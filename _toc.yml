@@ -1,4 +1,5 @@
-- file: welcome
+- file: index
+  numbered: true
 
 - part: Introduction
   chapters:
