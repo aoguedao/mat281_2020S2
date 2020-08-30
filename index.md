@@ -1,22 +1,26 @@
-# Bienvenido!
+# Bienvenido(a) a MAT281!
 
-Libro recopilatorio del curso Aplicaciones de la Matemática en la Ingeniería dictado en la Universidad Técnica Federico Santa María, Chile.
-
-Algunos de los objetivos son:
-
-- **Preparar a ingenieros matemáticos al mundo real**
-- **...**
-
+Página web del curso Aplicaciones de la Matemática en la Ingeniería dictado en la Universidad Técnica Federico Santa María, Chile dictado el segundo semestre del año 2020 a cargo de [Alonso Ogueda](https://github.com/aoguedao) en Casa Central
 
 ```{warning}
 Esta es una versión alpha, aún está en desarrollo. Por favor no desesperéis.
 ```
 
+## Descripción
 
-## *Get started!*
+Según el programa de la asignatura en este curso:
 
-Por ejemplo, el repositorio del año 2020 lo puedes encontrar [aquí](https://github.com/aoguedao/mat281_2019S2) y para obtener el material solo debes ejecutar el siguiente comando:
+_El estudiante adquiere competencias específicas relevantes para la modelación matemática de problemas de ingeniería, que incluyen elementos básicos del análisis de datos, y uso de programas computacionales especializados. Se analizan problemas provenientes de la ingeniería._
+
+## Material
+
+El material para el año 2020 está disponible en el siguiente [repositorio](https://github.com/aoguedao/mat281_2020S2), para obtener el código de fuente basta con que ejecutes el siguiente comando:
 
 ```
 git clone https://github.com/aoguedao/mat281_2020S2.git
+```
+
+## Contenidos
+
+```{tableofcontents}
 ```
