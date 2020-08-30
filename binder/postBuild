@@ -1,0 +1,6 @@
+jupyter contrib nbextension install --user
+jupyter nbextension enable --py widgetsnbextension
+jupyter labextension install @jupyter-widgets/jupyterlab-manager@1.0.3
+jupyter labextension install @jupyterlab/toc
+jupyter labextension install @telamonian/theme-darcula
+jupyter labextension install @aquirdturtle/collapsible_headings

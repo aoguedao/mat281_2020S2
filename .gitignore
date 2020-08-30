@@ -97,3 +97,6 @@ ENV/
 
 # Visual Studio Code
 .vscode/
+
+# Jupyter Book Build
+_build/
