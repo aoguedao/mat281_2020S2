@@ -1,0 +1,489 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Toolkit &amp; Setup &#8212; MAT281 - Aplicaciones de la Matemática en la Ingeniería  - 2020</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/mystnb.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Acerca de MAT281" href="M1L01_about_mat281.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/utfsm.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">MAT281 - Aplicaciones de la Matemática en la Ingeniería  - 2020</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Bienvenido(a) a MAT281!
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Introducción
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="M1L01_about_mat281.html">
+   Acerca de MAT281
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Toolkit &amp; Setup
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/lessons/M1L02_toolkit_and_setup.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/aoguedao/mat281_2020S2"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/aoguedao/mat281_2020S2/master?urlpath=lab/tree/lessons/M1L02_toolkit_and_setup.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/aoguedao/mat281_2020S2/blob/master/lessons/M1L02_toolkit_and_setup.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sistema-operativo">
+   Sistema Operativo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interfaz-de-linea-de-comandos-command-line-interface-cli">
+   Interfaz de Línea de Comandos (
+   <em>
+    Command Line Interface
+   </em>
+   / CLI)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#entorno-virtual">
+   Entorno Virtual
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conda">
+     Conda
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python">
+   Python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#project-jupyter">
+   Project Jupyter
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jupyter-notebook">
+     Jupyter Notebook
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jupyter-lab">
+     Jupyter Lab
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#otros-proyectos">
+     Otros proyectos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git">
+   Git
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#github">
+   GitHub
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resumen">
+   Resumen
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="toolkit-setup">
+<h1>Toolkit &amp; Setup<a class="headerlink" href="#toolkit-setup" title="Permalink to this headline">¶</a></h1>
+<p>En esta clase presentaremos algunos conceptos y herramientas que utilizaremos durante el curso. El objetivo final es instalar correctamente el <em>toolkit</em> de MAT281.</p>
+<div class="section" id="sistema-operativo">
+<h2>Sistema Operativo<a class="headerlink" href="#sistema-operativo" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Personalmente recomiendo <strong>Linux</strong>, en particular distribuciones como Ubuntu, Mint o Fedora por su simplicidad y transversalidad a la hora de instalar.</p></li>
+<li><p>En ocasiones las implementaciones en <strong>Windows</strong> no están completamente integradas e inclusive en ocasiones no están disponibles. Actualmente contamos con dos alternativas para utilizar Linux en Windows:</p>
+<ul>
+<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/about"><strong>Windows Subsystem for Linux</strong></a></p></li>
+<li><p><a class="reference external" href="https://www.docker.com/"><strong>Docker</strong></a></p></li>
+</ul>
+</li>
+<li><p>En el caso que poseas un equipo con <strong>macOS</strong> no debería haber problema.</p></li>
+</ul>
+</div>
+<div class="section" id="interfaz-de-linea-de-comandos-command-line-interface-cli">
+<h2>Interfaz de Línea de Comandos (<em>Command Line Interface</em> / CLI)<a class="headerlink" href="#interfaz-de-linea-de-comandos-command-line-interface-cli" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Es un método que permite a los usuarios interactuar con algún programa informático por medio de líneas de texto.</p></li>
+<li><p>Típicamente se hace uso de una terminal/<em>shell</em> (ver imagen).</p></li>
+<li><p>En el día a día dentro de la oficina facilita flujo de trabajo.</p></li>
+<li><p>Permite moverse entre manipular directorios y ficheros, instalar/actualizar herramientas, aplicaciones, softwares, etc.</p></li>
+</ul>
+<p><img alt="cli" src="https://upload.wikimedia.org/wikipedia/commons/2/29/Linux_command-line._Bash._GNOME_Terminal._screenshot.png" />
+<em>Screenshot of a sample bash session in GNOME Terminal 3, Fedora 15. <a class="reference external" href="https://en.wikipedia.org/wiki/Command-line_interface">Wikipedia</a></em></p>
+</div>
+<div class="section" id="entorno-virtual">
+<h2>Entorno Virtual<a class="headerlink" href="#entorno-virtual" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Problemas recurrentes</strong></p>
+<ul>
+<li><p>Dependencias de librerías (<em>packages</em>) incompatibles.</p></li>
+<li><p>Dificultad a la hora de compartir y reproducir resultados, e.g. no conocer las versiones de las librerías instaladas.</p></li>
+<li><p>Tener una máquina virtual para cada desarrollo es tedioso y costoso.</p></li>
+<li><p>Miedo constante a instalar algo nuevo y tu desarrollo (nunca) vuelva a funcionar.</p></li>
+</ul>
+</li>
+<li><p><strong>Solución</strong></p>
+<ul>
+<li><p>Aislar el desarrollo con tal de mejorar la compatibilidad y reproducibilidad de resultados.</p></li>
+</ul>
+</li>
+<li><p><strong>¿Cómo?</strong></p>
+<ul>
+<li><p>Utilizando entornos virtuales.</p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="conda">
+<h3>Conda<a class="headerlink" href="#conda" title="Permalink to this headline">¶</a></h3>
+<p><img alt="Conda" src="https://conda.io/docs/_images/conda_logo.svg" /></p>
+<p><em>Package, dependency and environment management for any language—Python, R, Ruby, Lua, Scala, Java, JavaScript, C/ C++, FORTRAN.</em> <a class="reference external" href="https://conda.io/docs/">(Link)</a></p>
+<p><strong>¿Por qué Conda?</strong></p>
+<ul class="simple">
+<li><p>Open Source</p></li>
+<li><p>Gestor de librerías <strong>y</strong> entornos virtuales.</p></li>
+<li><p>Compatible con Linux, Windows y macOS.</p></li>
+<li><p>Es agnóstico al lenguaje de programación (inicialmente fue desarrollado para Python).</p></li>
+<li><p>Es de fácil instalación y uso.</p></li>
+</ul>
+<p><strong>Otras alternativas</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pip</span></code> + <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code>, el primero es el gestor favorito de librerías de Python y el segundo es un gestos de entornos virtuales, el contra es que es exclusivo de Python.</p>
+<ul>
+<li><p>Ojo! En Conda también puedes instalar por  <code class="docutils literal notranslate"><span class="pre">pip</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong>Dockers</strong> es una herramienta muy de moda en grandes proyectos debido a ser, en palabras simples, un intermedio entre entornos virtuales y máquinas virtuales.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="python">
+<h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
+<p>Las principales librerías científicas a instalar y que ocuparemos durante el curso son:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.numpy.org/">Numpy</a>: Computación científica.</p></li>
+<li><p><a class="reference external" href="https://pandas.pydata.org/">Pandas</a>: Análisis de datos.</p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/">Matplotlib</a>: Visualización.</p></li>
+<li><p><a class="reference external" href="https://altair-viz.github.io/">Altair</a>: Visualización Declarativa.</p></li>
+<li><p><a class="reference external" href="http://scikit-learn.org/stable/">Scikit-Learn</a>: Machine Learning.</p></li>
+</ul>
+<p>A medida que avance el semestre detallaremos mejor cada una de estas (y otras) librerías.</p>
+</div>
+<div class="section" id="project-jupyter">
+<h2>Project Jupyter<a class="headerlink" href="#project-jupyter" title="Permalink to this headline">¶</a></h2>
+<p><em><a class="reference external" href="https://jupyter.org/index.html">Project Jupyter</a> exists to develop open-source software, open-standards, and services for interactive computing across dozens of programming languages.</em></p>
+<img src="https://2.bp.blogspot.com/-Q23VBETHLS0/WN_lgpxinkI/AAAAAAAAA-k/f3DJQfBre0QD5rwMWmGIGhBGjU40MTAxQCLcB/s1600/jupyter.png" alt="" align="center"/><div class="section" id="jupyter-notebook">
+<h3>Jupyter Notebook<a class="headerlink" href="#jupyter-notebook" title="Permalink to this headline">¶</a></h3>
+<p>Es una aplicación web que permite crear y compartir documentos que contienen código, ecuaciones, visualizaciones y texto. Entre sus usos se encuentra:</p>
+<ul class="simple">
+<li><p>Limpieza de datos</p></li>
+<li><p>Transformación de datos</p></li>
+<li><p>Simulaciones numéricas</p></li>
+<li><p>Modelamiendo Estadístico</p></li>
+<li><p>Visualización de Datos</p></li>
+<li><p>Machine Learning</p></li>
+<li><p>Mucho más.</p></li>
+</ul>
+<p><img alt="Jupyter Notebook Example" src="https://jupyter.org/assets/jupyterpreview.png" /></p>
+</div>
+<div class="section" id="jupyter-lab">
+<h3>Jupyter Lab<a class="headerlink" href="#jupyter-lab" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Es la siguiente generación de la interfaz de usuario de <em>Project Jupyter</em>.</p></li>
+<li><p>Similar a Jupyter Notebook cuenta con la facilidad de editar archivos .ipynb (notebooks) y heramientas como una terminal, editor de texto, explorador de archivos, etc.</p></li>
+<li><p>Eventualmente Jupyter Lab reemplazará a Jupyter Notebok (aunque la versión estable fue liberada hace algunos meses).</p></li>
+<li><p>Cuenta con una serie de extensiones que puedes instalar (y desarrollar inclurisve.</p></li>
+</ul>
+<p>Puedes probar Jupyter Lab con solo dos clicks!</p>
+<ol class="simple">
+<li><p>Ingresar a este link: https://github.com/jupyterlab/jupyterlab-demo</p></li>
+<li><p>Hacer click en el icono de binder:  <img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></p></li>
+</ol>
+</div>
+<div class="section" id="otros-proyectos">
+<h3>Otros proyectos<a class="headerlink" href="#otros-proyectos" title="Permalink to this headline">¶</a></h3>
+<p>Entre los más conocidos se encuentran:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jupyterhub.readthedocs.io/">JupyterHub</a>: Distribuir Jupyter Noterbooks a múltiples usuarios.</p></li>
+<li><p><a class="reference external" href="https://nbviewer.jupyter.org/">nbviewer</a>: Compartir Jupyter Notebooks.</p></li>
+<li><p><a class="reference external" href="https://jupyterbook.org/">Jupyter Book</a>: Construir y publicar libros de tópicos computacionales.</p></li>
+<li><p><a class="reference external" href="https://jupyter-docker-stacks.readthedocs.io/">Jupyter Docker Stacks</a>: Imágenes de Jupyter para utilizar en Docker.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="git">
+<h2>Git<a class="headerlink" href="#git" title="Permalink to this headline">¶</a></h2>
+<p><em><a class="reference external" href="https://git-scm.com/"><strong>Git</strong></a> is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</em></p>
+<p>Un control de versiones es un sistema que registra los cambios realizados en un archivo o conjunto de archivos a lo largo del tiempo, de modo que puedas recuperar versiones específicas más adelante. Aunque en los ejemplos de este libro usarás archivos de código fuente como aquellos cuya versión está siendo controlada, en realidad puedes hacer lo mismo con casi cualquier tipo de archivo que encuentres en una computadora (<a class="reference external" href="https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Acerca-del-Control-de-Versiones">fuente</a>).</p>
+<p>Es importante comprender que <em>Git</em> es la herramienta que permite versionar tus proyectos, sin embargo, a la hora de querer aprovechar más funcionalidades, como compartir o sincronizar tus trabajos se hace necesario utilizar servicios externos. Los más famosos son:</p>
+<ul class="simple">
+<li><p>GitHub</p></li>
+<li><p>GitLab</p></li>
+<li><p>Bitbucket</p></li>
+</ul>
+<p>Piensa lo siguiente, cualquiera podría implementar un correo electrónico entre dos computadoras conectadas entre ellas por LAN pero no conectadas a Internet. Sin embargo la gente utiliza servicios como Gmail, Outlook, etc. con tal de aprovechar de mejor manera las funcionalidades que ofrece la tecnología del correo electrónico. Esta es una analogía perfecta entre las diferencias de Git y los servicios como GitHub o GitLab.</p>
+</div>
+<div class="section" id="github">
+<h2>GitHub<a class="headerlink" href="#github" title="Permalink to this headline">¶</a></h2>
+<p><em><a class="reference external" href="https://github.com/">GitHub</a> is a development platform inspired by the way you work. From open source to business, you can host and review code, manage projects, and build software alongside 30 million developers.</em>
+Es decir, es una plataforma para alojar proyectos que utilizan Git como sistema de control.</p>
+<p>El <strong>material del curso</strong> estará disponible a través de GitHub en el siguiente link: https://github.com/aoguedao/mat281_2020S2.</p>
+<p>De manera experimental este año, se está implementando una página web del curso utilizando Jupyter Book y alojada en GitHub: https://aoguedao.github.io/mat281_2020S2</p>
+</div>
+<div class="section" id="resumen">
+<h2>Resumen<a class="headerlink" href="#resumen" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Sistema operativo: Cualquiera, sin embargo se recomiendan alternativas basadas en Unix.</p></li>
+<li><p>Lenguaje de programación: Python</p></li>
+<li><p>Entorno virtual: Conda, preferentemetne a través de miniconda.</p></li>
+<li><p>Entorno de trabajo: Jupyter Lab.</p></li>
+<li><p>Versionamiento: Git &amp; GitHub.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="M1L01_about_mat281.html" title="previous page">Acerca de MAT281</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Alonso Ogueda Oliva<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>
