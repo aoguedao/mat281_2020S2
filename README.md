@@ -14,8 +14,9 @@
 * **Docentes**:  
     - Casa Central: [Alonso Ogueda](https://www.linkedin.com/in/aoguedaoliva/)
     - Campus San Joaquín: [Francisco Alfaro](https://www.linkedin.com/in/francisco-alfaro-medina-80820aa2)
-
 * **Repositorio Código**: [mat281_2020S2](https://github.com/aoguedao/mat281_2020S2)
+* **Template Portafolio**: [mat281_portfolio_template](https://github.com/aoguedao/mat281_portfolio_template)
+* **Página web (en desarrollo)**: https://aoguedao.github.io/mat281_2020S2/
 
 
 ## Planificación

@@ -4,3 +4,5 @@
   chapters:
   - file: lessons/M1L01_about_mat281
   - file: lessons/M1L02_toolkit_and_setup
+    sections:
+      - file: lessons/M1L02_installation
