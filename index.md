@@ -1,9 +1,9 @@
 # Bienvenido(a) a MAT281!
 
-Página web del curso Aplicaciones de la Matemática en la Ingeniería dictado en la Universidad Técnica Federico Santa María, Chile dictado el segundo semestre del año 2020 a cargo de [Alonso Ogueda](https://github.com/aoguedao) en Casa Central
+Página web del curso Aplicaciones de la Matemática en la Ingeniería de la Universidad Técnica Federico Santa María, Chile dictado el segundo semestre del año 2020 a cargo de [Alonso Ogueda](https://github.com/aoguedao) en Casa Central
 
 ```{warning}
-Esta es una versión alpha, aún está en desarrollo. Por favor no desesperéis.
+Esta es una versión alpha, aún está en desarrollo. Por favor no _desesperéis_.
 ```
 
 ## Descripción
