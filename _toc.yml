@@ -6,3 +6,4 @@
   - file: lessons/M1L02_toolkit_and_setup
     sections:
       - file: lessons/M1L02_installation
+  - file: lessons/M1L03_python_basics
