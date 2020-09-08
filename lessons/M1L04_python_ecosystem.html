@@ -1,0 +1,1055 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecosistema Python &#8212; MAT281 - Aplicaciones de la Matemática en la Ingeniería  - 2020</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Recordando Python" href="M1L03_python_basics.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/utfsm.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">MAT281 - Aplicaciones de la Matemática en la Ingeniería  - 2020</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Bienvenido(a) a MAT281!
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Introducción
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="M1L01_about_mat281.html">
+   Acerca de MAT281
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M1L02_toolkit_and_setup.html">
+   Toolkit &amp; Setup
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M1L03_python_basics.html">
+   Recordando Python
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Ecosistema Python
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/lessons/M1L04_python_ecosystem.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/aoguedao/mat281_2020S2"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/aoguedao/mat281_2020S2/master?urlpath=lab/tree/lessons/M1L04_python_ecosystem.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/aoguedao/mat281_2020S2/blob/master/lessons/M1L04_python_ecosystem.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comunidad">
+   Comunidad
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#performance">
+   Performance
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zen-de-python">
+   Zen de Python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#buenas-practicas">
+   Buenas Prácticas
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nombres-de-variables-y-comentarios">
+     Nombres de variables y comentarios
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#documentacion">
+     Documentación
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pep8">
+       PEP8
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manejo-de-excepciones">
+     Manejo de excepciones
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#programacion-orientada-a-objetos">
+     Programación Orientada a Objetos
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#decoradores">
+       Decoradores
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="ecosistema-python">
+<h1>Ecosistema Python<a class="headerlink" href="#ecosistema-python" title="Permalink to this headline">¶</a></h1>
+<p>En la clase pasada hicimos un pequeño resumen de <a class="reference external" href="https://www.python.org/">Python</a>, pero ahora pondremos énfasis en su ecosistema y comunidad. Lo primoero, Python es un lenguaje de programación interpretado, cuya filosofía hace hincapié en una sintaxis muy limpia y un código legible. Aquí les presento una lista de razones para aprender Python.</p>
+<ul class="simple">
+<li><p>Código abierto</p></li>
+<li><p>Multiparadigma y Multiplataforma</p></li>
+<li><p>Versatilidad a la hora de programar</p></li>
+<li><p>Sintaxis amigable</p></li>
+</ul>
+<div class="section" id="comunidad">
+<h2>Comunidad<a class="headerlink" href="#comunidad" title="Permalink to this headline">¶</a></h2>
+<p>Desde 2012, Python ha crecido constantemente en popularidad, y es probable que la tendencia siga aumentando hasta que la comunidad migre a otro lenguaje.Según <a class="reference external" href="https://insights.stackoverflow.com/survey/2020#technology-most-loved-dreaded-and-wanted-languages-loved">Stack Overflow Developer Survey 2020</a> se encuentra en los primeros lugares entre los lenguajes de programación más amados y buscados.</p>
+<p>Gracias a la popularidad de Python, es probable que encuentres una solución lista para usar en múltiples problemas que puedas estar enfrentando. La comunidad de Python es grande y están trabajando incansablemente para mejorar el lenguaje todos los días.</p>
+<p>Python también tiene una serie de patrocinadores corporativos, presionando para popularizar aún más el lenguaje. Entre ellos se encuentran gigantes tecnológicos como <a class="reference external" href="https://www.google.com/">Google</a> o <a class="reference external" href="https://numfocus.org/">NumFocus</a>.</p>
+<p><img alt="Ecosistema Científico" src="https://s3.amazonaws.com/media-p.slid.es/uploads/202361/images/2556567/PyData_Stack.png" /></p>
+<p>Una gran ventaja de Python es la amplia selección de bibliotecas y <em>frameworks</em> que ofrece. Hay una (o más) biblioteca(s) de Python para (casi) todo:</p>
+<ul class="simple">
+<li><p>Visualización de datos,</p></li>
+<li><p>Aprendizaje automático,</p></li>
+<li><p>Ciencia de los datos,</p></li>
+<li><p>Procesamiento natural del lenguaje,</p></li>
+<li><p>Análisis de datos complejos.</p></li>
+<li><p>Cálculo científico.</p></li>
+</ul>
+<p>Lo mismo es cierto para los <em>frameworks</em>, que ayudan a despegar su proyecto y le ahorran tiempo y esfuerzo. Hay una variedad de ellos para elegir, dependiendo de sus necesidades, tales como:</p>
+<ul class="simple">
+<li><p>Django,</p></li>
+<li><p>Flask,</p></li>
+<li><p>Pyramid,</p></li>
+<li><p>Twisted,</p></li>
+<li><p>Falcon.</p></li>
+</ul>
+<p>En lo que respecta a este curso, hablaremos sobre todo de aquellas librerías pertenecientes al <em>stack</em> científico.</p>
+</div>
+<div class="section" id="performance">
+<h2>Performance<a class="headerlink" href="#performance" title="Permalink to this headline">¶</a></h2>
+<p>Una de las mayores críticas de Python es el tiempo de ejecución, relativamente lento en comparación con otros lenguajes. Sin embargo, hay una solución alternativa a este desafío específico.</p>
+<p>Cuando el rendimiento tiene prioridad, Python le brinda la capacidad de integrar otros lenguajes de mayor rendimiento en su código. Cython es un buen ejemplo de tal solución. Optimiza su velocidad sin obligarlo a reescribir todo su código base desde cero.</p>
+<p>El recurso más caro no es el tiempo de CPU, sino el tiempo de tus desarrolladores. Por lo tanto, reducir el tiempo de comercialización siempre debe tener prioridad sobre la ejecución rápida del tiempo de ejecución. Puedes implementar rápidamente en Python y en el caso de necesitar más <em>performance</em> es posible cambiar la implementación a lenguajes compilados como <code class="docutils literal notranslate"><span class="pre">C</span></code> o <code class="docutils literal notranslate"><span class="pre">Rust</span></code>.</p>
+<p>Python es intuitivo de leer, ya que se parece al inglés real, esto hace que el lenguaje sea fácil de descifrar y mantener. Además tiene una sintaxis clara y no requiere tantas líneas de código como <code class="docutils literal notranslate"><span class="pre">Java</span></code> o <code class="docutils literal notranslate"><span class="pre">C</span></code> para obtener resultados comparables.</p>
+</div>
+<div class="section" id="zen-de-python">
+<h2>Zen de Python<a class="headerlink" href="#zen-de-python" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">this</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren&#39;t special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you&#39;re Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it&#39;s a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let&#39;s do more of those!
+</pre></div>
+</div>
+</div>
+</div>
+<p>El <strong>Zen</strong> de Python te dará la guía para decidir sobre que hacer con tu código, no te dice como lo debes escribir, sino como debes pensar si estas programando en Python.</p>
+<p>Principios importantes:</p>
+<ul class="simple">
+<li><p><strong>Explícito es mejor que implícito</strong>: Que no se asuma nada, asegúrate que las cosas sean.</p></li>
+<li><p><strong>Simple es mejor que complejo</strong>: Evita código complejo, código espagueti o que hace mas cosas para poder hacer una simple tarea.</p></li>
+<li><p><strong>Plano es mejor que anidado</strong>: Si tu código tiene mas de 3 niveles de identación, deberías mover parte de ese código a una función.</p></li>
+<li><p><strong>Los errores nunca deberían pasar silenciosamente</strong>: No uses un Try/Except sin definir que tipo de error vas a cachar, viene de la mano con Explicito es mejor que implícito.</p></li>
+<li><p><strong>Si la implementación es difícil de explicar, es mala idea</strong>.</p></li>
+</ul>
+</div>
+<div class="section" id="buenas-practicas">
+<h2>Buenas Prácticas<a class="headerlink" href="#buenas-practicas" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="nombres-de-variables-y-comentarios">
+<h3>Nombres de variables y comentarios<a class="headerlink" href="#nombres-de-variables-y-comentarios" title="Permalink to this headline">¶</a></h3>
+<p>Asigna nombres a las variables que tengan sentido o que puedan ser identificadas fácilmente, no importa que sean utilices más caracteres. Un mal ejemplo es el siguiente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">10.</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mf">3.5</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El área del triángulo es </span><span class="si">{</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span> <span class="o">/</span> <span class="mi">2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El área del triángulo es 17.5
+</pre></div>
+</div>
+</div>
+</div>
+<p>¿Si otra persona lee este código puede saber qué significan <code class="docutils literal notranslate"><span class="pre">a</span></code> y  <code class="docutils literal notranslate"><span class="pre">b</span></code>? Lo puede saber por el comentario, pero sin embargo esas variables podrían ser utilizadas nuevamente y se perdería su significado al pasar las líneas de código. Recuerda, explícito es mejor que implícito.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">altura</span> <span class="o">=</span> <span class="mf">10.</span>
+<span class="n">base</span> <span class="o">=</span> <span class="mf">3.5</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El área del triángulo es </span><span class="si">{</span><span class="n">altura</span> <span class="o">*</span> <span class="n">base</span> <span class="o">/</span> <span class="mi">2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El área del triángulo es 17.5
+</pre></div>
+</div>
+</div>
+</div>
+<p>Si con las nombres de las variables no basta, una buena práctica es comentar el código, ya sea antes de varías líneas o comentar una línea en particular.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Se define la altura y base del triángulo</span>
+<span class="n">altura</span> <span class="o">=</span> <span class="mf">10.</span>  <span class="c1"># en metros</span>
+<span class="n">base</span> <span class="o">=</span> <span class="mf">3.5</span>  <span class="c1"># en metros</span>
+<span class="c1"># Se calcula el área del triángulo</span>
+<span class="n">area</span> <span class="o">=</span> <span class="n">altura</span> <span class="o">*</span> <span class="n">base</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El área del triángulo es </span><span class="si">{</span><span class="n">area</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El área del triángulo es 17.5
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="documentacion">
+<h3>Documentación<a class="headerlink" href="#documentacion" title="Permalink to this headline">¶</a></h3>
+<p>Casi tan importante como la escritura de código, es su correcta documentación, una parte fundamental de cualquier programa que a menudo se infravalora o simplemente se ignora. Aparte de los comentarios entre el código explicando cómo funciona, el elemento básico de documentación de Python es el Docstring o cadena de documentación, que ya hemos visto. Simplemente es una cadena de texto con triple comillas que se coloca justo después de la definición de función o clase que sirve de documentación a ese elemento.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">potencia</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calcula la potencia arbitraria de un numero</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Acceso a la documentación</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">potencia</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    Calcula la potencia arbitraria de un numero
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Acceso a la documentación</span>
+<span class="n">help</span><span class="p">(</span><span class="n">potencia</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function potencia in module __main__:
+
+potencia(x, y)
+    Calcula la potencia arbitraria de un numero
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>potencia<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lo correcto es detallar lo mejor posible en el <em>Docstring</em>, ya sea funcionamienot, parámetros, valores que retorna, etc.
+Veamos un ejemplo de la función <code class="docutils literal notranslate"><span class="pre">potencia</span></code> mejor documentada:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">potencia</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    power(x1, x2[, out])</span>
+
+<span class="sd">    First array elements raised to powers from second array, element-wise.</span>
+
+<span class="sd">    Raise each base in `x1` to the positionally-corresponding power in</span>
+<span class="sd">    `x2`.  `x1` and `x2` must be broadcastable to the same shape. Note that an</span>
+<span class="sd">    integer type raised to a negative integer power will raise a ValueError.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x1 : array_like</span>
+<span class="sd">        The bases.</span>
+<span class="sd">    x2 : array_like</span>
+<span class="sd">        The exponents.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    y : ndarray</span>
+<span class="sd">        The bases in `x1` raised to the exponents in `x2`.</span>
+
+<span class="sd">    See Also</span>
+<span class="sd">    --------</span>
+<span class="sd">    float_power : power function that promotes integers to float</span>
+<span class="sd">    </span>
+<span class="sd">    </span>
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    Cube each element in a list.</span>
+
+<span class="sd">    &gt;&gt;&gt; x1 = range(6)</span>
+<span class="sd">    &gt;&gt;&gt; x1</span>
+<span class="sd">    [0, 1, 2, 3, 4, 5]</span>
+<span class="sd">    &gt;&gt;&gt; np.power(x1, 3)</span>
+<span class="sd">    array([  0,   1,   8,  27,  64, 125])</span>
+
+<span class="sd">    Raise the bases to different exponents.</span>
+
+<span class="sd">    &gt;&gt;&gt; x2 = [1.0, 2.0, 3.0, 3.0, 2.0, 1.0]</span>
+<span class="sd">    &gt;&gt;&gt; np.power(x1, x2)</span>
+<span class="sd">    array([  0.,   1.,   8.,  27.,  16.,   5.])</span>
+
+<span class="sd">    The effect of broadcasting.</span>
+
+<span class="sd">    &gt;&gt;&gt; x2 = np.array([[1, 2, 3, 3, 2, 1], [1, 2, 3, 3, 2, 1]])</span>
+<span class="sd">    &gt;&gt;&gt; x2</span>
+<span class="sd">    array([[1, 2, 3, 3, 2, 1],</span>
+<span class="sd">           [1, 2, 3, 3, 2, 1]])</span>
+<span class="sd">    &gt;&gt;&gt; np.power(x1, x2)</span>
+<span class="sd">    array([[ 0,  1,  8, 27, 16,  5],</span>
+<span class="sd">           [ 0,  1,  8, 27, 16,  5]])</span>
+<span class="sd">       </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Acceso a la documentación</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">potencia</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    power(x1, x2[, out])
+
+    First array elements raised to powers from second array, element-wise.
+
+    Raise each base in `x1` to the positionally-corresponding power in
+    `x2`.  `x1` and `x2` must be broadcastable to the same shape. Note that an
+    integer type raised to a negative integer power will raise a ValueError.
+
+    Parameters
+    ----------
+    x1 : array_like
+        The bases.
+    x2 : array_like
+        The exponents.
+
+    Returns
+    -------
+    y : ndarray
+        The bases in `x1` raised to the exponents in `x2`.
+
+    See Also
+    --------
+    float_power : power function that promotes integers to float
+    
+    
+    Examples
+    --------
+    Cube each element in a list.
+
+    &gt;&gt;&gt; x1 = range(6)
+    &gt;&gt;&gt; x1
+    [0, 1, 2, 3, 4, 5]
+    &gt;&gt;&gt; np.power(x1, 3)
+    array([  0,   1,   8,  27,  64, 125])
+
+    Raise the bases to different exponents.
+
+    &gt;&gt;&gt; x2 = [1.0, 2.0, 3.0, 3.0, 2.0, 1.0]
+    &gt;&gt;&gt; np.power(x1, x2)
+    array([  0.,   1.,   8.,  27.,  16.,   5.])
+
+    The effect of broadcasting.
+
+    &gt;&gt;&gt; x2 = np.array([[1, 2, 3, 3, 2, 1], [1, 2, 3, 3, 2, 1]])
+    &gt;&gt;&gt; x2
+    array([[1, 2, 3, 3, 2, 1],
+           [1, 2, 3, 3, 2, 1]])
+    &gt;&gt;&gt; np.power(x1, x2)
+    array([[ 0,  1,  8, 27, 16,  5],
+           [ 0,  1,  8, 27, 16,  5]])
+       
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Acceso a la documentación</span>
+<span class="n">help</span><span class="p">(</span><span class="n">potencia</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function potencia in module __main__:
+
+potencia(x, y)
+    power(x1, x2[, out])
+    
+    First array elements raised to powers from second array, element-wise.
+    
+    Raise each base in `x1` to the positionally-corresponding power in
+    `x2`.  `x1` and `x2` must be broadcastable to the same shape. Note that an
+    integer type raised to a negative integer power will raise a ValueError.
+    
+    Parameters
+    ----------
+    x1 : array_like
+        The bases.
+    x2 : array_like
+        The exponents.
+    
+    Returns
+    -------
+    y : ndarray
+        The bases in `x1` raised to the exponents in `x2`.
+    
+    See Also
+    --------
+    float_power : power function that promotes integers to float
+    
+    
+    Examples
+    --------
+    Cube each element in a list.
+    
+    &gt;&gt;&gt; x1 = range(6)
+    &gt;&gt;&gt; x1
+    [0, 1, 2, 3, 4, 5]
+    &gt;&gt;&gt; np.power(x1, 3)
+    array([  0,   1,   8,  27,  64, 125])
+    
+    Raise the bases to different exponents.
+    
+    &gt;&gt;&gt; x2 = [1.0, 2.0, 3.0, 3.0, 2.0, 1.0]
+    &gt;&gt;&gt; np.power(x1, x2)
+    array([  0.,   1.,   8.,  27.,  16.,   5.])
+    
+    The effect of broadcasting.
+    
+    &gt;&gt;&gt; x2 = np.array([[1, 2, 3, 3, 2, 1], [1, 2, 3, 3, 2, 1]])
+    &gt;&gt;&gt; x2
+    array([[1, 2, 3, 3, 2, 1],
+           [1, 2, 3, 3, 2, 1]])
+    &gt;&gt;&gt; np.power(x1, x2)
+    array([[ 0,  1,  8, 27, 16,  5],
+           [ 0,  1,  8, 27, 16,  5]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="pep8">
+<h4>PEP8<a class="headerlink" href="#pep8" title="Permalink to this headline">¶</a></h4>
+<p>Además de una correcta y ordenada estructura general que deben tener los programa, es conveniente mantener ciertas buenas prácticas de codificación y el estilo de codificación recomendado. Estas normas no son obligatorias, como lo es la propia sintaxis del lenguaje, pero conviene <a class="reference external" href="https://legacy.python.org/dev/peps/pep-0008/">seguir las recomendaciones</a> de los desarrolladores de Python para facilitar la lectura del programa y ayudar a encontrar posibles errores. Incluso dentro de PEP8 existen <em>“sabores”</em> más estrictos, uno que ha ganado fama en el último tiempo es <a class="reference external" href="https://github.com/psf/black">Black</a>.</p>
+</div>
+</div>
+<div class="section" id="manejo-de-excepciones">
+<h3>Manejo de excepciones<a class="headerlink" href="#manejo-de-excepciones" title="Permalink to this headline">¶</a></h3>
+<p>Los errores que se producen en tiempo de ejecución se denominan excepciones. Ocurren, por ejemplo, cuando un archivo que intentamos abrir no existe <em>FileNotFoundError</em>, dividiendo un número por cero <em>ZeroDivisionError</em>, etc.</p>
+<p>Si no se manejan las excepciones, se escupe un mensaje de error y nuestro programa se detiene repentinamente e inesperadamente.</p>
+<p>En Python, las excepciones se pueden manejar usando la declaración try. Cuando se detectan excepciones, depende de ti qué operador realizar, pero siempre puedes <em>capturar</em> todas las exepciones.</p>
+<p>Ejemplo: Obtener el inverso multiplicativo de una lista de elementos.</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lista_con_errores</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mf">2.3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">lista_con_errores</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intentando dividir 1 por&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">x</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;1 dividido </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> es </span><span class="si">{</span><span class="n">r</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Intentando dividir 1 por 2
+1 dividido 2 es 0.5
+
+Intentando dividir 1 por 2.3
+1 dividido 2.3 es 0.4347826086956522
+
+Intentando dividir 1 por 0
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ZeroDivisionError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">43</span><span class="n">d6566e765c</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">lista_con_errores</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intentando dividir 1 por&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">4</span>     <span class="n">r</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">x</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;1 dividido </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> es </span><span class="si">{</span><span class="n">r</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="ne">ZeroDivisionError</span>: division by zero
+</pre></div>
+</div>
+</div>
+</div>
+<p>Problema! División por cero! La forma de caputar los errores es la siguiente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">lista_con_errores</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mf">2.3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">lista_con_errores</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intentando dividir 1 por&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">x</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;1 dividido </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> es </span><span class="si">{</span><span class="n">r</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="n">exc_type</span><span class="p">,</span> <span class="n">exc_obj</span><span class="p">,</span> <span class="n">exc_tb</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Oops! Ocurrió una excepción del tipo: </span><span class="si">{</span><span class="n">exc_type</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2"> y mensaje: </span><span class="si">{</span><span class="n">exc_obj</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Intentando dividir 1 por 2
+1 dividido 2 es 0.5
+
+Intentando dividir 1 por 2.3
+1 dividido 2.3 es 0.4347826086956522
+
+Intentando dividir 1 por 0
+Oops! Ocurrió una excepción del tipo: ZeroDivisionError y mensaje: division by zero
+
+Intentando dividir 1 por None
+Oops! Ocurrió una excepción del tipo: TypeError y mensaje: unsupported operand type(s) for /: &#39;int&#39; and &#39;NoneType&#39;
+
+Intentando dividir 1 por a
+Oops! Ocurrió una excepción del tipo: TypeError y mensaje: unsupported operand type(s) for /: &#39;int&#39; and &#39;str&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>En proyectos más serios, se busca capturar cada tipo de excepción, por ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lista_con_errores</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mf">2.3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">lista_con_errores</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intentando dividir 1 por&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">x</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;1 dividido </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> es </span><span class="si">{</span><span class="n">r</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ZeroDivisionError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No puedes dividir por cero!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">TypeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No es posible dividir un 1 por un objeto de tipo </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Intentando dividir 1 por 2
+1 dividido 2 es 0.5
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Intentando dividir 1 por 2.3
+1 dividido 2.3 es 0.4347826086956522
+
+Intentando dividir 1 por 0
+division by zero
+No puedes dividir por cero!
+
+Intentando dividir 1 por None
+unsupported operand type(s) for /: &#39;int&#39; and &#39;NoneType&#39;
+No es posible dividir un 1 por un objeto de tipo NoneType!
+
+Intentando dividir 1 por a
+unsupported operand type(s) for /: &#39;int&#39; and &#39;str&#39;
+No es posible dividir un 1 por un objeto de tipo str!
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="programacion-orientada-a-objetos">
+<h3>Programación Orientada a Objetos<a class="headerlink" href="#programacion-orientada-a-objetos" title="Permalink to this headline">¶</a></h3>
+<p>Todo en Python es un objeto que incluye enteros, flotantes, funciones, clases y Ninguno. No nos centremos en por qué todo en Python es un objeto. Para eso, visite esta página. Más bien, esta sección se enfoca en crear sus propias clases y objetos.</p>
+<p>El objeto es simplemente una colección de datos (variables) y métodos (funciones) que actúan sobre los datos. Y, la clase es un modelo para el objeto.</p>
+<p>Tan pronto como defina una clase, se crea un nuevo objeto de clase con el mismo nombre. Este objeto de clase nos permite acceder a los diferentes atributos, así como crear instancias de nuevos objetos de esa clase.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Mi_clase</span><span class="p">:</span>
+    <span class="s2">&quot;Esta es mi clase&quot;</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hola&#39;</span><span class="p">)</span>
+
+<span class="c1"># Output: 10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Mi_clase</span><span class="o">.</span><span class="n">a</span><span class="p">)</span>
+
+<span class="c1"># Output: &lt;function 0x0000000003079bf8=&quot;&quot; at=&quot;&quot; myclass.func=&quot;&quot;&gt;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Mi_clase</span><span class="o">.</span><span class="n">func</span><span class="p">)</span>
+
+<span class="c1"># Output: &#39;Esta es mi clase&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Mi_clase</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+&lt;function Mi_clase.func at 0x7f09f547d050&gt;
+Esta es mi clase
+</pre></div>
+</div>
+</div>
+</div>
+<p>Es posible que haya notado el parámetro <em>self</em> en la definición de la función dentro de la clase, pero llamamos al método simplemente como <em>ob.func()</em> sin ningún argumento. Aún funcionó.</p>
+<p>Esto se debe a que, cada vez que un objeto llama a su método, el objeto mismo se pasa como primer argumento. Entonces, <em>ob.func()</em> se traduce en <em>Mi_clase.func(ob)</em>.</p>
+<p>Instanciar objetos también es muy sencillo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj1</span> <span class="o">=</span> <span class="n">Mi_clase</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">obj1</span><span class="o">.</span><span class="n">a</span><span class="p">)</span>        <span class="c1"># Output: 10</span>
+ 
+<span class="n">obj2</span> <span class="o">=</span> <span class="n">Mi_clase</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">obj1</span><span class="o">.</span><span class="n">a</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span>    <span class="c1"># Output: 15</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+15
+</pre></div>
+</div>
+</div>
+</div>
+<p>En Python, un método con el nombre <em>__init () __</em>  es un constructor. Este método se llama automáticamente cuando se instancia un objeto.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">NumerosComplejos</span><span class="p">:</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>  <span class="c1"># constructor</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">real</span> <span class="o">=</span> <span class="n">r</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">imag</span> <span class="o">=</span> <span class="n">i</span>
+
+    <span class="k">def</span> <span class="nf">obtener_representacion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{0}</span><span class="s2"> + </span><span class="si">{1}</span><span class="s2">j&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">imag</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c1</span> <span class="o">=</span> <span class="n">NumerosComplejos</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># crear el objeto NumerosComplejos</span>
+<span class="n">c1</span><span class="o">.</span><span class="n">obtener_representacion</span><span class="p">()</span> <span class="c1"># Output: 2+3j</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 + 3j
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c2</span> <span class="o">=</span> <span class="n">NumerosComplejos</span><span class="p">()</span> <span class="c1"># crear un nuevo objeto NumerosComplejos</span>
+<span class="n">c2</span><span class="o">.</span><span class="n">obtener_representacion</span><span class="p">()</span> <span class="c1"># Output: 0+0j</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 + 0j
+</pre></div>
+</div>
+</div>
+</div>
+<p>La herencia se refiere a definir una nueva clase con poca o ninguna modificación a una clase existente. Tomemos un ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Mamifero</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre</span><span class="o">=</span><span class="s2">&quot;Sin Nombre&quot;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span>
+
+    <span class="k">def</span> <span class="nf">caracteristicas</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Los mamíferos son animales de sangre caliente&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Derivemos una nueva clase Perro de esta clase <em>Mamifero</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Perro</span><span class="p">(</span><span class="n">Mamifero</span><span class="p">):</span>
+    
+    <span class="n">numero_patas</span> <span class="o">=</span> <span class="mi">4</span>
+    
+    <span class="k">def</span> <span class="nf">ladrar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nombre</span><span class="si">}</span><span class="s1">: Guau!&#39;</span><span class="p">)</span>
+
+<span class="n">firulais</span> <span class="o">=</span> <span class="n">Perro</span><span class="p">(</span><span class="s2">&quot;Firulais&quot;</span><span class="p">)</span>
+<span class="n">firulais</span><span class="o">.</span><span class="n">ladrar</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">firulais</span><span class="o">.</span><span class="n">nombre</span><span class="si">}</span><span class="s2"> tiene </span><span class="si">{</span><span class="n">firulais</span><span class="o">.</span><span class="n">numero_patas</span><span class="si">}</span><span class="s2"> patas.&quot;</span><span class="p">)</span>
+<span class="n">firulais</span><span class="o">.</span><span class="n">caracteristicas</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Firulais: Guau!
+Firulais tiene 4 patas.
+Los mamíferos son animales de sangre caliente
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lo importante aquí es que notes que hay elementos que pertenecen a cada perro, como su nombre y la cantidad de patas. Pero también hay acciones que puede realizar un perro. En programación orientada a objetos, esto se conoce como atributos y métodos respectivamente.</p>
+<div class="section" id="decoradores">
+<h4>Decoradores<a class="headerlink" href="#decoradores" title="Permalink to this headline">¶</a></h4>
+<p>Python tiene una característica interesante llamada decoradores para agregar funcionalidad a un código existente.
+Esto también se llama metaprogramación ya que una parte del programa intenta modificar otra parte del programa en tiempo de compilación.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">debug</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">nueva_funcion</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La funcion Sumar es llamada!!!&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">nueva_funcion</span>
+
+
+<span class="nd">@debug</span> <span class="c1"># decorador</span>
+<span class="k">def</span> <span class="nf">Sumar</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Sumar</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La funcion Sumar es llamada!!!
+12
+</pre></div>
+</div>
+</div>
+</div>
+<p>Hay decoradores especiales que se utilizan al declarar clases, por ejemplo <code class="docutils literal notranslate"><span class="pre">classmethod</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span><span class="o">,</span> <span class="nn">string</span>
+
+<span class="k">class</span> <span class="nc">Gato</span><span class="p">(</span><span class="n">Mamifero</span><span class="p">):</span>
+
+    <span class="n">numero_patas</span> <span class="o">=</span> <span class="mi">4</span>
+
+    <span class="k">def</span> <span class="nf">maullar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nombre</span><span class="si">}</span><span class="s1">: Miau!&#39;</span><span class="p">)</span>
+    
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">random_name</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">8</span><span class="p">):</span>
+        <span class="n">letras</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">ascii_lowercase</span>
+        <span class="n">nombre</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">letras</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">))</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">nombre</span><span class="o">=</span><span class="n">nombre</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gañaña</span> <span class="o">=</span> <span class="n">Gato</span><span class="p">(</span><span class="n">nombre</span><span class="o">=</span><span class="s2">&quot;Gañaña&quot;</span><span class="p">)</span>
+<span class="n">gañaña</span><span class="o">.</span><span class="n">maullar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gañaña: Miau!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">random_gato</span> <span class="o">=</span> <span class="n">Gato</span><span class="o">.</span><span class="n">random_name</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">random_gato</span><span class="o">.</span><span class="n">maullar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>kfnaktwnvk: Miau!
+</pre></div>
+</div>
+</div>
+</div>
+<p>No te preocupes si parece chino mandarín, en el curso no crearemos nuestras propias clases, si no que aprenderemos a leer documentación para utilizar las clases que ya han sido implementadas.</p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="M1L03_python_basics.html" title="previous page">Recordando Python</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Alonso Ogueda Oliva<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-177357392-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

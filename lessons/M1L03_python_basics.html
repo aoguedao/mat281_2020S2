@@ -39,6 +39,7 @@
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Ecosistema Python" href="M1L04_python_ecosystem.html" />
     <link rel="prev" title="Instalación" href="M1L02_installation.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -98,6 +99,11 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Recordando Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M1L04_python_ecosystem.html">
+   Ecosistema Python
   </a>
  </li>
 </ul>
@@ -206,6 +212,18 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jupyter-notebooks">
+   Jupyter Notebooks
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#markdown">
+     Markdown
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#hola-mundo">
    Hola Mundo!
   </a>
@@ -248,9 +266,62 @@
   <div class="section" id="recordando-python">
 <h1>Recordando Python<a class="headerlink" href="#recordando-python" title="Permalink to this headline">¶</a></h1>
 <p>En esta clase repasaremos algunos conceptos de Python que probablemente ya conoces, pero te servirá para familiarizarte con Jupyter Notebook y refrescar la memoria.</p>
+<div class="section" id="jupyter-notebooks">
+<h2>Jupyter Notebooks<a class="headerlink" href="#jupyter-notebooks" title="Permalink to this headline">¶</a></h2>
 <div class="admonition-ojo-piojo admonition">
 <p class="admonition-title">Ojo Piojo</p>
 <p>Cada archivo Jupyter Notebook se compone de celdas, que pueden ser Code, Markdown o Raw.</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Los jupyter notebooks poseen dos modos actualmente, de edición y comandos. Dependiendo del modo que se encuentre activo el teclado realiza diferentes cosas.</p>
+</div>
+<ul class="simple">
+<li><p><strong>Modo Edición</strong>: Escribes directamente en la celda, de igual manera como si estuvieras en un editor de texto. Se reconoce este modo pues la celda activa posee un borde de color verde (en el <em>theme</em> por defecto).</p></li>
+<li><p><strong>Modo Comando</strong>: Es posible editar acciones al notebook como un todo, no dentro de una celda. Por ejemplo, copiar o crear celdas. Se reconoce este modo pues en una celda hay un borde azul al lado izquierdo.</p></li>
+</ul>
+<p>La documentación oficial de Jupyter Notebook es mucho más formal, pero por lo mismo más extensa, aquí está el <a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/stable/index.html">link</a> para cuando la necesites.</p>
+<p>Algunas otras cosas útiles a saber para trabajar utilizando notebooks:</p>
+<ul class="simple">
+<li><p><strong>File</strong>: En él, puede crear un nuevo cuaderno o abrir uno preexistente. Aquí es también a donde iría para cambiar el nombre de un Cuaderno. Creo que el elemento de menú más interesante es la opción Guardar y Checkpoint. Esto le permite crear puntos de control a los que puede retroceder si lo necesita.</p></li>
+<li><p><strong>Edit</strong>: Aquí puede cortar, copiar y pegar celdas. Aquí también es donde irías si quisieras eliminar, dividir o fusionar una celda. Puede reordenar celdas aquí también.</p></li>
+<li><p><strong>View</strong>: es útil para alternar la visibilidad del encabezado y la barra de herramientas. También puede activar o desactivar los números de línea dentro de las celdas. Aquí también es donde irías si quieres meterte con la barra de herramientas de la celda.</p></li>
+<li><p><strong>Insert</strong>: es solo para insertar celdas encima o debajo de la celda seleccionada actualmente.</p></li>
+<li><p><strong>Cell</strong>: le permite ejecutar una celda, un grupo de celdas o todas las celdas. También puede ir aquí para cambiar el tipo de celda, aunque personalmente considero que la barra de herramientas es más intuitiva para eso.</p></li>
+<li><p><strong>Kernel</strong>: es para trabajar con el kernel que se ejecuta en segundo plano. Aquí puede reiniciar el kernel, volver a conectarlo, apagarlo o incluso cambiar el kernel que está utilizando su computadora portátil.</p></li>
+<li><p><strong>Widgets</strong>: es para guardar y borrar el estado del widget. Los widgets son básicamente widgets de JavaScript que puede agregar a sus celdas para crear contenido dinámico utilizando Python (u otro Kernel).</p></li>
+<li><p><strong>Help</strong>: es donde debe aprender sobre los atajos de teclado del Notebook, un recorrido por la interfaz de usuario y mucho material de referencia.</p></li>
+</ul>
+<div class="section" id="markdown">
+<h3>Markdown<a class="headerlink" href="#markdown" title="Permalink to this headline">¶</a></h3>
+<p><strong>Jupyter Notebook</strong> permite que escribamos texto formateado, es decir, texto con cursiva, negritas, títulos de distintos tamaños, etc., de forma simple. Para ello <em>Jupyter</em> nos permite usar <em>Markdown</em>, que es un lenguaje de marcado (markup) muy popular.</p>
+<p>Los lenguajes de markup son lenguajes ideados para procesar texto, algunos de los más conocidos son <a class="reference external" href="https://es.wikipedia.org/wiki/HTML">HTML</a> y <span class="math notranslate nohighlight">\(\LaTeX\)</span>. <em>Markdown</em> tiene como objetivo ser un lenguaje de sintaxis minimalista, simple de aprender y usar; de esa forma uno puede dar formato al texto pero sin perder demasiado tiempo en los detalles.</p>
+<p>La cantidad de <a class="reference external" href="https://joedicastro.com/pages/markdown.html">tutoriales</a> en la red sobre <em>Markdown</em> es inmenso, por lo que nos centraremos en indicar las opciones que más se utilizan.</p>
+<ul class="simple">
+<li><p><strong>Texto en negrita/cursiva</strong>: El texto en negrita se indica entre dos pares de asteriscos. De este modo <code class="docutils literal notranslate"><span class="pre">**palabra**</span></code> aparecerá como <strong>palabra</strong>. Por otro lado, el texto en cursiva se indica entre dos asteriscos simples; es decir <code class="docutils literal notranslate"><span class="pre">*palabra*</span></code> aparecerá como <em>palabra</em>.</p></li>
+<li><p><strong>Listas</strong>: Las listas en <em>Markdown</em> se realizan indicando un asterisco o un número seguido de un punto si se desean listas numeradas. <em>Markdown</em> organiza automáticamente los items asignándoles el número correcto.</p></li>
+<li><p><strong>Inclusión de imágenes</strong>: La sintaxis para incluir imágenes en Markdown es <code class="docutils literal notranslate"><span class="pre">![nombre</span> <span class="pre">alternativo](dirección</span> <span class="pre">de</span> <span class="pre">la</span> <span class="pre">imagen)</span></code> en donde el nombre alternativo aparecerá en caso de que no se pueda cargar la imágen y la dirección puede referirse a una imagen local o un enlace en Internet.</p></li>
+<li><p><strong>Inclusión de código HTML</strong>: El lenguaje <em>Markdown</em> es un subconjunto del lenguaje HTML y en donde se necesite un mayor control del formato, se puede incluir directamente el código HTML.</p></li>
+<li><p><strong>Enlaces</strong>: Las celdas de texto pueden contener enlaces, tanto a otras partes del documento, como a páginas en internet u otros archivos locales. Su sintaxis es <code class="docutils literal notranslate"><span class="pre">[texto](dirección</span> <span class="pre">del</span> <span class="pre">enlace)</span></code>.</p></li>
+<li><p><strong>Fórmulas matemáticas</strong>: Gracias al uso de <em>MathJax</em>, se puede incluir código en <span class="math notranslate nohighlight">\(\LaTeX\)</span> para mostrar todo tipo de fórmulas y expresiones matemáticas. Las fórmulas dentro de una línea de texto se escriben entre símbolos de dólar <code class="docutils literal notranslate"><span class="pre">$...$</span></code>, mientras que las expresiones separadas del texto utilizan símbolos de dólar dobles <code class="docutils literal notranslate"><span class="pre">$$...$$</span></code>. Los siguientes son ejemplos de fórmulas matemáticas escritas en <span class="math notranslate nohighlight">\(\LaTeX\)</span>:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[p(x) = 3x^2 + 5y^2 + x^2y^2\]</div>
+<div class="math notranslate nohighlight">
+\[e^{\pi i} - 1 = 0\]</div>
+<div class="math notranslate nohighlight">
+\[\lim_{x \rightarrow \infty} 3x+1\]</div>
+<div class="math notranslate nohighlight">
+\[\sum_{n=1}^\infty\frac{1}{n^2}\]</div>
+<div class="math notranslate nohighlight">
+\[\int_0^\infty\frac{\sin x}{x}\,\mathrm{d}x=\frac{\pi}{2}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^2 = 
+\begin{pmatrix} c &amp; s \end{pmatrix} 
+\begin{pmatrix} 1 &amp; 0\\ 0 &amp; 1 \end{pmatrix}
+\begin{pmatrix} c \\ s \end{pmatrix} 
+= c^2 + s^2\end{split}\]</div>
+</div>
 </div>
 <div class="section" id="hola-mundo">
 <h2>Hola Mundo!<a class="headerlink" href="#hola-mundo" title="Permalink to this headline">¶</a></h2>
@@ -328,11 +399,15 @@
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>En Jupyter, no siempre es necesario utilizar print en cada celda.</p>
+<p>En Jupyter Notebook es posible autocompletar métodos y atributos utilizando la tecla TAB, siempre y cuando el objeto ya esté definido.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Para ver los métodos y atributos de una instancia basta con utilizar <code class="docutils literal notranslate"><span class="pre">dir(variable)</span></code>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>En Jupyter, no siempre es necesario utilizar print en cada celda.</p>
 </div>
 </div>
 <div class="section" id="numeros-y-operaciones">
@@ -957,8 +1032,8 @@ El cuadrado de 9 es 81
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>M1L01_about_mat281.ipynb       M1L03_python_basics.ipynb
-M1L02_installation.md          my_packaged_function.py
-M1L02_toolkit_and_setup.ipynb
+M1L02_installation.md          M1L04_python_ecosystem.ipynb
+M1L02_toolkit_and_setup.ipynb  my_packaged_function.py
 </pre></div>
 </div>
 </div>
@@ -1061,7 +1136,7 @@ Automagic is ON, % prefix IS NOT needed for line magics.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>54.1 µs ± 1.63 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>61.8 µs ± 961 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1077,7 +1152,7 @@ Automagic is ON, % prefix IS NOT needed for line magics.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>95.2 µs ± 2.24 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>105 µs ± 1.5 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1135,6 +1210,7 @@ Automagic is ON, % prefix IS NOT needed for line magics.
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="M1L02_installation.html" title="previous page">Instalación</a>
+    <a class='right-next' id="next-link" href="M1L04_python_ecosystem.html" title="next page">Ecosistema Python</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
