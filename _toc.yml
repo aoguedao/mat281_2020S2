@@ -7,3 +7,4 @@
     sections:
       - file: lessons/M1L02_installation
   - file: lessons/M1L03_python_basics
+  - file: lessons/M1L04_python_ecosystem
