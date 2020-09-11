@@ -19,9 +19,9 @@ git pull
 Perderás todos los cambios que hayas hecho en el repositorio del curso, no olvides respaldar tus desarrollos en tu portafolio.
 ```
 
-Copia y pega el laboratorio/tarea/etc. actualizado del repositorio `mat281_2020` en tu repositorio `mat281_portfolio` en el directorio correspondiente. Por ejemplo, la cuarta clase del módulo tiene asociado el laboratorio `mat281_2020S2/labs/M1L04_lab.ipynb`, luego de hacer `pull` debes copiar este archivo en tu repositorio en el directorio `mat281_portfolio/labs/M1L04_lab.ipynb`. 
+Copia y pega el laboratorio/tarea/etc. actualizado del repositorio `mat281_2020` en tu repositorio `mat281_portfolio` en el directorio correspondiente. Por ejemplo, la cuarta clase del módulo tiene asociado el laboratorio `mat281_2020S2/labs/lab01.ipynb`, luego de hacer `pull` debes copiar este archivo en tu repositorio en el directorio `mat281_portfolio/labs/lab01.ipynb`. 
 
-Ejecuta Jupyter Lab en tu directorio favorito, de preferencia uno que tenga acceso a ambos repositorios. Luego abre el laboratorio de tu repositorio, por ejemplo `mat281_portfolio/labs/M1L04_lab.ipynb` y comienza a desarrollar.
+Ejecuta Jupyter Lab en tu directorio favorito, de preferencia uno que tenga acceso a ambos repositorios. Luego abre el laboratorio de tu repositorio, por ejemplo `mat281_portfolio/labs/lab01.ipynb` y comienza a desarrollar.
 
 Al finalizar es importante que subas los cambios a tu repositorio en GitHub (recuerda que hasta el momento esos cambios solo están reflejados en tu computador personal). En la carpeta de tu portafolio ejecuta lo siguiente en una terminal con acceso a `git`:
 
@@ -44,7 +44,7 @@ Ahora es necesario firmar estos cambios, con el siguiente comando:
 git commit -m "{ANY DESCRIPTIVE MESSAGE}"
 ```
 
-donde se recomienda agregar un mensaje descriptivo del cambio en cuestión, por ejemplo: _"Se agrega desarrollo del laboratorio correspondiente a la clase M1L04"_.
+donde se recomienda agregar un mensaje descriptivo del cambio en cuestión, por ejemplo: _"Se agrega desarrollo del laboratorio 01 correspondiente a la clase M1L04"_.
 
 Finalmente, es necesario subir estos cambios a GitHub:
 
