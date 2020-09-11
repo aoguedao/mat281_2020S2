@@ -289,6 +289,23 @@
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">calcular_pi</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">18</span><span class="n">b88c0e83b1</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">calcular_pi</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;calcular_pi&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="problema-2">
 <h2>Problema 2<a class="headerlink" href="#problema-2" title="Permalink to this headline">¶</a></h2>
@@ -305,13 +322,13 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">collatz</span><span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="s2">&quot;Input n must be greater or equal than 1.&quot;</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Input n must be greater or equal than 1.&quot;</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">return</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">value</span> <span class="o">=</span> <span class="n">n</span>  <span class="c1"># Instanciar valor inicial que se usa como variable auxiliar y sobrescribirla.</span>
         <span class="n">collatz_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">value</span><span class="p">]</span>  <span class="c1"># Instanciar lista con el primer elemento</span>
-        <span class="k">while</span> <span class="c1"># FIXME #:  # Cuando parar?</span>
+        <span class="k">while</span> <span class="c1">#FIXME#:  # Cuando parar?</span>
             <span class="k">if</span> <span class="c1">#FIXME#:  # Primera condicion</span>
                 <span class="n">value</span> <span class="o">=</span> <span class="c1">#FIXME#</span>
             <span class="k">else</span><span class="p">:</span>
@@ -322,9 +339,9 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-2-df64344c683b&gt;&quot;</span><span class="gt">, line </span><span class="mi">9</span>
-    <span class="k">while</span> <span class="c1"># FIXME #:  # Cuando parar?</span>
-                                     <span class="o">^</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-3-06cc3fb54ded&gt;&quot;</span><span class="gt">, line </span><span class="mi">9</span>
+    <span class="k">while</span> <span class="c1">#FIXME#:  # Cuando parar?</span>
+                                   <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
 </pre></div>
 </div>
@@ -339,7 +356,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">2536</span><span class="n">f3cb670f</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">2536</span><span class="n">f3cb670f</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">collatz</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
 
 <span class="ne">NameError</span>: name &#39;collatz&#39; is not defined
@@ -377,7 +394,7 @@
 
 
 <span class="k">def</span> <span class="nf">sigma</span><span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="n">divisores</span> <span class="o">=</span> <span class="c1">#FIXME#</span>
+    <span class="n">divisors</span> <span class="o">=</span> <span class="c1">#FIXME#</span>
     <span class="n">suma</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">divisors</span><span class="p">:</span>
         <span class="n">suma</span><span class="c1">#FIXME#</span>
@@ -395,7 +412,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-4-ae826a580860&gt;&quot;</span><span class="gt">, line </span><span class="mi">5</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-5-9c2c57742824&gt;&quot;</span><span class="gt">, line </span><span class="mi">5</span>
     <span class="k">if</span> <span class="c1">#FIXME#:  # Tip: Usar operación módulo</span>
      <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
@@ -405,17 +422,23 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">amigos</span><span class="p">(</span><span class="mi">220</span><span class="p">,</span> <span class="mi">284</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">220</span><span class="p">,</span> <span class="mi">284</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Los divisores de </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2"> son </span><span class="si">{</span><span class="n">divisores</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="si">}</span><span class="s2">, por ende sigma(</span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2">) es </span><span class="si">{</span><span class="n">sigma</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Los divisores de </span><span class="si">{</span><span class="n">m</span><span class="si">}</span><span class="s2"> son </span><span class="si">{</span><span class="n">divisores</span><span class="p">(</span><span class="n">m</span><span class="p">)</span><span class="si">}</span><span class="s2">, por ende sigma(</span><span class="si">{</span><span class="n">m</span><span class="si">}</span><span class="s2">) es </span><span class="si">{</span><span class="n">sigma</span><span class="p">(</span><span class="n">m</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;¿220 y 284 son números amigos?: </span><span class="si">{</span><span class="n">amigos</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="n">f51920bb1272</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">amigos</span><span class="p">(</span><span class="mi">220</span><span class="p">,</span> <span class="mi">284</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mi">22</span><span class="n">af70c566e9</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">220</span><span class="p">,</span> <span class="mi">284</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Los divisores de </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2"> son </span><span class="si">{</span><span class="n">divisores</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="si">}</span><span class="s2">, por ende sigma(</span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2">) es </span><span class="si">{</span><span class="n">sigma</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Los divisores de </span><span class="si">{</span><span class="n">m</span><span class="si">}</span><span class="s2"> son </span><span class="si">{</span><span class="n">divisores</span><span class="p">(</span><span class="n">m</span><span class="p">)</span><span class="si">}</span><span class="s2">, por ende sigma(</span><span class="si">{</span><span class="n">m</span><span class="si">}</span><span class="s2">) es </span><span class="si">{</span><span class="n">sigma</span><span class="p">(</span><span class="n">m</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;¿220 y 284 son números amigos?: </span><span class="si">{</span><span class="n">amigos</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-<span class="ne">NameError</span>: name &#39;amigos&#39; is not defined
+<span class="ne">NameError</span>: name &#39;divisores&#39; is not defined
 </pre></div>
 </div>
 </div>
