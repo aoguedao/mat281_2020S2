@@ -1,0 +1,485 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAT281 - Laboratorio 1 &#8212; MAT281 - Aplicaciones de la Matemática en la Ingeniería  - 2020</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/utfsm.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">MAT281 - Aplicaciones de la Matemática en la Ingeniería  - 2020</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Bienvenido(a) a MAT281!
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Introducción
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lessons/M1L01_about_mat281.html">
+   Acerca de MAT281
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lessons/M1L02_toolkit_and_setup.html">
+   Toolkit &amp; Setup
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lessons/M1L03_python_basics.html">
+   Recordando Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lessons/M1L04_python_ecosystem.html">
+   Ecosistema Python
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/labs/lab01.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/aoguedao/mat281_2020S2"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/aoguedao/mat281_2020S2/master?urlpath=lab/tree/labs/lab01.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/aoguedao/mat281_2020S2/blob/master/labs/lab01.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ejercicio-1">
+   Ejercicio 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problema-2">
+   Problema 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problema-3">
+   Problema 3
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="mat281-laboratorio-1">
+<h1>MAT281 - Laboratorio 1<a class="headerlink" href="#mat281-laboratorio-1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="ejercicio-1">
+<h2>Ejercicio 1<a class="headerlink" href="#ejercicio-1" title="Permalink to this headline">¶</a></h2>
+<p>(1 punto)</p>
+<p><strong>Calcular <span class="math notranslate nohighlight">\(\pi\)</span>:</strong> En los siglos XVII y XVIII, James Gregory y Gottfried Leibniz descubrieron una serie infinita que sirve para calcular <span class="math notranslate nohighlight">\(\pi\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\pi = 4 \sum_{k=1}^{\infty}\dfrac{(-1)^{k+1}}{2k-1} = 4(1-\dfrac{1}{3}+\dfrac{1}{5}-\dfrac{1}{7} + ...) \]</div>
+<p>Implemente la función <code class="docutils literal notranslate"><span class="pre">calcular_pi</span></code> para estimar el valor de <span class="math notranslate nohighlight">\(\pi\)</span> ocupando el método de Leibniz, donde el argumento debe ser un número entero <span class="math notranslate nohighlight">\(n\)</span> que indique la cantidad de términos sumados, es decir:</p>
+<div class="math notranslate nohighlight">
+\[\pi \approx 4 \sum_{k=1}^{n}\dfrac{(-1)^{k+1}}{2k-1} \]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcular_pi</span><span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Aproximacion del valor de pi mediante el método de Leibniz</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    n : int</span>
+<span class="sd">        Numero de terminos en la sumatoria.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    output : float</span>
+<span class="sd">        Valor aproximado de pi.</span>
+<span class="sd">        </span>
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; calcular_pi(3)</span>
+<span class="sd">    3.466666666666667</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; calcular_pi(1000) </span>
+<span class="sd">    3.140592653839794</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">pi</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Se inicializa la suma parcial</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="c1">#FIXME#):</span>
+        <span class="n">numerador</span> <span class="o">=</span> <span class="c1">#FIXME#</span>
+        <span class="n">denominador</span> <span class="o">=</span> <span class="c1">#FIXME#</span>
+        <span class="n">pi</span> <span class="o">+=</span> <span class="c1">#FIXME#  # Agregar numerador/denominador a la suma total</span>
+    <span class="n">pi</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">pi</span>  <span class="c1"># Se ajusta al valor real</span>
+    <span class="k">return</span> <span class="n">pi</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-1-0350c3fb7aec&gt;&quot;</span><span class="gt">, line </span><span class="mi">28</span>
+    <span class="n">denominador</span> <span class="o">=</span> <span class="c1">#FIXME#</span>
+                <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="problema-2">
+<h2>Problema 2<a class="headerlink" href="#problema-2" title="Permalink to this headline">¶</a></h2>
+<p>La <a class="reference external" href="https://en.wikipedia.org/wiki/Collatz_conjecture">conjetura de Collatz</a>, conocida también como conjetura <span class="math notranslate nohighlight">\(3n+1\)</span> o conjetura de Ulam (entre otros nombres), fue enunciada por el matemático Lothar Collatz en 1937, y a la fecha no se ha resuelto.</p>
+<p>Sea la siguiente operación, aplicable a cualquier número entero positivo:</p>
+<ul class="simple">
+<li><p>Si el número es par, se divide entre 2.</p></li>
+<li><p>Si el número es impar, se multiplica por 3 y se suma 1.</p></li>
+</ul>
+<p>La conjetura dice que siempre alcanzaremos el 1 (y por tanto el ciclo 4, 2, 1) para cualquier número con el que comencemos.</p>
+<p>Implemente una función llamada <code class="docutils literal notranslate"><span class="pre">collatz</span></code> cuyo input sea un número natural positivo <span class="math notranslate nohighlight">\(N\)</span> y como output retorne una lista con la secuencia de la conjetura de Collatz hasta llegar a 1.</p>
+<p><strong>Ejemplo</strong>: <em>collatz(9)</em> = [9, 28, 14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1]</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">collatz</span><span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="s2">&quot;Input n must be greater or equal than 1.&quot;</span>
+    <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">n</span>  <span class="c1"># Instanciar valor inicial que se usa como variable auxiliar y sobrescribirla.</span>
+        <span class="n">collatz_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">value</span><span class="p">]</span>  <span class="c1"># Instanciar lista con el primer elemento</span>
+        <span class="k">while</span> <span class="c1"># FIXME #:  # Cuando parar?</span>
+            <span class="k">if</span> <span class="c1">#FIXME#:  # Primera condicion</span>
+                <span class="n">value</span> <span class="o">=</span> <span class="c1">#FIXME#</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">value</span> <span class="o">=</span> <span class="c1">#FIXME#</span>
+            <span class="n">collatz_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="c1">#FIXME#)</span>
+        <span class="k">return</span> <span class="n">collatz_list</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-2-df64344c683b&gt;&quot;</span><span class="gt">, line </span><span class="mi">9</span>
+    <span class="k">while</span> <span class="c1"># FIXME #:  # Cuando parar?</span>
+                                     <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">collatz</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">2536</span><span class="n">f3cb670f</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">collatz</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;collatz&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="problema-3">
+<h2>Problema 3<a class="headerlink" href="#problema-3" title="Permalink to this headline">¶</a></h2>
+<p>(2 puntos)</p>
+<p>Sea <span class="math notranslate nohighlight">\(\sigma(n)\)</span> definido como la suma de los divisores propios de <span class="math notranslate nohighlight">\(n\)</span> (es decir, menores a <span class="math notranslate nohighlight">\(n\)</span>). Los <a class="reference external" href="https://en.wikipedia.org/wiki/Amicable_numbers">números amigos</a> son  enteros positivos <span class="math notranslate nohighlight">\(n_1\)</span> y <span class="math notranslate nohighlight">\(n_2\)</span> tales que la suma de los divisores propios de uno es igual al otro número y viceversa, es decir:</p>
+<div class="math notranslate nohighlight">
+\[\sigma(n_1)=n_2 \quad \textrm{y} \quad \sigma(n_2)=n_1\]</div>
+<p>Por ejemplo, los números 220 y 284 son números amigos.</p>
+<ul class="simple">
+<li><p>los divisores propios de 220 son 1, 2, 4, 5, 10, 11, 20, 22, 44, 55 y 110, por ende <span class="math notranslate nohighlight">\(\sigma(220) = 284\)</span>.</p></li>
+<li><p>los divisores propios de 284 son 1, 2, 4, 71 y 142, por ende <span class="math notranslate nohighlight">\(\sigma(284) = 220\)</span>.</p></li>
+</ul>
+<p>Implemente las siguientes funciones:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">divisores(n)</span></code> tal que retorne una lista con los divisores propios de <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sigma(n)</span></code> tal que retorne el valor <span class="math notranslate nohighlight">\(\sigma(n)\)</span>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amigos(n,</span> <span class="pre">m)</span></code> tal que retorne <code class="docutils literal notranslate"><span class="pre">True</span></code> si <span class="math notranslate nohighlight">\(n\)</span> y <span class="math notranslate nohighlight">\(m\)</span> son números amigos y <code class="docutils literal notranslate"><span class="pre">False</span></code> en caso contrario.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">divisores</span><span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+    <span class="n">divisors</span> <span class="o">=</span> <span class="p">[]</span> 
+    <span class="c1"># No es necesario ser eficiente, basta con una búsqueda exhaustiva.</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="c1">#FIXME#)</span>
+        <span class="k">if</span> <span class="c1">#FIXME#:  # Tip: Usar operación módulo</span>
+            <span class="n">divisirs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">return</span> <span class="c1">#FIXME#</span>
+
+
+<span class="k">def</span> <span class="nf">sigma</span><span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="n">divisores</span> <span class="o">=</span> <span class="c1">#FIXME#</span>
+    <span class="n">suma</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">divisors</span><span class="p">:</span>
+        <span class="n">suma</span><span class="c1">#FIXME#</span>
+    <span class="k">return</span> <span class="n">suma</span>
+        
+    
+<span class="k">def</span> <span class="nf">amigos</span><span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="n">sigma_n</span> <span class="o">=</span> <span class="c1">#FIXME#</span>
+    <span class="n">sigma_m</span> <span class="o">=</span> <span class="c1">#FIXME#</span>
+    <span class="k">if</span> <span class="c1">#FIXME#:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-4-ae826a580860&gt;&quot;</span><span class="gt">, line </span><span class="mi">5</span>
+    <span class="k">if</span> <span class="c1">#FIXME#:  # Tip: Usar operación módulo</span>
+     <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">amigos</span><span class="p">(</span><span class="mi">220</span><span class="p">,</span> <span class="mi">284</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="n">f51920bb1272</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">amigos</span><span class="p">(</span><span class="mi">220</span><span class="p">,</span> <span class="mi">284</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;amigos&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./labs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Alonso Ogueda Oliva<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-177357392-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

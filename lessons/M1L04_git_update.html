@@ -1,0 +1,319 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Utilizando git &#8212; MAT281 - Aplicaciones de la Matemática en la Ingeniería  - 2020</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Ecosistema Python" href="M1L04_python_ecosystem.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/utfsm.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">MAT281 - Aplicaciones de la Matemática en la Ingeniería  - 2020</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Bienvenido(a) a MAT281!
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Introducción
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="M1L01_about_mat281.html">
+   Acerca de MAT281
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M1L02_toolkit_and_setup.html">
+   Toolkit &amp; Setup
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M1L03_python_basics.html">
+   Recordando Python
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="M1L04_python_ecosystem.html">
+   Ecosistema Python
+  </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Utilizando git
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/lessons/M1L04_git_update.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/aoguedao/mat281_2020S2"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#actualizar-repositorio-del-curso">
+   Actualizar repositorio del curso
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="utilizando-git">
+<h1>Utilizando git<a class="headerlink" href="#utilizando-git" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="actualizar-repositorio-del-curso">
+<h2>Actualizar repositorio del curso<a class="headerlink" href="#actualizar-repositorio-del-curso" title="Permalink to this headline">¶</a></h2>
+<p>Para actualizar el repositorio del curso (típicamente cada clase) debes abrir una terminal que tenga <code class="docutils literal notranslate"><span class="pre">git</span></code> en el <code class="docutils literal notranslate"><span class="pre">PATH</span></code>, que para usuarios de Windows podría ser <em>Git Bash</em> o <em>Anaconda Prompt</em> (si es que se configuró así). Luego ejecutar el siguiente comando en la carpeta del repositorio <code class="docutils literal notranslate"><span class="pre">mat281_2020S2</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git pull
+</pre></div>
+</div>
+<p>En caso que la ejecución anterior arroje algún error ejecuta lo siguiente:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git reset --hard
+git pull
+</pre></div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Perderás todos los cambios que hayas hecho en el repositorio del curso, no olvides respaldar tus desarrollos en tu portafolio.</p>
+</div>
+<p>Copia y pega el laboratorio/tarea/etc. actualizado del repositorio <code class="docutils literal notranslate"><span class="pre">mat281_2020</span></code> en tu repositorio <code class="docutils literal notranslate"><span class="pre">mat281_portfolio</span></code> en el directorio correspondiente. Por ejemplo, la cuarta clase del módulo tiene asociado el laboratorio <code class="docutils literal notranslate"><span class="pre">mat281_2020S2/labs/lab01.ipynb</span></code>, luego de hacer <code class="docutils literal notranslate"><span class="pre">pull</span></code> debes copiar este archivo en tu repositorio en el directorio <code class="docutils literal notranslate"><span class="pre">mat281_portfolio/labs/lab01.ipynb</span></code>.</p>
+<p>Ejecuta Jupyter Lab en tu directorio favorito, de preferencia uno que tenga acceso a ambos repositorios. Luego abre el laboratorio de tu repositorio, por ejemplo <code class="docutils literal notranslate"><span class="pre">mat281_portfolio/labs/lab01.ipynb</span></code> y comienza a desarrollar.</p>
+<p>Al finalizar es importante que subas los cambios a tu repositorio en GitHub (recuerda que hasta el momento esos cambios solo están reflejados en tu computador personal). En la carpeta de tu portafolio ejecuta lo siguiente en una terminal con acceso a <code class="docutils literal notranslate"><span class="pre">git</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git config user.name <span class="s2">&quot;{YOUR_NAME}&quot;</span>
+git config user.email <span class="s2">&quot;{YOUR_GITHUB_ACCOUNT_EMAIL}&quot;</span>
+</pre></div>
+</div>
+<p>donde debes reemplazar por tu nombre personal y tu correo electrónico (asociado a tu cuenta de GitHub). Esto configura el autor de los cambios.</p>
+<p>El siguiente paso es seleccionar los cambios a subir, típicamente deberás agregar el archivo notebook del entregable y en caso de ser necesario otros archivos que sean necesarios para el correcto desarrollo, ya sea conjuntos de datos, scripts, imágenes, etc. Siguiente con el mismo ejemplo, debería ser algo así:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git add labs/M1L04_lab.ipynb
+</pre></div>
+</div>
+<p>Ahora es necesario firmar estos cambios, con el siguiente comando:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git commit -m <span class="s2">&quot;{ANY DESCRIPTIVE MESSAGE}&quot;</span>
+</pre></div>
+</div>
+<p>donde se recomienda agregar un mensaje descriptivo del cambio en cuestión, por ejemplo: <em>“Se agrega desarrollo del laboratorio 01 correspondiente a la clase M1L04”</em>.</p>
+<p>Finalmente, es necesario subir estos cambios a GitHub:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git push origin master
+</pre></div>
+</div>
+<p>Verifica que los cambios se hayan actualizado en tu cuenta de GitHub y además verifica que tu entregable funciona correctamente con Binder.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Repositorios en donde Binder no ejecute correctamente se calificarán con nota cero.</p>
+</div>
+<p>Para cumplir con las formalidades debes enviar un correo antes del plazo establecido (o si no se aplicará la sanción correspondiente) a <code class="docutils literal notranslate"><span class="pre">alonso.ogueda&#64;usm.cl</span></code> que contenga el link al commit de tu entregable (al que puedes acceder directamente desde tu repositorio). Tu link debe lucir similar a este <a class="reference external" href="https://github.com/aoguedao/mat281_portfolio_template/commit/7081d2fb63e55a391f712aef942f35c60e8b7a2b"><code class="docutils literal notranslate"><span class="pre">https://github.com/aoguedao/mat281_portfolio_template/commit/7081d2fb63e55a391f712aef942f35c60e8b7a2b</span></code></a>. Nota que el commit está asociado a una hora específica, por lo que para caso de plazos se utilizará la fecha del correo electrónico pero se revisará el desarrollo al commit enviado (por lo que es posible determinar si el entregable ha sido modificado después de enviar el correo).</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="M1L04_python_ecosystem.html" title="previous page">Ecosistema Python</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Alonso Ogueda Oliva<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-177357392-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>
