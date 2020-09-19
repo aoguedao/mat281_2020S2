@@ -10,3 +10,6 @@
   - file: lessons/M1L04_python_ecosystem
     sections:
       - file: lessons/M1L04_git_update
+- part: Análisis de Datos
+  chapters:
+  - file: lessons/M2L01_scientific_computing
