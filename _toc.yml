@@ -14,3 +14,4 @@
   chapters:
   - file: lessons/M2L01_scientific_computing
   - file: lessons/M2L02_linear_algebra
+  - file: lessons/M2L03_data_manipulation
