@@ -1,0 +1,2253 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manipulación de Datos &#8212; MAT281 - Aplicaciones de la Matemática en la Ingeniería  - 2020</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Álgebra Lineal" href="M2L02_linear_algebra.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/utfsm.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">MAT281 - Aplicaciones de la Matemática en la Ingeniería  - 2020</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Bienvenido(a) a MAT281!
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Introducción
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="M1L01_about_mat281.html">
+   Acerca de MAT281
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M1L02_toolkit_and_setup.html">
+   Toolkit &amp; Setup
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M1L03_python_basics.html">
+   Recordando Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M1L04_python_ecosystem.html">
+   Ecosistema Python
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Análisis de Datos
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L01_scientific_computing.html">
+   Introducción al Cálculo Científico
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L02_linear_algebra.html">
+   Álgebra Lineal
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Manipulación de Datos
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/lessons/M2L03_data_manipulation.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/aoguedao/mat281_2020S2"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/aoguedao/mat281_2020S2/master?urlpath=lab/tree/lessons/M2L03_data_manipulation.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/aoguedao/mat281_2020S2/blob/master/lessons/M2L03_data_manipulation.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduccion-a-pandas">
+   Introducción a pandas
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#principales-caracteristicas">
+     Principales Características
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#series">
+   Series
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#acceder-a-los-valores-de-una">
+     Acceder a los valores de una
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#trabajar-con-fechas">
+     Trabajar con fechas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dataframes">
+   DataFrames
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exploracion">
+     Exploración
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#valores-perdidos-nulos">
+     Valores perdidos/nulos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resumen">
+   Resumen
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="manipulacion-de-datos">
+<h1>Manipulación de Datos<a class="headerlink" href="#manipulacion-de-datos" title="Permalink to this headline">¶</a></h1>
+<p>El principal objetivo de esta clase introducir la biblioteca de análisis de datos <strong>pandas</strong>, agrega mayor flexibilidad y opciones que Numpy, sin embargo, el costo se traduce en rendimiento y eficiencia. Conocer los elemnos básicos pandas permite manejar desde pocos dados en un arhivo <em>excel</em> hasta miles y millones de registros de una base de datos.</p>
+<div class="section" id="introduccion-a-pandas">
+<h2>Introducción a pandas<a class="headerlink" href="#introduccion-a-pandas" title="Permalink to this headline">¶</a></h2>
+<p>Desde de la <a class="reference external" href="https://pandas.pydata.org/">página oficial</a> Pandas se introduce de la siguiente forma:</p>
+<p><em>pandas is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool,
+built on top of the Python programming language.</em></p>
+<p>Mientras que su [misión]:</p>
+<p><em>pandas aims to be the fundamental high-level building block for doing practical, real world data analysis in Python. Additionally, it has the broader goal of becoming the most powerful and flexible open source data analysis / manipulation tool available in any language.</em></p>
+<div class="section" id="principales-caracteristicas">
+<h3>Principales Características<a class="headerlink" href="#principales-caracteristicas" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>A fast and efficient <strong>DataFrame</strong> object for data manipulation with integrated indexing;</p></li>
+<li><p>Tools for <strong>reading and writing data</strong> between in-memory data structures and different formats: CSV and text files, Microsoft Excel, SQL databases, and the fast HDF5 format;</p></li>
+<li><p>Intelligent <strong>data alignment</strong> and integrated handling of <strong>missing data</strong>: gain automatic label-based alignment in computations and easily manipulate messy data into an orderly form;</p></li>
+<li><p>Flexible <strong>reshaping</strong> and pivoting of data sets;</p></li>
+<li><p>Intelligent label-based <strong>slicing</strong>, <strong>fancy indexing</strong>, and <strong>subsetting</strong> of large data sets;</p></li>
+<li><p>Columns can be inserted and deleted from data structures for <strong>size mutability</strong>;</p></li>
+<li><p>Aggregating or transforming data with a powerful <strong>group by</strong> engine allowing split-apply-combine operations on data sets;</p></li>
+<li><p>High performance <strong>merging and joining</strong> of data sets;</p></li>
+<li><p><strong>Hierarchical axis indexing</strong> provides an intuitive way of working with high-dimensional data in a lower-dimensional data structure;</p></li>
+<li><p><strong>Time series</strong>-functionality: date range generation and frequency conversion, moving window statistics, date shifting and lagging. Even create domain-specific time offsets and join time series without losing data;</p></li>
+<li><p>Highly <strong>optimized for performance</strong>, with critical code paths written in Cython or C.</p></li>
+<li><p>Python with pandas is in use in a wide variety of <strong>academic and commercial</strong> domains, including Finance, Neuroscience, Economics, * Statistics, Advertising, Web Analytics, and more.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">__version__</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1.0.0&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p><a id='series'></a></p>
+</div>
+</div>
+<div class="section" id="series">
+<h2>Series<a class="headerlink" href="#series" title="Permalink to this headline">¶</a></h2>
+<p>Arreglos unidimensionales con etiquetas. Se puede pensar como una generalización de los diccionarios de Python.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Descomenta y ejecuta para ver la documentación sobre pd.Series</span>
+<span class="c1"># pd.Series?</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para crear una instancia de una serie existen muchas opciones, las más comunes son:</p>
+<ul class="simple">
+<li><p>A partir de una lista.</p></li>
+<li><p>A partir de un <em>numpy.array</em>.</p></li>
+<li><p>A partir de un diccionario.</p></li>
+<li><p>A partir de un archivo (por ejemplo un csv).</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_serie</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">my_serie</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     3
+1     6
+2     9
+3    12
+4    15
+5    18
+6    21
+7    24
+8    27
+9    30
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">my_serie</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pandas.core.series.Series
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Presiona TAB y sorpréndete con la cantidad de métodos y atributos que poseen!</span>
+<span class="c1"># my_serie.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Las series son arreglos unidemensionales que constan de <em>data</em> e <em>index</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data</span>
+<span class="n">my_serie</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 3,  6,  9, 12, 15, 18, 21, 24, 27, 30])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">my_serie</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>numpy.ndarray
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Index</span>
+<span class="n">my_serie</span><span class="o">.</span><span class="n">index</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RangeIndex(start=0, stop=10, step=1)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">my_serie</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pandas.core.indexes.range.RangeIndex
+</pre></div>
+</div>
+</div>
+</div>
+<p>¿Te fijaste que el index es de otra clase?</p>
+<p>A diferencia de Numpy, pandas ofrece más flexibilidad para los valores e índices.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_serie_2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="s1">&#39;abcdefghij&#39;</span><span class="p">))</span>
+<span class="n">my_serie_2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a     3
+b     6
+c     9
+d    12
+e    15
+f    18
+g    21
+h    24
+i    27
+j    30
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="acceder-a-los-valores-de-una">
+<h3>Acceder a los valores de una<a class="headerlink" href="#acceder-a-los-valores-de-una" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_serie_2</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_serie_2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_serie_2</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">loc</span></code>?? <code class="docutils literal notranslate"><span class="pre">iloc</span></code>?? ¿Qué es eso?</p>
+<p>A modo de resumen:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">loc</span></code> es un método que hace referencia a las etiquetas (<em>labels</em>) del objeto .</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iloc</span></code> es un método que hace referencia posicional del objeto.</p></li>
+</ul>
+<p><strong>Consejo</strong>: Si quieres editar valores siempre utiliza <code class="docutils literal notranslate"><span class="pre">loc</span></code> y/o <code class="docutils literal notranslate"><span class="pre">iloc</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_serie_2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1000</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_serie_2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a       3
+b       6
+c       9
+d    1000
+e      15
+f      18
+g      21
+h      24
+i      27
+j      30
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>¿Y si quiero escoger más de un valor?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_serie_2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;b&quot;</span><span class="p">:</span><span class="s2">&quot;e&quot;</span><span class="p">]</span>  <span class="c1"># Incluso retorna el último valor!</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b       6
+c       9
+d    1000
+e      15
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_serie_2</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>  <span class="c1"># Incluso retorna el último valor!</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b       6
+c       9
+d    1000
+e      15
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Sorpresa! También puedes filtrar según condiciones!</p>
+<p>En la mayoría de los tutoriales en internet encontrarás algo como lo siguiente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_serie_2</span><span class="p">[</span><span class="n">my_serie_2</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b       6
+d    1000
+f      18
+h      24
+j      30
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lo siguiente se conoce como <em>mask</em>, y se basa en el siguiente hecho:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_serie_2</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>  <span class="c1"># Retorna una serie con valores booleanos pero los mismos index!</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a    False
+b     True
+c    False
+d     True
+e    False
+f     True
+g    False
+h     True
+i    False
+j     True
+dtype: bool
+</pre></div>
+</div>
+</div>
+</div>
+<p>Si es una serie resultante de otra operación, tendrás que guardarla en una variable para así tener el nombre y luego acceder a ella. La siguiente manera puede qeu sea un poco más verboso, pero te otorga más flexibilidad.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_serie_2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">s</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b       6
+d    1000
+f      18
+h      24
+j      30
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Una función lambda es una función pequeña y anónima. Pueden tomar cualquer número de argumentos pero solo tienen una expresión.</p>
+</div>
+<div class="section" id="trabajar-con-fechas">
+<h3>Trabajar con fechas<a class="headerlink" href="#trabajar-con-fechas" title="Permalink to this headline">¶</a></h3>
+<p>Pandas incluso permite que los index sean fechas! Por ejemplo, a continuación se crea una serie con las tendencia de búsqueda de <em>data science</em> en Google.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temperature</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+    <span class="s2">&quot;https://raw.githubusercontent.com/jbrownlee/Datasets/master/daily-min-temperatures.csv&quot;</span><span class="p">,</span>
+    <span class="n">index_col</span><span class="o">=</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span>
+    <span class="n">squeeze</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temperature</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Date
+1981-01-01    20.7
+1981-01-02    17.9
+1981-01-03    18.8
+1981-01-04    14.6
+1981-01-05    15.8
+1981-01-06    15.8
+1981-01-07    15.8
+1981-01-08    17.4
+1981-01-09    21.8
+1981-01-10    20.0
+Name: Temp, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temperature</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Date
+1990-12-22    13.2
+1990-12-23    13.9
+1990-12-24    10.0
+1990-12-25    12.9
+1990-12-26    14.6
+1990-12-27    14.0
+1990-12-28    13.6
+1990-12-29    13.5
+1990-12-30    15.7
+1990-12-31    13.0
+Name: Temp, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temperature</span><span class="o">.</span><span class="n">dtype</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dtype(&#39;float64&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temperature</span><span class="o">.</span><span class="n">index</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;1981-01-01&#39;, &#39;1981-01-02&#39;, &#39;1981-01-03&#39;, &#39;1981-01-04&#39;, &#39;1981-01-05&#39;,
+       &#39;1981-01-06&#39;, &#39;1981-01-07&#39;, &#39;1981-01-08&#39;, &#39;1981-01-09&#39;, &#39;1981-01-10&#39;,
+       ...
+       &#39;1990-12-22&#39;, &#39;1990-12-23&#39;, &#39;1990-12-24&#39;, &#39;1990-12-25&#39;, &#39;1990-12-26&#39;,
+       &#39;1990-12-27&#39;, &#39;1990-12-28&#39;, &#39;1990-12-29&#39;, &#39;1990-12-30&#39;, &#39;1990-12-31&#39;],
+      dtype=&#39;object&#39;, name=&#39;Date&#39;, length=3650)
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>OJO!</strong> Los valores del Index son <em>strings</em> (<em>object</em> es una generalización).</p>
+<p><strong>Solución:</strong> <em>Parsear</em> a elementos de fecha con la función <code class="docutils literal notranslate"><span class="pre">pd.to_datetime()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pd.to_datetime?</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temperature</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">temperature</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temperature</span><span class="o">.</span><span class="n">index</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DatetimeIndex([&#39;1981-01-01&#39;, &#39;1981-01-02&#39;, &#39;1981-01-03&#39;, &#39;1981-01-04&#39;,
+               &#39;1981-01-05&#39;, &#39;1981-01-06&#39;, &#39;1981-01-07&#39;, &#39;1981-01-08&#39;,
+               &#39;1981-01-09&#39;, &#39;1981-01-10&#39;,
+               ...
+               &#39;1990-12-22&#39;, &#39;1990-12-23&#39;, &#39;1990-12-24&#39;, &#39;1990-12-25&#39;,
+               &#39;1990-12-26&#39;, &#39;1990-12-27&#39;, &#39;1990-12-28&#39;, &#39;1990-12-29&#39;,
+               &#39;1990-12-30&#39;, &#39;1990-12-31&#39;],
+              dtype=&#39;datetime64[ns]&#39;, name=&#39;Date&#39;, length=3650, freq=None)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para otros tipos de <em>parse</em> puedes visitar la documentación <a class="reference external" href="https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior">aquí</a>.</p>
+<p>La idea de los elementos de fecha es poder realizar operaciones que resulten naturales para el ser humano. Por ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temperature</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Timestamp(&#39;1981-01-01 00:00:00&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temperature</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Timestamp(&#39;1990-12-31 00:00:00&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temperature</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">temperature</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Timedelta(&#39;3651 days 00:00:00&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Volviendo a la Serie, podemos trabajar con todos sus elementos, por ejemplo, determinar rápidamente la máxima tendencia.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">max_temperature</span> <span class="o">=</span> <span class="n">temperature</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">max_temperature</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>26.3
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para determinar el <em>index</em> correspondiente al valor máximo usualmente se utilizan dos formas:</p>
+<ul class="simple">
+<li><p>Utilizar una máscara (<em>mask</em>)</p></li>
+<li><p>Utilizar métodos ya implementados</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mask</span>
+<span class="n">temperature</span><span class="p">[</span><span class="n">temperature</span> <span class="o">==</span> <span class="n">max_temperature</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Date
+1982-02-15    26.3
+Name: Temp, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Built-in method</span>
+<span class="n">temperature</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Timestamp(&#39;1982-02-15 00:00:00&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p><a id='dataframes'></a></p>
+</div>
+</div>
+<div class="section" id="dataframes">
+<h2>DataFrames<a class="headerlink" href="#dataframes" title="Permalink to this headline">¶</a></h2>
+<p>Arreglo bidimensional y extensión natural de una serie. Podemos pensarlo como la generalización de un numpy.array.</p>
+<p>Para motivar utilizaremos los datos de COVID-19 disponibilizados por el Ministerio de Ciencias, Tecnología, Conocimiento e Innovación de Chile. En particular, los casos totales por comuna, puedes leer más detalles en el <a class="reference external" href="https://github.com/MinCiencia/Datos-COVID19/tree/master/output/producto1">repositorio oficial</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">covid</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/MinCiencia/Datos-COVID19/master/output/producto1/Covid-19_std.csv&quot;</span><span class="p">)</span>
+<span class="n">covid</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Region</th>
+      <th>Codigo region</th>
+      <th>Comuna</th>
+      <th>Codigo comuna</th>
+      <th>Poblacion</th>
+      <th>Fecha</th>
+      <th>Casos confirmados</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Arica y Parinacota</td>
+      <td>15</td>
+      <td>Arica</td>
+      <td>15101.0</td>
+      <td>247552.0</td>
+      <td>2020-03-30</td>
+      <td>6.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Arica y Parinacota</td>
+      <td>15</td>
+      <td>Camarones</td>
+      <td>15102.0</td>
+      <td>1233.0</td>
+      <td>2020-03-30</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Arica y Parinacota</td>
+      <td>15</td>
+      <td>General Lagos</td>
+      <td>15202.0</td>
+      <td>810.0</td>
+      <td>2020-03-30</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Arica y Parinacota</td>
+      <td>15</td>
+      <td>Putre</td>
+      <td>15201.0</td>
+      <td>2515.0</td>
+      <td>2020-03-30</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Arica y Parinacota</td>
+      <td>15</td>
+      <td>Desconocido Arica y Parinacota</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2020-03-30</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">covid</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Region</th>
+      <th>Codigo region</th>
+      <th>Comuna</th>
+      <th>Codigo comuna</th>
+      <th>Poblacion</th>
+      <th>Fecha</th>
+      <th>Casos confirmados</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>19543</th>
+      <td>Magallanes</td>
+      <td>12</td>
+      <td>Rio Verde</td>
+      <td>12103.0</td>
+      <td>211.0</td>
+      <td>2020-09-25</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>19544</th>
+      <td>Magallanes</td>
+      <td>12</td>
+      <td>San Gregorio</td>
+      <td>12104.0</td>
+      <td>681.0</td>
+      <td>2020-09-25</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>19545</th>
+      <td>Magallanes</td>
+      <td>12</td>
+      <td>Timaukel</td>
+      <td>12303.0</td>
+      <td>282.0</td>
+      <td>2020-09-25</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>19546</th>
+      <td>Magallanes</td>
+      <td>12</td>
+      <td>Torres del Paine</td>
+      <td>12402.0</td>
+      <td>1021.0</td>
+      <td>2020-09-25</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>19547</th>
+      <td>Magallanes</td>
+      <td>12</td>
+      <td>Desconocido Magallanes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2020-09-25</td>
+      <td>29.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">covid</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Region == &#39;Valparaíso&#39;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Region</th>
+      <th>Codigo region</th>
+      <th>Comuna</th>
+      <th>Codigo comuna</th>
+      <th>Poblacion</th>
+      <th>Fecha</th>
+      <th>Casos confirmados</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>49</th>
+      <td>Valparaíso</td>
+      <td>5</td>
+      <td>Algarrobo</td>
+      <td>5602.0</td>
+      <td>15174.0</td>
+      <td>2020-03-30</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>Valparaíso</td>
+      <td>5</td>
+      <td>Cabildo</td>
+      <td>5402.0</td>
+      <td>20663.0</td>
+      <td>2020-03-30</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>Valparaíso</td>
+      <td>5</td>
+      <td>Calera</td>
+      <td>5502.0</td>
+      <td>53591.0</td>
+      <td>2020-03-30</td>
+      <td>6.0</td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td>Valparaíso</td>
+      <td>5</td>
+      <td>Calle Larga</td>
+      <td>5302.0</td>
+      <td>16482.0</td>
+      <td>2020-03-30</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>53</th>
+      <td>Valparaíso</td>
+      <td>5</td>
+      <td>Cartagena</td>
+      <td>5603.0</td>
+      <td>25357.0</td>
+      <td>2020-03-30</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>19269</th>
+      <td>Valparaíso</td>
+      <td>5</td>
+      <td>Valparaiso</td>
+      <td>5101.0</td>
+      <td>315732.0</td>
+      <td>2020-09-25</td>
+      <td>6890.0</td>
+    </tr>
+    <tr>
+      <th>19270</th>
+      <td>Valparaíso</td>
+      <td>5</td>
+      <td>Villa Alemana</td>
+      <td>5804.0</td>
+      <td>139310.0</td>
+      <td>2020-09-25</td>
+      <td>2518.0</td>
+    </tr>
+    <tr>
+      <th>19271</th>
+      <td>Valparaíso</td>
+      <td>5</td>
+      <td>Vina del Mar</td>
+      <td>5109.0</td>
+      <td>361371.0</td>
+      <td>2020-09-25</td>
+      <td>6556.0</td>
+    </tr>
+    <tr>
+      <th>19272</th>
+      <td>Valparaíso</td>
+      <td>5</td>
+      <td>Zapallar</td>
+      <td>5405.0</td>
+      <td>7994.0</td>
+      <td>2020-09-25</td>
+      <td>138.0</td>
+    </tr>
+    <tr>
+      <th>19273</th>
+      <td>Valparaíso</td>
+      <td>5</td>
+      <td>Desconocido Valparaiso</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2020-09-25</td>
+      <td>439.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>2106 rows × 7 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">covid</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pandas.core.frame.DataFrame
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">covid</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">memory_usage</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 19548 entries, 0 to 19547
+Data columns (total 7 columns):
+ #   Column             Non-Null Count  Dtype  
+---  ------             --------------  -----  
+ 0   Region             19548 non-null  object 
+ 1   Codigo region      19548 non-null  int64  
+ 2   Comuna             19548 non-null  object 
+ 3   Codigo comuna      18684 non-null  float64
+ 4   Poblacion          18684 non-null  float64
+ 5   Fecha              19548 non-null  object 
+ 6   Casos confirmados  19129 non-null  float64
+dtypes: float64(3), int64(1), object(3)
+memory usage: 1.0+ MB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">covid</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Region                object
+Codigo region          int64
+Comuna                object
+Codigo comuna        float64
+Poblacion            float64
+Fecha                 object
+Casos confirmados    float64
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<p>Puedes pensar que un dataframe es una colección de series</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">covid</span><span class="p">[</span><span class="s1">&#39;Casos confirmados&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    6.0
+1    0.0
+2    0.0
+3    0.0
+4    NaN
+Name: Casos confirmados, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">covid</span><span class="p">[</span><span class="s1">&#39;Casos confirmados&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pandas.core.series.Series
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="exploracion">
+<h3>Exploración<a class="headerlink" href="#exploracion" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">covid</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
+      <th>max</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Codigo region</th>
+      <td>19548.0</td>
+      <td>8.784530</td>
+      <td>3.879209</td>
+      <td>1.0</td>
+      <td>6.0</td>
+      <td>8.0</td>
+      <td>13.0</td>
+      <td>16.0</td>
+    </tr>
+    <tr>
+      <th>Codigo comuna</th>
+      <td>18684.0</td>
+      <td>9034.997110</td>
+      <td>3812.727918</td>
+      <td>1101.0</td>
+      <td>6109.0</td>
+      <td>8313.5</td>
+      <td>13103.0</td>
+      <td>16305.0</td>
+    </tr>
+    <tr>
+      <th>Poblacion</th>
+      <td>18684.0</td>
+      <td>56237.890173</td>
+      <td>88819.716373</td>
+      <td>137.0</td>
+      <td>9546.0</td>
+      <td>19770.0</td>
+      <td>56058.0</td>
+      <td>645909.0</td>
+    </tr>
+    <tr>
+      <th>Casos confirmados</th>
+      <td>19129.0</td>
+      <td>659.288776</td>
+      <td>2033.571904</td>
+      <td>0.0</td>
+      <td>5.0</td>
+      <td>46.0</td>
+      <td>236.0</td>
+      <td>25779.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">covid</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+      <th>unique</th>
+      <th>top</th>
+      <th>freq</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
+      <th>max</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Region</th>
+      <td>19548</td>
+      <td>16</td>
+      <td>Metropolitana</td>
+      <td>2862</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>Codigo region</th>
+      <td>19548</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>8.78453</td>
+      <td>3.87921</td>
+      <td>1</td>
+      <td>6</td>
+      <td>8</td>
+      <td>13</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>Comuna</th>
+      <td>19548</td>
+      <td>362</td>
+      <td>Vitacura</td>
+      <td>54</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>Codigo comuna</th>
+      <td>18684</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>9035</td>
+      <td>3812.73</td>
+      <td>1101</td>
+      <td>6109</td>
+      <td>8313.5</td>
+      <td>13103</td>
+      <td>16305</td>
+    </tr>
+    <tr>
+      <th>Poblacion</th>
+      <td>18684</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>56237.9</td>
+      <td>88819.7</td>
+      <td>137</td>
+      <td>9546</td>
+      <td>19770</td>
+      <td>56058</td>
+      <td>645909</td>
+    </tr>
+    <tr>
+      <th>Fecha</th>
+      <td>19548</td>
+      <td>54</td>
+      <td>2020-09-21</td>
+      <td>362</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>Casos confirmados</th>
+      <td>19129</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>659.289</td>
+      <td>2033.57</td>
+      <td>0</td>
+      <td>5</td>
+      <td>46</td>
+      <td>236</td>
+      <td>25779</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">covid</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Region                    Ñuble
+Codigo region                16
+Comuna                 Zapallar
+Codigo comuna             16305
+Poblacion                645909
+Fecha                2020-09-25
+Casos confirmados         25779
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para extraer elementos lo más recomendable es el método loc.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">covid</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">19271</span><span class="p">,</span> <span class="s1">&#39;Region&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Valparaíso&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Evita acceder con doble corchete</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">covid</span><span class="p">[</span><span class="mi">19271</span><span class="p">][</span><span class="s1">&#39;Region&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/pandas/core/indexes/base.py</span> in <span class="ni">get_loc</span><span class="nt">(self, key, method, tolerance)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2645</span>             <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">2646</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2647</span>             <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+
+<span class="nn">pandas/_libs/index.pyx</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">pandas/_libs/index.pyx</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+
+<span class="nn">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+
+<span class="ne">KeyError</span>: 19271
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">49</span><span class="o">-</span><span class="mi">16</span><span class="n">f1c11e5439</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">covid</span><span class="p">[</span><span class="mi">19271</span><span class="p">][</span><span class="s1">&#39;Region&#39;</span><span class="p">]</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/pandas/core/frame.py</span> in <span class="ni">__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2798</span>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">nlevels</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">2799</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem_multilevel</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">2800</span>             <span class="n">indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2801</span>             <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">indexer</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">2802</span>                 <span class="n">indexer</span> <span class="o">=</span> <span class="p">[</span><span class="n">indexer</span><span class="p">]</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/pandas/core/indexes/base.py</span> in <span class="ni">get_loc</span><span class="nt">(self, key, method, tolerance)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2646</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2647</span>             <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">2648</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_maybe_cast_indexer</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+<span class="g g-Whitespace">   </span><span class="mi">2649</span>         <span class="n">indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_indexer</span><span class="p">([</span><span class="n">key</span><span class="p">],</span> <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">tolerance</span><span class="o">=</span><span class="n">tolerance</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2650</span>         <span class="k">if</span> <span class="n">indexer</span><span class="o">.</span><span class="n">ndim</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">indexer</span><span class="o">.</span><span class="n">size</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+
+<span class="nn">pandas/_libs/index.pyx</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">pandas/_libs/index.pyx</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+
+<span class="nn">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+
+<span class="ne">KeyError</span>: 19271
+</pre></div>
+</div>
+</div>
+</div>
+<p>Aunque en ocasiones funcione, no se asegura que sea siempre así. <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/indexing.html#why-does-assignment-fail-when-using-chained-indexing">Más info aquí.</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">covid</span><span class="p">[</span><span class="s1">&#39;Region&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Metropolitana         2862
+Valparaíso            2106
+Biobío                1836
+O’Higgins             1836
+Araucanía             1782
+Maule                 1674
+Los Lagos             1674
+Ñuble                 1188
+Coquimbo               864
+Los Ríos               702
+Magallanes             648
+Aysén                  594
+Antofagasta            540
+Atacama                540
+Tarapacá               432
+Arica y Parinacota     270
+Name: Region, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="valores-perdidos-nulos">
+<h3>Valores perdidos/nulos<a class="headerlink" href="#valores-perdidos-nulos" title="Permalink to this headline">¶</a></h3>
+<p>Pandas ofrece herramientas para trabajar con valors nulos, pero es necesario conocerlas y saber aplicarlas. Por ejemplo, el método <code class="docutils literal notranslate"><span class="pre">isnull()</span></code> entrega un booleano si algún valor es nulo.</p>
+<p>Por ejemplo: ¿Qué jugadores no tienen registrado su fecha de nacimiento?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">covid</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(19548,)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">covid</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;Casos confirmados&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Region</th>
+      <th>Codigo region</th>
+      <th>Comuna</th>
+      <th>Codigo comuna</th>
+      <th>Poblacion</th>
+      <th>Fecha</th>
+      <th>Casos confirmados</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>4</th>
+      <td>Arica y Parinacota</td>
+      <td>15</td>
+      <td>Desconocido Arica y Parinacota</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2020-03-30</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Tarapacá</td>
+      <td>1</td>
+      <td>Desconocido Tarapaca</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2020-03-30</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Antofagasta</td>
+      <td>2</td>
+      <td>Desconocido Antofagasta</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2020-03-30</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>Atacama</td>
+      <td>3</td>
+      <td>Desconocido Atacama</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2020-03-30</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>Coquimbo</td>
+      <td>4</td>
+      <td>Desconocido Coquimbo</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2020-03-30</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>9344</th>
+      <td>Araucanía</td>
+      <td>9</td>
+      <td>Desconocido Araucania</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2020-06-15</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>9357</th>
+      <td>Los Ríos</td>
+      <td>14</td>
+      <td>Desconocido Los Rios</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2020-06-15</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>9388</th>
+      <td>Los Lagos</td>
+      <td>10</td>
+      <td>Desconocido Los Lagos</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2020-06-15</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>9399</th>
+      <td>Aysén</td>
+      <td>11</td>
+      <td>Desconocido Aysen</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2020-06-15</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>9411</th>
+      <td>Magallanes</td>
+      <td>12</td>
+      <td>Desconocido Magallanes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2020-06-15</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>419 rows × 7 columns</p>
+</div></div></div>
+</div>
+<p>Si deseamos encontrar todas las filas que contengan por lo menos un valor nulo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">covid</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Region</th>
+      <th>Codigo region</th>
+      <th>Comuna</th>
+      <th>Codigo comuna</th>
+      <th>Poblacion</th>
+      <th>Fecha</th>
+      <th>Casos confirmados</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>19543</th>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>19544</th>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>19545</th>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>19546</th>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>19547</th>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+<p>19548 rows × 7 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rows_null_mask</span> <span class="o">=</span> <span class="n">covid</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># axis=1 hace referencia a las filas.</span>
+<span class="n">rows_null_mask</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    False
+1    False
+2    False
+3    False
+4     True
+dtype: bool
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">covid</span><span class="p">[</span><span class="n">rows_null_mask</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Region</th>
+      <th>Codigo region</th>
+      <th>Comuna</th>
+      <th>Codigo comuna</th>
+      <th>Poblacion</th>
+      <th>Fecha</th>
+      <th>Casos confirmados</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>4</th>
+      <td>Arica y Parinacota</td>
+      <td>15</td>
+      <td>Desconocido Arica y Parinacota</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2020-03-30</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Tarapacá</td>
+      <td>1</td>
+      <td>Desconocido Tarapaca</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2020-03-30</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Antofagasta</td>
+      <td>2</td>
+      <td>Desconocido Antofagasta</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2020-03-30</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>Atacama</td>
+      <td>3</td>
+      <td>Desconocido Atacama</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2020-03-30</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>Coquimbo</td>
+      <td>4</td>
+      <td>Desconocido Coquimbo</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2020-03-30</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">covid</span><span class="p">[</span><span class="n">rows_null_mask</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(867, 7)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para determinar aquellos que no tienen valors nulos el prodecimiento es similar.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">covid</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">notnull</span><span class="p">()</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Region</th>
+      <th>Codigo region</th>
+      <th>Comuna</th>
+      <th>Codigo comuna</th>
+      <th>Poblacion</th>
+      <th>Fecha</th>
+      <th>Casos confirmados</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Arica y Parinacota</td>
+      <td>15</td>
+      <td>Arica</td>
+      <td>15101.0</td>
+      <td>247552.0</td>
+      <td>2020-03-30</td>
+      <td>6.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Arica y Parinacota</td>
+      <td>15</td>
+      <td>Camarones</td>
+      <td>15102.0</td>
+      <td>1233.0</td>
+      <td>2020-03-30</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Arica y Parinacota</td>
+      <td>15</td>
+      <td>General Lagos</td>
+      <td>15202.0</td>
+      <td>810.0</td>
+      <td>2020-03-30</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Arica y Parinacota</td>
+      <td>15</td>
+      <td>Putre</td>
+      <td>15201.0</td>
+      <td>2515.0</td>
+      <td>2020-03-30</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Tarapacá</td>
+      <td>1</td>
+      <td>Alto Hospicio</td>
+      <td>1107.0</td>
+      <td>129999.0</td>
+      <td>2020-03-30</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Pandas incluso ofrece opciones para eliminar elementos nulos!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cualquier registro con null</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">covid</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="c1"># Filas con elementos nulos</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">covid</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="c1"># Columnas con elementos nulos</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">covid</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(18681, 7)
+(18681, 7)
+(19548, 4)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="resumen">
+<h2>Resumen<a class="headerlink" href="#resumen" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Pandas posee una infinidad de herramientas para trabajar con datos, incluyendo la carga, manipulación, operaciones y filtrado de datos.</p></li>
+<li><p>La documentación oficial (y StackOverflow) son tus mejores amigos.</p></li>
+<li><p>La importancia está en darle sentido a los datos, no solo a coleccionarlos.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="M2L02_linear_algebra.html" title="previous page">Álgebra Lineal</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Alonso Ogueda Oliva<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-177357392-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>
