@@ -1336,7 +1336,7 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.94 ms ± 25.5 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.81 ms ± 48.4 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
 </pre></div>
 </div>
 </div>
@@ -1349,7 +1349,7 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>923 µs ± 5.91 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>878 µs ± 7.73 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1364,7 +1364,7 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>844 µs ± 3.05 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>878 µs ± 11.5 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1377,7 +1377,7 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>729 µs ± 18.6 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>751 µs ± 16.9 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1387,7 +1387,8 @@ dtype: object
 <div class="section" id="concatenar">
 <h3>Concatenar<a class="headerlink" href="#concatenar" title="Permalink to this headline">¶</a></h3>
 <p>Imagina que tienes varias tablas con las mismas columnas y quieres unirlas en una grande. La función <code class="docutils literal notranslate"><span class="pre">concat</span></code> está diseñada para esta labor.</p>
-<img src="https://pandas.pydata.org/pandas-docs/stable/_images/merging_concat_basic.png" width="360" height="240" align="center"/><div class="cell docutils container">
+<p><img alt="concat" src="https://pandas.pydata.org/pandas-docs/stable/_images/merging_concat_basic.png" /></p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A0&#39;</span><span class="p">,</span> <span class="s1">&#39;A1&#39;</span><span class="p">,</span> <span class="s1">&#39;A2&#39;</span><span class="p">,</span> <span class="s1">&#39;A3&#39;</span><span class="p">],</span>
                     <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B0&#39;</span><span class="p">,</span> <span class="s1">&#39;B1&#39;</span><span class="p">,</span> <span class="s1">&#39;B2&#39;</span><span class="p">,</span> <span class="s1">&#39;B3&#39;</span><span class="p">],</span>
@@ -1649,7 +1650,8 @@ dtype: object
 </div></div></div>
 </div>
 <p>Si los dataframes tienen distintas columnas no es impedimento para concatenarlas.</p>
-<img src="https://pandas.pydata.org/pandas-docs/stable/_images/merging_append2.png" width="360" height="480" align="center"/><div class="cell docutils container">
+<p><img alt="concat2" src="https://pandas.pydata.org/pandas-docs/stable/_images/merging_append2.png" /></p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df4</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B2&#39;</span><span class="p">,</span> <span class="s1">&#39;B3&#39;</span><span class="p">,</span> <span class="s1">&#39;B6&#39;</span><span class="p">,</span> <span class="s1">&#39;B7&#39;</span><span class="p">],</span>
                        <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;D2&#39;</span><span class="p">,</span> <span class="s1">&#39;D3&#39;</span><span class="p">,</span> <span class="s1">&#39;D6&#39;</span><span class="p">,</span> <span class="s1">&#39;D7&#39;</span><span class="p">],</span>
@@ -1756,7 +1758,8 @@ dtype: object
 </div></div></div>
 </div>
 <p>¿Quieres que se agreguen columnas dependiendo de los index que tienen cada dataframe?</p>
-<img src="https://pandas.pydata.org/pandas-docs/stable/_images/merging_concat_axis1.png" width="540" height="480" align="center"/><div class="cell docutils container">
+<p><img alt="concat3" src="https://pandas.pydata.org/pandas-docs/stable/_images/merging_concat_axis1.png" /></p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span> <span class="n">df4</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
@@ -2139,7 +2142,7 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>183 ms ± 5.66 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>183 ms ± 3.87 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
 </pre></div>
 </div>
 </div>
@@ -2152,7 +2155,7 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.56 ms ± 56.1 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.46 ms ± 39 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
 </pre></div>
 </div>
 </div>
@@ -2185,7 +2188,8 @@ dtype: object
 </div>
 </div>
 <p><strong>Left Merge</strong></p>
-<img src="https://pandas.pydata.org/pandas-docs/stable/_images/merging_merge_on_key_left.png" width="540" height="480" align="center"/><div class="cell docutils container">
+<p><img alt="left_merge" src="https://pandas.pydata.org/pandas-docs/stable/_images/merging_merge_on_key_left.png" /></p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;key1&#39;</span><span class="p">,</span> <span class="s1">&#39;key2&#39;</span><span class="p">])</span>
 </pre></div>
@@ -2251,7 +2255,8 @@ dtype: object
 </div></div></div>
 </div>
 <p><strong>Right Merge</strong></p>
-<img src="https://pandas.pydata.org/pandas-docs/stable/_images/merging_merge_on_key_right.png" width="540" height="480" align="center"/><div class="cell docutils container">
+<p><img alt="right_merge" src="https://pandas.pydata.org/pandas-docs/stable/_images/merging_merge_on_key_right.png" /></p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;key1&#39;</span><span class="p">,</span> <span class="s1">&#39;key2&#39;</span><span class="p">])</span>
 </pre></div>
@@ -2326,7 +2331,8 @@ dtype: object
 </div></div></div>
 </div>
 <p><strong>Outer Merge</strong></p>
-<img src="https://pandas.pydata.org/pandas-docs/stable/_images/merging_merge_on_key_outer.png" width="540" height="480" align="center"/><div class="cell docutils container">
+<p><img alt="outer_merge" src="https://pandas.pydata.org/pandas-docs/stable/_images/merging_merge_on_key_outer.png" /></p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;key1&#39;</span><span class="p">,</span> <span class="s1">&#39;key2&#39;</span><span class="p">])</span>
 </pre></div>
@@ -2419,7 +2425,8 @@ dtype: object
 </div></div></div>
 </div>
 <p><strong>Inner Merge</strong></p>
-<img src="https://pandas.pydata.org/pandas-docs/stable/_images/merging_merge_on_key_inner.png" width="540" height="480" align="center"/><div class="cell docutils container">
+<p><img alt="inner_merge" src="https://pandas.pydata.org/pandas-docs/stable/_images/merging_merge_on_key_inner.png" /></p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;key1&#39;</span><span class="p">,</span> <span class="s1">&#39;key2&#39;</span><span class="p">])</span>
 </pre></div>
