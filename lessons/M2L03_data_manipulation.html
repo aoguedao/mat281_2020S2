@@ -152,6 +152,11 @@
    Combinando Datos
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L05_data_aggregation.html">
+   Agrupando Datos
+  </a>
+ </li>
 </ul>
 
 </nav>
@@ -360,7 +365,7 @@ built on top of the Python programming language.</em></p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1.1.2&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1.1.3&#39;
 </pre></div>
 </div>
 </div>
@@ -1016,54 +1021,54 @@ Name: Temp, dtype: float64
   </thead>
   <tbody>
     <tr>
-      <th>19905</th>
+      <th>20267</th>
       <td>Magallanes</td>
       <td>12</td>
       <td>Rio Verde</td>
       <td>12103.0</td>
       <td>211.0</td>
-      <td>2020-09-28</td>
+      <td>2020-10-02</td>
       <td>1.0</td>
     </tr>
     <tr>
-      <th>19906</th>
+      <th>20268</th>
       <td>Magallanes</td>
       <td>12</td>
       <td>San Gregorio</td>
       <td>12104.0</td>
       <td>681.0</td>
-      <td>2020-09-28</td>
-      <td>2.0</td>
+      <td>2020-10-02</td>
+      <td>9.0</td>
     </tr>
     <tr>
-      <th>19907</th>
+      <th>20269</th>
       <td>Magallanes</td>
       <td>12</td>
       <td>Timaukel</td>
       <td>12303.0</td>
       <td>282.0</td>
-      <td>2020-09-28</td>
+      <td>2020-10-02</td>
       <td>2.0</td>
     </tr>
     <tr>
-      <th>19908</th>
+      <th>20270</th>
       <td>Magallanes</td>
       <td>12</td>
       <td>Torres del Paine</td>
       <td>12402.0</td>
       <td>1021.0</td>
-      <td>2020-09-28</td>
-      <td>0.0</td>
+      <td>2020-10-02</td>
+      <td>2.0</td>
     </tr>
     <tr>
-      <th>19909</th>
+      <th>20271</th>
       <td>Magallanes</td>
       <td>12</td>
       <td>Desconocido Magallanes</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>2020-09-28</td>
-      <td>28.0</td>
+      <td>2020-10-02</td>
+      <td>29.0</td>
     </tr>
   </tbody>
 </table>
@@ -1165,58 +1170,58 @@ Name: Temp, dtype: float64
       <td>...</td>
     </tr>
     <tr>
-      <th>19631</th>
+      <th>19993</th>
       <td>Valparaíso</td>
       <td>5</td>
       <td>Valparaiso</td>
       <td>5101.0</td>
       <td>315732.0</td>
-      <td>2020-09-28</td>
-      <td>7020.0</td>
+      <td>2020-10-02</td>
+      <td>7199.0</td>
     </tr>
     <tr>
-      <th>19632</th>
+      <th>19994</th>
       <td>Valparaíso</td>
       <td>5</td>
       <td>Villa Alemana</td>
       <td>5804.0</td>
       <td>139310.0</td>
-      <td>2020-09-28</td>
-      <td>2583.0</td>
+      <td>2020-10-02</td>
+      <td>2641.0</td>
     </tr>
     <tr>
-      <th>19633</th>
+      <th>19995</th>
       <td>Valparaíso</td>
       <td>5</td>
       <td>Vina del Mar</td>
       <td>5109.0</td>
       <td>361371.0</td>
-      <td>2020-09-28</td>
-      <td>6701.0</td>
+      <td>2020-10-02</td>
+      <td>6852.0</td>
     </tr>
     <tr>
-      <th>19634</th>
+      <th>19996</th>
       <td>Valparaíso</td>
       <td>5</td>
       <td>Zapallar</td>
       <td>5405.0</td>
       <td>7994.0</td>
-      <td>2020-09-28</td>
-      <td>141.0</td>
+      <td>2020-10-02</td>
+      <td>143.0</td>
     </tr>
     <tr>
-      <th>19635</th>
+      <th>19997</th>
       <td>Valparaíso</td>
       <td>5</td>
       <td>Desconocido Valparaiso</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>2020-09-28</td>
-      <td>449.0</td>
+      <td>2020-10-02</td>
+      <td>439.0</td>
     </tr>
   </tbody>
 </table>
-<p>2145 rows × 7 columns</p>
+<p>2184 rows × 7 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -1239,17 +1244,17 @@ Name: Temp, dtype: float64
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 19910 entries, 0 to 19909
+RangeIndex: 20272 entries, 0 to 20271
 Data columns (total 7 columns):
  #   Column             Non-Null Count  Dtype  
 ---  ------             --------------  -----  
- 0   Region             19910 non-null  object 
- 1   Codigo region      19910 non-null  int64  
- 2   Comuna             19910 non-null  object 
- 3   Codigo comuna      19030 non-null  float64
- 4   Poblacion          19030 non-null  float64
- 5   Fecha              19910 non-null  object 
- 6   Casos confirmados  19491 non-null  float64
+ 0   Region             20272 non-null  object 
+ 1   Codigo region      20272 non-null  int64  
+ 2   Comuna             20272 non-null  object 
+ 3   Codigo comuna      19376 non-null  float64
+ 4   Poblacion          19376 non-null  float64
+ 5   Fecha              20272 non-null  object 
+ 6   Casos confirmados  19853 non-null  float64
 dtypes: float64(3), int64(1), object(3)
 memory usage: 1.1+ MB
 </pre></div>
@@ -1345,9 +1350,9 @@ Name: Casos confirmados, dtype: float64
   <tbody>
     <tr>
       <th>Codigo region</th>
-      <td>19910.0</td>
+      <td>20272.0</td>
       <td>8.784530</td>
-      <td>3.879208</td>
+      <td>3.879206</td>
       <td>1.0</td>
       <td>6.0</td>
       <td>8.0</td>
@@ -1356,9 +1361,9 @@ Name: Casos confirmados, dtype: float64
     </tr>
     <tr>
       <th>Codigo comuna</th>
-      <td>19030.0</td>
+      <td>19376.0</td>
       <td>9034.997110</td>
-      <td>3812.726063</td>
+      <td>3812.724274</td>
       <td>1101.0</td>
       <td>6109.0</td>
       <td>8313.5</td>
@@ -1367,9 +1372,9 @@ Name: Casos confirmados, dtype: float64
     </tr>
     <tr>
       <th>Poblacion</th>
-      <td>19030.0</td>
+      <td>19376.0</td>
       <td>56237.890173</td>
-      <td>88819.673154</td>
+      <td>88819.631479</td>
       <td>137.0</td>
       <td>9546.0</td>
       <td>19770.0</td>
@@ -1378,14 +1383,14 @@ Name: Casos confirmados, dtype: float64
     </tr>
     <tr>
       <th>Casos confirmados</th>
-      <td>19491.0</td>
-      <td>673.718383</td>
-      <td>2058.570821</td>
+      <td>19853.0</td>
+      <td>688.037627</td>
+      <td>2083.114284</td>
       <td>0.0</td>
       <td>5.0</td>
-      <td>49.0</td>
-      <td>246.0</td>
-      <td>25926.0</td>
+      <td>51.0</td>
+      <td>255.0</td>
+      <td>26122.0</td>
     </tr>
   </tbody>
 </table>
@@ -1432,10 +1437,10 @@ Name: Casos confirmados, dtype: float64
   <tbody>
     <tr>
       <th>Region</th>
-      <td>19910</td>
+      <td>20272</td>
       <td>16</td>
       <td>Metropolitana</td>
-      <td>2915</td>
+      <td>2968</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1446,7 +1451,7 @@ Name: Casos confirmados, dtype: float64
     </tr>
     <tr>
       <th>Codigo region</th>
-      <td>19910</td>
+      <td>20272</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1460,10 +1465,10 @@ Name: Casos confirmados, dtype: float64
     </tr>
     <tr>
       <th>Comuna</th>
-      <td>19910</td>
+      <td>20272</td>
       <td>362</td>
-      <td>Pelarco</td>
-      <td>55</td>
+      <td>Cerro Navia</td>
+      <td>56</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1474,12 +1479,12 @@ Name: Casos confirmados, dtype: float64
     </tr>
     <tr>
       <th>Codigo comuna</th>
-      <td>19030</td>
+      <td>19376</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>9035</td>
-      <td>3812.73</td>
+      <td>3812.72</td>
       <td>1101</td>
       <td>6109</td>
       <td>8313.5</td>
@@ -1488,12 +1493,12 @@ Name: Casos confirmados, dtype: float64
     </tr>
     <tr>
       <th>Poblacion</th>
-      <td>19030</td>
+      <td>19376</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>56237.9</td>
-      <td>88819.7</td>
+      <td>88819.6</td>
       <td>137</td>
       <td>9546</td>
       <td>19770</td>
@@ -1502,9 +1507,9 @@ Name: Casos confirmados, dtype: float64
     </tr>
     <tr>
       <th>Fecha</th>
-      <td>19910</td>
-      <td>55</td>
-      <td>2020-04-08</td>
+      <td>20272</td>
+      <td>56</td>
+      <td>2020-03-30</td>
       <td>362</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1516,17 +1521,17 @@ Name: Casos confirmados, dtype: float64
     </tr>
     <tr>
       <th>Casos confirmados</th>
-      <td>19491</td>
+      <td>19853</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>673.718</td>
-      <td>2058.57</td>
+      <td>688.038</td>
+      <td>2083.11</td>
       <td>0</td>
       <td>5</td>
-      <td>49</td>
-      <td>246</td>
-      <td>25926</td>
+      <td>51</td>
+      <td>255</td>
+      <td>26122</td>
     </tr>
   </tbody>
 </table>
@@ -1544,8 +1549,8 @@ Codigo region                16
 Comuna                 Zapallar
 Codigo comuna             16305
 Poblacion                645909
-Fecha                2020-09-28
-Casos confirmados         25926
+Fecha                2020-10-02
+Casos confirmados         26122
 dtype: object
 </pre></div>
 </div>
@@ -1575,9 +1580,9 @@ dtype: object
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
 <span class="nn">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/pandas/core/indexes/base.py</span> in <span class="ni">get_loc</span><span class="nt">(self, key, method, tolerance)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2890</span>             <span class="k">try</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">2891</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2892</span>             <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">2894</span>             <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">2895</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2896</span>             <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
 
 <span class="nn">pandas/_libs/index.pyx</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
 
@@ -1603,11 +1608,11 @@ dtype: object
 <span class="g g-Whitespace">   </span><span class="mi">2904</span>                 <span class="n">indexer</span> <span class="o">=</span> <span class="p">[</span><span class="n">indexer</span><span class="p">]</span>
 
 <span class="nn">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/pandas/core/indexes/base.py</span> in <span class="ni">get_loc</span><span class="nt">(self, key, method, tolerance)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2891</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2892</span>             <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">2893</span>                 <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
-<span class="g g-Whitespace">   </span><span class="mi">2894</span> 
-<span class="g g-Whitespace">   </span><span class="mi">2895</span>         <span class="k">if</span> <span class="n">tolerance</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">2895</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2896</span>             <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">2897</span>                 <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
+<span class="g g-Whitespace">   </span><span class="mi">2898</span> 
+<span class="g g-Whitespace">   </span><span class="mi">2899</span>         <span class="k">if</span> <span class="n">tolerance</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
 
 <span class="ne">KeyError</span>: 19271
 </pre></div>
@@ -1622,22 +1627,22 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Metropolitana         2915
-Valparaíso            2145
-O’Higgins             1870
-Biobío                1870
-Araucanía             1815
-Maule                 1705
-Los Lagos             1705
-Ñuble                 1210
-Coquimbo               880
-Los Ríos               715
-Magallanes             660
-Aysén                  605
-Antofagasta            550
-Atacama                550
-Tarapacá               440
-Arica y Parinacota     275
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Metropolitana         2968
+Valparaíso            2184
+Biobío                1904
+O’Higgins             1904
+Araucanía             1848
+Los Lagos             1736
+Maule                 1736
+Ñuble                 1232
+Coquimbo               896
+Los Ríos               728
+Magallanes             672
+Aysén                  616
+Antofagasta            560
+Atacama                560
+Tarapacá               448
+Arica y Parinacota     280
 Name: Region, dtype: int64
 </pre></div>
 </div>
@@ -1655,7 +1660,7 @@ Name: Region, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(19910,)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(20272,)
 </pre></div>
 </div>
 </div>
@@ -1907,7 +1912,7 @@ Name: Region, dtype: int64
       <td>...</td>
     </tr>
     <tr>
-      <th>19905</th>
+      <th>20267</th>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -1917,7 +1922,7 @@ Name: Region, dtype: int64
       <td>False</td>
     </tr>
     <tr>
-      <th>19906</th>
+      <th>20268</th>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -1927,7 +1932,7 @@ Name: Region, dtype: int64
       <td>False</td>
     </tr>
     <tr>
-      <th>19907</th>
+      <th>20269</th>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -1937,7 +1942,7 @@ Name: Region, dtype: int64
       <td>False</td>
     </tr>
     <tr>
-      <th>19908</th>
+      <th>20270</th>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -1947,7 +1952,7 @@ Name: Region, dtype: int64
       <td>False</td>
     </tr>
     <tr>
-      <th>19909</th>
+      <th>20271</th>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -1958,7 +1963,7 @@ Name: Region, dtype: int64
     </tr>
   </tbody>
 </table>
-<p>19910 rows × 7 columns</p>
+<p>20272 rows × 7 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -2075,7 +2080,7 @@ dtype: bool
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(883, 7)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(899, 7)
 </pre></div>
 </div>
 </div>
@@ -2183,9 +2188,9 @@ dtype: bool
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(19027, 7)
-(19027, 7)
-(19910, 4)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(19373, 7)
+(19373, 7)
+(20272, 4)
 </pre></div>
 </div>
 </div>

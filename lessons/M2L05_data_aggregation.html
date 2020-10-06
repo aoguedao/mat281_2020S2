@@ -1,0 +1,2396 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agrupando Datos &#8212; MAT281 - Aplicaciones de la Matemática en la Ingeniería  - 2020</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Combinando Datos" href="M2L04_data_combining.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/utfsm.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">MAT281 - Aplicaciones de la Matemática en la Ingeniería  - 2020</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Bienvenido(a) a MAT281!
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Introducción
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="M1L01_about_mat281.html">
+   Acerca de MAT281
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M1L02_toolkit_and_setup.html">
+   Toolkit &amp; Setup
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M1L03_python_basics.html">
+   Recordando Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M1L04_python_ecosystem.html">
+   Ecosistema Python
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Análisis de Datos
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L01_scientific_computing.html">
+   Introducción al Cálculo Científico
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L02_linear_algebra.html">
+   Álgebra Lineal
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L03_data_manipulation.html">
+   Manipulación de Datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L04_data_combining.html">
+   Combinando Datos
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Agrupando Datos
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/lessons/M2L05_data_aggregation.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/aoguedao/mat281_2020S2"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/aoguedao/mat281_2020S2/master?urlpath=lab/tree/lessons/M2L05_data_aggregation.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/aoguedao/mat281_2020S2/blob/master/lessons/M2L05_data_aggregation.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#group-by-aggregation">
+   Group By - Aggregation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#group-by-transform">
+   Group By - Transform
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#group-by-filter">
+   Group By - Filter
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resumen">
+   Resumen
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="agrupando-datos">
+<h1>Agrupando Datos<a class="headerlink" href="#agrupando-datos" title="Permalink to this headline">¶</a></h1>
+<p><strong>Group By</strong> se refiere al proceso que involucra uno o más de los siguientes pasos:</p>
+<ul class="simple">
+<li><p>Dividir los datos en grupos basados en algún criterio.</p></li>
+<li><p>Aplicar una función a cada uno de los grupos independientemente.</p></li>
+<li><p>Combinar los resultados en una estructura de datos.</p></li>
+</ul>
+<p>La división es el paso principal. Usualmente, el usuario busca dividir la data en grupos y luego <em>hacer algo</em> con estos grupos. En el paso de aplicar se puede:</p>
+<ul class="simple">
+<li><p>Agregación: Calcular alguna estadística(s) para cada grupo. Por ejemplo, la suma, promedio y/o conteo de cada grupo.</p></li>
+<li><p>Transformación: Algún cálculo específico a cada grupo pero devolviendo un índice similar al original. Por ejemplo, estandarizar o rellenar valores nulos respecto a cada grupo.</p></li>
+<li><p>Filtrado: Descartar grupos de acuerdo a un cálculo grupal que se evalua verdadero o falso. Por ejemplo, descartar los regristros que la cantidad de miembros del grupo es menor a cierto umbral.</p></li>
+</ul>
+<p>La clase de hoy será motivada con el dataset de monstruos de bolsillo favorito de los milleniasl: <strong>Pokemon</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pkm</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;pokemon.csv&quot;</span><span class="p">),</span> <span class="n">index_col</span><span class="o">=</span><span class="s2">&quot;#&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+<span class="p">)</span>
+<span class="n">pkm</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>type1</th>
+      <th>type2</th>
+      <th>hp</th>
+      <th>attack</th>
+      <th>defense</th>
+      <th>sp_atk</th>
+      <th>sp_def</th>
+      <th>speed</th>
+      <th>generation</th>
+      <th>legendary</th>
+    </tr>
+    <tr>
+      <th>#</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>Bulbasaur</td>
+      <td>Grass</td>
+      <td>Poison</td>
+      <td>45</td>
+      <td>49</td>
+      <td>49</td>
+      <td>65</td>
+      <td>65</td>
+      <td>45</td>
+      <td>1</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Ivysaur</td>
+      <td>Grass</td>
+      <td>Poison</td>
+      <td>60</td>
+      <td>62</td>
+      <td>63</td>
+      <td>80</td>
+      <td>80</td>
+      <td>60</td>
+      <td>1</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Venusaur</td>
+      <td>Grass</td>
+      <td>Poison</td>
+      <td>80</td>
+      <td>82</td>
+      <td>83</td>
+      <td>100</td>
+      <td>100</td>
+      <td>80</td>
+      <td>1</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Mega Venusaur</td>
+      <td>Grass</td>
+      <td>Poison</td>
+      <td>80</td>
+      <td>100</td>
+      <td>123</td>
+      <td>122</td>
+      <td>120</td>
+      <td>80</td>
+      <td>1</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Charmander</td>
+      <td>Fire</td>
+      <td>NaN</td>
+      <td>39</td>
+      <td>52</td>
+      <td>43</td>
+      <td>60</td>
+      <td>50</td>
+      <td>65</td>
+      <td>1</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Ejemplo: ¿Sabes cuántos pokemones legendarios hay por generación? ¿No? Agrupemos por generación.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pkm</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;generation&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x7f5803932b10&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">pkm</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;generation&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pandas.core.groupby.generic.DataFrameGroupBy
+</pre></div>
+</div>
+</div>
+</div>
+<p>Hacer un groupby nos entrega un objeto groupby, usualmente no nos ayuda mucho, pero ya tiene los grupos separados internamente.</p>
+<p>Idea: Iteremos por grupo y contemos!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">pkm</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;generation&quot;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;type(name): </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;type(group): </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">group</span><span class="p">)</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;name: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;group:&quot;</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">group</span><span class="p">)</span>
+    <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>type(name): &lt;class &#39;int&#39;&gt;
+type(group): &lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+
+name: 1
+group:
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>type1</th>
+      <th>type2</th>
+      <th>hp</th>
+      <th>attack</th>
+      <th>defense</th>
+      <th>sp_atk</th>
+      <th>sp_def</th>
+      <th>speed</th>
+      <th>generation</th>
+      <th>legendary</th>
+    </tr>
+    <tr>
+      <th>#</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>Bulbasaur</td>
+      <td>Grass</td>
+      <td>Poison</td>
+      <td>45</td>
+      <td>49</td>
+      <td>49</td>
+      <td>65</td>
+      <td>65</td>
+      <td>45</td>
+      <td>1</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Ivysaur</td>
+      <td>Grass</td>
+      <td>Poison</td>
+      <td>60</td>
+      <td>62</td>
+      <td>63</td>
+      <td>80</td>
+      <td>80</td>
+      <td>60</td>
+      <td>1</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Venusaur</td>
+      <td>Grass</td>
+      <td>Poison</td>
+      <td>80</td>
+      <td>82</td>
+      <td>83</td>
+      <td>100</td>
+      <td>100</td>
+      <td>80</td>
+      <td>1</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Mega Venusaur</td>
+      <td>Grass</td>
+      <td>Poison</td>
+      <td>80</td>
+      <td>100</td>
+      <td>123</td>
+      <td>122</td>
+      <td>120</td>
+      <td>80</td>
+      <td>1</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Charmander</td>
+      <td>Fire</td>
+      <td>NaN</td>
+      <td>39</td>
+      <td>52</td>
+      <td>43</td>
+      <td>60</td>
+      <td>50</td>
+      <td>65</td>
+      <td>1</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>162</th>
+      <td>Dragonite</td>
+      <td>Dragon</td>
+      <td>Flying</td>
+      <td>91</td>
+      <td>134</td>
+      <td>95</td>
+      <td>100</td>
+      <td>100</td>
+      <td>80</td>
+      <td>1</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>163</th>
+      <td>Mewtwo</td>
+      <td>Psychic</td>
+      <td>NaN</td>
+      <td>106</td>
+      <td>110</td>
+      <td>90</td>
+      <td>154</td>
+      <td>90</td>
+      <td>130</td>
+      <td>1</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>164</th>
+      <td>Mega Mewtwo X</td>
+      <td>Psychic</td>
+      <td>Fighting</td>
+      <td>106</td>
+      <td>190</td>
+      <td>100</td>
+      <td>154</td>
+      <td>100</td>
+      <td>130</td>
+      <td>1</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>165</th>
+      <td>Mega Mewtwo Y</td>
+      <td>Psychic</td>
+      <td>NaN</td>
+      <td>106</td>
+      <td>150</td>
+      <td>70</td>
+      <td>194</td>
+      <td>120</td>
+      <td>140</td>
+      <td>1</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>166</th>
+      <td>Mew</td>
+      <td>Psychic</td>
+      <td>NaN</td>
+      <td>100</td>
+      <td>100</td>
+      <td>100</td>
+      <td>100</td>
+      <td>100</td>
+      <td>100</td>
+      <td>1</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+<p>166 rows × 11 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">pkm</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;generation&quot;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La generación </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> tiene </span><span class="si">{</span><span class="n">group</span><span class="p">[</span><span class="s1">&#39;legendary&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">}</span><span class="s2"> pokemones legendarios.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La generación 1 tiene 6 pokemones legendarios.
+La generación 2 tiene 5 pokemones legendarios.
+La generación 3 tiene 18 pokemones legendarios.
+La generación 4 tiene 13 pokemones legendarios.
+La generación 5 tiene 15 pokemones legendarios.
+La generación 6 tiene 8 pokemones legendarios.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lo anterior no es lo mejor, porque es secuencial, es decir, debemos esperar a que la i-ésima iteración termine para ejecutar la (i+1)-ésima iteración.</p>
+<div class="section" id="group-by-aggregation">
+<h2>Group By - Aggregation<a class="headerlink" href="#group-by-aggregation" title="Permalink to this headline">¶</a></h2>
+<p>Una vez el objeto GroupBy ha sido creado, es posible aplicar diferentes métodos para realizar los cálculos requeridos. El más común, es <code class="docutils literal notranslate"><span class="pre">aggregate()</span></code>, o equivalentemente, <code class="docutils literal notranslate"><span class="pre">agg()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pkm</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;generation&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s2">&quot;legendary&quot;</span><span class="p">:</span> <span class="s2">&quot;sum&quot;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>legendary</th>
+    </tr>
+    <tr>
+      <th>generation</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>8</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Nota que después de aplicado el <code class="docutils literal notranslate"><span class="pre">agg</span></code> el nombre de la columna se mantiene, esto se puede cambiar de la siguiente forma:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Nombre de la columna como argumento de agg, tupla con nombre de la columna y operación.</span>
+<span class="n">pkm</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;generation&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">legendaries_sum</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;legendary&quot;</span><span class="p">,</span> <span class="s2">&quot;sum&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>legendaries_sum</th>
+    </tr>
+    <tr>
+      <th>generation</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>8</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Comparemos tiempos</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>it
+<span class="n">aux</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span><span class="o">.</span><span class="n">rename_axis</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s2">&quot;generation&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">pkm</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;generation&quot;</span><span class="p">):</span>
+    <span class="n">aux</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;legendary&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">group</span><span class="p">[</span><span class="s1">&#39;legendary&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8.01 ms ± 649 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>it
+<span class="n">pkm</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;generation&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s2">&quot;legendary&quot;</span><span class="p">:</span> <span class="s2">&quot;sum&quot;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.17 ms ± 139 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Si es algo pequeño de una sola columna, puedes acceder directamente a ella.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pkm</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;generation&quot;</span><span class="p">)[</span><span class="s2">&quot;legendary&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>  <span class="c1"># Ojo! Devuelve una serie</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>generation
+1     6
+2     5
+3    18
+4    13
+5    15
+6     8
+Name: legendary, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Puedes agrupar por más de una columna.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pkm</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;type1&quot;</span><span class="p">,</span> <span class="s2">&quot;type2&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">hp_max</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;hp&quot;</span><span class="p">,</span> <span class="s2">&quot;max&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>hp_max</th>
+    </tr>
+    <tr>
+      <th>type1</th>
+      <th>type2</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="5" valign="top">Bug</th>
+      <th>Electric</th>
+      <td>70</td>
+    </tr>
+    <tr>
+      <th>Fighting</th>
+      <td>80</td>
+    </tr>
+    <tr>
+      <th>Fire</th>
+      <td>85</td>
+    </tr>
+    <tr>
+      <th>Flying</th>
+      <td>86</td>
+    </tr>
+    <tr>
+      <th>Ghost</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">Water</th>
+      <th>Ice</th>
+      <td>130</td>
+    </tr>
+    <tr>
+      <th>Poison</th>
+      <td>80</td>
+    </tr>
+    <tr>
+      <th>Psychic</th>
+      <td>95</td>
+    </tr>
+    <tr>
+      <th>Rock</th>
+      <td>100</td>
+    </tr>
+    <tr>
+      <th>Steel</th>
+      <td>84</td>
+    </tr>
+  </tbody>
+</table>
+<p>136 rows × 1 columns</p>
+</div></div></div>
+</div>
+<p>También puedes agregar más de una columna.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">pkm</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;type1&quot;</span><span class="p">,</span> <span class="s2">&quot;type2&quot;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">agg</span><span class="p">(</span>
+        <span class="n">hp_max</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;hp&quot;</span><span class="p">,</span> <span class="s2">&quot;max&quot;</span><span class="p">),</span>
+        <span class="n">attack_max</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;attack&quot;</span><span class="p">,</span> <span class="s2">&quot;max&quot;</span><span class="p">)</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>hp_max</th>
+      <th>attack_max</th>
+    </tr>
+    <tr>
+      <th>type1</th>
+      <th>type2</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="5" valign="top">Bug</th>
+      <th>Electric</th>
+      <td>70</td>
+      <td>77</td>
+    </tr>
+    <tr>
+      <th>Fighting</th>
+      <td>80</td>
+      <td>185</td>
+    </tr>
+    <tr>
+      <th>Fire</th>
+      <td>85</td>
+      <td>85</td>
+    </tr>
+    <tr>
+      <th>Flying</th>
+      <td>86</td>
+      <td>155</td>
+    </tr>
+    <tr>
+      <th>Ghost</th>
+      <td>1</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">Water</th>
+      <th>Ice</th>
+      <td>130</td>
+      <td>95</td>
+    </tr>
+    <tr>
+      <th>Poison</th>
+      <td>80</td>
+      <td>95</td>
+    </tr>
+    <tr>
+      <th>Psychic</th>
+      <td>95</td>
+      <td>75</td>
+    </tr>
+    <tr>
+      <th>Rock</th>
+      <td>100</td>
+      <td>108</td>
+    </tr>
+    <tr>
+      <th>Steel</th>
+      <td>84</td>
+      <td>86</td>
+    </tr>
+  </tbody>
+</table>
+<p>136 rows × 2 columns</p>
+</div></div></div>
+</div>
+<p>Incluso hacer más de una agregación a una misma columna</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">pkm</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;type1&quot;</span><span class="p">,</span> <span class="s2">&quot;type2&quot;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s2">&quot;hp&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;min&quot;</span><span class="p">,</span> <span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="s2">&quot;max&quot;</span><span class="p">]}</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th colspan="3" halign="left">hp</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>min</th>
+      <th>mean</th>
+      <th>max</th>
+    </tr>
+    <tr>
+      <th>type1</th>
+      <th>type2</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="5" valign="top">Bug</th>
+      <th>Electric</th>
+      <td>50</td>
+      <td>60.000000</td>
+      <td>70</td>
+    </tr>
+    <tr>
+      <th>Fighting</th>
+      <td>80</td>
+      <td>80.000000</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <th>Fire</th>
+      <td>55</td>
+      <td>70.000000</td>
+      <td>85</td>
+    </tr>
+    <tr>
+      <th>Flying</th>
+      <td>30</td>
+      <td>63.000000</td>
+      <td>86</td>
+    </tr>
+    <tr>
+      <th>Ghost</th>
+      <td>1</td>
+      <td>1.000000</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">Water</th>
+      <th>Ice</th>
+      <td>50</td>
+      <td>90.000000</td>
+      <td>130</td>
+    </tr>
+    <tr>
+      <th>Poison</th>
+      <td>40</td>
+      <td>61.666667</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <th>Psychic</th>
+      <td>60</td>
+      <td>87.000000</td>
+      <td>95</td>
+    </tr>
+    <tr>
+      <th>Rock</th>
+      <td>54</td>
+      <td>70.750000</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <th>Steel</th>
+      <td>84</td>
+      <td>84.000000</td>
+      <td>84</td>
+    </tr>
+  </tbody>
+</table>
+<p>136 rows × 3 columns</p>
+</div></div></div>
+</div>
+<p>Si quieres cambiar los nombres es un poco más verboso.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">pkm</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;type1&quot;</span><span class="p">,</span> <span class="s2">&quot;type2&quot;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">agg</span><span class="p">(</span>
+        <span class="n">hp_min</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;hp&quot;</span><span class="p">,</span> <span class="s2">&quot;min&quot;</span><span class="p">),</span>
+        <span class="n">hp_mean</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;hp&quot;</span><span class="p">,</span> <span class="s2">&quot;mean&quot;</span><span class="p">),</span>
+        <span class="n">hp_max</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;hp&quot;</span><span class="p">,</span> <span class="s2">&quot;max&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>hp_min</th>
+      <th>hp_mean</th>
+      <th>hp_max</th>
+    </tr>
+    <tr>
+      <th>type1</th>
+      <th>type2</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="5" valign="top">Bug</th>
+      <th>Electric</th>
+      <td>50</td>
+      <td>60.000000</td>
+      <td>70</td>
+    </tr>
+    <tr>
+      <th>Fighting</th>
+      <td>80</td>
+      <td>80.000000</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <th>Fire</th>
+      <td>55</td>
+      <td>70.000000</td>
+      <td>85</td>
+    </tr>
+    <tr>
+      <th>Flying</th>
+      <td>30</td>
+      <td>63.000000</td>
+      <td>86</td>
+    </tr>
+    <tr>
+      <th>Ghost</th>
+      <td>1</td>
+      <td>1.000000</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">Water</th>
+      <th>Ice</th>
+      <td>50</td>
+      <td>90.000000</td>
+      <td>130</td>
+    </tr>
+    <tr>
+      <th>Poison</th>
+      <td>40</td>
+      <td>61.666667</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <th>Psychic</th>
+      <td>60</td>
+      <td>87.000000</td>
+      <td>95</td>
+    </tr>
+    <tr>
+      <th>Rock</th>
+      <td>54</td>
+      <td>70.750000</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <th>Steel</th>
+      <td>84</td>
+      <td>84.000000</td>
+      <td>84</td>
+    </tr>
+  </tbody>
+</table>
+<p>136 rows × 3 columns</p>
+</div></div></div>
+</div>
+<p>También puedes aplicar tus propias funciones</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">pkm</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;type1&quot;</span><span class="p">,</span> <span class="s2">&quot;type2&quot;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">agg</span><span class="p">(</span>
+        <span class="n">hp_range</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;hp&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">x</span><span class="o">.</span><span class="n">min</span><span class="p">()),</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>hp_range</th>
+    </tr>
+    <tr>
+      <th>type1</th>
+      <th>type2</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="5" valign="top">Bug</th>
+      <th>Electric</th>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>Fighting</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Fire</th>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>Flying</th>
+      <td>56</td>
+    </tr>
+    <tr>
+      <th>Ghost</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">Water</th>
+      <th>Ice</th>
+      <td>80</td>
+    </tr>
+    <tr>
+      <th>Poison</th>
+      <td>40</td>
+    </tr>
+    <tr>
+      <th>Psychic</th>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>Rock</th>
+      <td>46</td>
+    </tr>
+    <tr>
+      <th>Steel</th>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>136 rows × 1 columns</p>
+</div></div></div>
+</div>
+<p>Finalmente, si quieres interactuar con más de una columna, necesitas el método <code class="docutils literal notranslate"><span class="pre">apply</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">pkm</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;type1&quot;</span><span class="p">,</span> <span class="s2">&quot;type2&quot;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">df</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;attack&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;defense&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>type1  type2   
+Bug    Electric     7.000000
+       Fighting    60.000000
+       Fire        12.500000
+       Flying       8.571429
+       Ghost       45.000000
+                     ...    
+Water  Ice        -30.000000
+       Poison      10.000000
+       Psychic    -31.000000
+       Rock       -30.000000
+       Steel       -2.000000
+Length: 136, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Eres libre de definir tu propia función y entregarla a un groupby, por ejemplo, usando el mismo ejemplo anterior:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">attack_minus_defense</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;attack&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;defense&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pkm</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;type1&quot;</span><span class="p">,</span> <span class="s2">&quot;type2&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">attack_minus_defense</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>type1  type2   
+Bug    Electric     7.000000
+       Fighting    60.000000
+       Fire        12.500000
+       Flying       8.571429
+       Ghost       45.000000
+                     ...    
+Water  Ice        -30.000000
+       Poison      10.000000
+       Psychic    -31.000000
+       Rock       -30.000000
+       Steel       -2.000000
+Length: 136, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nota que no es necesario usar la función lambda, pero si es importante que tu función definida tenga como argumento un dataframe (puedes pensar que en cada grupo se le entregará el dataframe filtrado).</p>
+</div>
+<div class="section" id="group-by-transform">
+<h2>Group By - Transform<a class="headerlink" href="#group-by-transform" title="Permalink to this headline">¶</a></h2>
+<p>Ejemplo: Normalizar cada columna agrupados por generación</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">pkm</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;generation&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="p">(</span><span class="n">s</span> <span class="o">-</span> <span class="n">s</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span> <span class="o">/</span> <span class="n">s</span><span class="o">.</span><span class="n">std</span><span class="p">())</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>hp</th>
+      <th>attack</th>
+      <th>defense</th>
+      <th>sp_atk</th>
+      <th>sp_def</th>
+      <th>speed</th>
+      <th>legendary</th>
+    </tr>
+    <tr>
+      <th>#</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>-0.739479</td>
+      <td>-0.898969</td>
+      <td>-0.763283</td>
+      <td>-0.198010</td>
+      <td>-0.160373</td>
+      <td>-0.929521</td>
+      <td>-0.193065</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-0.206695</td>
+      <td>-0.476132</td>
+      <td>-0.274479</td>
+      <td>0.237542</td>
+      <td>0.427740</td>
+      <td>-0.424060</td>
+      <td>-0.193065</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.503685</td>
+      <td>0.174386</td>
+      <td>0.423812</td>
+      <td>0.818277</td>
+      <td>1.211892</td>
+      <td>0.249889</td>
+      <td>-0.193065</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.503685</td>
+      <td>0.759852</td>
+      <td>1.820395</td>
+      <td>1.457086</td>
+      <td>1.996043</td>
+      <td>0.249889</td>
+      <td>-0.193065</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>-0.952593</td>
+      <td>-0.801391</td>
+      <td>-0.972770</td>
+      <td>-0.343193</td>
+      <td>-0.748487</td>
+      <td>-0.255573</td>
+      <td>-0.193065</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>796</th>
+      <td>-0.873754</td>
+      <td>0.829182</td>
+      <td>2.337149</td>
+      <td>0.808641</td>
+      <td>2.496477</td>
+      <td>-0.639851</td>
+      <td>3.022779</td>
+    </tr>
+    <tr>
+      <th>797</th>
+      <td>-0.873754</td>
+      <td>2.885421</td>
+      <td>1.062058</td>
+      <td>2.695980</td>
+      <td>1.166968</td>
+      <td>1.695510</td>
+      <td>3.022779</td>
+    </tr>
+    <tr>
+      <th>798</th>
+      <td>0.561116</td>
+      <td>1.171889</td>
+      <td>-0.531806</td>
+      <td>2.381423</td>
+      <td>1.831723</td>
+      <td>0.138603</td>
+      <td>3.022779</td>
+    </tr>
+    <tr>
+      <th>799</th>
+      <td>0.561116</td>
+      <td>2.885421</td>
+      <td>-0.531806</td>
+      <td>3.010536</td>
+      <td>1.831723</td>
+      <td>0.527830</td>
+      <td>3.022779</td>
+    </tr>
+    <tr>
+      <th>800</th>
+      <td>0.561116</td>
+      <td>1.171889</td>
+      <td>1.380831</td>
+      <td>1.752310</td>
+      <td>0.502214</td>
+      <td>0.138603</td>
+      <td>3.022779</td>
+    </tr>
+  </tbody>
+</table>
+<p>800 rows × 7 columns</p>
+</div></div></div>
+</div>
+<p>También se lo puedes aplicar a una sola columna.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">pkm</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;generation&quot;</span><span class="p">)[</span><span class="s2">&quot;attack&quot;</span><span class="p">]</span>
+    <span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="p">(</span><span class="n">s</span> <span class="o">-</span> <span class="n">s</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span> <span class="o">/</span> <span class="n">s</span><span class="o">.</span><span class="n">std</span><span class="p">())</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>#
+1     -0.898969
+2     -0.476132
+3      0.174386
+4      0.759852
+5     -0.801391
+         ...   
+796    0.829182
+797    2.885421
+798    1.171889
+799    2.885421
+800    1.171889
+Name: attack, Length: 800, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Personalmente, no suelo utilizar mucho este método, porque prefiero guardar la data original. Suelo agregar nuevas columnas, por ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pkm</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span>
+    <span class="n">attack_nrm</span><span class="o">=</span><span class="k">lambda</span> <span class="n">df</span><span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;generation&quot;</span><span class="p">)[</span><span class="s2">&quot;attack&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="p">(</span><span class="n">s</span> <span class="o">-</span> <span class="n">s</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span> <span class="o">/</span> <span class="n">s</span><span class="o">.</span><span class="n">std</span><span class="p">())</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>type1</th>
+      <th>type2</th>
+      <th>hp</th>
+      <th>attack</th>
+      <th>defense</th>
+      <th>sp_atk</th>
+      <th>sp_def</th>
+      <th>speed</th>
+      <th>generation</th>
+      <th>legendary</th>
+      <th>attack_nrm</th>
+    </tr>
+    <tr>
+      <th>#</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>Bulbasaur</td>
+      <td>Grass</td>
+      <td>Poison</td>
+      <td>45</td>
+      <td>49</td>
+      <td>49</td>
+      <td>65</td>
+      <td>65</td>
+      <td>45</td>
+      <td>1</td>
+      <td>False</td>
+      <td>-0.898969</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Ivysaur</td>
+      <td>Grass</td>
+      <td>Poison</td>
+      <td>60</td>
+      <td>62</td>
+      <td>63</td>
+      <td>80</td>
+      <td>80</td>
+      <td>60</td>
+      <td>1</td>
+      <td>False</td>
+      <td>-0.476132</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Venusaur</td>
+      <td>Grass</td>
+      <td>Poison</td>
+      <td>80</td>
+      <td>82</td>
+      <td>83</td>
+      <td>100</td>
+      <td>100</td>
+      <td>80</td>
+      <td>1</td>
+      <td>False</td>
+      <td>0.174386</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Mega Venusaur</td>
+      <td>Grass</td>
+      <td>Poison</td>
+      <td>80</td>
+      <td>100</td>
+      <td>123</td>
+      <td>122</td>
+      <td>120</td>
+      <td>80</td>
+      <td>1</td>
+      <td>False</td>
+      <td>0.759852</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Charmander</td>
+      <td>Fire</td>
+      <td>NaN</td>
+      <td>39</td>
+      <td>52</td>
+      <td>43</td>
+      <td>60</td>
+      <td>50</td>
+      <td>65</td>
+      <td>1</td>
+      <td>False</td>
+      <td>-0.801391</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>796</th>
+      <td>Diancie</td>
+      <td>Rock</td>
+      <td>Fairy</td>
+      <td>50</td>
+      <td>100</td>
+      <td>150</td>
+      <td>100</td>
+      <td>150</td>
+      <td>50</td>
+      <td>6</td>
+      <td>True</td>
+      <td>0.829182</td>
+    </tr>
+    <tr>
+      <th>797</th>
+      <td>Mega Diancie</td>
+      <td>Rock</td>
+      <td>Fairy</td>
+      <td>50</td>
+      <td>160</td>
+      <td>110</td>
+      <td>160</td>
+      <td>110</td>
+      <td>110</td>
+      <td>6</td>
+      <td>True</td>
+      <td>2.885421</td>
+    </tr>
+    <tr>
+      <th>798</th>
+      <td>Hoopa Confined</td>
+      <td>Psychic</td>
+      <td>Ghost</td>
+      <td>80</td>
+      <td>110</td>
+      <td>60</td>
+      <td>150</td>
+      <td>130</td>
+      <td>70</td>
+      <td>6</td>
+      <td>True</td>
+      <td>1.171889</td>
+    </tr>
+    <tr>
+      <th>799</th>
+      <td>Hoopa Unbound</td>
+      <td>Psychic</td>
+      <td>Dark</td>
+      <td>80</td>
+      <td>160</td>
+      <td>60</td>
+      <td>170</td>
+      <td>130</td>
+      <td>80</td>
+      <td>6</td>
+      <td>True</td>
+      <td>2.885421</td>
+    </tr>
+    <tr>
+      <th>800</th>
+      <td>Volcanion</td>
+      <td>Fire</td>
+      <td>Water</td>
+      <td>80</td>
+      <td>110</td>
+      <td>120</td>
+      <td>130</td>
+      <td>90</td>
+      <td>70</td>
+      <td>6</td>
+      <td>True</td>
+      <td>1.171889</td>
+    </tr>
+  </tbody>
+</table>
+<p>800 rows × 12 columns</p>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="group-by-filter">
+<h2>Group By - Filter<a class="headerlink" href="#group-by-filter" title="Permalink to this headline">¶</a></h2>
+<p>Ejemplo: Filtrar el dataframe de pokemons pero manteniendo solo las generaciones que tengan más de 10 pokemones legendarios.</p>
+<p>Como te estás dando cuenta, no se puede hacer con una máscara, porque el criterio no depende de cada registro, depende del grupo al cual pertenece el regirstro.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pkm_filtered</span> <span class="o">=</span> <span class="n">pkm</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;generation&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">df</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;legendary&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">pkm_filtered</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>type1</th>
+      <th>type2</th>
+      <th>hp</th>
+      <th>attack</th>
+      <th>defense</th>
+      <th>sp_atk</th>
+      <th>sp_def</th>
+      <th>speed</th>
+      <th>generation</th>
+      <th>legendary</th>
+    </tr>
+    <tr>
+      <th>#</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>273</th>
+      <td>Treecko</td>
+      <td>Grass</td>
+      <td>NaN</td>
+      <td>40</td>
+      <td>45</td>
+      <td>35</td>
+      <td>65</td>
+      <td>55</td>
+      <td>70</td>
+      <td>3</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>274</th>
+      <td>Grovyle</td>
+      <td>Grass</td>
+      <td>NaN</td>
+      <td>50</td>
+      <td>65</td>
+      <td>45</td>
+      <td>85</td>
+      <td>65</td>
+      <td>95</td>
+      <td>3</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>275</th>
+      <td>Sceptile</td>
+      <td>Grass</td>
+      <td>NaN</td>
+      <td>70</td>
+      <td>85</td>
+      <td>65</td>
+      <td>105</td>
+      <td>85</td>
+      <td>120</td>
+      <td>3</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>276</th>
+      <td>Mega Sceptile</td>
+      <td>Grass</td>
+      <td>Dragon</td>
+      <td>70</td>
+      <td>110</td>
+      <td>75</td>
+      <td>145</td>
+      <td>85</td>
+      <td>145</td>
+      <td>3</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>277</th>
+      <td>Torchic</td>
+      <td>Fire</td>
+      <td>NaN</td>
+      <td>45</td>
+      <td>60</td>
+      <td>40</td>
+      <td>70</td>
+      <td>50</td>
+      <td>45</td>
+      <td>3</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Veamos cuales son las generaciones que permanecieron luego del filtrado.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pkm_filtered</span><span class="p">[</span><span class="s2">&quot;generation&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3, 4, 5])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Verifiquemos que filtramos correctamente</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pkm</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;generation&quot;</span><span class="p">)[</span><span class="s2">&quot;legendary&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>generation
+1     6
+2     5
+3    18
+4    13
+5    15
+6     8
+Name: legendary, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lo importante del argumento del método <code class="docutils literal notranslate"><span class="pre">filter</span></code> es que retorne un booleano! Es distinto a cuando uno hace una máscara, donde se obtiene una serie de elementos booleanos.</p>
+<p>Por ejemplo, filtrar los pokemones que son de la primera generación generación.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pkm</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="k">lambda</span> <span class="n">df</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;generation&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>type1</th>
+      <th>type2</th>
+      <th>hp</th>
+      <th>attack</th>
+      <th>defense</th>
+      <th>sp_atk</th>
+      <th>sp_def</th>
+      <th>speed</th>
+      <th>generation</th>
+      <th>legendary</th>
+    </tr>
+    <tr>
+      <th>#</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>167</th>
+      <td>Chikorita</td>
+      <td>Grass</td>
+      <td>NaN</td>
+      <td>45</td>
+      <td>49</td>
+      <td>65</td>
+      <td>49</td>
+      <td>65</td>
+      <td>45</td>
+      <td>2</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>168</th>
+      <td>Bayleef</td>
+      <td>Grass</td>
+      <td>NaN</td>
+      <td>60</td>
+      <td>62</td>
+      <td>80</td>
+      <td>63</td>
+      <td>80</td>
+      <td>60</td>
+      <td>2</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>169</th>
+      <td>Meganium</td>
+      <td>Grass</td>
+      <td>NaN</td>
+      <td>80</td>
+      <td>82</td>
+      <td>100</td>
+      <td>83</td>
+      <td>100</td>
+      <td>80</td>
+      <td>2</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>170</th>
+      <td>Cyndaquil</td>
+      <td>Fire</td>
+      <td>NaN</td>
+      <td>39</td>
+      <td>52</td>
+      <td>43</td>
+      <td>60</td>
+      <td>50</td>
+      <td>65</td>
+      <td>2</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>171</th>
+      <td>Quilava</td>
+      <td>Fire</td>
+      <td>NaN</td>
+      <td>58</td>
+      <td>64</td>
+      <td>58</td>
+      <td>80</td>
+      <td>65</td>
+      <td>80</td>
+      <td>2</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>796</th>
+      <td>Diancie</td>
+      <td>Rock</td>
+      <td>Fairy</td>
+      <td>50</td>
+      <td>100</td>
+      <td>150</td>
+      <td>100</td>
+      <td>150</td>
+      <td>50</td>
+      <td>6</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>797</th>
+      <td>Mega Diancie</td>
+      <td>Rock</td>
+      <td>Fairy</td>
+      <td>50</td>
+      <td>160</td>
+      <td>110</td>
+      <td>160</td>
+      <td>110</td>
+      <td>110</td>
+      <td>6</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>798</th>
+      <td>Hoopa Confined</td>
+      <td>Psychic</td>
+      <td>Ghost</td>
+      <td>80</td>
+      <td>110</td>
+      <td>60</td>
+      <td>150</td>
+      <td>130</td>
+      <td>70</td>
+      <td>6</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>799</th>
+      <td>Hoopa Unbound</td>
+      <td>Psychic</td>
+      <td>Dark</td>
+      <td>80</td>
+      <td>160</td>
+      <td>60</td>
+      <td>170</td>
+      <td>130</td>
+      <td>80</td>
+      <td>6</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>800</th>
+      <td>Volcanion</td>
+      <td>Fire</td>
+      <td>Water</td>
+      <td>80</td>
+      <td>110</td>
+      <td>120</td>
+      <td>130</td>
+      <td>90</td>
+      <td>70</td>
+      <td>6</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+<p>634 rows × 11 columns</p>
+</div></div></div>
+</div>
+<p>La máscara dentro de <code class="docutils literal notranslate"><span class="pre">loc</span></code> es una serie de elementos booleanos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pkm</span><span class="p">[</span><span class="s2">&quot;generation&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>#
+1      False
+2      False
+3      False
+4      False
+5      False
+       ...  
+796     True
+797     True
+798     True
+799     True
+800     True
+Name: generation, Length: 800, dtype: bool
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="resumen">
+<h2>Resumen<a class="headerlink" href="#resumen" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Agrupar datos por condiciones es una tarea usual.</p></li>
+<li><p>Dependiendo de tu objetivo es posible operar, transformar o filtrar los grupos.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="M2L04_data_combining.html" title="previous page">Combinando Datos</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Alonso Ogueda Oliva<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-177357392-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>
