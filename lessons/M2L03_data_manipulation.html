@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Manipulación de Datos &#8212; MAT281 - Aplicaciones de la Matemática en la Ingeniería  - 2020</title>
     
-  <link rel="stylesheet" href="../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
     
   <link rel="stylesheet"
@@ -25,7 +25,7 @@
     href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.30270b6e4c972e43c488.js">
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -157,6 +157,11 @@
    Agrupando Datos
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L06_eda.html">
+   Análisis Exploratorio de Datos
+  </a>
+ </li>
 </ul>
 
 </nav>
@@ -226,7 +231,8 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -1021,54 +1027,54 @@ Name: Temp, dtype: float64
   </thead>
   <tbody>
     <tr>
-      <th>20267</th>
+      <th>20629</th>
       <td>Magallanes</td>
       <td>12</td>
       <td>Rio Verde</td>
       <td>12103.0</td>
       <td>211.0</td>
-      <td>2020-10-02</td>
+      <td>2020-10-05</td>
       <td>1.0</td>
     </tr>
     <tr>
-      <th>20268</th>
+      <th>20630</th>
       <td>Magallanes</td>
       <td>12</td>
       <td>San Gregorio</td>
       <td>12104.0</td>
       <td>681.0</td>
-      <td>2020-10-02</td>
+      <td>2020-10-05</td>
       <td>9.0</td>
     </tr>
     <tr>
-      <th>20269</th>
+      <th>20631</th>
       <td>Magallanes</td>
       <td>12</td>
       <td>Timaukel</td>
       <td>12303.0</td>
       <td>282.0</td>
-      <td>2020-10-02</td>
-      <td>2.0</td>
+      <td>2020-10-05</td>
+      <td>8.0</td>
     </tr>
     <tr>
-      <th>20270</th>
+      <th>20632</th>
       <td>Magallanes</td>
       <td>12</td>
       <td>Torres del Paine</td>
       <td>12402.0</td>
       <td>1021.0</td>
-      <td>2020-10-02</td>
+      <td>2020-10-05</td>
       <td>2.0</td>
     </tr>
     <tr>
-      <th>20271</th>
+      <th>20633</th>
       <td>Magallanes</td>
       <td>12</td>
       <td>Desconocido Magallanes</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>2020-10-02</td>
-      <td>29.0</td>
+      <td>2020-10-05</td>
+      <td>31.0</td>
     </tr>
   </tbody>
 </table>
@@ -1170,58 +1176,58 @@ Name: Temp, dtype: float64
       <td>...</td>
     </tr>
     <tr>
-      <th>19993</th>
+      <th>20355</th>
       <td>Valparaíso</td>
       <td>5</td>
       <td>Valparaiso</td>
       <td>5101.0</td>
       <td>315732.0</td>
-      <td>2020-10-02</td>
-      <td>7199.0</td>
+      <td>2020-10-05</td>
+      <td>7301.0</td>
     </tr>
     <tr>
-      <th>19994</th>
+      <th>20356</th>
       <td>Valparaíso</td>
       <td>5</td>
       <td>Villa Alemana</td>
       <td>5804.0</td>
       <td>139310.0</td>
-      <td>2020-10-02</td>
-      <td>2641.0</td>
+      <td>2020-10-05</td>
+      <td>2689.0</td>
     </tr>
     <tr>
-      <th>19995</th>
+      <th>20357</th>
       <td>Valparaíso</td>
       <td>5</td>
       <td>Vina del Mar</td>
       <td>5109.0</td>
       <td>361371.0</td>
-      <td>2020-10-02</td>
-      <td>6852.0</td>
+      <td>2020-10-05</td>
+      <td>6962.0</td>
     </tr>
     <tr>
-      <th>19996</th>
+      <th>20358</th>
       <td>Valparaíso</td>
       <td>5</td>
       <td>Zapallar</td>
       <td>5405.0</td>
       <td>7994.0</td>
-      <td>2020-10-02</td>
+      <td>2020-10-05</td>
       <td>143.0</td>
     </tr>
     <tr>
-      <th>19997</th>
+      <th>20359</th>
       <td>Valparaíso</td>
       <td>5</td>
       <td>Desconocido Valparaiso</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>2020-10-02</td>
-      <td>439.0</td>
+      <td>2020-10-05</td>
+      <td>445.0</td>
     </tr>
   </tbody>
 </table>
-<p>2184 rows × 7 columns</p>
+<p>2223 rows × 7 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -1244,17 +1250,17 @@ Name: Temp, dtype: float64
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 20272 entries, 0 to 20271
+RangeIndex: 20634 entries, 0 to 20633
 Data columns (total 7 columns):
  #   Column             Non-Null Count  Dtype  
 ---  ------             --------------  -----  
- 0   Region             20272 non-null  object 
- 1   Codigo region      20272 non-null  int64  
- 2   Comuna             20272 non-null  object 
- 3   Codigo comuna      19376 non-null  float64
- 4   Poblacion          19376 non-null  float64
- 5   Fecha              20272 non-null  object 
- 6   Casos confirmados  19853 non-null  float64
+ 0   Region             20634 non-null  object 
+ 1   Codigo region      20634 non-null  int64  
+ 2   Comuna             20634 non-null  object 
+ 3   Codigo comuna      19722 non-null  float64
+ 4   Poblacion          19722 non-null  float64
+ 5   Fecha              20634 non-null  object 
+ 6   Casos confirmados  20215 non-null  float64
 dtypes: float64(3), int64(1), object(3)
 memory usage: 1.1+ MB
 </pre></div>
@@ -1350,9 +1356,9 @@ Name: Casos confirmados, dtype: float64
   <tbody>
     <tr>
       <th>Codigo region</th>
-      <td>20272.0</td>
+      <td>20634.0</td>
       <td>8.784530</td>
-      <td>3.879206</td>
+      <td>3.879204</td>
       <td>1.0</td>
       <td>6.0</td>
       <td>8.0</td>
@@ -1361,9 +1367,9 @@ Name: Casos confirmados, dtype: float64
     </tr>
     <tr>
       <th>Codigo comuna</th>
-      <td>19376.0</td>
+      <td>19722.0</td>
       <td>9034.997110</td>
-      <td>3812.724274</td>
+      <td>3812.722547</td>
       <td>1101.0</td>
       <td>6109.0</td>
       <td>8313.5</td>
@@ -1372,9 +1378,9 @@ Name: Casos confirmados, dtype: float64
     </tr>
     <tr>
       <th>Poblacion</th>
-      <td>19376.0</td>
+      <td>19722.0</td>
       <td>56237.890173</td>
-      <td>88819.631479</td>
+      <td>88819.591267</td>
       <td>137.0</td>
       <td>9546.0</td>
       <td>19770.0</td>
@@ -1383,14 +1389,14 @@ Name: Casos confirmados, dtype: float64
     </tr>
     <tr>
       <th>Casos confirmados</th>
-      <td>19853.0</td>
-      <td>688.037627</td>
-      <td>2083.114284</td>
+      <td>20215.0</td>
+      <td>702.123077</td>
+      <td>2106.955830</td>
       <td>0.0</td>
       <td>5.0</td>
-      <td>51.0</td>
-      <td>255.0</td>
-      <td>26122.0</td>
+      <td>54.0</td>
+      <td>264.5</td>
+      <td>26243.0</td>
     </tr>
   </tbody>
 </table>
@@ -1437,10 +1443,10 @@ Name: Casos confirmados, dtype: float64
   <tbody>
     <tr>
       <th>Region</th>
-      <td>20272</td>
+      <td>20634</td>
       <td>16</td>
       <td>Metropolitana</td>
-      <td>2968</td>
+      <td>3021</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1451,12 +1457,12 @@ Name: Casos confirmados, dtype: float64
     </tr>
     <tr>
       <th>Codigo region</th>
-      <td>20272</td>
+      <td>20634</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>8.78453</td>
-      <td>3.87921</td>
+      <td>3.8792</td>
       <td>1</td>
       <td>6</td>
       <td>8</td>
@@ -1465,10 +1471,10 @@ Name: Casos confirmados, dtype: float64
     </tr>
     <tr>
       <th>Comuna</th>
-      <td>20272</td>
+      <td>20634</td>
       <td>362</td>
-      <td>Cerro Navia</td>
-      <td>56</td>
+      <td>Desconocido Tarapaca</td>
+      <td>57</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1479,7 +1485,7 @@ Name: Casos confirmados, dtype: float64
     </tr>
     <tr>
       <th>Codigo comuna</th>
-      <td>19376</td>
+      <td>19722</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1493,7 +1499,7 @@ Name: Casos confirmados, dtype: float64
     </tr>
     <tr>
       <th>Poblacion</th>
-      <td>19376</td>
+      <td>19722</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1507,9 +1513,9 @@ Name: Casos confirmados, dtype: float64
     </tr>
     <tr>
       <th>Fecha</th>
-      <td>20272</td>
-      <td>56</td>
-      <td>2020-03-30</td>
+      <td>20634</td>
+      <td>57</td>
+      <td>2020-10-02</td>
       <td>362</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1521,17 +1527,17 @@ Name: Casos confirmados, dtype: float64
     </tr>
     <tr>
       <th>Casos confirmados</th>
-      <td>19853</td>
+      <td>20215</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>688.038</td>
-      <td>2083.11</td>
+      <td>702.123</td>
+      <td>2106.96</td>
       <td>0</td>
       <td>5</td>
-      <td>51</td>
-      <td>255</td>
-      <td>26122</td>
+      <td>54</td>
+      <td>264.5</td>
+      <td>26243</td>
     </tr>
   </tbody>
 </table>
@@ -1549,8 +1555,8 @@ Codigo region                16
 Comuna                 Zapallar
 Codigo comuna             16305
 Poblacion                645909
-Fecha                2020-10-02
-Casos confirmados         26122
+Fecha                2020-10-05
+Casos confirmados         26243
 dtype: object
 </pre></div>
 </div>
@@ -1627,22 +1633,22 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Metropolitana         2968
-Valparaíso            2184
-Biobío                1904
-O’Higgins             1904
-Araucanía             1848
-Los Lagos             1736
-Maule                 1736
-Ñuble                 1232
-Coquimbo               896
-Los Ríos               728
-Magallanes             672
-Aysén                  616
-Antofagasta            560
-Atacama                560
-Tarapacá               448
-Arica y Parinacota     280
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Metropolitana         3021
+Valparaíso            2223
+Biobío                1938
+O’Higgins             1938
+Araucanía             1881
+Los Lagos             1767
+Maule                 1767
+Ñuble                 1254
+Coquimbo               912
+Los Ríos               741
+Magallanes             684
+Aysén                  627
+Antofagasta            570
+Atacama                570
+Tarapacá               456
+Arica y Parinacota     285
 Name: Region, dtype: int64
 </pre></div>
 </div>
@@ -1660,7 +1666,7 @@ Name: Region, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(20272,)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(20634,)
 </pre></div>
 </div>
 </div>
@@ -1912,7 +1918,7 @@ Name: Region, dtype: int64
       <td>...</td>
     </tr>
     <tr>
-      <th>20267</th>
+      <th>20629</th>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -1922,7 +1928,7 @@ Name: Region, dtype: int64
       <td>False</td>
     </tr>
     <tr>
-      <th>20268</th>
+      <th>20630</th>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -1932,7 +1938,7 @@ Name: Region, dtype: int64
       <td>False</td>
     </tr>
     <tr>
-      <th>20269</th>
+      <th>20631</th>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -1942,7 +1948,7 @@ Name: Region, dtype: int64
       <td>False</td>
     </tr>
     <tr>
-      <th>20270</th>
+      <th>20632</th>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -1952,7 +1958,7 @@ Name: Region, dtype: int64
       <td>False</td>
     </tr>
     <tr>
-      <th>20271</th>
+      <th>20633</th>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -1963,7 +1969,7 @@ Name: Region, dtype: int64
     </tr>
   </tbody>
 </table>
-<p>20272 rows × 7 columns</p>
+<p>20634 rows × 7 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -2080,7 +2086,7 @@ dtype: bool
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(899, 7)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(915, 7)
 </pre></div>
 </div>
 </div>
@@ -2188,9 +2194,9 @@ dtype: bool
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(19373, 7)
-(19373, 7)
-(20272, 4)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(19719, 7)
+(19719, 7)
+(20634, 4)
 </pre></div>
 </div>
 </div>
@@ -2256,7 +2262,7 @@ dtype: bool
     </div>
 
     
-  <script src="../_static/js/index.30270b6e4c972e43c488.js"></script>
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
 
 
     

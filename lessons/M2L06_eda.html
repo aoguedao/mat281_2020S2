@@ -1,0 +1,3048 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Análisis Exploratorio de Datos &#8212; MAT281 - Aplicaciones de la Matemática en la Ingeniería  - 2020</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Agrupando Datos" href="M2L05_data_aggregation.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/utfsm.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">MAT281 - Aplicaciones de la Matemática en la Ingeniería  - 2020</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Bienvenido(a) a MAT281!
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Introducción
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="M1L01_about_mat281.html">
+   Acerca de MAT281
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M1L02_toolkit_and_setup.html">
+   Toolkit &amp; Setup
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M1L03_python_basics.html">
+   Recordando Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M1L04_python_ecosystem.html">
+   Ecosistema Python
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Análisis de Datos
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L01_scientific_computing.html">
+   Introducción al Cálculo Científico
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L02_linear_algebra.html">
+   Álgebra Lineal
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L03_data_manipulation.html">
+   Manipulación de Datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L04_data_combining.html">
+   Combinando Datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L05_data_aggregation.html">
+   Agrupando Datos
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Análisis Exploratorio de Datos
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/lessons/M2L06_eda.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/aoguedao/mat281_2020S2"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/aoguedao/mat281_2020S2/master?urlpath=lab/tree/lessons/M2L06_eda.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/aoguedao/mat281_2020S2/blob/master/lessons/M2L06_eda.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fuentes-de-datos">
+   Fuentes de datos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#csv">
+     CSV
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#json">
+     JSON
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pickle">
+     Pickle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sql">
+     SQL
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#api">
+     API
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manos-a-la-obra">
+   Manos a la obra
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ejemplo-datos-de-terremotos">
+     Ejemplo: Datos de terremotos
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#que-pregunta-s-estas-tratando-de-resolver-o-probar-que-estas-equivocado">
+       ¿Qué pregunta(s) estás tratando de resolver (o probar que estás equivocado)?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#que-tipo-de-datos-tiene-y-como-trata-los-diferentes-tipos">
+       ¿Qué tipo de datos tiene y cómo trata los diferentes tipos?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#que-falta-en-los-datos-y-como-los-maneja">
+       ¿Qué falta en los datos y cómo los maneja?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#que-hacer-con-los-datos-faltantes-outliers-o-informacion-mal-inputada">
+       ¿Qué hacer con los datos faltantes, outliers o información mal inputada?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#se-puede-sacar-mas-provecho-a-los-datos">
+       ¿Se puede sacar más provecho a los datos ?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dar-respuesta">
+       Dar respuesta
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resumen">
+   Resumen
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="analisis-exploratorio-de-datos">
+<h1>Análisis Exploratorio de Datos<a class="headerlink" href="#analisis-exploratorio-de-datos" title="Permalink to this headline">¶</a></h1>
+<p>Hemos hablado mucho de datos, todo muy de libro o juguete. Esta clase intentará acercarte a algunos de los principales desafíos a la hora de trabajar con distintas fuentes de datos y los problemas usuales que podrías encontrar.</p>
+<div class="section" id="fuentes-de-datos">
+<h2>Fuentes de datos<a class="headerlink" href="#fuentes-de-datos" title="Permalink to this headline">¶</a></h2>
+<p>Para variar un poco, utilizaremos la librería <code class="docutils literal notranslate"><span class="pre">pathlib</span></code> en lugar de <code class="docutils literal notranslate"><span class="pre">os</span></code> para manejar directorios. El paradigma es un poco distinto, en lugar de muchas funciones, la filosofía es tratar a los directorios como objetos que tienen sus propios métodos y operaciones.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">()</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span> <span class="o">/</span> <span class="s2">&quot;data&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data_path</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/runner/work/mat281_2020S2/mat281_2020S2/data
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="csv">
+<h3>CSV<a class="headerlink" href="#csv" title="Permalink to this headline">¶</a></h3>
+<p>Del inglés <em>Comma-Separated Values</em>, los archivos CSV utilizan comas (“,”) para separar valores y cada registro consiste de una fila.</p>
+<ul class="simple">
+<li><p>Pros:</p>
+<ul>
+<li><p>Livianos.</p></li>
+<li><p>De fácil entendimiento.</p></li>
+<li><p>Editables usando un editor de texto.</p></li>
+</ul>
+</li>
+<li><p>Contras:</p>
+<ul>
+<li><p>No está totalmente estandarizado (e.g. ¿Qué pasa si un valor tiene comas?)</p></li>
+<li><p>Son sensible al <em>encoding</em> (es la forma en que se codifica un carácter).</p></li>
+</ul>
+</li>
+</ul>
+<p>Pandas posee su propia función para leer csv: <code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Documentación</span>
+<span class="c1"># pd.read_csv?</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Un ejemplo de <em>encoding</em> incorrecto</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_path</span> <span class="o">/</span> <span class="s2">&quot;encoding_example.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;gbk&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>nombre</th>
+      <th>apellido</th>
+      <th>edad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Juan</td>
+      <td>P茅rez</td>
+      <td>12.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Le贸n</td>
+      <td>Pardo</td>
+      <td>29.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Jos茅</td>
+      <td>Nu帽ez</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Mientras que el mismo dataset con el encoding correcto luce así</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_path</span> <span class="o">/</span> <span class="s2">&quot;encoding_example.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>nombre</th>
+      <th>apellido</th>
+      <th>edad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Juan</td>
+      <td>Pérez</td>
+      <td>12.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>León</td>
+      <td>Pardo</td>
+      <td>29.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>José</td>
+      <td>Nuñez</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="json">
+<h3>JSON<a class="headerlink" href="#json" title="Permalink to this headline">¶</a></h3>
+<p>Acrónimo de <em>JavaScript Object Notation</em>, utilizado principalmente para intercambiar datos entre una aplicación web y un servidor.</p>
+<ul class="simple">
+<li><p>Pros:</p>
+<ul>
+<li><p>Livianos.</p></li>
+<li><p>De fácil entendimiento.</p></li>
+<li><p>Editables usando un editor de texto.</p></li>
+<li><p>Formato estandarizado.</p></li>
+</ul>
+</li>
+<li><p>Contras:</p>
+<ul>
+<li><p>La lectura con pandas puede ser un poco complicada.</p></li>
+</ul>
+</li>
+</ul>
+<p>Pandas posee su propia función para leer JSON: <code class="docutils literal notranslate"><span class="pre">pd.read_json()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pd.read_json?</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se parecen mucho a los diccionarios de python pero en un archivo de texto.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>head ../data/json_example.json
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+  &quot;integer&quot;: {
+    &quot;0&quot;: 5,
+    &quot;1&quot;: 5,
+    &quot;2&quot;: 9,
+    &quot;3&quot;: 6,
+    &quot;4&quot;: 6,
+    &quot;5&quot;: 9,
+    &quot;6&quot;: 7,
+    &quot;7&quot;: 1,
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="n">data_path</span> <span class="o">/</span> <span class="s2">&quot;json_example.json&quot;</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="s2">&quot;columns&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>integer</th>
+      <th>datetime</th>
+      <th>category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5</td>
+      <td>2015-01-01 00:00:00</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>5</td>
+      <td>2015-01-01 00:00:01</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>9</td>
+      <td>2015-01-01 00:00:02</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>6</td>
+      <td>2015-01-01 00:00:03</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>6</td>
+      <td>2015-01-01 00:00:04</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="pickle">
+<h3>Pickle<a class="headerlink" href="#pickle" title="Permalink to this headline">¶</a></h3>
+<p>Es un módulo que implementa protocolos binarios de serialización y des-serialización de objetos de Python.</p>
+<ul class="simple">
+<li><p>Pros</p>
+<ul>
+<li><p>Puede representar una inmensa cantidad de tipos de objetos de python.</p></li>
+<li><p>En un contexto de seguridad, como no es legible por el ser humano (representación binaria) puede ser útil para almacenar datos sensibles.</p></li>
+</ul>
+</li>
+<li><p>Contras:</p>
+<ul>
+<li><p>Solo Python.</p></li>
+<li><p>Si viene de un tercero podría tener contenido malicioso.</p></li>
+</ul>
+</li>
+</ul>
+<p>Pandas posee su propia función para leer pickles: <code class="docutils literal notranslate"><span class="pre">pd.read_pickle()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pd.read_pickle?</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_pickle</span><span class="p">(</span><span class="n">data_path</span> <span class="o">/</span> <span class="s1">&#39;nba.pkl&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>year_start</th>
+      <th>year_end</th>
+      <th>position</th>
+      <th>height</th>
+      <th>weight</th>
+      <th>birth_date</th>
+      <th>college</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Alaa Abdelnaby</td>
+      <td>1991</td>
+      <td>1995</td>
+      <td>F-C</td>
+      <td>6-10</td>
+      <td>240.0</td>
+      <td>June 24, 1968</td>
+      <td>Duke University</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Zaid Abdul-Aziz</td>
+      <td>1969</td>
+      <td>1978</td>
+      <td>C-F</td>
+      <td>6-9</td>
+      <td>235.0</td>
+      <td>April 7, 1946</td>
+      <td>Iowa State University</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Kareem Abdul-Jabbar</td>
+      <td>1970</td>
+      <td>1989</td>
+      <td>C</td>
+      <td>7-2</td>
+      <td>225.0</td>
+      <td>April 16, 1947</td>
+      <td>University of California, Los Angeles</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Mahmoud Abdul-Rauf</td>
+      <td>1991</td>
+      <td>2001</td>
+      <td>G</td>
+      <td>6-1</td>
+      <td>162.0</td>
+      <td>March 9, 1969</td>
+      <td>Louisiana State University</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Tariq Abdul-Wahad</td>
+      <td>1998</td>
+      <td>2003</td>
+      <td>F</td>
+      <td>6-6</td>
+      <td>223.0</td>
+      <td>November 3, 1974</td>
+      <td>San Jose State University</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="sql">
+<h3>SQL<a class="headerlink" href="#sql" title="Permalink to this headline">¶</a></h3>
+<p>Conocimos las bases de datos relacionales SQL en clases anteriores y como recordarás existe la función <code class="docutils literal notranslate"><span class="pre">pd.read_sql()</span></code>, lo interesante aquí es que debes crear una conexión antes de poder leer la base de datos. Cada Sistema de Gestión de Bases de Datos Relacionales (<em>Relational Database Management System</em> o RDBMS) tiene su propia forma de conectarse.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pd.read_sql?</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="n">connector</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">data_path</span> <span class="o">/</span> <span class="s2">&quot;chinook.db&quot;</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;select * from albums&quot;</span><span class="p">,</span> <span class="n">con</span><span class="o">=</span><span class="n">connector</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>AlbumId</th>
+      <th>Title</th>
+      <th>ArtistId</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>For Those About To Rock We Salute You</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Balls to the Wall</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Restless and Wild</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Let There Be Rock</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Big Ones</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="api">
+<h3>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h3>
+<p>¿Has escuchado el término <strong>API</strong>? Fuera de todo tecnicismo, las APIs (<em>Application Programming Interface</em>) permiten hacer uso de funciones ya existentes en otro software (o de la infraestructura ya existente en otras plataformas) para no estar reinventando la rueda constantemente, reutilizando así código que se sabe que está probado y que funciona correctamente. Por ejemplo, cuando haces una compra online y utilizas WebPay o una página utiliza los mapas de GoogleMaps. ¡Hay APIs en todos lados!</p>
+<p>Utilizaremos la API de Open Notify para obtener cuántas personas hay en el espacio en este momento (<a class="reference external" href="http://open-notify.org/Open-Notify-API/People-In-Space/">link</a>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;http://api.open-notify.org/astros.json&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;response has type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>response has type &lt;class &#39;requests.models.Response&#39;&gt;
+&lt;Response [200]&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Puedes acceder a su contenido como un JSON de la siguiente manera</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;number&#39;: 3,
+ &#39;people&#39;: [{&#39;craft&#39;: &#39;ISS&#39;, &#39;name&#39;: &#39;Chris Cassidy&#39;},
+  {&#39;craft&#39;: &#39;ISS&#39;, &#39;name&#39;: &#39;Anatoly Ivanishin&#39;},
+  {&#39;craft&#39;: &#39;ISS&#39;, &#39;name&#39;: &#39;Ivan Vagner&#39;}],
+ &#39;message&#39;: &#39;success&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lo cual en la práctica lo carga como un diccionario en Python</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict
+</pre></div>
+</div>
+</div>
+</div>
+<p>Por lo que podemos cargar ciertas estructuras a dataframes con métodos de pandas que utilicen diccionarios. Por dar un ejemplo, dentro del JSON obtenido hay una lista de personas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&quot;people&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>craft</th>
+      <th>name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ISS</td>
+      <td>Chris Cassidy</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ISS</td>
+      <td>Anatoly Ivanishin</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ISS</td>
+      <td>Ivan Vagner</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="manos-a-la-obra">
+<h2>Manos a la obra<a class="headerlink" href="#manos-a-la-obra" title="Permalink to this headline">¶</a></h2>
+<p>El análisis exploratorio de datos es una forma de analizar datos definido por John W. Tukey (E.D.A.: Exploratory data analysis) es el tratamiento estadístico al que se someten las muestras recogidas durante un proceso de investigación en cualquier campo científico. Para mayor rapidez y precisión, todo el proceso suele realizarse por medios informáticos, con aplicaciones específicas para el tratamiento estadístico.</p>
+<p>El análisis exploratorio de datos debería dar respuestas (al menos) a lo siguiente:</p>
+<ol class="simple">
+<li><p>¿Qué pregunta(s) estás tratando de resolver (o probar que estás equivocado)?</p></li>
+<li><p>¿Qué tipo de datos tiene y cómo trata los diferentes tipos?</p></li>
+<li><p>¿Qué falta en los datos y cómo los maneja?</p></li>
+<li><p>¿Qué hacer con los datos faltantes, outliers o información mal inputada?</p></li>
+<li><p>¿Se puede sacar más provecho a los datos ?</p></li>
+</ol>
+<div class="section" id="ejemplo-datos-de-terremotos">
+<h3>Ejemplo: Datos de terremotos<a class="headerlink" href="#ejemplo-datos-de-terremotos" title="Permalink to this headline">¶</a></h3>
+<p>El dataset <code class="docutils literal notranslate"><span class="pre">earthquakes.csv</span></code> contiene la información de los terremotos de los países durante el año 2000 al 2011. Debido a que la información de este dataset es relativamente fácil de trabajar, hemos creado un dataset denominado <code class="docutils literal notranslate"><span class="pre">earthquakes_contaminated.csv</span></code> que posee información contaminada en cada una de sus columnas. De esta forma se podrá ilustrar los distintos inconvenientes al realizar análisis exploratorio de datos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_path</span> <span class="o">/</span> <span class="s2">&quot;earthquakes.csv&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Año</th>
+      <th>Pais</th>
+      <th>Magnitud</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2011</td>
+      <td>Turkey</td>
+      <td>7.1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2011</td>
+      <td>India</td>
+      <td>6.9</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2011</td>
+      <td>Japan</td>
+      <td>7.1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2011</td>
+      <td>Burma</td>
+      <td>6.8</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2011</td>
+      <td>Japan</td>
+      <td>9.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">earthquakes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_path</span> <span class="o">/</span> <span class="s2">&quot;earthquakes_contaminated.csv&quot;</span><span class="p">)</span>
+<span class="n">earthquakes</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Año</th>
+      <th>Pais</th>
+      <th>Magnitud</th>
+      <th>Informacion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2000</td>
+      <td>Turkey</td>
+      <td>6</td>
+      <td>info no valiosa</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2000</td>
+      <td>Turkmenistan</td>
+      <td>7</td>
+      <td>info no valiosa</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2000</td>
+      <td>Azerbaijan</td>
+      <td>6.5</td>
+      <td>info no valiosa</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2000</td>
+      <td>Azerbaijan</td>
+      <td>6.8</td>
+      <td>info no valiosa</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2000</td>
+      <td>Papua New Guinea</td>
+      <td>8</td>
+      <td>info no valiosa</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>Variables</strong></p>
+<ul class="simple">
+<li><p><strong>Pais</strong>:</p>
+<ul>
+<li><p>Descripción: País del devento sísmico.</p></li>
+<li><p>Tipo: <em>string</em></p></li>
+<li><p>Observaciones: No deberían encontrarse nombres de ciudades, comunas, pueblos, estados, etc.</p></li>
+</ul>
+</li>
+<li><p>Año:</p>
+<ul>
+<li><p>Descripción: Año del devento sísmico.</p></li>
+<li><p>Tipo: <em>integer</em></p></li>
+<li><p>Observaciones: Los años deben estar entre 2000 y 2011.</p></li>
+</ul>
+</li>
+<li><p>Magnitud:</p>
+<ul>
+<li><p>Descripción: Magnitud del devento sísmico medida en <a class="reference external" href="https://en.wikipedia.org/wiki/Moment_magnitude_scale">Magnitud de Momento Sísmico</a>.</p></li>
+<li><p>Tipo: <em>float</em></p></li>
+<li><p>Observaciones: Magnitudes menores a 9.6.</p></li>
+</ul>
+</li>
+<li><p>Informacion:</p>
+<ul>
+<li><p>Descripción: Columna contaminante.</p></li>
+<li><p>Tipo: <em>string</em></p></li>
+<li><p>Observaciones: A priori pareciera que no entrega información a los datos.</p></li>
+</ul>
+</li>
+</ul>
+<p>A pesar que la magnitud es un <em>float</em>, el conocimiento de los datos nos da información relevante, pues el terremoto con mayor magnitud registrado a la fecha fue el de Valdivia, Chile el 22 de mayo de 1960 con una magnitud entre 9.4 - 9.6.</p>
+<p><strong>Los datos son solo bytes en el disco duro si es que no entregan valor y conocimiento.</strong></p>
+<div class="section" id="que-pregunta-s-estas-tratando-de-resolver-o-probar-que-estas-equivocado">
+<h4>¿Qué pregunta(s) estás tratando de resolver (o probar que estás equivocado)?<a class="headerlink" href="#que-pregunta-s-estas-tratando-de-resolver-o-probar-que-estas-equivocado" title="Permalink to this headline">¶</a></h4>
+<p>A modo de ejemplo, consideremos que que queremos conocer la mayor magnitud de terremoto en cada país a lo largo de los años.</p>
+</div>
+<div class="section" id="que-tipo-de-datos-tiene-y-como-trata-los-diferentes-tipos">
+<h4>¿Qué tipo de datos tiene y cómo trata los diferentes tipos?<a class="headerlink" href="#que-tipo-de-datos-tiene-y-como-trata-los-diferentes-tipos" title="Permalink to this headline">¶</a></h4>
+<p>Por el conocimiento de los datos sabemos que <code class="docutils literal notranslate"><span class="pre">Pais</span></code> e <code class="docutils literal notranslate"><span class="pre">Información</span></code> son variables categóricas, mientras que <code class="docutils literal notranslate"><span class="pre">Año</span></code> y <code class="docutils literal notranslate"><span class="pre">Magnitud</span></code> son variables numéricas.</p>
+<p>Utilizemos las herramientas que nos entrega <code class="docutils literal notranslate"><span class="pre">pandas</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">earthquakes</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 228 entries, 0 to 227
+Data columns (total 4 columns):
+ #   Column       Non-Null Count  Dtype 
+---  ------       --------------  ----- 
+ 0   Año          226 non-null    object
+ 1   Pais         226 non-null    object
+ 2   Magnitud     225 non-null    object
+ 3   Informacion  220 non-null    object
+dtypes: object(4)
+memory usage: 7.2+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">earthquakes</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+      <th>unique</th>
+      <th>top</th>
+      <th>freq</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Año</th>
+      <td>226</td>
+      <td>16</td>
+      <td>2003</td>
+      <td>31</td>
+    </tr>
+    <tr>
+      <th>Pais</th>
+      <td>226</td>
+      <td>74</td>
+      <td>Indonesia</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <th>Magnitud</th>
+      <td>225</td>
+      <td>45</td>
+      <td>6.4</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>Informacion</th>
+      <td>220</td>
+      <td>3</td>
+      <td>info valiosa</td>
+      <td>166</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">earthquakes</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Año            object
+Pais           object
+Magnitud       object
+Informacion    object
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<p>Todas las columnas son de tipo <code class="docutils literal notranslate"><span class="pre">object</span></code>, sospechoso. Además, algunas no tienen datos.</p>
+<p><strong>Tip</strong>: Típicamente se utilizan nombres de columnas en minúsculas y sin espacios. Un truco es hacer lo siguiente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">earthquakes</span> <span class="o">=</span> <span class="n">earthquakes</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+<span class="n">earthquakes</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>año</th>
+      <th>pais</th>
+      <th>magnitud</th>
+      <th>informacion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2000</td>
+      <td>Turkey</td>
+      <td>6</td>
+      <td>info no valiosa</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2000</td>
+      <td>Turkmenistan</td>
+      <td>7</td>
+      <td>info no valiosa</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2000</td>
+      <td>Azerbaijan</td>
+      <td>6.5</td>
+      <td>info no valiosa</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2000</td>
+      <td>Azerbaijan</td>
+      <td>6.8</td>
+      <td>info no valiosa</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2000</td>
+      <td>Papua New Guinea</td>
+      <td>8</td>
+      <td>info no valiosa</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Se le aplicó una función <code class="docutils literal notranslate"><span class="pre">lambda</span></code> a cada nombre de columna! Puum!</p>
+</div>
+<div class="section" id="que-falta-en-los-datos-y-como-los-maneja">
+<h4>¿Qué falta en los datos y cómo los maneja?<a class="headerlink" href="#que-falta-en-los-datos-y-como-los-maneja" title="Permalink to this headline">¶</a></h4>
+<p>No es necesario agregar más variables, pero si procesarla.</p>
+</div>
+<div class="section" id="que-hacer-con-los-datos-faltantes-outliers-o-informacion-mal-inputada">
+<h4>¿Qué hacer con los datos faltantes, outliers o información mal inputada?<a class="headerlink" href="#que-hacer-con-los-datos-faltantes-outliers-o-informacion-mal-inputada" title="Permalink to this headline">¶</a></h4>
+<p>A continuación iremos explorando cada una de las columnas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">earthquakes</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La columna </span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s2"> posee los siguientes valores únicos:</span><span class="se">\n</span><span class="s2"> </span><span class="si">{</span><span class="n">earthquakes</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span><span class="si">}</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La columna año posee los siguientes valores únicos:
+ [&#39;1990&#39; &#39;1997&#39; &#39;1999&#39; &#39;2000&#39; &#39;2001&#39; &#39;2002&#39; &#39;2003&#39; &#39;2004&#39; &#39;2005&#39; &#39;2006&#39;
+ &#39;2007&#39; &#39;2008&#39; &#39;2009&#39; &#39;2010&#39; &#39;2011&#39; &#39;dos mil uno&#39; nan]
+
+
+La columna pais posee los siguientes valores únicos:
+ [&#39;Afghanistan&#39; &#39;Afghanistan &#39; &#39;Algeria&#39; &#39;Algeria &#39; &#39;Argentina&#39;
+ &#39;Azerbaijan&#39; &#39;Azerbaijan &#39; &#39;Bangladesh&#39; &#39;Burma &#39; &#39;Chile&#39; &#39;Chile &#39; &#39;China&#39;
+ &#39;China &#39; &#39;Colombia&#39; &#39;Costa Rica&#39; &#39;Costa Rica &#39;
+ &#39;Democratic Republic of the Congo&#39; &#39;Democratic Republic of the Congo &#39;
+ &#39;Dominican Republic&#39; &#39;Ecuador&#39; &#39;El Salvador &#39; &#39;Greece&#39; &#39;Greece &#39;
+ &#39;Guadeloupe&#39; &#39;Guatemala&#39; &#39;Haiti &#39; &#39;India&#39; &#39;India &#39; &#39;Indonesia&#39;
+ &#39;Indonesia &#39; &#39;Iran&#39; &#39;Iran &#39; &#39;Iran, 2005 Qeshm earthquake&#39; &#39;Italy&#39;
+ &#39;Italy &#39; &#39;Japan&#39; &#39;Japan &#39; &#39;Kazakhstan&#39; &#39;Kyrgyzstan &#39; &#39;Martinique&#39;
+ &#39;Mexico &#39; &#39;Morocco&#39; &#39;Morocco &#39; &#39;Mozambique&#39; &#39;New Zealand&#39; &#39;New Zealand &#39;
+ &#39;Nicaragua&#39; &#39;Pakistan&#39; &#39;Pakistan &#39; &#39;Panama&#39; &#39;Papua New Guinea&#39; &#39;Peru&#39;
+ &#39;Peru &#39; &#39;Philippines&#39; &#39;Russian Federation&#39; &#39;Rwanda&#39; &#39;Samoa &#39; &#39;Serbia&#39;
+ &#39;Slovenia&#39; &#39;Solomon Islands &#39; &#39;Taiwan&#39; &#39;Taiwan &#39; &#39;Tajikistan&#39;
+ &#39;Tajikistan &#39; &#39;Tanzania&#39; &#39;Tanzania &#39; &#39;Turkey&#39; &#39;Turkey &#39; &#39;Turkmenistan&#39;
+ &#39;United States &#39; &#39;Venezuela&#39; &#39;Vietnam&#39; &#39;arica&#39; &#39;shile&#39; nan]
+
+
+La columna magnitud posee los siguientes valores únicos:
+ [&#39;-10&#39; &#39;2002-Tanzania-5.8&#39; &#39;2003-japan-8.5&#39; &#39;4.7&#39; &#39;4.9&#39; &#39;5&#39; &#39;5.1&#39; &#39;5.2&#39;
+ &#39;5.3&#39; &#39;5.4&#39; &#39;5.5&#39; &#39;5.6&#39; &#39;5.7&#39; &#39;5.8&#39; &#39;5.9&#39; &#39;6&#39; &#39;6.1&#39; &#39;6.2&#39; &#39;6.3&#39; &#39;6.4&#39;
+ &#39;6.5&#39; &#39;6.6&#39; &#39;6.7&#39; &#39;6.8&#39; &#39;6.9&#39; &#39;7&#39; &#39;7.1&#39; &#39;7.2&#39; &#39;7.3&#39; &#39;7.4&#39; &#39;7.5&#39; &#39;7.6&#39;
+ &#39;7.7&#39; &#39;7.8&#39; &#39;7.9&#39; &#39;8&#39; &#39;8.1&#39; &#39;8.3&#39; &#39;8.4&#39; &#39;8.5&#39; &#39;8.6&#39; &#39;8.8&#39; &#39;9&#39; &#39;9.1&#39; &#39;9.7&#39;
+ nan]
+
+
+La columna informacion posee los siguientes valores únicos:
+ [&#39;info no valiosa&#39; &#39;info valiosa&#39; &#39;valiosa&#39; nan]
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>En la columna <code class="docutils literal notranslate"><span class="pre">año</span></code> se presentan las siguientes anomalías:</p>
+<ul>
+<li><p>Datos vacíos.</p></li>
+<li><p>Años sin importancia: Se ha establecido que los años de estudios son desde el año 2000 al 2011.</p></li>
+<li><p>Nombres mal escritos: en este caso sabemos que ‘dos mil uno’ corresponde a ‘2001’.</p></li>
+</ul>
+</li>
+<li><p>En la columna <code class="docutils literal notranslate"><span class="pre">pais</span></code> se presentan las siguientes anomalías:</p>
+<ul>
+<li><p>Datos vacíos.</p></li>
+<li><p>Ciudades, e.g. <em>arica</em>.</p></li>
+<li><p>Países mal escritos e.g. <em>shile</em>.</p></li>
+<li><p>Países repetidos pero mal formateados, e.g. <em>Turkey</em>.</p></li>
+<li><p>Cruce de información, e.g. <em>Iran, 2005 Qeshm earthquake</em>.</p></li>
+</ul>
+</li>
+<li><p>En la columna <code class="docutils literal notranslate"><span class="pre">magnitud</span></code> se presentan las siguientes anomalías:</p>
+<ul>
+<li><p>Datos vacíos.</p></li>
+<li><p>Cruce de información, e.g. <em>2002-Tanzania-5.8</em>.</p></li>
+<li><p>Valores imposibles, e.g. <em>9.7</em>.</p></li>
+</ul>
+</li>
+<li><p>La columna <code class="docutils literal notranslate"><span class="pre">informacion</span></code> realmente no está entregando ninguna información valiosa al problema.</p></li>
+</ul>
+<p>Partamos por eliminar la columna <code class="docutils literal notranslate"><span class="pre">informacion</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eqk</span> <span class="o">=</span> <span class="n">earthquakes</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s2">&quot;informacion&quot;</span><span class="p">)</span>  <span class="c1"># A veces es importante no sobrescribir el dataframe original para realizar análisis posteriores.</span>
+<span class="n">eqk</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>año</th>
+      <th>pais</th>
+      <th>magnitud</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2000</td>
+      <td>Turkey</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2000</td>
+      <td>Turkmenistan</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2000</td>
+      <td>Azerbaijan</td>
+      <td>6.5</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2000</td>
+      <td>Azerbaijan</td>
+      <td>6.8</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2000</td>
+      <td>Papua New Guinea</td>
+      <td>8</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Respecto a la columna <code class="docutils literal notranslate"><span class="pre">año</span></code>, corregir estos errores no es difícil, pero suele ser tedioso. Aparte que si no se realiza un correcto análisis es posible no detectar estos errores a tiempo. Empecemos con los registros nulos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eqk</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;año&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>año</th>
+      <th>pais</th>
+      <th>magnitud</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>225</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2002-Tanzania-5.8</td>
+    </tr>
+    <tr>
+      <th>226</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2003-japan-8.5</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Veamos el archivo</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span> sed  -n <span class="s2">&quot;226,228p&quot;</span> data/earthquakes_contaminated.csv
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sed: can&#39;t read data/earthquakes_contaminated.csv: No such file or directory
+</pre></div>
+</div>
+</div>
+</div>
+<p>Toda la información está contenida en una columna!</p>
+<p>Para editar la información usaremos dos herramientas:</p>
+<ul class="simple">
+<li><p>Los métodos de <code class="docutils literal notranslate"><span class="pre">str</span></code> en <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, en particular para dividir una columna.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loc</span></code> para asignar los nuevos valores.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eqk</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;año&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">(),</span> <span class="s2">&quot;magnitud&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[&#39;2002&#39;, &#39;Tanzania&#39;, &#39;5.8&#39;],
+       [&#39;2003&#39;, &#39;japan&#39;, &#39;8.5&#39;]], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eqk</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;año&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">(),</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">eqk</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;año&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">(),</span> <span class="s2">&quot;magnitud&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eqk</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="mi">225</span><span class="p">,</span> <span class="mi">226</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>año</th>
+      <th>pais</th>
+      <th>magnitud</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>225</th>
+      <td>2002</td>
+      <td>Tanzania</td>
+      <td>5.8</td>
+    </tr>
+    <tr>
+      <th>226</th>
+      <td>2003</td>
+      <td>japan</td>
+      <td>8.5</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Ahora los registros que no se pueden convertir a <code class="docutils literal notranslate"><span class="pre">numeric</span></code>. Veamos que no es posible convertirlo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">eqk</span><span class="p">[</span><span class="s2">&quot;año&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>invalid literal for int() with base 10: &#39;dos mil uno&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eqk</span><span class="p">[</span><span class="s2">&quot;año&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">()</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      True
+1      True
+2      True
+3      True
+4      True
+       ... 
+223    True
+224    True
+225    True
+226    True
+227    True
+Name: año, Length: 228, dtype: bool
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eqk</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="o">~</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;año&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>año</th>
+      <th>pais</th>
+      <th>magnitud</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>31</th>
+      <td>dos mil uno</td>
+      <td>China</td>
+      <td>5.4</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Veamos el valor a cambiar</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eqk</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="o">~</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;año&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">(),</span> <span class="s2">&quot;año&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;dos mil uno&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Reemplazar es muy fácil!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eqk</span><span class="p">[</span><span class="s2">&quot;año&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;dos mil uno&quot;</span><span class="p">,</span> <span class="s2">&quot;2001&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      2000
+1      2000
+2      2000
+3      2000
+4      2000
+       ... 
+223    1990
+224    1999
+225    2002
+226    2003
+227    2005
+Name: año, Length: 228, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para asignar en el dataframe basta con:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eqk</span><span class="p">[</span><span class="s2">&quot;año&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">eqk</span><span class="p">[</span><span class="s2">&quot;año&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;dos mil uno&quot;</span><span class="p">,</span> <span class="s2">&quot;2001&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>La forma encadenada sería:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># eqk[&quot;año&quot;] = eqk.assign(año=lambda x: x[&quot;año&quot;].str.replace(&quot;dos mil uno&quot;, &quot;2001&quot;).astype(&quot;int&quot;))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eqk</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>año          int64
+pais        object
+magnitud    object
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finalmentem, filtremos los años necesarios:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eqk</span> <span class="o">=</span> <span class="n">eqk</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;2000 &lt;= año &lt;= 2011&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Siguiendo de forma análoga con la columna <code class="docutils literal notranslate"><span class="pre">magnitud</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eqk</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;magnitud&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>año</th>
+      <th>pais</th>
+      <th>magnitud</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>219</th>
+      <td>2010</td>
+      <td>Colombia</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>220</th>
+      <td>2005</td>
+      <td>Indonesia</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>221</th>
+      <td>2010</td>
+      <td>Venezuela</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>La verdad es que no hay mucho que hacer con estos valores, por el momento no <em>inputaremos</em> ningún valor y los descartaremos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eqk</span> <span class="o">=</span> <span class="n">eqk</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;magnitud&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">notnull</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">eqk</span><span class="p">[</span><span class="s2">&quot;magnitud&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ya es posible transformar la columna a float.&quot;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Aún no es posible transformar la columna a float.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ya es posible transformar la columna a float.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eqk</span> <span class="o">=</span> <span class="n">eqk</span><span class="o">.</span><span class="n">astype</span><span class="p">({</span><span class="s2">&quot;magnitud&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">float</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eqk</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>año           int64
+pais         object
+magnitud    float64
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eqk</span><span class="o">.</span><span class="n">magnitud</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([  6. ,   7. ,   6.5,   6.8,   8. ,   5.7,   6.4,   5.5,   6.3,
+         5.4,   6.1,   6.7,   7.9,   7.2,   7.5,   5.3,   5.9,   9.7,
+         5.8,   4.7,   7.6,   8.4,   5. ,   5.6,   6.6,   6.2,   7.1,
+         7.3,   5.1,   5.2,   8.3,   6.9,   9.1,   4.9,   7.8,   8.6,
+         7.7,   7.4,   8.5,   8.1,   8.8,   9. , -10. ])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eqk</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;magnitud &lt; 0 or 9.6 &lt; magnitud&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>año</th>
+      <th>pais</th>
+      <th>magnitud</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>22</th>
+      <td>2000</td>
+      <td>shile</td>
+      <td>9.7</td>
+    </tr>
+    <tr>
+      <th>217</th>
+      <td>2011</td>
+      <td>shile</td>
+      <td>-10.0</td>
+    </tr>
+    <tr>
+      <th>218</th>
+      <td>2011</td>
+      <td>shile</td>
+      <td>-10.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eqk</span> <span class="o">=</span> <span class="n">eqk</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;0 &lt;= magnitud &lt;= 9.6&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eqk</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;magnitud &lt; 0 or 9.6 &lt; magnitud&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>año</th>
+      <th>pais</th>
+      <th>magnitud</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Finalmente, para la columna <code class="docutils literal notranslate"><span class="pre">pais</span></code>. Comenzaremos con los nombres erróneos, estos los podemos mapear directamente.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">map_paises</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;arica&quot;</span><span class="p">:</span> <span class="s2">&quot;Chile&quot;</span><span class="p">,</span> <span class="s2">&quot;shile&quot;</span><span class="p">:</span> <span class="s2">&quot;Chile&quot;</span><span class="p">,</span> <span class="s2">&quot;Iran, 2005 Qeshm earthquake&quot;</span><span class="p">:</span> <span class="s2">&quot;Iran&quot;</span><span class="p">}</span>
+<span class="n">eqk</span><span class="p">[</span><span class="s2">&quot;pais&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">map_paises</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">eqk</span><span class="p">[</span><span class="s2">&quot;pais&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0                Turkey
+1          Turkmenistan
+2            Azerbaijan
+3           Azerbaijan 
+4      Papua New Guinea
+             ...       
+215              China 
+216        New Zealand 
+225            Tanzania
+226               japan
+227               Chile
+Name: pais, Length: 219, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para editarlo en el dataframe basta hacer un <code class="docutils literal notranslate"><span class="pre">assign</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eqk</span> <span class="o">=</span> <span class="n">eqk</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">pais</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;pais&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">map_paises</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s2">&quot;pais&quot;</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ahora formatearemos los nombres, pasándolos a minúsculas y quitando los espacios al principio y final de cada <em>string</em>. Y ahabíamos hablado del ejemplo de <em>Turkey</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eqk</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;pais&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="s2">&quot;Turkey&quot;</span> <span class="ow">in</span> <span class="n">s</span><span class="p">),</span> <span class="s2">&quot;pais&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;Turkey&#39;, &#39;Turkey &#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Chaining method</span>
+<span class="n">eqk</span> <span class="o">=</span> <span class="n">eqk</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">pais</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;pais&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eqk</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;pais&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="s2">&quot;turkey&quot;</span> <span class="ow">in</span> <span class="n">s</span><span class="p">),</span> <span class="s2">&quot;pais&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;turkey&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nota que no hay países con valores nulos porque ya fueron reparados.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eqk</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;pais&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>año</th>
+      <th>pais</th>
+      <th>magnitud</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="se-puede-sacar-mas-provecho-a-los-datos">
+<h4>¿Se puede sacar más provecho a los datos ?<a class="headerlink" href="#se-puede-sacar-mas-provecho-a-los-datos" title="Permalink to this headline">¶</a></h4>
+<p>No es posible crear variables nuevas o algo por el estilo, ya se hizo todo el procesamiento necesario para cumplir las reglas de negocio.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">earthquakes</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(228, 4)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eqk</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(219, 3)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="dar-respuesta">
+<h4>Dar respuesta<a class="headerlink" href="#dar-respuesta" title="Permalink to this headline">¶</a></h4>
+<p>Como es un método de agregación podríamos simplemente hacer un <code class="docutils literal notranslate"><span class="pre">groupby</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eqk</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;pais&quot;</span><span class="p">,</span> <span class="s2">&quot;año&quot;</span><span class="p">])[</span><span class="s2">&quot;magnitud&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pais           año 
+afghanistan    2000    6.3
+               2001    5.0
+               2002    7.3
+               2003    5.8
+               2004    6.5
+                      ... 
+turkmenistan   2000    7.0
+united states  2001    6.8
+               2003    6.6
+venezuela      2006    5.5
+vietnam        2005    5.3
+Name: magnitud, Length: 134, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Sin embargo, en ocasiones, una tabla <strong>pivoteada</strong> es mucho más explicativa.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eqk</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span>
+    <span class="n">index</span><span class="o">=</span><span class="s2">&quot;pais&quot;</span><span class="p">,</span>
+    <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;año&quot;</span><span class="p">,</span>
+    <span class="n">values</span><span class="o">=</span><span class="s2">&quot;magnitud&quot;</span><span class="p">,</span>
+    <span class="n">aggfunc</span><span class="o">=</span><span class="s2">&quot;max&quot;</span><span class="p">,</span>
+    <span class="n">fill_value</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>año</th>
+      <th>2000</th>
+      <th>2001</th>
+      <th>2002</th>
+      <th>2003</th>
+      <th>2004</th>
+      <th>2005</th>
+      <th>2006</th>
+      <th>2007</th>
+      <th>2008</th>
+      <th>2009</th>
+      <th>2010</th>
+      <th>2011</th>
+    </tr>
+    <tr>
+      <th>pais</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>afghanistan</th>
+      <td>6.3</td>
+      <td>5</td>
+      <td>7.3</td>
+      <td>5.8</td>
+      <td>6.5</td>
+      <td>6.5</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>algeria</th>
+      <td>5.7</td>
+      <td></td>
+      <td></td>
+      <td>6.8</td>
+      <td></td>
+      <td></td>
+      <td>5.2</td>
+      <td></td>
+      <td>5.5</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>argentina</th>
+      <td>7.2</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>6.1</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>azerbaijan</th>
+      <td>6.8</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>bangladesh</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>5.6</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>burma</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>6.8</td>
+    </tr>
+    <tr>
+      <th>chile</th>
+      <td></td>
+      <td>6.3</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>8</td>
+      <td></td>
+      <td>7.7</td>
+      <td></td>
+      <td></td>
+      <td>8.8</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>china</th>
+      <td>5.9</td>
+      <td>5.6</td>
+      <td>5.5</td>
+      <td>6.3</td>
+      <td>5.3</td>
+      <td>5.2</td>
+      <td>5</td>
+      <td>6.1</td>
+      <td>7.9</td>
+      <td>5.7</td>
+      <td>6.9</td>
+      <td>5.4</td>
+    </tr>
+    <tr>
+      <th>colombia</th>
+      <td>6.5</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>5.9</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>costa rica</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>6.4</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>6.1</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>democratic republic of the congo</th>
+      <td></td>
+      <td></td>
+      <td>6.2</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>5.9</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>dominican republic</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>6.4</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>ecuador</th>
+      <td>5.5</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>el salvador</th>
+      <td></td>
+      <td>7.6</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>greece</th>
+      <td></td>
+      <td></td>
+      <td>6.2</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>6.4</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>guadeloupe</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>6.3</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>guatemala</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>6.4</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>haiti</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>7</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>india</th>
+      <td></td>
+      <td>7.6</td>
+      <td>6.5</td>
+      <td></td>
+      <td></td>
+      <td>5.1</td>
+      <td>5.3</td>
+      <td>5.1</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>6.9</td>
+    </tr>
+    <tr>
+      <th>indonesia</th>
+      <td>7.9</td>
+      <td></td>
+      <td>7.5</td>
+      <td>6.9</td>
+      <td>9.1</td>
+      <td>8.6</td>
+      <td>7.7</td>
+      <td>8.5</td>
+      <td>7.3</td>
+      <td>7.6</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>iran</th>
+      <td>5.3</td>
+      <td></td>
+      <td>6.5</td>
+      <td>6.6</td>
+      <td>6.3</td>
+      <td>6.4</td>
+      <td>6.1</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>italy</th>
+      <td></td>
+      <td>4.7</td>
+      <td>5.9</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>6.2</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>japan</th>
+      <td>6.1</td>
+      <td>6.8</td>
+      <td></td>
+      <td>8.5</td>
+      <td>6.6</td>
+      <td>6.6</td>
+      <td></td>
+      <td>6.7</td>
+      <td>6.9</td>
+      <td>6.4</td>
+      <td></td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>kazakhstan</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>6</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>kyrgyzstan</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>6.9</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>martinique</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>7.4</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>mexico</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>7.5</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>morocco</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>6.3</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>mozambique</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>7</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>new zealand</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>5.4</td>
+      <td></td>
+      <td></td>
+      <td>6.6</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>6.3</td>
+    </tr>
+    <tr>
+      <th>nicaragua</th>
+      <td>5.4</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>pakistan</th>
+      <td></td>
+      <td></td>
+      <td>6.3</td>
+      <td></td>
+      <td>5.4</td>
+      <td>7.6</td>
+      <td>4.9</td>
+      <td>5.2</td>
+      <td>6.4</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>panama</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>6.5</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>papua new guinea</th>
+      <td>8</td>
+      <td></td>
+      <td>7.6</td>
+      <td></td>
+      <td></td>
+      <td>6.1</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>peru</th>
+      <td></td>
+      <td>8.4</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>7.5</td>
+      <td></td>
+      <td>8</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>philippines</th>
+      <td></td>
+      <td></td>
+      <td>7.5</td>
+      <td>6.5</td>
+      <td></td>
+      <td>7.1</td>
+      <td></td>
+      <td>5.3</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>russian federation</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>7.3</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>6.2</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>rwanda</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>5.3</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>samoa</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>8.1</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>serbia</th>
+      <td></td>
+      <td></td>
+      <td>5.7</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>slovenia</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>5.2</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>solomon islands</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>8.1</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>taiwan</th>
+      <td>6.4</td>
+      <td></td>
+      <td>7.1</td>
+      <td></td>
+      <td>5.2</td>
+      <td></td>
+      <td>7</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>tajikistan</th>
+      <td></td>
+      <td></td>
+      <td>5.2</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>5.6</td>
+      <td>5.2</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>tanzania</th>
+      <td>6.4</td>
+      <td></td>
+      <td>5.8</td>
+      <td></td>
+      <td></td>
+      <td>6.8</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>turkey</th>
+      <td>6</td>
+      <td></td>
+      <td>6.5</td>
+      <td>6.3</td>
+      <td>5.6</td>
+      <td>5.9</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>6.1</td>
+      <td>7.1</td>
+    </tr>
+    <tr>
+      <th>turkmenistan</th>
+      <td>7</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>united states</th>
+      <td></td>
+      <td>6.8</td>
+      <td></td>
+      <td>6.6</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>venezuela</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>5.5</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>vietnam</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>5.3</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>¿Notas las similitudes con <code class="docutils literal notranslate"><span class="pre">groupby</span></code>? Ambos son métodos de agregación, pero retornan formas de la matriz distintas.</p>
+<p>Sin embargo, esto se vería mucho mejor con una visualización, que es lo que veremos en el próximo módulo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
+<span class="n">alt</span><span class="o">.</span><span class="n">themes</span><span class="o">.</span><span class="n">enable</span><span class="p">(</span><span class="s1">&#39;opaque&#39;</span><span class="p">)</span>
+
+<span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span>
+    <span class="n">eqk</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;pais&quot;</span><span class="p">,</span> <span class="s2">&quot;año&quot;</span><span class="p">])[</span><span class="s2">&quot;magnitud&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="p">)</span><span class="o">.</span><span class="n">mark_rect</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;año:O&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;pais:N&#39;</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;magnitud:Q&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">59</span><span class="o">-</span><span class="n">b05957a20ea3</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">alt</span><span class="o">.</span><span class="n">themes</span><span class="o">.</span><span class="n">enable</span><span class="p">(</span><span class="s1">&#39;opaque&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">eqk</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;pais&quot;</span><span class="p">,</span> <span class="s2">&quot;año&quot;</span><span class="p">])[</span><span class="s2">&quot;magnitud&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;altair&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="resumen">
+<h2>Resumen<a class="headerlink" href="#resumen" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>En el <em>mundo real</em> te encontrarás con múltiples fuentes de datos, es importante adaptarse ya que las tecnologías cambian constantemente.</p></li>
+<li><p>Datos deben entregar valor a través del análisis.</p></li>
+<li><p>Es poco probable que los datos vengan <em>“limpios”</em>.</p></li>
+<li><p>El análisis exploratorio de datos (EDA) es una metodología que sirve para asegurarse de la calidad de los datos.</p></li>
+<li><p>A medida que se tiene más experticia en el tema, mejor es el análisis de datos y por tanto, mejor son los resultados obtenidos.</p></li>
+<li><p>No existe un procedimiento estándar para realizar el EDA, pero siempre se debe tener claro el problema a resolver.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="M2L05_data_aggregation.html" title="previous page">Agrupando Datos</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Alonso Ogueda Oliva<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-177357392-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>
