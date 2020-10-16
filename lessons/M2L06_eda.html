@@ -174,6 +174,11 @@
    Teoría y Landscape de Visualización
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M3L02_imperative_visualization.html">
+   Visualización Imperativa
+  </a>
+ </li>
 </ul>
 
 </nav>
@@ -884,11 +889,14 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;number&#39;: 3,
- &#39;people&#39;: [{&#39;craft&#39;: &#39;ISS&#39;, &#39;name&#39;: &#39;Chris Cassidy&#39;},
-  {&#39;craft&#39;: &#39;ISS&#39;, &#39;name&#39;: &#39;Anatoly Ivanishin&#39;},
-  {&#39;craft&#39;: &#39;ISS&#39;, &#39;name&#39;: &#39;Ivan Vagner&#39;}],
- &#39;message&#39;: &#39;success&#39;}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;number&#39;: 6,
+ &#39;message&#39;: &#39;success&#39;,
+ &#39;people&#39;: [{&#39;name&#39;: &#39;Chris Cassidy&#39;, &#39;craft&#39;: &#39;ISS&#39;},
+  {&#39;name&#39;: &#39;Anatoly Ivanishin&#39;, &#39;craft&#39;: &#39;ISS&#39;},
+  {&#39;name&#39;: &#39;Ivan Vagner&#39;, &#39;craft&#39;: &#39;ISS&#39;},
+  {&#39;name&#39;: &#39;Sergey Ryzhikov&#39;, &#39;craft&#39;: &#39;ISS&#39;},
+  {&#39;name&#39;: &#39;Kate Rubins&#39;, &#39;craft&#39;: &#39;ISS&#39;},
+  {&#39;name&#39;: &#39;Sergey Kud-Sverchkov&#39;, &#39;craft&#39;: &#39;ISS&#39;}]}
 </pre></div>
 </div>
 </div>
@@ -932,25 +940,40 @@
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>craft</th>
       <th>name</th>
+      <th>craft</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>ISS</td>
       <td>Chris Cassidy</td>
+      <td>ISS</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>ISS</td>
       <td>Anatoly Ivanishin</td>
+      <td>ISS</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>ISS</td>
       <td>Ivan Vagner</td>
+      <td>ISS</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Sergey Ryzhikov</td>
+      <td>ISS</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Kate Rubins</td>
+      <td>ISS</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Sergey Kud-Sverchkov</td>
+      <td>ISS</td>
     </tr>
   </tbody>
 </table>
@@ -2966,12 +2989,12 @@ Name: magnitud, Length: 134, dtype: float64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-479a71312afc4fff9acc632393924879"></div>
+<div id="altair-viz-9818d68797d74d3abd3fe14bb8e3beff"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-479a71312afc4fff9acc632393924879") {
-      outputDiv = document.getElementById("altair-viz-479a71312afc4fff9acc632393924879");
+    if (outputDiv.id !== "altair-viz-9818d68797d74d3abd3fe14bb8e3beff") {
+      outputDiv = document.getElementById("altair-viz-9818d68797d74d3abd3fe14bb8e3beff");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
