@@ -3,14 +3,17 @@ channels:
   - conda-forge
   - defaults
 dependencies:
+  # Jupyter
+  - jupyterlab=2.1.3
+  - nodejs=11
+  - widgetsnbextension=3.5
+  # Python kernel
   - altair=4
   - altair_saver
   - beautifulsoup4=4.9
   - h5py=2.10
   - ipywidgets=7.5
-  - jupyterlab=2.1.3
   - matplotlib-base=3.2
-  - nodejs
   - numba=0.48
   - numpy
   - pandas=1
