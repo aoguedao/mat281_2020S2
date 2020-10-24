@@ -48,6 +48,8 @@
     <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.14.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -182,6 +184,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="M3L03_declarative_visualization.html">
    Visualización Declarativa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M3L04_interactive_visualization.html">
+   Visualización Interactiva
   </a>
  </li>
 </ul>
@@ -706,7 +713,7 @@ np.array([a_list]) = [[1 1 2 3 5]] tiene shape: (1, 5), es decir, 2 dimensión(e
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.0771828 , 0.26629307, 0.01150127])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.49165623, 0.23920069, 0.85748743])
 </pre></div>
 </div>
 </div>
@@ -718,7 +725,7 @@ np.array([a_list]) = [[1 1 2 3 5]] tiene shape: (1, 5), es decir, 2 dimensión(e
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([4.70821266, 6.61714215, 6.91388253, 4.62695559, 4.77876827])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([4.71611427, 5.57178796, 4.96263554, 4.1766869 , 4.63135385])
 </pre></div>
 </div>
 </div>
@@ -730,8 +737,8 @@ np.array([a_list]) = [[1 1 2 3 5]] tiene shape: (1, 5), es decir, 2 dimensión(e
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[105.64815137,  98.94459905, 110.60222997],
-       [100.6186542 ,  99.18665811,  96.16225203]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 81.62789281,  89.24270634,  74.54689776],
+       [119.74474651, 109.07835332,  99.94947333]])
 </pre></div>
 </div>
 </div>
@@ -916,7 +923,7 @@ x2:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>19.3 µs ± 393 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>18.5 µs ± 247 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
 </div>
@@ -929,7 +936,7 @@ x2:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>623 ns ± 19.3 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>613 ns ± 20.4 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1061,51 +1068,56 @@ x % 2  = [0 1 0 1 0]
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A + B: 
 
-[[1.16242331 0.72528424 1.03371344 1.12245362 0.93440883]
- [0.58494011 0.86585091 0.61725149 1.1525762  1.5620627 ]
- [1.06743333 1.10029107 1.76049524 1.19766455 1.56500465]
- [1.4176572  0.92942115 1.20453207 1.22446109 0.54112249]
- [1.3442152  1.27206524 0.81403371 0.76410737 1.67310655]]
+[[0.97062992 0.08206163 1.20069945 1.17282745 1.19322843]
+ [1.24508038 1.18392883 0.75746467 0.97610331 1.24729046]
+ [0.471012   0.71683758 1.11068961 1.39860916 0.94623003]
+ [0.22828472 0.81487898 1.36849199 0.69249926 1.71511779]
+ [1.5467037  1.70894469 1.04400031 1.04841058 0.61428139]]
 
 --------------------------------------------------------------------------------
 
 A - B: 
 
-[[ 0.17548904 -0.25875395 -0.530869    0.05982288 -0.69870218]
- [-0.27264233  0.55727391 -0.55499121  0.22621178  0.21475834]
- [ 0.38501439  0.62200276  0.1102847  -0.62526103  0.40963339]
- [ 0.44167309 -0.576827   -0.2848239  -0.76333297  0.11446518]
- [-0.419455    0.34483824  0.39272407  0.2214455  -0.09333731]]
+[[-2.01693324e-01 -4.73577127e-02  1.73300397e-01  4.89266548e-01
+   6.21012303e-01]
+ [ 3.92003126e-02  4.67949179e-01  5.83452141e-01  1.35096480e-01
+   5.39097110e-01]
+ [ 3.55165482e-01  6.92759397e-01 -8.39447668e-01 -5.44124290e-01
+   5.30113941e-01]
+ [-1.02077078e-01 -4.21278464e-02  4.57957633e-01  2.99874350e-01
+   1.26280351e-01]
+ [ 2.29330433e-01  3.38933246e-04  7.09799876e-01  3.67180186e-01
+   3.95954302e-02]]
 
 --------------------------------------------------------------------------------
 
 A * B: 
 
-[[0.33010789 0.1147709  0.1966854  0.31408084 0.09623378]
- [0.06695527 0.1097859  0.01824604 0.31931503 0.59847968]
- [0.24779446 0.20593825 0.7717952  0.26086225 0.57036001]
- [0.45366921 0.13277357 0.34244321 0.22915693 0.06992782]
- [0.407743   0.37480914 0.12710467 0.13370549 0.69764342]]
+[[0.22536056 0.00112284 0.35291154 0.28403562 0.25953445]
+ [0.38717212 0.29567776 0.05833408 0.23363165 0.31627695]
+ [0.02392745 0.00848513 0.13223976 0.41500908 0.15358262]
+ [0.01042355 0.16556325 0.41576128 0.09740765 0.73142058]
+ [0.58492497 0.73012296 0.1465302  0.24108587 0.09394346]]
 
 --------------------------------------------------------------------------------
 
 A / B: 
 
-[[1.35562457 0.47409774 0.3213921  1.11259392 0.14432984]
- [0.36416066 4.61189533 0.05311211 1.48838615 1.31879706]
- [2.12838133 3.60095324 1.13366137 0.31400268 1.70909395]
- [1.90508255 0.23408769 0.61752072 0.23197982 1.5365673 ]
- [0.52433851 1.74380544 2.86430134 1.81614541 0.89432179]]
+[[ 0.65590834  0.2681509   1.33735752  2.43152292  3.17055157]
+ [ 1.06501528  2.30715776  7.70586366  1.3212732   2.52245741]
+ [ 7.1316556  58.54249405  0.13908864  0.43983639  3.54791369]
+ [ 0.38202857  0.90168609  2.00590962  2.52753602  1.15895944]
+ [ 1.34816318  1.00039674  5.24774954  2.07799119  1.13779849]]
 
 --------------------------------------------------------------------------------
 
 A @ B: 
 
-[[0.90831554 0.92509434 1.33252403 1.31214076 1.0788198 ]
- [1.51263832 1.12513704 1.26542595 1.36716121 1.55656438]
- [2.0571005  1.38715397 2.26576199 2.18964025 2.64655378]
- [1.09283394 0.92019802 1.45077572 1.31284048 1.48223782]
- [1.71772395 1.23385214 1.86677058 1.87417669 2.07350436]]
+[[1.01039717 1.17042351 1.39881143 1.27815303 1.17993357]
+ [1.59333415 1.34643664 1.4576713  1.63134873 1.31370998]
+ [1.23173991 1.09437157 0.72362329 0.90459914 0.94748978]
+ [1.01126005 1.15256995 1.33623696 1.48212784 1.00360909]
+ [1.41887644 0.95657061 1.76243841 1.76498749 1.39537015]]
 </pre></div>
 </div>
 </div>

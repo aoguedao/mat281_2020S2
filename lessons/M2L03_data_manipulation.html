@@ -48,6 +48,8 @@
     <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.14.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -182,6 +184,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="M3L03_declarative_visualization.html">
    Visualización Declarativa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M3L04_interactive_visualization.html">
+   Visualización Interactiva
   </a>
  </li>
 </ul>
@@ -1495,7 +1502,7 @@ Name: Casos confirmados, dtype: float64
       <th>Comuna</th>
       <td>22444</td>
       <td>362</td>
-      <td>Sierra Gorda</td>
+      <td>Paillaco</td>
       <td>62</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1537,7 +1544,7 @@ Name: Casos confirmados, dtype: float64
       <th>Fecha</th>
       <td>22444</td>
       <td>62</td>
-      <td>2020-04-27</td>
+      <td>2020-07-05</td>
       <td>362</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1660,15 +1667,15 @@ Valparaíso            2418
 O’Higgins             2108
 Biobío                2108
 Araucanía             2046
-Los Lagos             1922
 Maule                 1922
+Los Lagos             1922
 Ñuble                 1364
 Coquimbo               992
 Los Ríos               806
 Magallanes             744
 Aysén                  682
-Antofagasta            620
 Atacama                620
+Antofagasta            620
 Tarapacá               496
 Arica y Parinacota     310
 Name: Region, dtype: int64

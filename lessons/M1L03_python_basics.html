@@ -48,6 +48,8 @@
     <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.14.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -182,6 +184,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="M3L03_declarative_visualization.html">
    Visualización Declarativa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M3L04_interactive_visualization.html">
+   Visualización Interactiva
   </a>
  </li>
 </ul>
@@ -1112,15 +1119,16 @@ El cuadrado de 9 es 81
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>M1L01_about_mat281.ipynb          M2L04_data_combining.ipynb
-M1L02_installation.md             M2L05_data_aggregation.ipynb
-M1L02_toolkit_and_setup.ipynb     M2L06_eda.ipynb
-M1L03_python_basics.ipynb         M3L01_theory_and_landscape.ipynb
-M1L04_git_update.md               M3L02_imperative_visualization.ipynb
-M1L04_python_ecosystem.ipynb      M3L03_declarative_visualization.ipynb
-M2L01_scientific_computing.ipynb  mpl_heatmap.py
-M2L02_linear_algebra.ipynb        my_packaged_function.py
-M2L03_data_manipulation.ipynb
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>M1L01_about_mat281.ipynb          M2L05_data_aggregation.ipynb
+M1L02_installation.md             M2L06_eda.ipynb
+M1L02_toolkit_and_setup.ipynb     M3L01_theory_and_landscape.ipynb
+M1L03_python_basics.ipynb         M3L02_imperative_visualization.ipynb
+M1L04_git_update.md               M3L03_declarative_visualization.ipynb
+M1L04_python_ecosystem.ipynb      M3L04_interactive_visualization.ipynb
+M2L01_scientific_computing.ipynb  lorenz.py
+M2L02_linear_algebra.ipynb        mpl_heatmap.py
+M2L03_data_manipulation.ipynb     my_packaged_function.py
+M2L04_data_combining.ipynb
 </pre></div>
 </div>
 </div>
@@ -1223,7 +1231,7 @@ Automagic is ON, % prefix IS NOT needed for line magics.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>64.3 µs ± 187 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>61 µs ± 1.68 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1239,7 +1247,7 @@ Automagic is ON, % prefix IS NOT needed for line magics.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>107 µs ± 52.7 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>109 µs ± 1.84 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div>
 </div>
 </div>
