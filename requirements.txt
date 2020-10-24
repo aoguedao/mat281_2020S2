@@ -7,3 +7,4 @@ scikit-learn==0.22
 sympy==1.5
 altair
 vega-datasets
+ipywidgets==7.5
