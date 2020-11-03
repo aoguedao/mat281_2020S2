@@ -1,0 +1,933 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modelamiento &#8212; MAT281 - Aplicaciones de la Matemática en la Ingeniería  - 2020</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.14.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Visualización Interactiva" href="M3L04_interactive_visualization.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/utfsm.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">MAT281 - Aplicaciones de la Matemática en la Ingeniería  - 2020</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Bienvenido(a) a MAT281!
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Introducción
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="M1L01_about_mat281.html">
+   Acerca de MAT281
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M1L02_toolkit_and_setup.html">
+   Toolkit &amp; Setup
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M1L03_python_basics.html">
+   Recordando Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M1L04_python_ecosystem.html">
+   Ecosistema Python
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Análisis de Datos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L01_scientific_computing.html">
+   Introducción al Cálculo Científico
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L02_linear_algebra.html">
+   Álgebra Lineal
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L03_data_manipulation.html">
+   Manipulación de Datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L04_data_combining.html">
+   Combinando Datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L05_data_aggregation.html">
+   Agrupando Datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L06_eda.html">
+   Análisis Exploratorio de Datos
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Visualización
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="M3L01_theory_and_landscape.html">
+   Teoría y Landscape de Visualización
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M3L02_imperative_visualization.html">
+   Visualización Imperativa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M3L03_declarative_visualization.html">
+   Visualización Declarativa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M3L04_interactive_visualization.html">
+   Visualización Interactiva
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Machine Learning
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Modelamiento
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/lessons/M4L01_modeling.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/aoguedao/mat281_2020S2"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/aoguedao/mat281_2020S2/master?urlpath=lab/tree/lessons/M4L01_modeling.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/aoguedao/mat281_2020S2/blob/master/lessons/M4L01_modeling.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduccion">
+   Introducción
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#machine-learning">
+     Machine Learning
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-science">
+     Data Science
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inteligencia-artificial">
+     Inteligencia Artificial
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#big-data">
+     Big Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aplicaciones">
+   Aplicaciones
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#deteccion-de-spam">
+     Detección de Spam
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#deteccion-de-fraude-con-tarjeta-de-credito">
+     Detección de Fraude con Tarjeta de crédito
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reconocimiento-de-digitos">
+     Reconocimiento de dígitos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reconocimiento-de-voz">
+     Reconocimiento de Voz
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#deteccion-facial">
+     Detección facial
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recomendacion-de-productos">
+     Recomendación de Productos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diagnostico-medico">
+     Diagnóstico médico
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mercado-de-acciones">
+     Mercado de Acciones
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#segmentacion-de-mercado">
+     Segmentación de Mercado
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#deteccion-de-formas">
+     Detección de Formas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Modelamiento
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#que-es-un-modelo">
+     ¿Qué es un modelo?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#por-que-utilizar-modelos">
+     ¿Por qué utilizar módelos?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#objetivos-del-modelamiento">
+     Objetivos del modelamiento
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#algunos-principios-basicos">
+     Algunos principios básicos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#etapas-del-modelamiento">
+     Etapas del Modelamiento
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#debriefing">
+   Debriefing
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fuentes-de-error">
+     Fuentes de Error
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fuente-de-error-humana">
+       Fuente de Error Humana
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fuente-de-error-debido-a-la-incerteza-en-parametros">
+       Fuente de Error debido a la Incerteza en Parámetros
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algoritmos-ml">
+   Algoritmos ML
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#regresion">
+     Regresión
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clasificacion">
+     Clasificación
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clustering">
+     Clustering
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#extraccion-de-reglas">
+     Extracción de Reglas
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#consejos">
+       Consejos
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="modelamiento">
+<h1>Modelamiento<a class="headerlink" href="#modelamiento" title="Permalink to this headline">¶</a></h1>
+<p>Esta clase es el puntapié inicial para todo lo que nos estuvimos preparando durante el semestre, utilizar modelos matemáticos en conjuntos de datos. Hoy en día se habla mucho de <em>Machine Learning</em> y otros conceptos <em>fancy</em>.</p>
+<div class="section" id="introduccion">
+<h2>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="machine-learning">
+<h3>Machine Learning<a class="headerlink" href="#machine-learning" title="Permalink to this headline">¶</a></h3>
+<p><em>Machine learning algorithms can figure out how to perform important tasks by generalizing from examples. This is often feasible and cost-effective where manual programming is not. As more data becomes available, more ambitious problems can be tackled  (Pedro Domingos: <a class="reference external" href="https://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf">A Few Useful Things to Know about Machine Learning</a>).</em></p>
+<ul class="simple">
+<li><p>Estudia y construye sistemas que pueden aprender de los datos, más
+que seguir instrucciones explícitamente programadas.</p></li>
+<li><p>Machine Learning es un conjunto de técnicas y modelos que permiten
+el modelamiento predictivo de datos, reunidas a partir de la
+intersección de elementos de probabilidad, estadística e
+inteligencia artificial.</p></li>
+<li><p>Típicamente, alguien que trabaja en Machine Learning está en la Academia y busca realizar investigación y publicar artículos.</p></li>
+<li><p>Pregunta fundamental:
+¿Qué conocimiento emerge a partir de los datos? ¿Qué modelo/técnica
+otorga la mejor predicción para estos datos?</p></li>
+</ul>
+</div>
+<div class="section" id="data-science">
+<h3>Data Science<a class="headerlink" href="#data-science" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Se preocupa de la practicidad de resolver problemas complejos
+utilizando datos.</p></li>
+<li><p>Data Science es la aplicación de diversas técnicas de modelamiento con un fin específico. También se conoce como eScience.</p></li>
+<li><p>La base de datos a utilizar no ha sido necesariamente creada.</p></li>
+<li><p>Típicamente, un data scientist se encuentra en la industria, buscando automatizar un análisis complejo para un cliente (interno o externo).</p></li>
+<li><p>Pregunta fundamental:
+¿Qué puedo decir de <strong>X</strong> a partir de los datos?</p></li>
+</ul>
+</div>
+<div class="section" id="inteligencia-artificial">
+<h3>Inteligencia Artificial<a class="headerlink" href="#inteligencia-artificial" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Tiene por objetivo hacer que el computador ejecute tareas para las cuales el hombre, en un contexto dado, es actualmente mejor que la máquina.</p></li>
+<li><p>Es un concepto más amplio que Machine Learning, en el sentido de definir el concepto de <em>inteligencia</em>.</p></li>
+<li><p>Algunos enfoques de inteligencia considerean que tiene que ver principalmente con acciones racionales. Que un agente inteligente es capaz de percibir y actuar, realizando la mejor acción posible en una situación dada.</p></li>
+<li><p>Pregunta fundamental:
+¿Puedo modelar el problema pero que su resolución no es razonablemente factible por algoritmos existentes?</p></li>
+</ul>
+</div>
+<div class="section" id="big-data">
+<h3>Big Data<a class="headerlink" href="#big-data" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Caracterizado por 4 V:</p>
+<ul>
+<li><p><strong>Volumen</strong>: ¿Cuántos datos se requiere procesar? ¿Terabytes, Exabytes, Zettabytes?</p></li>
+<li><p><strong>Variedad</strong>: ¿Qué patrón siguen los datos? ¿SQL o noSQL?</p></li>
+<li><p><strong>Velocidad</strong>: ¿Con que velocidad podemos procesar los datos? ¿A qué velocidad se generan?</p></li>
+<li><p><strong>Veracidad</strong>: ¿Qué tan confiables son los datos?</p></li>
+</ul>
+</li>
+<li><p>Pregunta fundamental:
+¿Cómo proceso esta monstruosidad de datos?</p></li>
+</ul>
+<p>También es usual ver en LinkedIn, foros y/o blogs una serie de infografías tratando de definir o separar conceptos. Al no existir límites fijos, estas infografías suelen variar entre autores. <strong>No creas todo lo que ves.</strong></p>
+<p>Opinión personal: No todo lo que brilla es oro. No soy fan de estas infografías o diagramas.</p>
+<p><img alt="ML" src="../_images/ML.png" /></p>
+<p>¿Estadística separada de Machine Learning? No lo creo.</p>
+<p>Aunque hay algunos diagramas más conservadores y no tan estrafalarios.</p>
+<p><img alt="DS" src="../_images/DS1.png" /></p>
+<p><img alt="DS2" src="../_images/DS2.png" /></p>
+</div>
+</div>
+<div class="section" id="aplicaciones">
+<h2>Aplicaciones<a class="headerlink" href="#aplicaciones" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="deteccion-de-spam">
+<h3>Detección de Spam<a class="headerlink" href="#deteccion-de-spam" title="Permalink to this headline">¶</a></h3>
+<p>A partir de correos previamente clasificados como spam y no-spam,
+identificar futuros correos en spam de aquellos que no son spam.</p>
+<p><img alt="spam" src="../_images/spam.jpg" /></p>
+</div>
+<div class="section" id="deteccion-de-fraude-con-tarjeta-de-credito">
+<h3>Detección de Fraude con Tarjeta de crédito<a class="headerlink" href="#deteccion-de-fraude-con-tarjeta-de-credito" title="Permalink to this headline">¶</a></h3>
+<p>Dado el historial de transacciones de un cliente en un mes, identificar
+transacciones que realizadas por el cliente y transacciones fraudulentas
+realizadas por terceros.</p>
+<p><img alt="fraude" src="../_images/creditcard.jpg" /></p>
+</div>
+<div class="section" id="reconocimiento-de-digitos">
+<h3>Reconocimiento de dígitos<a class="headerlink" href="#reconocimiento-de-digitos" title="Permalink to this headline">¶</a></h3>
+<p>Dado un código zip escrito en un sobre, identificar cada dígito
+manuscrito para automatizar la clasificación y despacho de correo.</p>
+<p><img alt="digits" src="../_images/digits.png" /></p>
+</div>
+<div class="section" id="reconocimiento-de-voz">
+<h3>Reconocimiento de Voz<a class="headerlink" href="#reconocimiento-de-voz" title="Permalink to this headline">¶</a></h3>
+<p>Dada una orden vocal de un usuario, idenficar el requerimiento específico realizado.</p>
+<p><img alt="speech" src="../_images/speechrecognition.png" /></p>
+</div>
+<div class="section" id="deteccion-facial">
+<h3>Detección facial<a class="headerlink" href="#deteccion-facial" title="Permalink to this headline">¶</a></h3>
+<p>Dada una colección de fotos digitales, identificar en cuáles fotos y en
+qué sectores aparece una persona. Más difícil, dada una colección de
+fotos etiquetadas para una cierta persona, identificar en cuales fotos
+aparece esa persona.</p>
+<p><img alt="facedetection" src="../_images/facedetection.jpg" /></p>
+</div>
+<div class="section" id="recomendacion-de-productos">
+<h3>Recomendación de Productos<a class="headerlink" href="#recomendacion-de-productos" title="Permalink to this headline">¶</a></h3>
+<p>Dado un historial de compra para un cliente y un largo inventario de
+productos, identificar cuáles productos pueden interesarle al cliente en
+su próxima compra.</p>
+<p><img alt="product" src="../_images/productrecommendation.png" /></p>
+</div>
+<div class="section" id="diagnostico-medico">
+<h3>Diagnóstico médico<a class="headerlink" href="#diagnostico-medico" title="Permalink to this headline">¶</a></h3>
+<p>Dado un conjunto de síntomas exhibidos por un paciente y una base de
+casos anónima, predecir si el paciente tiene una enfermedad (y cuál).</p>
+<p><img alt="medical" src="../_images/medicaldiagnosis.jpg" /></p>
+</div>
+<div class="section" id="mercado-de-acciones">
+<h3>Mercado de Acciones<a class="headerlink" href="#mercado-de-acciones" title="Permalink to this headline">¶</a></h3>
+<p>Dadas las fluctuaciones pasadas y presentes de una cierta acción,
+predecir si la acción debe comprarse, mantenerse o venderse.</p>
+<p><img alt="stock" src="../_images/stocktrading.jpg" /></p>
+</div>
+<div class="section" id="segmentacion-de-mercado">
+<h3>Segmentación de Mercado<a class="headerlink" href="#segmentacion-de-mercado" title="Permalink to this headline">¶</a></h3>
+<p>Dado un historial de comportamientos pasados de clientes, identificar
+cuáles clientes exhibirán un cierto comportamiento (de compra) en el
+futuro.</p>
+<p><img alt="customer" src="../_images/customersegmentation.jpg" /></p>
+</div>
+<div class="section" id="deteccion-de-formas">
+<h3>Detección de Formas<a class="headerlink" href="#deteccion-de-formas" title="Permalink to this headline">¶</a></h3>
+<p>Reconocer una forma (2D o 3D) a partir de una muestra 2D de baja calidad.</p>
+<p><img alt="shape" src="../_images/shapedetection.jpg" /></p>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Modelamiento<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="que-es-un-modelo">
+<h3>¿Qué es un modelo?<a class="headerlink" href="#que-es-un-modelo" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Un modelo es</p>
+<ul>
+<li><p>Una representación abstracta y conveniente de un sistema.</p></li>
+<li><p>Una simplificación del mundo real.</p></li>
+<li><p>Un medio de exploración y de explicación para nuestro entendimiento de la realidad.</p></li>
+</ul>
+</li>
+<li><p>Un modelo NO es</p>
+<ul>
+<li><p>Igual al mundo real.</p></li>
+<li><p>Un sustituto para mediciones o experimentos.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="por-que-utilizar-modelos">
+<h3>¿Por qué utilizar módelos?<a class="headerlink" href="#por-que-utilizar-modelos" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Permiten reproducir escalas temporales o espaciales donde las mediciones o los experimentos son costosos, difíciles o imposibles.</p>
+<ul>
+<li><p>Ejemplo: deriva continental, impacto de asteroides, evolución de enfermedades, etc.</p></li>
+</ul>
+</li>
+<li><p>Es mejor que no hacer nada o confiar en juicios dudosos de terceros.</p>
+<ul>
+<li><p>Ejemplo: Predicción meteorológica versus danza de la lluvia.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="objetivos-del-modelamiento">
+<h3>Objetivos del modelamiento<a class="headerlink" href="#objetivos-del-modelamiento" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Ayudar al diseño de experimentos y mediciones.</p></li>
+<li><p>Condensar entendimiento al forzar la abstracción, integración y formalización de ideas científicas.</p></li>
+<li><p>Permitir la realización de experimentos virtuales.</p></li>
+<li><p>Divulgar conocimiento científico a no-expertos.</p></li>
+<li><p>Realizar predicciones.</p></li>
+</ul>
+<p><em><strong>El modelamiento nunca es un objetivo en sí mismo.</strong></em></p>
+</div>
+<div class="section" id="algunos-principios-basicos">
+<h3>Algunos principios básicos<a class="headerlink" href="#algunos-principios-basicos" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Un mismo fenómeno físico puede tener distintos modelos, cada uno apropiado para el estudio de un cierto aspecto del fenómeno.</p></li>
+<li><p>Modelamiento require tiempo: es necesario determinar el nivel de complejidad en función los resultados deseados y del tiempo disponible.</p></li>
+<li><p>GIGO: Garbage In = Garbage Out: Un buen modelo no compensa malos datos de entrada.</p></li>
+<li><p>El mundo es demasiado complejo para poder modelarlo perfectamente.</p></li>
+<li><p>Todo modelo es una simplificación de la realidad.</p></li>
+<li><p>Modelos complementan otras formas de conocimiento (experimentos, mediciones)</p></li>
+<li><p>Que algo se pueda simular, no significa que se corresponda con la realidad.</p></li>
+<li><p>Validación completa del un modelo es imposible, al igual que cualquier teoría.</p></li>
+</ol>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&quot;All models are wrong, 
+some are useful&quot; - George Box&quot;
+</pre></div>
+</div>
+</div>
+<div class="section" id="etapas-del-modelamiento">
+<h3>Etapas del Modelamiento<a class="headerlink" href="#etapas-del-modelamiento" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p><em><strong>Meta</strong></em>: Definir el propósito del modelo.</p></li>
+<li><p><em><strong>Modelar</strong></em>: Desarrollar el modelo conceptual.</p></li>
+<li><p><em><strong>Afinar</strong></em>: Seleccionar el tipo de modelo y la escala.</p></li>
+<li><p><em><strong>Implementar</strong></em>: Realizar la implementación numérica del modelo conceptual.</p></li>
+<li><p><em><strong>Calibrar</strong></em>: Estimar los parámetros requeridos por el modelo.</p></li>
+<li><p><em><strong>Analizar</strong></em>: Evaluar el modelo con análisis de sensitividad e incertidumbre.</p></li>
+<li><p><em><strong>Validar</strong></em>: Comparar las predicciones del modelo con mediciones reales. Requiere parámetros y mediciones reales.</p></li>
+<li><p><em><strong>Utilizar</strong></em>: Aplicar el modelo al propósito. Requiere parámetros reales.</p></li>
+</ol>
+<p><img alt="model" src="../_images/ModelComplexity1.png" /></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&quot;Everyone believes the recorded data, 
+except the scientist that record it.
+No one believes the model, 
+except for the scientist that created it.&quot; 
+- Unknown
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&quot;If you&#39;re doing an experiment, 
+you should report everything 
+that you think might make it invalid — 
+not only what you think is right about it;
+other causes that could possibly explain
+your results; and things you thought 
+of that you&#39;ve eliminated by some 
+other experiment, and how they worked — 
+to make sure the other fellow 
+can tell they have been eliminated.&quot;
+- Richard Feynman.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="debriefing">
+<h2>Debriefing<a class="headerlink" href="#debriefing" title="Permalink to this headline">¶</a></h2>
+<p>El Debriefing es un proceso semi-estructurado, que permite analizar una cierta actividad que ha sido llevada a cabo. Se realiza una serie de preguntas que permite que los participantes refleccionen en lo
+ocurrido, los resultados y metas, para mejorar el desempeño futuro.</p>
+<p>Durante la vida universitaria se puede utilizar en situaciones coloquiales.</p>
+<ul class="simple">
+<li><p>Certámenes y Tareas:</p></li>
+</ul>
+<ul class="simple">
+<li><p>¿Cuál era la solución correcta?</p></li>
+<li><p>¿Porqué no llegué a la solución?</p></li>
+<li><p>¿Cómo debería haber estudiado para optimizar mi nota?</p></li>
+</ul>
+<ul class="simple">
+<li><p>Proyectos en grupo:</p>
+<ul>
+<li><p>¿Existieron problemas en el grupo?</p></li>
+<li><p>¿Qué podría haberse hecho de mejor forma?</p></li>
+<li><p>¿Cómo fue la interacción entre los integrantes?</p></li>
+<li><p>¿Estamos conformes con el resultado dado el tiempo invertido?</p></li>
+</ul>
+</li>
+</ul>
+<p>Debriefing no altera resultados pasados, pero permite mejorar incrementalmente y detectar errores metodológicos.</p>
+<p><img alt="debriefing" src="../_images/Modelamiento.png" /></p>
+<div class="section" id="fuentes-de-error">
+<h3>Fuentes de Error<a class="headerlink" href="#fuentes-de-error" title="Permalink to this headline">¶</a></h3>
+<p>Existen múltiples fuentes de error:</p>
+<ul class="simple">
+<li><p>Humana</p></li>
+<li><p>Instrumental</p></li>
+</ul>
+<p>Algo importante a considerar es que toda medición es siempre indirecta. Lo que se mide no es necesariamente lo que se necesita. Por ejemplo:</p>
+<ul class="simple">
+<li><p><strong>Longitud</strong>: comparación directa (regla), comparación indirecta (sensor laser).</p></li>
+<li><p><strong>Temperatura</strong>: mediante dilatación (termómetro tradicional), cambio de densidad (termómetro de Galileo), o cambio de resistencia eléctrica (termómetro digital).</p></li>
+</ul>
+<div class="section" id="fuente-de-error-humana">
+<h4>Fuente de Error Humana<a class="headerlink" href="#fuente-de-error-humana" title="Permalink to this headline">¶</a></h4>
+<p>La definición del problema a resolver está dado por el cliente, y la respuesta contiene:</p>
+<ul class="simple">
+<li><p>Deformación profesional.</p></li>
+<li><p>Expectativas a priori.</p></li>
+<li><p>Confianza infinita (o nula) en los métodos numéricos.</p></li>
+</ul>
+<p>Pueden ser del tipo:</p>
+<ul class="simple">
+<li><p><strong>Medición</strong>: Falta de apego a protocolos e imprecisión.</p></li>
+<li><p><strong>Modelamiento Matemático</strong>: Errores conceptuales, de unidades, de condiciones de frontera o características de la problemática. Para quien tiene un martillo, todo parece un clavo.</p></li>
+<li><p><strong>Modelamiento Numérico</strong>: La discretización de un sistema de ecuaciones introduce un error que suele olvidarse.</p></li>
+<li><p><strong>Implementación Numérica</strong>:  Testeo deficiente permite que bugs permanezcan ocultos en la implementación.</p></li>
+<li><p><strong>Interpretación</strong>: Confianza ciega en la caja negra.</p></li>
+</ul>
+</div>
+<div class="section" id="fuente-de-error-debido-a-la-incerteza-en-parametros">
+<h4>Fuente de Error debido a la Incerteza en Parámetros<a class="headerlink" href="#fuente-de-error-debido-a-la-incerteza-en-parametros" title="Permalink to this headline">¶</a></h4>
+<p>Los parámetros rara vez se conocen con buena precisión, incluso cuando el modelo físico-matemático ha sido bien definido. Por ello, siempre es necesario tomar un enfoque <strong>conservador</strong> en la incerteza de los parámetros involucrados dependiendo de la aplicación del modelo.</p>
+<p>Por ejemplo, en el caso de minería subterránea:</p>
+<ul class="simple">
+<li><p>Si el problema involucra seguridad en los túneles mineros, se  utiliza un modelo conservador que <strong>subestima</strong> los parámetros físicos de la roca: : la roca del modelo es menos resistente que en la realidad. Si el modelo indica que el túnel es resistente, tenemos confianza que en la realidad el tunel es seguro.</p></li>
+<li><p>Si el problema involucra factibilidad de la técnica extractiva, se utiliza un modelo que <strong>sobreestima</strong> los parámetros físicos de la roca: la roca del modelo es más resistente que en la realidad. Si el modelo indica que la roca se quiebra adecuadamente durante el caving, tenemos confianza que la roca se quiebra durante el caving.</p></li>
+</ul>
+<p>Otro tema a considerar es que los modelos nunca tienen precisión infinita. Por ejemplo, en minería:</p>
+<ul class="simple">
+<li><p>Si consideramos que los parámetros físicos de la roca son constantes en todo el dominio en análisis, no se considera las variaciones que existen naturalmente.</p></li>
+<li><p>Si consideramos que los parámetros físicos de la roca varían punto a punto en todo el dominio de análisis, es necesario conocer dicho valor, lo cual resulta imposible de mapear tridimensionalmente.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="algoritmos-ml">
+<h2>Algoritmos ML<a class="headerlink" href="#algoritmos-ml" title="Permalink to this headline">¶</a></h2>
+<p>Hay 4 grandes familias de problemas en Machine Learning:</p>
+<ul class="simple">
+<li><p><strong>Clasificación</strong></p></li>
+<li><p><strong>Regresión</strong></p></li>
+<li><p><strong>Clustering</strong></p></li>
+<li><p><strong>Extracción de Reglas</strong></p></li>
+</ul>
+<div class="section" id="regresion">
+<h3>Regresión<a class="headerlink" href="#regresion" title="Permalink to this headline">¶</a></h3>
+<p>Similar a clustering, pero donde los datos están etiquetados con un valor real. El desafío es asignar la etiqueta correcta a datos sin etiquetar.</p>
+<p>Ejemplos:</p>
+<ol class="simple">
+<li><p>Predicción de precio en mercado de acciones.</p></li>
+<li><p>Predicción de precio de casa/departamento basado en características.</p></li>
+</ol>
+</div>
+<div class="section" id="clasificacion">
+<h3>Clasificación<a class="headerlink" href="#clasificacion" title="Permalink to this headline">¶</a></h3>
+<p>Se conocen como están etiquetados (asignados a una clase) algunos de los elementos.
+El desafío es asignar la etiqueta correcta a datos sin etiquetar.</p>
+<p>Ejemplos:</p>
+<ol class="simple">
+<li><p>Clasificación de Spam.</p></li>
+<li><p>Clasificación de Fraudes.</p></li>
+<li><p>Reconocimiento de Dígitos</p></li>
+<li><p>Diágnostico Médico.</p></li>
+</ol>
+</div>
+<div class="section" id="clustering">
+<h3>Clustering<a class="headerlink" href="#clustering" title="Permalink to this headline">¶</a></h3>
+<p>Los datos no se encuentran etiquetados (no existe un valor <span class="math notranslate nohighlight">\(y\)</span> para
+predecir), pero se busca dividir el conjunto de datos basados en alguna
+medida de similaridad o estructura de los datos.
+El desafío es encontrar cómo se podrían separar los datos a partir de
+sus datos sin saber cómo ni porqué se podrían separar.</p>
+<p>Ejemplos:</p>
+<ol class="simple">
+<li><p>Ordenar fotos según persona que aparece en rostros.</p></li>
+<li><p>Segmentación de mercados.</p></li>
+<li><p>Compresión de información.</p></li>
+</ol>
+</div>
+<div class="section" id="extraccion-de-reglas">
+<h3>Extracción de Reglas<a class="headerlink" href="#extraccion-de-reglas" title="Permalink to this headline">¶</a></h3>
+<p>Los datos se usan para la extracción de reglas o relaciones previamente
+desconocidas entre los datos. A menudo no existe una relación predictiva
+entre los datos, sino que simplemente existe una relación no causal
+entre los atributos de los datos.
+El desafío es encontrar las relaciones no predictivas entre los datos,
+sin conocerlas a priori.</p>
+<p>Ejemplos:</p>
+<ol class="simple">
+<li><p>Reconocimiento de Voz.</p></li>
+<li><p>Recomendación de Productos.</p></li>
+</ol>
+<p>¡Existe un sitio con una animación increíble!: <a class="reference external" href="http://www.r2d3.us/una-introduccion-visual-al-machine-learning-1/">http://www.r2d3.us/</a></p>
+<div class="section" id="consejos">
+<h4>Consejos<a class="headerlink" href="#consejos" title="Permalink to this headline">¶</a></h4>
+<p>Excelente artículo de Pedro Domingos: <a class="reference external" href="https://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf">A Few Useful Things to Know about Machine Learning</a>.</p>
+<ol class="simple">
+<li><p>Learning = Representation + Evaluation + Optimization</p></li>
+<li><p>La meta fundamental es generalizar a partir de los ejemplos.</p></li>
+<li><p>Sólo tener datos no es suficiente.</p></li>
+<li><p>Cuidado con overfitting en el modelo.</p></li>
+<li><p>La intuición es difícil en grandes dimensiones.</p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="M3L04_interactive_visualization.html" title="previous page">Visualización Interactiva</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Alonso Ogueda Oliva<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-177357392-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>
