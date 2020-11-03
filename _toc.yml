@@ -24,3 +24,6 @@
   - file: lessons/M3L02_imperative_visualization
   - file: lessons/M3L03_declarative_visualization
   - file: lessons/M3L04_interactive_visualization
+- part: Machine Learning
+  chapters:
+  - file: lessons/M4L01_modeling
