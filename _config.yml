@@ -4,7 +4,7 @@ title                       : MAT281 - Aplicaciones de la Matemática en la Inge
 author                      : Alonso Ogueda Oliva  # The author of the book
 copyright                   : "2020"  # Copyright year to be placed in the footer
 logo                        : "images/utfsm.png"  # A path to the book logo
-exclude_patterns            : [README.md, labs/*, homeworks/*]  # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
+exclude_patterns            : ["README.md", "labs/*", "homeworks/*", "Untitled*.ipynb"]  # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
 
 #######################################################################################
 # Execution settings
