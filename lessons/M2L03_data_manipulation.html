@@ -26,7 +26,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -45,7 +45,7 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -86,22 +86,19 @@
   <h1 class="site-logo" id="site-title">MAT281 - Aplicaciones de la Matemática en la Ingeniería  - 2020</h1>
   
 </a>
-</div>
-
-<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form>
-
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <ul class="nav sidenav_l1">
+    <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../index.html">
    Bienvenido(a) a MAT281!
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption collapsible-parent">
  <span class="caption-text">
   Introducción
  </span>
@@ -112,23 +109,41 @@
    Acerca de MAT281
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="M1L02_toolkit_and_setup.html">
    Toolkit &amp; Setup
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="M1L02_installation.html">
+     Instalación
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="M1L03_python_basics.html">
    Recordando Python
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="M1L04_python_ecosystem.html">
    Ecosistema Python
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="M1L04_git_update.html">
+     Utilizando git
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
 </ul>
-<p class="caption">
+<p class="caption collapsible-parent">
  <span class="caption-text">
   Análisis de Datos
  </span>
@@ -165,7 +180,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption collapsible-parent">
  <span class="caption-text">
   Visualización
  </span>
@@ -192,7 +207,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption collapsible-parent">
  <span class="caption-text">
   Machine Learning
  </span>
@@ -210,9 +225,7 @@
  </li>
 </ul>
 
-</nav>
-
- <!-- To handle the deprecated key -->
+</nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
   Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
@@ -241,11 +254,11 @@
             <i class="fas fa-arrow-up"></i>
         </button>
         
-        <div class="dropdown-buttons-trigger">
+        
+<div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
 
-    
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         
@@ -257,8 +270,8 @@
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
-    
 </div>
+
         <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
@@ -1073,54 +1086,54 @@ Name: Temp, dtype: float64
   </thead>
   <tbody>
     <tr>
-      <th>23525</th>
+      <th>23887</th>
       <td>Magallanes</td>
       <td>12</td>
       <td>Rio Verde</td>
       <td>12103.0</td>
       <td>211.0</td>
-      <td>2020-11-02</td>
-      <td>2.0</td>
+      <td>2020-11-06</td>
+      <td>3.0</td>
     </tr>
     <tr>
-      <th>23526</th>
+      <th>23888</th>
       <td>Magallanes</td>
       <td>12</td>
       <td>San Gregorio</td>
       <td>12104.0</td>
       <td>681.0</td>
-      <td>2020-11-02</td>
+      <td>2020-11-06</td>
       <td>20.0</td>
     </tr>
     <tr>
-      <th>23527</th>
+      <th>23889</th>
       <td>Magallanes</td>
       <td>12</td>
       <td>Timaukel</td>
       <td>12303.0</td>
       <td>282.0</td>
-      <td>2020-11-02</td>
+      <td>2020-11-06</td>
       <td>21.0</td>
     </tr>
     <tr>
-      <th>23528</th>
+      <th>23890</th>
       <td>Magallanes</td>
       <td>12</td>
       <td>Torres del Paine</td>
       <td>12402.0</td>
       <td>1021.0</td>
-      <td>2020-11-02</td>
+      <td>2020-11-06</td>
       <td>2.0</td>
     </tr>
     <tr>
-      <th>23529</th>
+      <th>23891</th>
       <td>Magallanes</td>
       <td>12</td>
       <td>Desconocido Magallanes</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>2020-11-02</td>
-      <td>32.0</td>
+      <td>2020-11-06</td>
+      <td>39.0</td>
     </tr>
   </tbody>
 </table>
@@ -1222,58 +1235,58 @@ Name: Temp, dtype: float64
       <td>...</td>
     </tr>
     <tr>
-      <th>23251</th>
+      <th>23613</th>
       <td>Valparaíso</td>
       <td>5</td>
       <td>Valparaiso</td>
       <td>5101.0</td>
       <td>315732.0</td>
-      <td>2020-11-02</td>
-      <td>8033.0</td>
+      <td>2020-11-06</td>
+      <td>8134.0</td>
     </tr>
     <tr>
-      <th>23252</th>
+      <th>23614</th>
       <td>Valparaíso</td>
       <td>5</td>
       <td>Villa Alemana</td>
       <td>5804.0</td>
       <td>139310.0</td>
-      <td>2020-11-02</td>
-      <td>3105.0</td>
+      <td>2020-11-06</td>
+      <td>3131.0</td>
     </tr>
     <tr>
-      <th>23253</th>
+      <th>23615</th>
       <td>Valparaíso</td>
       <td>5</td>
       <td>Vina del Mar</td>
       <td>5109.0</td>
       <td>361371.0</td>
-      <td>2020-11-02</td>
-      <td>7620.0</td>
+      <td>2020-11-06</td>
+      <td>7684.0</td>
     </tr>
     <tr>
-      <th>23254</th>
+      <th>23616</th>
       <td>Valparaíso</td>
       <td>5</td>
       <td>Zapallar</td>
       <td>5405.0</td>
       <td>7994.0</td>
-      <td>2020-11-02</td>
+      <td>2020-11-06</td>
       <td>149.0</td>
     </tr>
     <tr>
-      <th>23255</th>
+      <th>23617</th>
       <td>Valparaíso</td>
       <td>5</td>
       <td>Desconocido Valparaiso</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>2020-11-02</td>
-      <td>431.0</td>
+      <td>2020-11-06</td>
+      <td>428.0</td>
     </tr>
   </tbody>
 </table>
-<p>2535 rows × 7 columns</p>
+<p>2574 rows × 7 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -1296,17 +1309,17 @@ Name: Temp, dtype: float64
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 23530 entries, 0 to 23529
+RangeIndex: 23892 entries, 0 to 23891
 Data columns (total 7 columns):
  #   Column             Non-Null Count  Dtype  
 ---  ------             --------------  -----  
- 0   Region             23530 non-null  object 
- 1   Codigo region      23530 non-null  int64  
- 2   Comuna             23530 non-null  object 
- 3   Codigo comuna      22490 non-null  float64
- 4   Poblacion          22490 non-null  float64
- 5   Fecha              23530 non-null  object 
- 6   Casos confirmados  23111 non-null  float64
+ 0   Region             23892 non-null  object 
+ 1   Codigo region      23892 non-null  int64  
+ 2   Comuna             23892 non-null  object 
+ 3   Codigo comuna      22836 non-null  float64
+ 4   Poblacion          22836 non-null  float64
+ 5   Fecha              23892 non-null  object 
+ 6   Casos confirmados  23473 non-null  float64
 dtypes: float64(3), int64(1), object(3)
 memory usage: 1.3+ MB
 </pre></div>
@@ -1402,9 +1415,9 @@ Name: Casos confirmados, dtype: float64
   <tbody>
     <tr>
       <th>Codigo region</th>
-      <td>23530.0</td>
+      <td>23892.0</td>
       <td>8.784530</td>
-      <td>3.879193</td>
+      <td>3.879191</td>
       <td>1.0</td>
       <td>6.0</td>
       <td>8.0</td>
@@ -1413,9 +1426,9 @@ Name: Casos confirmados, dtype: float64
     </tr>
     <tr>
       <th>Codigo comuna</th>
-      <td>22490.0</td>
+      <td>22836.0</td>
       <td>9034.997110</td>
-      <td>3812.710650</td>
+      <td>3812.709366</td>
       <td>1101.0</td>
       <td>6109.0</td>
       <td>8313.5</td>
@@ -1424,9 +1437,9 @@ Name: Casos confirmados, dtype: float64
     </tr>
     <tr>
       <th>Poblacion</th>
-      <td>22490.0</td>
+      <td>22836.0</td>
       <td>56237.890173</td>
-      <td>88819.314111</td>
+      <td>88819.284190</td>
       <td>137.0</td>
       <td>9546.0</td>
       <td>19770.0</td>
@@ -1435,14 +1448,14 @@ Name: Casos confirmados, dtype: float64
     </tr>
     <tr>
       <th>Casos confirmados</th>
-      <td>23111.0</td>
-      <td>808.737787</td>
-      <td>2279.179892</td>
+      <td>23473.0</td>
+      <td>821.324884</td>
+      <td>2298.566539</td>
       <td>0.0</td>
-      <td>7.0</td>
-      <td>71.0</td>
-      <td>341.5</td>
-      <td>27427.0</td>
+      <td>8.0</td>
+      <td>73.0</td>
+      <td>349.0</td>
+      <td>27540.0</td>
     </tr>
   </tbody>
 </table>
@@ -1489,10 +1502,10 @@ Name: Casos confirmados, dtype: float64
   <tbody>
     <tr>
       <th>Region</th>
-      <td>23530</td>
+      <td>23892</td>
       <td>16</td>
       <td>Metropolitana</td>
-      <td>3445</td>
+      <td>3498</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1503,7 +1516,7 @@ Name: Casos confirmados, dtype: float64
     </tr>
     <tr>
       <th>Codigo region</th>
-      <td>23530</td>
+      <td>23892</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1517,10 +1530,10 @@ Name: Casos confirmados, dtype: float64
     </tr>
     <tr>
       <th>Comuna</th>
-      <td>23530</td>
+      <td>23892</td>
       <td>362</td>
-      <td>Cerro Navia</td>
-      <td>65</td>
+      <td>San Jose de Maipo</td>
+      <td>66</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1531,7 +1544,7 @@ Name: Casos confirmados, dtype: float64
     </tr>
     <tr>
       <th>Codigo comuna</th>
-      <td>22490</td>
+      <td>22836</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1545,7 +1558,7 @@ Name: Casos confirmados, dtype: float64
     </tr>
     <tr>
       <th>Poblacion</th>
-      <td>22490</td>
+      <td>22836</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1559,9 +1572,9 @@ Name: Casos confirmados, dtype: float64
     </tr>
     <tr>
       <th>Fecha</th>
-      <td>23530</td>
-      <td>65</td>
-      <td>2020-10-12</td>
+      <td>23892</td>
+      <td>66</td>
+      <td>2020-05-04</td>
       <td>362</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1573,17 +1586,17 @@ Name: Casos confirmados, dtype: float64
     </tr>
     <tr>
       <th>Casos confirmados</th>
-      <td>23111</td>
+      <td>23473</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>808.738</td>
-      <td>2279.18</td>
+      <td>821.325</td>
+      <td>2298.57</td>
       <td>0</td>
-      <td>7</td>
-      <td>71</td>
-      <td>341.5</td>
-      <td>27427</td>
+      <td>8</td>
+      <td>73</td>
+      <td>349</td>
+      <td>27540</td>
     </tr>
   </tbody>
 </table>
@@ -1601,8 +1614,8 @@ Codigo region                16
 Comuna                 Zapallar
 Codigo comuna             16305
 Poblacion                645909
-Fecha                2020-11-02
-Casos confirmados         27427
+Fecha                2020-11-06
+Casos confirmados         27540
 dtype: object
 </pre></div>
 </div>
@@ -1679,22 +1692,22 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Metropolitana         3445
-Valparaíso            2535
-O’Higgins             2210
-Biobío                2210
-Araucanía             2145
-Los Lagos             2015
-Maule                 2015
-Ñuble                 1430
-Coquimbo              1040
-Los Ríos               845
-Magallanes             780
-Aysén                  715
-Antofagasta            650
-Atacama                650
-Tarapacá               520
-Arica y Parinacota     325
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Metropolitana         3498
+Valparaíso            2574
+Biobío                2244
+O’Higgins             2244
+Araucanía             2178
+Los Lagos             2046
+Maule                 2046
+Ñuble                 1452
+Coquimbo              1056
+Los Ríos               858
+Magallanes             792
+Aysén                  726
+Antofagasta            660
+Atacama                660
+Tarapacá               528
+Arica y Parinacota     330
 Name: Region, dtype: int64
 </pre></div>
 </div>
@@ -1712,7 +1725,7 @@ Name: Region, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(23530,)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(23892,)
 </pre></div>
 </div>
 </div>
@@ -1964,7 +1977,7 @@ Name: Region, dtype: int64
       <td>...</td>
     </tr>
     <tr>
-      <th>23525</th>
+      <th>23887</th>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -1974,7 +1987,7 @@ Name: Region, dtype: int64
       <td>False</td>
     </tr>
     <tr>
-      <th>23526</th>
+      <th>23888</th>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -1984,7 +1997,7 @@ Name: Region, dtype: int64
       <td>False</td>
     </tr>
     <tr>
-      <th>23527</th>
+      <th>23889</th>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -1994,7 +2007,7 @@ Name: Region, dtype: int64
       <td>False</td>
     </tr>
     <tr>
-      <th>23528</th>
+      <th>23890</th>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -2004,7 +2017,7 @@ Name: Region, dtype: int64
       <td>False</td>
     </tr>
     <tr>
-      <th>23529</th>
+      <th>23891</th>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -2015,7 +2028,7 @@ Name: Region, dtype: int64
     </tr>
   </tbody>
 </table>
-<p>23530 rows × 7 columns</p>
+<p>23892 rows × 7 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -2132,7 +2145,7 @@ dtype: bool
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1043, 7)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1059, 7)
 </pre></div>
 </div>
 </div>
@@ -2240,9 +2253,9 @@ dtype: bool
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(22487, 7)
-(22487, 7)
-(23530, 4)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(22833, 7)
+(22833, 7)
+(23892, 4)
 </pre></div>
 </div>
 </div>

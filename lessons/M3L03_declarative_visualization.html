@@ -26,7 +26,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -45,7 +45,7 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -86,22 +86,19 @@
   <h1 class="site-logo" id="site-title">MAT281 - Aplicaciones de la Matemática en la Ingeniería  - 2020</h1>
   
 </a>
-</div>
-
-<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form>
-
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <ul class="nav sidenav_l1">
+    <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../index.html">
    Bienvenido(a) a MAT281!
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption collapsible-parent">
  <span class="caption-text">
   Introducción
  </span>
@@ -112,23 +109,41 @@
    Acerca de MAT281
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="M1L02_toolkit_and_setup.html">
    Toolkit &amp; Setup
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="M1L02_installation.html">
+     Instalación
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="M1L03_python_basics.html">
    Recordando Python
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="M1L04_python_ecosystem.html">
    Ecosistema Python
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="M1L04_git_update.html">
+     Utilizando git
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
 </ul>
-<p class="caption">
+<p class="caption collapsible-parent">
  <span class="caption-text">
   Análisis de Datos
  </span>
@@ -165,7 +180,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption collapsible-parent">
  <span class="caption-text">
   Visualización
  </span>
@@ -192,7 +207,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption collapsible-parent">
  <span class="caption-text">
   Machine Learning
  </span>
@@ -210,9 +225,7 @@
  </li>
 </ul>
 
-</nav>
-
- <!-- To handle the deprecated key -->
+</nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
   Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
@@ -241,11 +254,11 @@
             <i class="fas fa-arrow-up"></i>
         </button>
         
-        <div class="dropdown-buttons-trigger">
+        
+<div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
 
-    
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         
@@ -257,8 +270,8 @@
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
-    
 </div>
+
         <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
@@ -791,7 +804,7 @@ memory usage: 6.0+ KB
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>versicolor</td>
+      <td>virginica</td>
     </tr>
     <tr>
       <th>freq</th>
@@ -915,12 +928,12 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-f8de9168269343e390203c7c2a6f94b7"></div>
+<div id="altair-viz-38767f893a7049fa81936ed9d06fe5b0"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-f8de9168269343e390203c7c2a6f94b7") {
-      outputDiv = document.getElementById("altair-viz-f8de9168269343e390203c7c2a6f94b7");
+    if (outputDiv.id !== "altair-viz-38767f893a7049fa81936ed9d06fe5b0") {
+      outputDiv = document.getElementById("altair-viz-38767f893a7049fa81936ed9d06fe5b0");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -979,12 +992,12 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-c8c4f1cdedfd42999de417707aa972c0"></div>
+<div id="altair-viz-d10a91fc2e194ee1afcfb1902af94b3d"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-c8c4f1cdedfd42999de417707aa972c0") {
-      outputDiv = document.getElementById("altair-viz-c8c4f1cdedfd42999de417707aa972c0");
+    if (outputDiv.id !== "altair-viz-d10a91fc2e194ee1afcfb1902af94b3d") {
+      outputDiv = document.getElementById("altair-viz-d10a91fc2e194ee1afcfb1902af94b3d");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -1069,12 +1082,12 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-b5a058ec8f0a48459fd2b274c126bbdd"></div>
+<div id="altair-viz-c54dfd8afb0848cbb47db01e9ac45f24"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-b5a058ec8f0a48459fd2b274c126bbdd") {
-      outputDiv = document.getElementById("altair-viz-b5a058ec8f0a48459fd2b274c126bbdd");
+    if (outputDiv.id !== "altair-viz-c54dfd8afb0848cbb47db01e9ac45f24") {
+      outputDiv = document.getElementById("altair-viz-c54dfd8afb0848cbb47db01e9ac45f24");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -1135,12 +1148,12 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-0f54164e59a14c9a93eb42c91db019b4"></div>
+<div id="altair-viz-88bbf8984981417fa7b8d454cdc57669"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-0f54164e59a14c9a93eb42c91db019b4") {
-      outputDiv = document.getElementById("altair-viz-0f54164e59a14c9a93eb42c91db019b4");
+    if (outputDiv.id !== "altair-viz-88bbf8984981417fa7b8d454cdc57669") {
+      outputDiv = document.getElementById("altair-viz-88bbf8984981417fa7b8d454cdc57669");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -1198,12 +1211,12 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-2864384300594583a0e4616fc70f371a"></div>
+<div id="altair-viz-84f16eb9c32f4a6d978ef0eeae85ad3f"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-2864384300594583a0e4616fc70f371a") {
-      outputDiv = document.getElementById("altair-viz-2864384300594583a0e4616fc70f371a");
+    if (outputDiv.id !== "altair-viz-84f16eb9c32f4a6d978ef0eeae85ad3f") {
+      outputDiv = document.getElementById("altair-viz-84f16eb9c32f4a6d978ef0eeae85ad3f");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -1263,12 +1276,12 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-eaf0a404f2e34f1daa460b8794386bde"></div>
+<div id="altair-viz-8efb2f9f596e4dc98f5115f678510684"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-eaf0a404f2e34f1daa460b8794386bde") {
-      outputDiv = document.getElementById("altair-viz-eaf0a404f2e34f1daa460b8794386bde");
+    if (outputDiv.id !== "altair-viz-8efb2f9f596e4dc98f5115f678510684") {
+      outputDiv = document.getElementById("altair-viz-8efb2f9f596e4dc98f5115f678510684");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -1325,12 +1338,12 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-17de7e787a644cff9e5350d68922ec5f"></div>
+<div id="altair-viz-c10cdccf69bb45a884dff51870e70c20"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-17de7e787a644cff9e5350d68922ec5f") {
-      outputDiv = document.getElementById("altair-viz-17de7e787a644cff9e5350d68922ec5f");
+    if (outputDiv.id !== "altair-viz-c10cdccf69bb45a884dff51870e70c20") {
+      outputDiv = document.getElementById("altair-viz-c10cdccf69bb45a884dff51870e70c20");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -1390,12 +1403,12 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-b51608137471409c8e8df7c073803fff"></div>
+<div id="altair-viz-8f79e1a582c443a792c0046b44e0d1e0"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-b51608137471409c8e8df7c073803fff") {
-      outputDiv = document.getElementById("altair-viz-b51608137471409c8e8df7c073803fff");
+    if (outputDiv.id !== "altair-viz-8f79e1a582c443a792c0046b44e0d1e0") {
+      outputDiv = document.getElementById("altair-viz-8f79e1a582c443a792c0046b44e0d1e0");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -1460,12 +1473,12 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-396187e9ea6644bbb348b51c4e0b809d"></div>
+<div id="altair-viz-5c7c887fb415487d9c6d33d97625d83e"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-396187e9ea6644bbb348b51c4e0b809d") {
-      outputDiv = document.getElementById("altair-viz-396187e9ea6644bbb348b51c4e0b809d");
+    if (outputDiv.id !== "altair-viz-5c7c887fb415487d9c6d33d97625d83e") {
+      outputDiv = document.getElementById("altair-viz-5c7c887fb415487d9c6d33d97625d83e");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -1524,12 +1537,12 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-3cdc3505fa594069bbb4e757238e3390"></div>
+<div id="altair-viz-156738c9e39a4978b0d8d6a0784c7552"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-3cdc3505fa594069bbb4e757238e3390") {
-      outputDiv = document.getElementById("altair-viz-3cdc3505fa594069bbb4e757238e3390");
+    if (outputDiv.id !== "altair-viz-156738c9e39a4978b0d8d6a0784c7552") {
+      outputDiv = document.getElementById("altair-viz-156738c9e39a4978b0d8d6a0784c7552");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -1596,12 +1609,12 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-a64b75fb73e144988b4991eb481299fb"></div>
+<div id="altair-viz-8732ff0ca33643c3b3bd27ff447046b3"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-a64b75fb73e144988b4991eb481299fb") {
-      outputDiv = document.getElementById("altair-viz-a64b75fb73e144988b4991eb481299fb");
+    if (outputDiv.id !== "altair-viz-8732ff0ca33643c3b3bd27ff447046b3") {
+      outputDiv = document.getElementById("altair-viz-8732ff0ca33643c3b3bd27ff447046b3");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -1662,12 +1675,12 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-2ef393e4d00945e5831b6cb1a581823c"></div>
+<div id="altair-viz-da3813b7a16945f1aa9666c319422724"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-2ef393e4d00945e5831b6cb1a581823c") {
-      outputDiv = document.getElementById("altair-viz-2ef393e4d00945e5831b6cb1a581823c");
+    if (outputDiv.id !== "altair-viz-da3813b7a16945f1aa9666c319422724") {
+      outputDiv = document.getElementById("altair-viz-da3813b7a16945f1aa9666c319422724");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -1738,12 +1751,12 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-398af6c9cf6246e393fcad14066e12c5"></div>
+<div id="altair-viz-342e9ac751454a5f84c6e9804c6c94a8"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-398af6c9cf6246e393fcad14066e12c5") {
-      outputDiv = document.getElementById("altair-viz-398af6c9cf6246e393fcad14066e12c5");
+    if (outputDiv.id !== "altair-viz-342e9ac751454a5f84c6e9804c6c94a8") {
+      outputDiv = document.getElementById("altair-viz-342e9ac751454a5f84c6e9804c6c94a8");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -1809,12 +1822,12 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-2639fd5b3100467c8a230b65c4c2550d"></div>
+<div id="altair-viz-26bd961508494b879c87263ad2723545"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-2639fd5b3100467c8a230b65c4c2550d") {
-      outputDiv = document.getElementById("altair-viz-2639fd5b3100467c8a230b65c4c2550d");
+    if (outputDiv.id !== "altair-viz-26bd961508494b879c87263ad2723545") {
+      outputDiv = document.getElementById("altair-viz-26bd961508494b879c87263ad2723545");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -1874,12 +1887,12 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-78379e38c9e244b69858f6723b915e8a"></div>
+<div id="altair-viz-0e783b3567734459b5dd0752d793cf53"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-78379e38c9e244b69858f6723b915e8a") {
-      outputDiv = document.getElementById("altair-viz-78379e38c9e244b69858f6723b915e8a");
+    if (outputDiv.id !== "altair-viz-0e783b3567734459b5dd0752d793cf53") {
+      outputDiv = document.getElementById("altair-viz-0e783b3567734459b5dd0752d793cf53");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -1941,12 +1954,12 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-707a4574d09347bd93e6379d2feaaf34"></div>
+<div id="altair-viz-eb2cf838222c4cb5ae6f90e16c864715"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-707a4574d09347bd93e6379d2feaaf34") {
-      outputDiv = document.getElementById("altair-viz-707a4574d09347bd93e6379d2feaaf34");
+    if (outputDiv.id !== "altair-viz-eb2cf838222c4cb5ae6f90e16c864715") {
+      outputDiv = document.getElementById("altair-viz-eb2cf838222c4cb5ae6f90e16c864715");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -2019,12 +2032,12 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-05e445286161430e9ec9193b4a037450"></div>
+<div id="altair-viz-78f170189ef44d36851eec5d2e373fa4"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-05e445286161430e9ec9193b4a037450") {
-      outputDiv = document.getElementById("altair-viz-05e445286161430e9ec9193b4a037450");
+    if (outputDiv.id !== "altair-viz-78f170189ef44d36851eec5d2e373fa4") {
+      outputDiv = document.getElementById("altair-viz-78f170189ef44d36851eec5d2e373fa4");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -2093,12 +2106,12 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-a0da5440784047c5ba0bf893b380c451"></div>
+<div id="altair-viz-473ec1983d5e4f6dbc742e5de2902208"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-a0da5440784047c5ba0bf893b380c451") {
-      outputDiv = document.getElementById("altair-viz-a0da5440784047c5ba0bf893b380c451");
+    if (outputDiv.id !== "altair-viz-473ec1983d5e4f6dbc742e5de2902208") {
+      outputDiv = document.getElementById("altair-viz-473ec1983d5e4f6dbc742e5de2902208");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -2161,12 +2174,12 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-10b4084aca5745fe811071a343b6c9e1"></div>
+<div id="altair-viz-bba43ebaa13e4899b5e3201bac0a10ba"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-10b4084aca5745fe811071a343b6c9e1") {
-      outputDiv = document.getElementById("altair-viz-10b4084aca5745fe811071a343b6c9e1");
+    if (outputDiv.id !== "altair-viz-bba43ebaa13e4899b5e3201bac0a10ba") {
+      outputDiv = document.getElementById("altair-viz-bba43ebaa13e4899b5e3201bac0a10ba");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -2226,12 +2239,12 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-e20d507d000b41d782daffc9658b6974"></div>
+<div id="altair-viz-9c50be65d2b74c6fb8db487c949104bd"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-e20d507d000b41d782daffc9658b6974") {
-      outputDiv = document.getElementById("altair-viz-e20d507d000b41d782daffc9658b6974");
+    if (outputDiv.id !== "altair-viz-9c50be65d2b74c6fb8db487c949104bd") {
+      outputDiv = document.getElementById("altair-viz-9c50be65d2b74c6fb8db487c949104bd");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -2301,12 +2314,12 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-9a0980c5dc114635bfa6f5bdc82db93c"></div>
+<div id="altair-viz-27e2c1e5e38f4eda93dab80f701c2752"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-9a0980c5dc114635bfa6f5bdc82db93c") {
-      outputDiv = document.getElementById("altair-viz-9a0980c5dc114635bfa6f5bdc82db93c");
+    if (outputDiv.id !== "altair-viz-27e2c1e5e38f4eda93dab80f701c2752") {
+      outputDiv = document.getElementById("altair-viz-27e2c1e5e38f4eda93dab80f701c2752");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -2393,12 +2406,12 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-26e3ad902373492eaf454209ed814501"></div>
+<div id="altair-viz-042810782a7247058298e323edb66299"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-26e3ad902373492eaf454209ed814501") {
-      outputDiv = document.getElementById("altair-viz-26e3ad902373492eaf454209ed814501");
+    if (outputDiv.id !== "altair-viz-042810782a7247058298e323edb66299") {
+      outputDiv = document.getElementById("altair-viz-042810782a7247058298e323edb66299");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -2468,12 +2481,12 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-02a226943ce6417d8c9490c734e7611e"></div>
+<div id="altair-viz-6187dbb2ed7c4009bc2d8e1f39703078"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-02a226943ce6417d8c9490c734e7611e") {
-      outputDiv = document.getElementById("altair-viz-02a226943ce6417d8c9490c734e7611e");
+    if (outputDiv.id !== "altair-viz-6187dbb2ed7c4009bc2d8e1f39703078") {
+      outputDiv = document.getElementById("altair-viz-6187dbb2ed7c4009bc2d8e1f39703078");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -2555,12 +2568,12 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-68fa5e00535040a1be23bfc1c616ad95"></div>
+<div id="altair-viz-618d9d5208f246a78d0a04b995bf29d0"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-68fa5e00535040a1be23bfc1c616ad95") {
-      outputDiv = document.getElementById("altair-viz-68fa5e00535040a1be23bfc1c616ad95");
+    if (outputDiv.id !== "altair-viz-618d9d5208f246a78d0a04b995bf29d0") {
+      outputDiv = document.getElementById("altair-viz-618d9d5208f246a78d0a04b995bf29d0");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -2677,12 +2690,12 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-d4d500bce6584efd8e080f04ad9e4217"></div>
+<div id="altair-viz-2bfa839082c445f7bf0dc1f8df3a2566"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-d4d500bce6584efd8e080f04ad9e4217") {
-      outputDiv = document.getElementById("altair-viz-d4d500bce6584efd8e080f04ad9e4217");
+    if (outputDiv.id !== "altair-viz-2bfa839082c445f7bf0dc1f8df3a2566") {
+      outputDiv = document.getElementById("altair-viz-2bfa839082c445f7bf0dc1f8df3a2566");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",

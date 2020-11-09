@@ -26,7 +26,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -45,7 +45,7 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -86,22 +86,19 @@
   <h1 class="site-logo" id="site-title">MAT281 - Aplicaciones de la Matemática en la Ingeniería  - 2020</h1>
   
 </a>
-</div>
-
-<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form>
-
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <ul class="nav sidenav_l1">
+    <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../index.html">
    Bienvenido(a) a MAT281!
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption collapsible-parent">
  <span class="caption-text">
   Introducción
  </span>
@@ -112,23 +109,41 @@
    Acerca de MAT281
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="M1L02_toolkit_and_setup.html">
    Toolkit &amp; Setup
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="M1L02_installation.html">
+     Instalación
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="M1L03_python_basics.html">
    Recordando Python
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="M1L04_python_ecosystem.html">
    Ecosistema Python
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="M1L04_git_update.html">
+     Utilizando git
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
 </ul>
-<p class="caption">
+<p class="caption collapsible-parent">
  <span class="caption-text">
   Análisis de Datos
  </span>
@@ -165,7 +180,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption collapsible-parent">
  <span class="caption-text">
   Visualización
  </span>
@@ -192,7 +207,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption collapsible-parent">
  <span class="caption-text">
   Machine Learning
  </span>
@@ -210,9 +225,7 @@
  </li>
 </ul>
 
-</nav>
-
- <!-- To handle the deprecated key -->
+</nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
   Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
@@ -241,11 +254,11 @@
             <i class="fas fa-arrow-up"></i>
         </button>
         
-        <div class="dropdown-buttons-trigger">
+        
+<div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
 
-    
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         
@@ -257,8 +270,8 @@
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
-    
 </div>
+
         <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
@@ -730,7 +743,7 @@ np.array([a_list]) = [[1 1 2 3 5]] tiene shape: (1, 5), es decir, 2 dimensión(e
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.23524288, 0.75977986, 0.81145195])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.44076445, 0.7722776 , 0.34861025])
 </pre></div>
 </div>
 </div>
@@ -742,7 +755,7 @@ np.array([a_list]) = [[1 1 2 3 5]] tiene shape: (1, 5), es decir, 2 dimensión(e
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5.38444436, 6.41687535, 4.24535965, 3.63814988, 6.59018603])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3.5163837 , 4.24392297, 6.88804005, 5.31539601, 6.2950947 ])
 </pre></div>
 </div>
 </div>
@@ -754,8 +767,8 @@ np.array([a_list]) = [[1 1 2 3 5]] tiene shape: (1, 5), es decir, 2 dimensión(e
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 93.32831447,  87.66766165, 105.69414403],
-       [107.07048014,  97.34833304, 114.13903548]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[109.85981054,  97.58218521, 114.68031408],
+       [100.64854832, 111.11958217, 107.05860667]])
 </pre></div>
 </div>
 </div>
@@ -940,7 +953,7 @@ x2:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>19.2 µs ± 41.2 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>17.5 µs ± 590 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
 </div>
@@ -953,7 +966,7 @@ x2:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>614 ns ± 9.48 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>562 ns ± 19.8 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1085,51 +1098,51 @@ x % 2  = [0 1 0 1 0]
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A + B: 
 
-[[1.50218479 1.68211882 0.64192451 0.59429111 0.44211004]
- [1.05405475 1.76912957 0.8218981  0.85081954 0.85051161]
- [0.66439365 0.65650036 1.04454029 0.9225366  0.59368863]
- [1.18821382 1.07223128 1.23818378 0.74319163 0.30180858]
- [1.06351537 1.67403218 1.32663032 0.35051878 1.23347477]]
+[[1.83784509 0.77305941 0.84114531 0.84264014 0.13418999]
+ [0.99109631 1.40240723 1.42816115 0.85918876 0.99593231]
+ [0.85700891 0.9487459  0.71300038 1.28454838 1.17522225]
+ [1.15527414 1.23696583 0.51331846 1.26701091 0.5116695 ]
+ [0.30467416 1.25559429 0.61044693 0.54705544 0.9848998 ]]
 
 --------------------------------------------------------------------------------
 
 A - B: 
 
-[[ 0.19503401 -0.06172338 -0.00558706 -0.043268   -0.13454487]
- [ 0.25419812 -0.2071749   0.07392152 -0.69431199  0.33800604]
- [-0.58192876  0.23450117 -0.0258649  -0.13710362 -0.50236174]
- [-0.68478234 -0.90223817 -0.0130318   0.14886706 -0.00302799]
- [ 0.36783752 -0.22055567  0.3345653  -0.04089662  0.45598978]]
+[[-0.11618019  0.69840668 -0.4439589  -0.04182399  0.02386801]
+ [ 0.72806147  0.45794003 -0.05190717 -0.40907977 -0.94014566]
+ [ 0.25165007  0.58092287 -0.01213554 -0.16095747 -0.78209332]
+ [ 0.46712139 -0.07617847 -0.34717563 -0.44119248 -0.01213766]
+ [ 0.19561037 -0.0807939  -0.14861923 -0.21674834 -0.6612959 ]]
 
 --------------------------------------------------------------------------------
 
 A * B: 
 
-[[0.55463022 0.70642848 0.10300897 0.08782745 0.04433974]
- [0.26160368 0.7717245  0.16751303 0.06045619 0.15228048]
- [0.02569446 0.09400048 0.27259885 0.2080691  0.02502472]
- [0.23573131 0.08391155 0.38323231 0.1325431  0.02276981]
- [0.24894013 0.68843473 0.41200351 0.03029772 0.32838333]]
+[[0.84104418 0.02746224 0.12760648 0.17707329 0.00435932]
+ [0.1130496  0.43925924 0.50923748 0.14271477 0.02700183]
+ [0.16778413 0.14066185 0.12705557 0.40603931 0.19236934]
+ [0.27911399 0.38107033 0.03574123 0.35266646 0.06541459]
+ [0.01364073 0.39249734 0.08763944 0.06307245 0.13317884]]
 
 --------------------------------------------------------------------------------
 
 A / B: 
 
-[[1.29841088 0.92920991 0.98274299 0.86426984 0.53336088]
- [1.6356092  0.79034111 1.19765731 0.10129076 2.3190336 ]
- [0.06616658 2.11138207 0.95167269 0.7412261  0.08332363]
- [0.26878405 0.08609559 0.97916937 1.50096217 0.9801337 ]
- [2.05749382 0.76717293 1.67448262 0.79103215 2.1729867 ]]
+[[ 0.8810863  19.7108133   0.30906942  0.90542525  1.43269728]
+ [ 6.53585568  1.96973199  0.92985841  0.35490038  0.02881426]
+ [ 1.83140796  4.15870849  0.96652892  0.77729945  0.20085107]
+ [ 2.35760959  0.88397548  0.19307841  0.48344268  0.95365601]
+ [ 4.58708212  0.87908618  0.60841561  0.4324502   0.19657681]]
 
 --------------------------------------------------------------------------------
 
 A @ B: 
 
-[[1.38842925 2.02532448 0.99667473 1.17699062 0.72843211]
- [1.29896677 2.07677254 1.08730395 1.18874521 0.87713705]
- [0.90617814 1.01460412 0.72089722 0.75281727 0.48278764]
- [1.04991072 1.01457126 0.79427628 0.63224227 0.55612162]
- [1.71479909 2.47044184 1.46389977 1.44098816 1.19974576]]
+[[1.13999654 0.73179669 1.37186934 1.36294561 1.12397434]
+ [1.24939237 0.76430134 1.59759276 1.67020605 1.70320191]
+ [0.95226422 0.94652262 1.36555827 1.53832481 1.42284831]
+ [1.04971887 0.75763506 1.25331441 1.23487783 1.00161286]
+ [0.45718719 0.54574506 0.81161363 0.85285558 0.98484316]]
 </pre></div>
 </div>
 </div>
