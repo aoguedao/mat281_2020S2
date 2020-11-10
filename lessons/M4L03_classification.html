@@ -1,0 +1,1891 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clasificación &#8212; MAT281 - Aplicaciones de la Matemática en la Ingeniería  - 2020</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.14.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Regresión" href="M4L02_regression.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/utfsm.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">MAT281 - Aplicaciones de la Matemática en la Ingeniería  - 2020</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Bienvenido(a) a MAT281!
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Introducción
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="M1L01_about_mat281.html">
+   Acerca de MAT281
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="M1L02_toolkit_and_setup.html">
+   Toolkit &amp; Setup
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="M1L02_installation.html">
+     Instalación
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M1L03_python_basics.html">
+   Recordando Python
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="M1L04_python_ecosystem.html">
+   Ecosistema Python
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="M1L04_git_update.html">
+     Utilizando git
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Análisis de Datos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L01_scientific_computing.html">
+   Introducción al Cálculo Científico
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L02_linear_algebra.html">
+   Álgebra Lineal
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L03_data_manipulation.html">
+   Manipulación de Datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L04_data_combining.html">
+   Combinando Datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L05_data_aggregation.html">
+   Agrupando Datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L06_eda.html">
+   Análisis Exploratorio de Datos
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Visualización
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="M3L01_theory_and_landscape.html">
+   Teoría y Landscape de Visualización
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M3L02_imperative_visualization.html">
+   Visualización Imperativa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M3L03_declarative_visualization.html">
+   Visualización Declarativa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M3L04_interactive_visualization.html">
+   Visualización Interactiva
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Machine Learning
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="M4L01_modeling.html">
+   Modelamiento
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M4L02_regression.html">
+   Regresión
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Clasificación
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/lessons/M4L03_classification.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/aoguedao/mat281_2020S2"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/aoguedao/mat281_2020S2/master?urlpath=lab/tree/lessons/M4L03_classification.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/aoguedao/mat281_2020S2/blob/master/lessons/M4L03_classification.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#motivacion">
+   Motivación
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#regresion-logistica">
+   Regresión Logística
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funcion-sigmoide">
+     Función Sigmoide
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#implementacion">
+   Implementación
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aproximacion-ingenieril">
+     Aproximación Ingenieril
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interpretacion-probabilistica">
+     Interpretación Probabilística
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aplicacion">
+   Aplicación
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scikit-learn">
+     scikit-learn
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#otro-ejemplo-iris-dataset">
+     Otro ejemplo: Iris Dataset
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="clasificacion">
+<h1>Clasificación<a class="headerlink" href="#clasificacion" title="Permalink to this headline">¶</a></h1>
+<p>Los modelos de regresión asumen que la variable de respuesta es cuantitativa, sin embargo, en muchas situaciones esta variable es cualitativa/categórica, por ejemplo el color de ojos. La idea de predecir variables categóricas es usualmente nombrada como <em>Clasificación</em>. Muchos de los problemas en los que se enfoca el Machine Learning están dentro de esta categoría, por lo mismo existen una serie de algoritmos y modelos con tal de obtener los mejores resultados. En esta clase introduciremos el algoritmo de clasificación más sencillo: <em>Regresión Logística</em>.</p>
+<div class="section" id="motivacion">
+<h2>Motivación<a class="headerlink" href="#motivacion" title="Permalink to this headline">¶</a></h2>
+<p>Para comprender mejor los algoritmos de clasificación se comenzará con un ejemplo.</p>
+<p><strong>Space Shuttle Challege</strong></p>
+<p>28 Junio 1986. A pesar de existir evidencia de funcionamiento defectuoso, se da luz verde al lanzamiento.</p>
+<p><img alt="challenger1" src="../_images/Challenger1.gif" /></p>
+<p>A los 73 segundos de vuelo, el transbordador espacial explota, matando a los 7 pasajeros.</p>
+<p><img alt="challenger2" src="../_images/Challenger2.jpg" /></p>
+<p>Como parte del debriefing del accidente, se obtuvieron los siguientes datos</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cat</span> ../data/Challenger.txt 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;Temp&quot;	&quot;BadRings&quot;
+53	3
+56	1
+57	1
+63	0
+66	0
+67	0
+67	0
+67	0
+68	0
+69	0
+70	0
+70	1
+70	1
+70	1
+72	0
+73	0
+75	0
+75	2
+76	0
+76	0
+78	0
+79	0
+80	0
+81	0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Es posible graficarlos para tener una idea general de estos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="n">alt</span><span class="o">.</span><span class="n">themes</span><span class="o">.</span><span class="n">enable</span><span class="p">(</span><span class="s1">&#39;opaque&#39;</span><span class="p">)</span>  <span class="c1"># Para quienes utilizan temas oscuros en Jupyter Lab/Notebook</span>
+
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filepath</span> <span class="o">=</span> <span class="n">Path</span><span class="p">()</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span> <span class="o">/</span> <span class="s2">&quot;data&quot;</span> <span class="o">/</span> <span class="s2">&quot;Challenger.txt&quot;</span>
+<span class="n">challenger</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">),</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;temp_f&quot;</span><span class="p">,</span> <span class="s2">&quot;nm_bad_rings&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">challenger</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>temp_f</th>
+      <th>nm_bad_rings</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>53</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>56</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>57</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>63</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>66</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">challenger</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;temp_f&quot;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">zero</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Temperature [F]&quot;</span><span class="p">),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">&quot;nm_bad_rings&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;# Bad Rings&quot;</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Cantidad de fallas vs temperatura en lanzamiento de Challenger&quot;</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">400</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-e5aa51c50b394264bf22dfe7d23e92a8"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-e5aa51c50b394264bf22dfe7d23e92a8") {
+      outputDiv = document.getElementById("altair-viz-e5aa51c50b394264bf22dfe7d23e92a8");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"background": "white", "view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-c79cf2c25bd14165cc6f25652029fa9f"}, "mark": {"type": "circle", "size": 100}, "encoding": {"x": {"type": "quantitative", "field": "temp_f", "scale": {"zero": false}, "title": "Temperature [F]"}, "y": {"type": "quantitative", "field": "nm_bad_rings", "title": "# Bad Rings"}}, "height": 400, "title": "Cantidad de fallas vs temperatura en lanzamiento de Challenger", "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-c79cf2c25bd14165cc6f25652029fa9f": [{"temp_f": 53, "nm_bad_rings": 3}, {"temp_f": 56, "nm_bad_rings": 1}, {"temp_f": 57, "nm_bad_rings": 1}, {"temp_f": 63, "nm_bad_rings": 0}, {"temp_f": 66, "nm_bad_rings": 0}, {"temp_f": 67, "nm_bad_rings": 0}, {"temp_f": 67, "nm_bad_rings": 0}, {"temp_f": 67, "nm_bad_rings": 0}, {"temp_f": 68, "nm_bad_rings": 0}, {"temp_f": 69, "nm_bad_rings": 0}, {"temp_f": 70, "nm_bad_rings": 0}, {"temp_f": 70, "nm_bad_rings": 1}, {"temp_f": 70, "nm_bad_rings": 1}, {"temp_f": 70, "nm_bad_rings": 1}, {"temp_f": 72, "nm_bad_rings": 0}, {"temp_f": 73, "nm_bad_rings": 0}, {"temp_f": 75, "nm_bad_rings": 0}, {"temp_f": 75, "nm_bad_rings": 2}, {"temp_f": 76, "nm_bad_rings": 0}, {"temp_f": 76, "nm_bad_rings": 0}, {"temp_f": 78, "nm_bad_rings": 0}, {"temp_f": 79, "nm_bad_rings": 0}, {"temp_f": 80, "nm_bad_rings": 0}, {"temp_f": 81, "nm_bad_rings": 0}]}}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p>Nos gustaría saber en qué condiciones se produce accidente. No nos importa el número de fallas, sólo si existe falla o no.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Un poco de procesamiento de datos</span>
+<span class="n">challenger</span> <span class="o">=</span> <span class="n">challenger</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span>
+    <span class="n">temp_c</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">((</span><span class="n">x</span><span class="p">[</span><span class="s2">&quot;temp_f&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="mf">32.</span><span class="p">)</span> <span class="o">/</span> <span class="mf">1.8</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="n">is_failure</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;nm_bad_rings&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">ne</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">),</span>
+    <span class="n">ds_failure</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;is_failure&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;Falla&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="s2">&quot;Éxito&quot;</span><span class="p">})</span>
+<span class="p">)</span>
+<span class="n">challenger</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>temp_f</th>
+      <th>nm_bad_rings</th>
+      <th>temp_c</th>
+      <th>is_failure</th>
+      <th>ds_failure</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>53</td>
+      <td>3</td>
+      <td>11.67</td>
+      <td>1</td>
+      <td>Falla</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>56</td>
+      <td>1</td>
+      <td>13.33</td>
+      <td>1</td>
+      <td>Falla</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>57</td>
+      <td>1</td>
+      <td>13.89</td>
+      <td>1</td>
+      <td>Falla</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>63</td>
+      <td>0</td>
+      <td>17.22</td>
+      <td>0</td>
+      <td>Éxito</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>66</td>
+      <td>0</td>
+      <td>18.89</td>
+      <td>0</td>
+      <td>Éxito</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">failure_chart</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">challenger</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;temp_c:Q&quot;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">zero</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Temperature [C]&quot;</span><span class="p">),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">&quot;is_failure:Q&quot;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">padding</span><span class="o">=</span><span class="mf">0.5</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Success/Failure&quot;</span><span class="p">),</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;ds_failure:N&quot;</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Exito o Falla en lanzamiento de Challenger&quot;</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">400</span>
+<span class="p">)</span>
+
+<span class="n">failure_chart</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-8350888d6e12400c9c5699f29940e5d7"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-8350888d6e12400c9c5699f29940e5d7") {
+      outputDiv = document.getElementById("altair-viz-8350888d6e12400c9c5699f29940e5d7");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"background": "white", "view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-2fb7a229c8f7d9b13ce371da893c47d0"}, "mark": {"type": "circle", "size": 100}, "encoding": {"color": {"type": "nominal", "field": "ds_failure"}, "x": {"type": "quantitative", "field": "temp_c", "scale": {"zero": false}, "title": "Temperature [C]"}, "y": {"type": "quantitative", "field": "is_failure", "scale": {"padding": 0.5}, "title": "Success/Failure"}}, "height": 400, "title": "Exito o Falla en lanzamiento de Challenger", "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-2fb7a229c8f7d9b13ce371da893c47d0": [{"temp_f": 53, "nm_bad_rings": 3, "temp_c": 11.67, "is_failure": 1, "ds_failure": "Falla"}, {"temp_f": 56, "nm_bad_rings": 1, "temp_c": 13.33, "is_failure": 1, "ds_failure": "Falla"}, {"temp_f": 57, "nm_bad_rings": 1, "temp_c": 13.89, "is_failure": 1, "ds_failure": "Falla"}, {"temp_f": 63, "nm_bad_rings": 0, "temp_c": 17.22, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 66, "nm_bad_rings": 0, "temp_c": 18.89, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 67, "nm_bad_rings": 0, "temp_c": 19.44, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 67, "nm_bad_rings": 0, "temp_c": 19.44, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 67, "nm_bad_rings": 0, "temp_c": 19.44, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 68, "nm_bad_rings": 0, "temp_c": 20.0, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 69, "nm_bad_rings": 0, "temp_c": 20.56, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 70, "nm_bad_rings": 0, "temp_c": 21.11, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 70, "nm_bad_rings": 1, "temp_c": 21.11, "is_failure": 1, "ds_failure": "Falla"}, {"temp_f": 70, "nm_bad_rings": 1, "temp_c": 21.11, "is_failure": 1, "ds_failure": "Falla"}, {"temp_f": 70, "nm_bad_rings": 1, "temp_c": 21.11, "is_failure": 1, "ds_failure": "Falla"}, {"temp_f": 72, "nm_bad_rings": 0, "temp_c": 22.22, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 73, "nm_bad_rings": 0, "temp_c": 22.78, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 75, "nm_bad_rings": 0, "temp_c": 23.89, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 75, "nm_bad_rings": 2, "temp_c": 23.89, "is_failure": 1, "ds_failure": "Falla"}, {"temp_f": 76, "nm_bad_rings": 0, "temp_c": 24.44, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 76, "nm_bad_rings": 0, "temp_c": 24.44, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 78, "nm_bad_rings": 0, "temp_c": 25.56, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 79, "nm_bad_rings": 0, "temp_c": 26.11, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 80, "nm_bad_rings": 0, "temp_c": 26.67, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 81, "nm_bad_rings": 0, "temp_c": 27.22, "is_failure": 0, "ds_failure": "\u00c9xito"}]}}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+</div>
+<div class="section" id="regresion-logistica">
+<h2>Regresión Logística<a class="headerlink" href="#regresion-logistica" title="Permalink to this headline">¶</a></h2>
+<p>Recordemos que la <strong>Regresión Lineal</strong> considera un modelo de la siguiente forma:</p>
+<div class="math notranslate nohighlight">
+\[ Y \approx X \theta \]</div>
+<p>donde
+$<span class="math notranslate nohighlight">\(
+Y = \begin{bmatrix}y^{(1)} \\ y^{(2)} \\ \vdots \\ y^{(m)}\end{bmatrix}
+\qquad , \qquad
+X = \begin{bmatrix} 
+1 &amp; x^{(1)}_1 &amp; \dots &amp; x^{(1)}_n \\ 
+1 &amp; x^{(2)}_1 &amp; \dots &amp; x^{(2)}_n \\
+\vdots &amp; \vdots &amp; &amp; \vdots \\
+1 &amp; x^{(m)}_1 &amp; \dots &amp; x^{(m)}_n
+\end{bmatrix}
+\qquad y \qquad
+\theta = \begin{bmatrix}\theta_1 \\ \theta_2 \\ \vdots \\ \theta_m\end{bmatrix}
+\)</span>$</p>
+<p>y que se  entrenar una función lineal</p>
+<div class="math notranslate nohighlight">
+\[h_{\theta}(x) = \theta_0 + \theta_1 x_1 + ... + \theta_n x_n\]</div>
+<p>deforma que se minimice</p>
+<div class="math notranslate nohighlight">
+\[J(\theta) = \frac{1}{2} \sum_{i=1}^{m} \left( h_{\theta}(x^{(i)}) - y^{(i)}\right)^2\]</div>
+<p>La <strong>Regresión Logística</strong> busca entrenar la función</p>
+<div class="math notranslate nohighlight">
+\[h_{\theta}(x) = \frac{1}{1 + e^{-(\theta_0 + \theta_1 x_1 + ... + \theta_n x_n)}}\]</div>
+<p>de forma que se minimice</p>
+<div class="math notranslate nohighlight">
+\[J(\theta) = \frac{1}{2} \sum_{i=1}^{m} \left( h_{\theta}(x^{(i)}) - y^{(i)}\right)^2\]</div>
+<p>Es decir, el objetivo es encontrar un <em>“buen”</em> vector <span class="math notranslate nohighlight">\(\theta\)</span> de modo que</p>
+<div class="math notranslate nohighlight">
+\[Y \approx g(X \theta)\]</div>
+<p>en donde <span class="math notranslate nohighlight">\(g(z)\)</span> es la función sigmoide (<em>sigmoid function</em>),</p>
+<div class="math notranslate nohighlight">
+\[g(z) = \frac{1}{1+e^{-z}}\]</div>
+<div class="section" id="funcion-sigmoide">
+<h3>Función Sigmoide<a class="headerlink" href="#funcion-sigmoide" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sigmoid</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">z</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">sigmoid_df_tmp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;z&quot;</span><span class="p">:</span> <span class="n">z</span><span class="p">,</span>
+        <span class="s2">&quot;sigmoid(z)&quot;</span><span class="p">:</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">z</span><span class="p">),</span>
+        <span class="s2">&quot;sigmoid(z*2)&quot;</span><span class="p">:</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">z</span> <span class="o">*</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="s2">&quot;sigmoid(z-2)&quot;</span><span class="p">:</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">z</span> <span class="o">-</span> <span class="mi">2</span><span class="p">),</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+<span class="n">sigmoid_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span>
+    <span class="n">sigmoid_df_tmp</span><span class="p">,</span>
+    <span class="n">id_vars</span><span class="o">=</span><span class="s2">&quot;z&quot;</span><span class="p">,</span>
+    <span class="n">value_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;sigmoid(z)&quot;</span><span class="p">,</span> <span class="s2">&quot;sigmoid(z*2)&quot;</span><span class="p">,</span> <span class="s2">&quot;sigmoid(z-2)&quot;</span><span class="p">],</span>
+    <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;sigmoid_function&quot;</span><span class="p">,</span>
+    <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;value&quot;</span>
+<span class="p">)</span>
+<span class="n">sigmoid_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>z</th>
+      <th>sigmoid_function</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-5.00000</td>
+      <td>sigmoid(z)</td>
+      <td>0.006693</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-4.89899</td>
+      <td>sigmoid(z)</td>
+      <td>0.007399</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-4.79798</td>
+      <td>sigmoid(z)</td>
+      <td>0.008179</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>-4.69697</td>
+      <td>sigmoid(z)</td>
+      <td>0.009040</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-4.59596</td>
+      <td>sigmoid(z)</td>
+      <td>0.009992</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">sigmoid_df</span><span class="p">)</span><span class="o">.</span><span class="n">mark_line</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;z:Q&quot;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s2">&quot;value:Q&quot;</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;sigmoid_function:N&quot;</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Sigmoid functions&quot;</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">400</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-e2b62b5b0a31465a8fe020acfcf9abdd"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-e2b62b5b0a31465a8fe020acfcf9abdd") {
+      outputDiv = document.getElementById("altair-viz-e2b62b5b0a31465a8fe020acfcf9abdd");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"background": "white", "view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-2649995b7caa889141db384fa65b2ea5"}, "mark": "line", "encoding": {"color": {"type": "nominal", "field": "sigmoid_function"}, "x": {"type": "quantitative", "field": "z"}, "y": {"type": "quantitative", "field": "value"}}, "height": 400, "title": "Sigmoid functions", "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-2649995b7caa889141db384fa65b2ea5": [{"z": -5.0, "sigmoid_function": "sigmoid(z)", "value": 0.0066928509242848554}, {"z": -4.898989898989899, "sigmoid_function": "sigmoid(z)", "value": 0.007398956049719674}, {"z": -4.797979797979798, "sigmoid_function": "sigmoid(z)", "value": 0.008178942856282161}, {"z": -4.696969696969697, "sigmoid_function": "sigmoid(z)", "value": 0.009040405808933128}, {"z": -4.595959595959596, "sigmoid_function": "sigmoid(z)", "value": 0.009991689936208048}, {"z": -4.494949494949495, "sigmoid_function": "sigmoid(z)", "value": 0.011041958337494755}, {"z": -4.393939393939394, "sigmoid_function": "sigmoid(z)", "value": 0.012201264260636085}, {"z": -4.292929292929293, "sigmoid_function": "sigmoid(z)", "value": 0.013480627700845831}, {"z": -4.191919191919192, "sigmoid_function": "sigmoid(z)", "value": 0.01489211636326034}, {"z": -4.090909090909091, "sigmoid_function": "sigmoid(z)", "value": 0.016448930693417962}, {"z": -3.9898989898989896, "sigmoid_function": "sigmoid(z)", "value": 0.01816549250715569}, {"z": -3.888888888888889, "sigmoid_function": "sigmoid(z)", "value": 0.02005753653785041}, {"z": -3.787878787878788, "sigmoid_function": "sigmoid(z)", "value": 0.022142203958132125}, {"z": -3.686868686868687, "sigmoid_function": "sigmoid(z)", "value": 0.024438136618332742}, {"z": -3.5858585858585856, "sigmoid_function": "sigmoid(z)", "value": 0.026965570368090237}, {"z": -3.484848484848485, "sigmoid_function": "sigmoid(z)", "value": 0.029746425384074206}, {"z": -3.383838383838384, "sigmoid_function": "sigmoid(z)", "value": 0.03280439090994282}, {"z": -3.282828282828283, "sigmoid_function": "sigmoid(z)", "value": 0.03616500122018774}, {"z": -3.1818181818181817, "sigmoid_function": "sigmoid(z)", "value": 0.039855698945889695}, {"z": -3.080808080808081, "sigmoid_function": "sigmoid(z)", "value": 0.043905881149939006}, {"z": -2.9797979797979797, "sigmoid_function": "sigmoid(z)", "value": 0.04834692271989779}, {"z": -2.878787878787879, "sigmoid_function": "sigmoid(z)", "value": 0.05321217077391106}, {"z": -2.7777777777777777, "sigmoid_function": "sigmoid(z)", "value": 0.0585369028743679}, {"z": -2.676767676767677, "sigmoid_function": "sigmoid(z)", "value": 0.06435824095339865}, {"z": -2.5757575757575757, "sigmoid_function": "sigmoid(z)", "value": 0.07071501202714367}, {"z": -2.474747474747475, "sigmoid_function": "sigmoid(z)", "value": 0.07764754608342478}, {"z": -2.3737373737373737, "sigmoid_function": "sigmoid(z)", "value": 0.08519740106158838}, {"z": -2.272727272727273, "sigmoid_function": "sigmoid(z)", "value": 0.09340700471683215}, {"z": -2.1717171717171717, "sigmoid_function": "sigmoid(z)", "value": 0.10231920350807018}, {"z": -2.070707070707071, "sigmoid_function": "sigmoid(z)", "value": 0.11197670961974694}, {"z": -1.9696969696969697, "sigmoid_function": "sigmoid(z)", "value": 0.12242143898621305}, {"z": -1.868686868686869, "sigmoid_function": "sigmoid(z)", "value": 0.13369373589385355}, {"z": -1.7676767676767677, "sigmoid_function": "sigmoid(z)", "value": 0.14583148353491507}, {"z": -1.6666666666666665, "sigmoid_function": "sigmoid(z)", "value": 0.15886910488091516}, {"z": -1.5656565656565657, "sigmoid_function": "sigmoid(z)", "value": 0.17283646446618905}, {"z": -1.4646464646464645, "sigmoid_function": "sigmoid(z)", "value": 0.18775768905482057}, {"z": -1.3636363636363638, "sigmoid_function": "sigmoid(z)", "value": 0.20364993350221924}, {"z": -1.2626262626262625, "sigmoid_function": "sigmoid(z)", "value": 0.2205221270455694}, {"z": -1.1616161616161618, "sigmoid_function": "sigmoid(z)", "value": 0.23837374421039675}, {"z": -1.0606060606060606, "sigmoid_function": "sigmoid(z)", "value": 0.2571936527643822}, {"z": -0.9595959595959593, "sigmoid_function": "sigmoid(z)", "value": 0.27695909778815886}, {"z": -0.858585858585859, "sigmoid_function": "sigmoid(z)", "value": 0.29763488497442225}, {"z": -0.7575757575757578, "sigmoid_function": "sigmoid(z)", "value": 0.31917282672147035}, {"z": -0.6565656565656566, "sigmoid_function": "sigmoid(z)", "value": 0.34151151059747936}, {"z": -0.5555555555555554, "sigmoid_function": "sigmoid(z)", "value": 0.3645764407416393}, {"z": -0.45454545454545503, "sigmoid_function": "sigmoid(z)", "value": 0.3882805885928385}, {"z": -0.3535353535353538, "sigmoid_function": "sigmoid(z)", "value": 0.4125253704018182}, {"z": -0.2525252525252526, "sigmoid_function": "sigmoid(z)", "value": 0.43720204630561754}, {"z": -0.15151515151515138, "sigmoid_function": "sigmoid(z)", "value": 0.462193510926849}, {"z": -0.050505050505050164, "sigmoid_function": "sigmoid(z)", "value": 0.4873764205699251}, {"z": 0.050505050505050164, "sigmoid_function": "sigmoid(z)", "value": 0.512623579430075}, {"z": 0.15151515151515138, "sigmoid_function": "sigmoid(z)", "value": 0.537806489073151}, {"z": 0.2525252525252526, "sigmoid_function": "sigmoid(z)", "value": 0.5627979536943825}, {"z": 0.3535353535353538, "sigmoid_function": "sigmoid(z)", "value": 0.5874746295981818}, {"z": 0.45454545454545414, "sigmoid_function": "sigmoid(z)", "value": 0.6117194114071612}, {"z": 0.5555555555555554, "sigmoid_function": "sigmoid(z)", "value": 0.6354235592583607}, {"z": 0.6565656565656566, "sigmoid_function": "sigmoid(z)", "value": 0.6584884894025207}, {"z": 0.7575757575757578, "sigmoid_function": "sigmoid(z)", "value": 0.6808271732785297}, {"z": 0.8585858585858581, "sigmoid_function": "sigmoid(z)", "value": 0.7023651150255775}, {"z": 0.9595959595959593, "sigmoid_function": "sigmoid(z)", "value": 0.7230409022118411}, {"z": 1.0606060606060606, "sigmoid_function": "sigmoid(z)", "value": 0.7428063472356178}, {"z": 1.1616161616161618, "sigmoid_function": "sigmoid(z)", "value": 0.7616262557896033}, {"z": 1.262626262626262, "sigmoid_function": "sigmoid(z)", "value": 0.7794778729544305}, {"z": 1.3636363636363633, "sigmoid_function": "sigmoid(z)", "value": 0.7963500664977807}, {"z": 1.4646464646464645, "sigmoid_function": "sigmoid(z)", "value": 0.8122423109451795}, {"z": 1.5656565656565657, "sigmoid_function": "sigmoid(z)", "value": 0.8271635355338108}, {"z": 1.666666666666667, "sigmoid_function": "sigmoid(z)", "value": 0.8411308951190849}, {"z": 1.7676767676767673, "sigmoid_function": "sigmoid(z)", "value": 0.854168516465085}, {"z": 1.8686868686868685, "sigmoid_function": "sigmoid(z)", "value": 0.8663062641061464}, {"z": 1.9696969696969697, "sigmoid_function": "sigmoid(z)", "value": 0.877578561013787}, {"z": 2.070707070707071, "sigmoid_function": "sigmoid(z)", "value": 0.888023290380253}, {"z": 2.1717171717171713, "sigmoid_function": "sigmoid(z)", "value": 0.8976807964919297}, {"z": 2.2727272727272725, "sigmoid_function": "sigmoid(z)", "value": 0.9065929952831678}, {"z": 2.3737373737373737, "sigmoid_function": "sigmoid(z)", "value": 0.9148025989384116}, {"z": 2.474747474747475, "sigmoid_function": "sigmoid(z)", "value": 0.9223524539165752}, {"z": 2.5757575757575752, "sigmoid_function": "sigmoid(z)", "value": 0.9292849879728562}, {"z": 2.6767676767676765, "sigmoid_function": "sigmoid(z)", "value": 0.9356417590466013}, {"z": 2.7777777777777777, "sigmoid_function": "sigmoid(z)", "value": 0.941463097125632}, {"z": 2.878787878787879, "sigmoid_function": "sigmoid(z)", "value": 0.946787829226089}, {"z": 2.9797979797979792, "sigmoid_function": "sigmoid(z)", "value": 0.9516530772801021}, {"z": 3.0808080808080813, "sigmoid_function": "sigmoid(z)", "value": 0.9560941188500611}, {"z": 3.1818181818181817, "sigmoid_function": "sigmoid(z)", "value": 0.9601443010541102}, {"z": 3.282828282828282, "sigmoid_function": "sigmoid(z)", "value": 0.9638349987798124}, {"z": 3.383838383838384, "sigmoid_function": "sigmoid(z)", "value": 0.9671956090900572}, {"z": 3.4848484848484844, "sigmoid_function": "sigmoid(z)", "value": 0.9702535746159258}, {"z": 3.5858585858585865, "sigmoid_function": "sigmoid(z)", "value": 0.9730344296319098}, {"z": 3.686868686868687, "sigmoid_function": "sigmoid(z)", "value": 0.9755618633816672}, {"z": 3.787878787878787, "sigmoid_function": "sigmoid(z)", "value": 0.977857796041868}, {"z": 3.8888888888888893, "sigmoid_function": "sigmoid(z)", "value": 0.9799424634621495}, {"z": 3.9898989898989896, "sigmoid_function": "sigmoid(z)", "value": 0.9818345074928443}, {"z": 4.09090909090909, "sigmoid_function": "sigmoid(z)", "value": 0.9835510693065821}, {"z": 4.191919191919192, "sigmoid_function": "sigmoid(z)", "value": 0.9851078836367397}, {"z": 4.292929292929292, "sigmoid_function": "sigmoid(z)", "value": 0.9865193722991542}, {"z": 4.3939393939393945, "sigmoid_function": "sigmoid(z)", "value": 0.9877987357393639}, {"z": 4.494949494949495, "sigmoid_function": "sigmoid(z)", "value": 0.9889580416625052}, {"z": 4.595959595959595, "sigmoid_function": "sigmoid(z)", "value": 0.990008310063792}, {"z": 4.696969696969697, "sigmoid_function": "sigmoid(z)", "value": 0.9909595941910669}, {"z": 4.797979797979798, "sigmoid_function": "sigmoid(z)", "value": 0.9918210571437178}, {"z": 4.8989898989899, "sigmoid_function": "sigmoid(z)", "value": 0.9926010439502804}, {"z": 5.0, "sigmoid_function": "sigmoid(z)", "value": 0.9933071490757153}, {"z": -5.0, "sigmoid_function": "sigmoid(z*2)", "value": 4.5397868702434395e-05}, {"z": -4.898989898989899, "sigmoid_function": "sigmoid(z*2)", "value": 5.556064893935847e-05}, {"z": -4.797979797979798, "sigmoid_function": "sigmoid(z*2)", "value": 6.7998317442358e-05}, {"z": -4.696969696969697, "sigmoid_function": "sigmoid(z*2)", "value": 8.322001972209245e-05}, {"z": -4.595959595959596, "sigmoid_function": "sigmoid(z*2)", "value": 0.00010184881542721271}, {"z": -4.494949494949495, "sigmoid_function": "sigmoid(z*2)", "value": 0.00012464714594414533}, {"z": -4.393939393939394, "sigmoid_function": "sigmoid(z*2)", "value": 0.00015254798624649647}, {"z": -4.292929292929293, "sigmoid_function": "sigmoid(z*2)", "value": 0.00018669294496130814}, {"z": -4.191919191919192, "sigmoid_function": "sigmoid(z*2)", "value": 0.00022847885532128418}, {"z": -4.090909090909091, "sigmoid_function": "sigmoid(z*2)", "value": 0.0002796147386491923}, {"z": -3.9898989898989896, "sigmoid_function": "sigmoid(z*2)", "value": 0.00034219143371662803}, {"z": -3.888888888888889, "sigmoid_function": "sigmoid(z*2)", "value": 0.0004187666844443735}, {"z": -3.787878787878788, "sigmoid_function": "sigmoid(z*2)", "value": 0.0005124690821944584}, {"z": -3.686868686868687, "sigmoid_function": "sigmoid(z*2)", "value": 0.0006271249872756847}, {"z": -3.5858585858585856, "sigmoid_function": "sigmoid(z*2)", "value": 0.000767413429918266}, {"z": -3.484848484848485, "sigmoid_function": "sigmoid(z*2)", "value": 0.0009390550390618305}, {"z": -3.383838383838384, "sigmoid_function": "sigmoid(z*2)", "value": 0.001149042294880872}, {"z": -3.282828282828283, "sigmoid_function": "sigmoid(z*2)", "value": 0.0014059198755086322}, {"z": -3.1818181818181817, "sigmoid_function": "sigmoid(z*2)", "value": 0.0017201255952192596}, {"z": -3.080808080808081, "sigmoid_function": "sigmoid(z*2)", "value": 0.0021044044291184333}, {"z": -2.9797979797979797, "sigmoid_function": "sigmoid(z*2)", "value": 0.0025743103931375314}, {"z": -2.878787878787879, "sigmoid_function": "sigmoid(z*2)", "value": 0.0031488135776798513}, {"z": -2.7777777777777777, "sigmoid_function": "sigmoid(z*2)", "value": 0.003851032355930255}, {"z": -2.676767676767677, "sigmoid_function": "sigmoid(z*2)", "value": 0.004709113572114011}, {"z": -2.5757575757575757, "sigmoid_function": "sigmoid(z*2)", "value": 0.0057572861219081835}, {"z": -2.474747474747475, "sigmoid_function": "sigmoid(z*2)", "value": 0.007037115364564376}, {"z": -2.3737373737373737, "sigmoid_function": "sigmoid(z*2)", "value": 0.008598986610189428}, {"z": -2.272727272727273, "sigmoid_function": "sigmoid(z*2)", "value": 0.010503844513285416}, {"z": -2.1717171717171717, "sigmoid_function": "sigmoid(z*2)", "value": 0.012825210092764685}, {"z": -2.070707070707071, "sigmoid_function": "sigmoid(z*2)", "value": 0.015651486142818367}, {"z": -1.9696969696969697, "sigmoid_function": "sigmoid(z*2)", "value": 0.019088541989923387}, {"z": -1.868686868686869, "sigmoid_function": "sigmoid(z*2)", "value": 0.0232625358308855}, {"z": -1.7676767676767677, "sigmoid_function": "sigmoid(z*2)", "value": 0.0283228820443032}, {"z": -1.6666666666666665, "sigmoid_function": "sigmoid(z*2)", "value": 0.03444519566621118}, {"z": -1.5656565656565657, "sigmoid_function": "sigmoid(z*2)", "value": 0.04183394000551971}, {"z": -1.4646464646464645, "sigmoid_function": "sigmoid(z*2)", "value": 0.05072436056205437}, {"z": -1.3636363636363638, "sigmoid_function": "sigmoid(z*2)", "value": 0.06138310740349217}, {"z": -1.2626262626262625, "sigmoid_function": "sigmoid(z*2)", "value": 0.07410673632504733}, {"z": -1.1616161616161618, "sigmoid_function": "sigmoid(z*2)", "value": 0.08921706025119844}, {"z": -1.0606060606060606, "sigmoid_function": "sigmoid(z*2)", "value": 0.10705214621417715}, {"z": -0.9595959595959593, "sigmoid_function": "sigmoid(z*2)", "value": 0.12795170492445268}, {"z": -0.858585858585859, "sigmoid_function": "sigmoid(z*2)", "value": 0.15223582314389053}, {"z": -0.7575757575757578, "sigmoid_function": "sigmoid(z*2)", "value": 0.18017659335766972}, {"z": -0.6565656565656566, "sigmoid_function": "sigmoid(z*2)", "value": 0.21196333386923713}, {"z": -0.5555555555555554, "sigmoid_function": "sigmoid(z*2)", "value": 0.2476638011390717}, {"z": -0.45454545454545503, "sigmoid_function": "sigmoid(z*2)", "value": 0.28718590138250244}, {"z": -0.3535353535353538, "sigmoid_function": "sigmoid(z*2)", "value": 0.33024642963181144}, {"z": -0.2525252525252526, "sigmoid_function": "sigmoid(z*2)", "value": 0.37635451749670706}, {"z": -0.15151515151515138, "sigmoid_function": "sigmoid(z*2)", "value": 0.42481686806284763}, {"z": -0.050505050505050164, "sigmoid_function": "sigmoid(z*2)", "value": 0.4747689239079115}, {"z": 0.050505050505050164, "sigmoid_function": "sigmoid(z*2)", "value": 0.5252310760920885}, {"z": 0.15151515151515138, "sigmoid_function": "sigmoid(z*2)", "value": 0.5751831319371523}, {"z": 0.2525252525252526, "sigmoid_function": "sigmoid(z*2)", "value": 0.623645482503293}, {"z": 0.3535353535353538, "sigmoid_function": "sigmoid(z*2)", "value": 0.6697535703681886}, {"z": 0.45454545454545414, "sigmoid_function": "sigmoid(z*2)", "value": 0.7128140986174972}, {"z": 0.5555555555555554, "sigmoid_function": "sigmoid(z*2)", "value": 0.7523361988609284}, {"z": 0.6565656565656566, "sigmoid_function": "sigmoid(z*2)", "value": 0.7880366661307628}, {"z": 0.7575757575757578, "sigmoid_function": "sigmoid(z*2)", "value": 0.8198234066423302}, {"z": 0.8585858585858581, "sigmoid_function": "sigmoid(z*2)", "value": 0.8477641768561092}, {"z": 0.9595959595959593, "sigmoid_function": "sigmoid(z*2)", "value": 0.8720482950755473}, {"z": 1.0606060606060606, "sigmoid_function": "sigmoid(z*2)", "value": 0.8929478537858229}, {"z": 1.1616161616161618, "sigmoid_function": "sigmoid(z*2)", "value": 0.9107829397488015}, {"z": 1.262626262626262, "sigmoid_function": "sigmoid(z*2)", "value": 0.9258932636749527}, {"z": 1.3636363636363633, "sigmoid_function": "sigmoid(z*2)", "value": 0.9386168925965077}, {"z": 1.4646464646464645, "sigmoid_function": "sigmoid(z*2)", "value": 0.9492756394379457}, {"z": 1.5656565656565657, "sigmoid_function": "sigmoid(z*2)", "value": 0.9581660599944802}, {"z": 1.666666666666667, "sigmoid_function": "sigmoid(z*2)", "value": 0.9655548043337889}, {"z": 1.7676767676767673, "sigmoid_function": "sigmoid(z*2)", "value": 0.9716771179556968}, {"z": 1.8686868686868685, "sigmoid_function": "sigmoid(z*2)", "value": 0.9767374641691144}, {"z": 1.9696969696969697, "sigmoid_function": "sigmoid(z*2)", "value": 0.9809114580100765}, {"z": 2.070707070707071, "sigmoid_function": "sigmoid(z*2)", "value": 0.9843485138571816}, {"z": 2.1717171717171713, "sigmoid_function": "sigmoid(z*2)", "value": 0.9871747899072354}, {"z": 2.2727272727272725, "sigmoid_function": "sigmoid(z*2)", "value": 0.9894961554867145}, {"z": 2.3737373737373737, "sigmoid_function": "sigmoid(z*2)", "value": 0.9914010133898106}, {"z": 2.474747474747475, "sigmoid_function": "sigmoid(z*2)", "value": 0.9929628846354357}, {"z": 2.5757575757575752, "sigmoid_function": "sigmoid(z*2)", "value": 0.9942427138780918}, {"z": 2.6767676767676765, "sigmoid_function": "sigmoid(z*2)", "value": 0.995290886427886}, {"z": 2.7777777777777777, "sigmoid_function": "sigmoid(z*2)", "value": 0.9961489676440697}, {"z": 2.878787878787879, "sigmoid_function": "sigmoid(z*2)", "value": 0.9968511864223202}, {"z": 2.9797979797979792, "sigmoid_function": "sigmoid(z*2)", "value": 0.9974256896068625}, {"z": 3.0808080808080813, "sigmoid_function": "sigmoid(z*2)", "value": 0.9978955955708816}, {"z": 3.1818181818181817, "sigmoid_function": "sigmoid(z*2)", "value": 0.9982798744047808}, {"z": 3.282828282828282, "sigmoid_function": "sigmoid(z*2)", "value": 0.9985940801244912}, {"z": 3.383838383838384, "sigmoid_function": "sigmoid(z*2)", "value": 0.9988509577051191}, {"z": 3.4848484848484844, "sigmoid_function": "sigmoid(z*2)", "value": 0.9990609449609381}, {"z": 3.5858585858585865, "sigmoid_function": "sigmoid(z*2)", "value": 0.9992325865700818}, {"z": 3.686868686868687, "sigmoid_function": "sigmoid(z*2)", "value": 0.9993728750127243}, {"z": 3.787878787878787, "sigmoid_function": "sigmoid(z*2)", "value": 0.9994875309178055}, {"z": 3.8888888888888893, "sigmoid_function": "sigmoid(z*2)", "value": 0.9995812333155556}, {"z": 3.9898989898989896, "sigmoid_function": "sigmoid(z*2)", "value": 0.9996578085662833}, {"z": 4.09090909090909, "sigmoid_function": "sigmoid(z*2)", "value": 0.9997203852613508}, {"z": 4.191919191919192, "sigmoid_function": "sigmoid(z*2)", "value": 0.9997715211446788}, {"z": 4.292929292929292, "sigmoid_function": "sigmoid(z*2)", "value": 0.9998133070550387}, {"z": 4.3939393939393945, "sigmoid_function": "sigmoid(z*2)", "value": 0.9998474520137535}, {"z": 4.494949494949495, "sigmoid_function": "sigmoid(z*2)", "value": 0.9998753528540559}, {"z": 4.595959595959595, "sigmoid_function": "sigmoid(z*2)", "value": 0.9998981511845727}, {"z": 4.696969696969697, "sigmoid_function": "sigmoid(z*2)", "value": 0.999916779980278}, {"z": 4.797979797979798, "sigmoid_function": "sigmoid(z*2)", "value": 0.9999320016825577}, {"z": 4.8989898989899, "sigmoid_function": "sigmoid(z*2)", "value": 0.9999444393510606}, {"z": 5.0, "sigmoid_function": "sigmoid(z*2)", "value": 0.9999546021312976}, {"z": -5.0, "sigmoid_function": "sigmoid(z-2)", "value": 0.0009110511944006454}, {"z": -4.898989898989899, "sigmoid_function": "sigmoid(z-2)", "value": 0.0010077872487099253}, {"z": -4.797979797979798, "sigmoid_function": "sigmoid(z-2)", "value": 0.0011147833441199496}, {"z": -4.696969696969697, "sigmoid_function": "sigmoid(z-2)", "value": 0.0012331251210586601}, {"z": -4.595959595959596, "sigmoid_function": "sigmoid(z-2)", "value": 0.0013640125215336378}, {"z": -4.494949494949495, "sigmoid_function": "sigmoid(z-2)", "value": 0.0015087716953255067}, {"z": -4.393939393939394, "sigmoid_function": "sigmoid(z-2)", "value": 0.0016688681177159349}, {"z": -4.292929292929293, "sigmoid_function": "sigmoid(z-2)", "value": 0.0018459210355774146}, {"z": -4.191919191919192, "sigmoid_function": "sigmoid(z-2)", "value": 0.0020417193684422754}, {"z": -4.090909090909091, "sigmoid_function": "sigmoid(z-2)", "value": 0.0022582392014275205}, {"z": -3.9898989898989896, "sigmoid_function": "sigmoid(z-2)", "value": 0.00249766301754779}, {"z": -3.888888888888889, "sigmoid_function": "sigmoid(z-2)", "value": 0.0027624008278954197}, {"z": -3.787878787878788, "sigmoid_function": "sigmoid(z-2)", "value": 0.003055113369257324}, {"z": -3.686868686868687, "sigmoid_function": "sigmoid(z-2)", "value": 0.003378737549774165}, {"z": -3.5858585858585856, "sigmoid_function": "sigmoid(z-2)", "value": 0.0037365143339650794}, {"z": -3.484848484848485, "sigmoid_function": "sigmoid(z-2)", "value": 0.004132019268498481}, {"z": -3.383838383838384, "sigmoid_function": "sigmoid(z-2)", "value": 0.004569195859047453}, {"z": -3.282828282828283, "sigmoid_function": "sigmoid(z-2)", "value": 0.005052392015870149}, {"z": -3.1818181818181817, "sigmoid_function": "sigmoid(z-2)", "value": 0.005586399790702615}, {"z": -3.080808080808081, "sigmoid_function": "sigmoid(z-2)", "value": 0.006176498629274528}, {"z": -2.9797979797979797, "sigmoid_function": "sigmoid(z-2)", "value": 0.006828502361184376}, {"z": -2.878787878787879, "sigmoid_function": "sigmoid(z-2)", "value": 0.007548810140686255}, {"z": -2.7777777777777777, "sigmoid_function": "sigmoid(z-2)", "value": 0.008344461536550052}, {"z": -2.676767676767677, "sigmoid_function": "sigmoid(z-2)", "value": 0.009223195944633751}, {"z": -2.5757575757575757, "sigmoid_function": "sigmoid(z-2)", "value": 0.010193516460848633}, {"z": -2.474747474747475, "sigmoid_function": "sigmoid(z-2)", "value": 0.011264758302067756}, {"z": -2.3737373737373737, "sigmoid_function": "sigmoid(z-2)", "value": 0.012447161795007164}, {"z": -2.272727272727273, "sigmoid_function": "sigmoid(z-2)", "value": 0.013751949864444812}, {"z": -2.1717171717171717, "sigmoid_function": "sigmoid(z-2)", "value": 0.015191409838007068}, {"z": -2.070707070707071, "sigmoid_function": "sigmoid(z-2)", "value": 0.01677897924021968}, {"z": -1.9696969696969697, "sigmoid_function": "sigmoid(z-2)", "value": 0.01852933506806215}, {"z": -1.868686868686869, "sigmoid_function": "sigmoid(z-2)", "value": 0.020458485817786212}, {"z": -1.7676767676767677, "sigmoid_function": "sigmoid(z-2)", "value": 0.022583865261700576}, {"z": -1.6666666666666665, "sigmoid_function": "sigmoid(z-2)", "value": 0.02492442664711404}, {"z": -1.5656565656565657, "sigmoid_function": "sigmoid(z-2)", "value": 0.027500735600776583}, {"z": -1.4646464646464645, "sigmoid_function": "sigmoid(z-2)", "value": 0.030335059564448208}, {"z": -1.3636363636363638, "sigmoid_function": "sigmoid(z-2)", "value": 0.03345145105511817}, {"z": -1.2626262626262625, "sigmoid_function": "sigmoid(z-2)", "value": 0.03687582143313014}, {"z": -1.1616161616161618, "sigmoid_function": "sigmoid(z-2)", "value": 0.04063600117212708}, {"z": -1.0606060606060606, "sigmoid_function": "sigmoid(z-2)", "value": 0.044761781859634225}, {"z": -0.9595959595959593, "sigmoid_function": "sigmoid(z-2)", "value": 0.04928493432551884}, {"z": -0.858585858585859, "sigmoid_function": "sigmoid(z-2)", "value": 0.054239196414809246}, {"z": -0.7575757575757578, "sigmoid_function": "sigmoid(z-2)", "value": 0.059660223019174806}, {"z": -0.6565656565656566, "sigmoid_function": "sigmoid(z-2)", "value": 0.06558549009863611}, {"z": -0.5555555555555554, "sigmoid_function": "sigmoid(z-2)", "value": 0.07205414361856402}, {"z": -0.45454545454545503, "sigmoid_function": "sigmoid(z-2)", "value": 0.07910678367200667}, {"z": -0.3535353535353538, "sigmoid_function": "sigmoid(z-2)", "value": 0.0867851736496764}, {"z": -0.2525252525252526, "sigmoid_function": "sigmoid(z-2)", "value": 0.09513186427677887}, {"z": -0.15151515151515138, "sigmoid_function": "sigmoid(z-2)", "value": 0.10418972279494806}, {"z": -0.050505050505050164, "sigmoid_function": "sigmoid(z-2)", "value": 0.11400135868312064}, {"z": 0.050505050505050164, "sigmoid_function": "sigmoid(z-2)", "value": 0.12460843924642248}, {"z": 0.15151515151515138, "sigmoid_function": "sigmoid(z-2)", "value": 0.13605089131658663}, {"z": 0.2525252525252526, "sigmoid_function": "sigmoid(z-2)", "value": 0.14836598933874684}, {"z": 0.3535353535353538, "sigmoid_function": "sigmoid(z-2)", "value": 0.16158733535923847}, {"z": 0.45454545454545414, "sigmoid_function": "sigmoid(z-2)", "value": 0.17574374289308}, {"z": 0.5555555555555554, "sigmoid_function": "sigmoid(z-2)", "value": 0.19085804424486544}, {"z": 0.6565656565656566, "sigmoid_function": "sigmoid(z-2)", "value": 0.20694584934715762}, {"z": 0.7575757575757578, "sigmoid_function": "sigmoid(z-2)", "value": 0.22401429315989183}, {"z": 0.8585858585858581, "sigmoid_function": "sigmoid(z-2)", "value": 0.24206081755024075}, {"z": 0.9595959595959593, "sigmoid_function": "sigmoid(z-2)", "value": 0.26107204157108393}, {"z": 1.0606060606060606, "sigmoid_function": "sigmoid(z-2)", "value": 0.28102278025633637}, {"z": 1.1616161616161618, "sigmoid_function": "sigmoid(z-2)", "value": 0.3018752754526367}, {"z": 1.262626262626262, "sigmoid_function": "sigmoid(z-2)", "value": 0.3235787018345793}, {"z": 1.3636363636363633, "sigmoid_function": "sigmoid(z-2)", "value": 0.346069006291123}, {"z": 1.4646464646464645, "sigmoid_function": "sigmoid(z-2)", "value": 0.36926912882296675}, {"z": 1.5656565656565657, "sigmoid_function": "sigmoid(z-2)", "value": 0.39308963791176027}, {"z": 1.666666666666667, "sigmoid_function": "sigmoid(z-2)", "value": 0.41742979353768545}, {"z": 1.7676767676767673, "sigmoid_function": "sigmoid(z-2)", "value": 0.4421790277715518}, {"z": 1.8686868686868685, "sigmoid_function": "sigmoid(z-2)", "value": 0.46721880785976294}, {"z": 1.9696969696969697, "sigmoid_function": "sigmoid(z-2)", "value": 0.492424822089224}, {"z": 2.070707070707071, "sigmoid_function": "sigmoid(z-2)", "value": 0.5176694067884358}, {"z": 2.1717171717171713, "sigmoid_function": "sigmoid(z-2)", "value": 0.5428241158086663}, {"z": 2.2727272727272725, "sigmoid_function": "sigmoid(z-2)", "value": 0.5677623235383434}, {"z": 2.3737373737373737, "sigmoid_function": "sigmoid(z-2)", "value": 0.5923617500568721}, {"z": 2.474747474747475, "sigmoid_function": "sigmoid(z-2)", "value": 0.6165068027011174}, {"z": 2.5757575757575752, "sigmoid_function": "sigmoid(z-2)", "value": 0.6400906414750341}, {"z": 2.6767676767676765, "sigmoid_function": "sigmoid(z-2)", "value": 0.663016894958972}, {"z": 2.7777777777777777, "sigmoid_function": "sigmoid(z-2)", "value": 0.6852009766653157}, {"z": 2.878787878787879, "sigmoid_function": "sigmoid(z-2)", "value": 0.706570976843413}, {"z": 2.9797979797979792, "sigmoid_function": "sigmoid(z-2)", "value": 0.7270681292782007}, {"z": 3.0808080808080813, "sigmoid_function": "sigmoid(z-2)", "value": 0.7466468746662198}, {"z": 3.1818181818181817, "sigmoid_function": "sigmoid(z-2)", "value": 0.7652745601971698}, {"z": 3.282828282828282, "sigmoid_function": "sigmoid(z-2)", "value": 0.7829308281250582}, {"z": 3.383838383838384, "sigmoid_function": "sigmoid(z-2)", "value": 0.7996067540917198}, {"z": 3.4848484848484844, "sigmoid_function": "sigmoid(z-2)", "value": 0.8153037990090656}, {"z": 3.5858585858585865, "sigmoid_function": "sigmoid(z-2)", "value": 0.8300326370593409}, {"z": 3.686868686868687, "sigmoid_function": "sigmoid(z-2)", "value": 0.8438119177307318}, {"z": 3.787878787878787, "sigmoid_function": "sigmoid(z-2)", "value": 0.8566670127685516}, {"z": 3.8888888888888893, "sigmoid_function": "sigmoid(z-2)", "value": 0.8686287904691933}, {"z": 3.9898989898989896, "sigmoid_function": "sigmoid(z-2)", "value": 0.8797324507435984}, {"z": 4.09090909090909, "sigmoid_function": "sigmoid(z-2)", "value": 0.8900164455326726}, {"z": 4.191919191919192, "sigmoid_function": "sigmoid(z-2)", "value": 0.8995215009861548}, {"z": 4.292929292929292, "sigmoid_function": "sigmoid(z-2)", "value": 0.908289750654218}, {"z": 4.3939393939393945, "sigmoid_function": "sigmoid(z-2)", "value": 0.9163639829624134}, {"z": 4.494949494949495, "sigmoid_function": "sigmoid(z-2)", "value": 0.9237870014910294}, {"z": 4.595959595959595, "sigmoid_function": "sigmoid(z-2)", "value": 0.9306010930095497}, {"z": 4.696969696969697, "sigmoid_function": "sigmoid(z-2)", "value": 0.9368475957123458}, {"z": 4.797979797979798, "sigmoid_function": "sigmoid(z-2)", "value": 0.94256655851407}, {"z": 4.8989898989899, "sigmoid_function": "sigmoid(z-2)", "value": 0.9477964814295412}, {"z": 5.0, "sigmoid_function": "sigmoid(z-2)", "value": 0.9525741268224334}]}}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p>La función
+sigmoide <span class="math notranslate nohighlight">\(g(z) = (1+e^{-z})^{-1}\)</span> tiene la siguiente propiedad:</p>
+<div class="math notranslate nohighlight">
+\[g'(z) =  g(z)(1-g(z))\]</div>
+<p>“Demostración”:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+g'(z) &amp;= \frac{-1}{(1+e^{-z})^2} (-e^{-z}) \\
+      &amp;= \frac{e^{-z}}{(1+e^{-z})^2} \\
+      &amp;= \frac{1}{1+e^{-z}} \frac{e^{-z}}{1+e^{-z}} \\
+      &amp;= \frac{1}{1+e^{-z}} \left(1 - \frac{1}{1+e^{-z}} \right) \\
+      &amp;= g(z)(1-g(z))\end{aligned}\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">d_sigmoid</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">z</span><span class="p">))</span>
+
+<span class="n">sigmoid_dz_df</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;z&quot;</span><span class="p">:</span> <span class="n">z</span><span class="p">,</span>
+            <span class="s2">&quot;sigmoid(z)&quot;</span><span class="p">:</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">z</span><span class="p">),</span>
+            <span class="s2">&quot;d_sigmoid(z)/dz&quot;</span><span class="p">:</span> <span class="n">d_sigmoid</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">)</span>
+    <span class="o">.</span><span class="n">melt</span><span class="p">(</span>
+        <span class="n">id_vars</span><span class="o">=</span><span class="s2">&quot;z&quot;</span><span class="p">,</span>
+        <span class="n">value_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;sigmoid(z)&quot;</span><span class="p">,</span> <span class="s2">&quot;d_sigmoid(z)/dz&quot;</span><span class="p">],</span>
+        <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;function&quot;</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+
+
+<span class="n">sigmoid_dz_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>z</th>
+      <th>function</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-5.00000</td>
+      <td>sigmoid(z)</td>
+      <td>0.006693</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-4.89899</td>
+      <td>sigmoid(z)</td>
+      <td>0.007399</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-4.79798</td>
+      <td>sigmoid(z)</td>
+      <td>0.008179</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>-4.69697</td>
+      <td>sigmoid(z)</td>
+      <td>0.009040</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-4.59596</td>
+      <td>sigmoid(z)</td>
+      <td>0.009992</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">sigmoid_dz_df</span><span class="p">)</span><span class="o">.</span><span class="n">mark_line</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;z:Q&quot;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s2">&quot;value:Q&quot;</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;function:N&quot;</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Sigmoid and her derivate function&quot;</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">400</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-b5545977336247dbb52b5d7fec84baf2"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-b5545977336247dbb52b5d7fec84baf2") {
+      outputDiv = document.getElementById("altair-viz-b5545977336247dbb52b5d7fec84baf2");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"background": "white", "view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-74d19d1b308958684d31ff006b7d4240"}, "mark": "line", "encoding": {"color": {"type": "nominal", "field": "function"}, "x": {"type": "quantitative", "field": "z"}, "y": {"type": "quantitative", "field": "value"}}, "height": 400, "title": "Sigmoid and her derivate function", "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-74d19d1b308958684d31ff006b7d4240": [{"z": -5.0, "function": "sigmoid(z)", "value": 0.0066928509242848554}, {"z": -4.898989898989899, "function": "sigmoid(z)", "value": 0.007398956049719674}, {"z": -4.797979797979798, "function": "sigmoid(z)", "value": 0.008178942856282161}, {"z": -4.696969696969697, "function": "sigmoid(z)", "value": 0.009040405808933128}, {"z": -4.595959595959596, "function": "sigmoid(z)", "value": 0.009991689936208048}, {"z": -4.494949494949495, "function": "sigmoid(z)", "value": 0.011041958337494755}, {"z": -4.393939393939394, "function": "sigmoid(z)", "value": 0.012201264260636085}, {"z": -4.292929292929293, "function": "sigmoid(z)", "value": 0.013480627700845831}, {"z": -4.191919191919192, "function": "sigmoid(z)", "value": 0.01489211636326034}, {"z": -4.090909090909091, "function": "sigmoid(z)", "value": 0.016448930693417962}, {"z": -3.9898989898989896, "function": "sigmoid(z)", "value": 0.01816549250715569}, {"z": -3.888888888888889, "function": "sigmoid(z)", "value": 0.02005753653785041}, {"z": -3.787878787878788, "function": "sigmoid(z)", "value": 0.022142203958132125}, {"z": -3.686868686868687, "function": "sigmoid(z)", "value": 0.024438136618332742}, {"z": -3.5858585858585856, "function": "sigmoid(z)", "value": 0.026965570368090237}, {"z": -3.484848484848485, "function": "sigmoid(z)", "value": 0.029746425384074206}, {"z": -3.383838383838384, "function": "sigmoid(z)", "value": 0.03280439090994282}, {"z": -3.282828282828283, "function": "sigmoid(z)", "value": 0.03616500122018774}, {"z": -3.1818181818181817, "function": "sigmoid(z)", "value": 0.039855698945889695}, {"z": -3.080808080808081, "function": "sigmoid(z)", "value": 0.043905881149939006}, {"z": -2.9797979797979797, "function": "sigmoid(z)", "value": 0.04834692271989779}, {"z": -2.878787878787879, "function": "sigmoid(z)", "value": 0.05321217077391106}, {"z": -2.7777777777777777, "function": "sigmoid(z)", "value": 0.0585369028743679}, {"z": -2.676767676767677, "function": "sigmoid(z)", "value": 0.06435824095339865}, {"z": -2.5757575757575757, "function": "sigmoid(z)", "value": 0.07071501202714367}, {"z": -2.474747474747475, "function": "sigmoid(z)", "value": 0.07764754608342478}, {"z": -2.3737373737373737, "function": "sigmoid(z)", "value": 0.08519740106158838}, {"z": -2.272727272727273, "function": "sigmoid(z)", "value": 0.09340700471683215}, {"z": -2.1717171717171717, "function": "sigmoid(z)", "value": 0.10231920350807018}, {"z": -2.070707070707071, "function": "sigmoid(z)", "value": 0.11197670961974694}, {"z": -1.9696969696969697, "function": "sigmoid(z)", "value": 0.12242143898621305}, {"z": -1.868686868686869, "function": "sigmoid(z)", "value": 0.13369373589385355}, {"z": -1.7676767676767677, "function": "sigmoid(z)", "value": 0.14583148353491507}, {"z": -1.6666666666666665, "function": "sigmoid(z)", "value": 0.15886910488091516}, {"z": -1.5656565656565657, "function": "sigmoid(z)", "value": 0.17283646446618905}, {"z": -1.4646464646464645, "function": "sigmoid(z)", "value": 0.18775768905482057}, {"z": -1.3636363636363638, "function": "sigmoid(z)", "value": 0.20364993350221924}, {"z": -1.2626262626262625, "function": "sigmoid(z)", "value": 0.2205221270455694}, {"z": -1.1616161616161618, "function": "sigmoid(z)", "value": 0.23837374421039675}, {"z": -1.0606060606060606, "function": "sigmoid(z)", "value": 0.2571936527643822}, {"z": -0.9595959595959593, "function": "sigmoid(z)", "value": 0.27695909778815886}, {"z": -0.858585858585859, "function": "sigmoid(z)", "value": 0.29763488497442225}, {"z": -0.7575757575757578, "function": "sigmoid(z)", "value": 0.31917282672147035}, {"z": -0.6565656565656566, "function": "sigmoid(z)", "value": 0.34151151059747936}, {"z": -0.5555555555555554, "function": "sigmoid(z)", "value": 0.3645764407416393}, {"z": -0.45454545454545503, "function": "sigmoid(z)", "value": 0.3882805885928385}, {"z": -0.3535353535353538, "function": "sigmoid(z)", "value": 0.4125253704018182}, {"z": -0.2525252525252526, "function": "sigmoid(z)", "value": 0.43720204630561754}, {"z": -0.15151515151515138, "function": "sigmoid(z)", "value": 0.462193510926849}, {"z": -0.050505050505050164, "function": "sigmoid(z)", "value": 0.4873764205699251}, {"z": 0.050505050505050164, "function": "sigmoid(z)", "value": 0.512623579430075}, {"z": 0.15151515151515138, "function": "sigmoid(z)", "value": 0.537806489073151}, {"z": 0.2525252525252526, "function": "sigmoid(z)", "value": 0.5627979536943825}, {"z": 0.3535353535353538, "function": "sigmoid(z)", "value": 0.5874746295981818}, {"z": 0.45454545454545414, "function": "sigmoid(z)", "value": 0.6117194114071612}, {"z": 0.5555555555555554, "function": "sigmoid(z)", "value": 0.6354235592583607}, {"z": 0.6565656565656566, "function": "sigmoid(z)", "value": 0.6584884894025207}, {"z": 0.7575757575757578, "function": "sigmoid(z)", "value": 0.6808271732785297}, {"z": 0.8585858585858581, "function": "sigmoid(z)", "value": 0.7023651150255775}, {"z": 0.9595959595959593, "function": "sigmoid(z)", "value": 0.7230409022118411}, {"z": 1.0606060606060606, "function": "sigmoid(z)", "value": 0.7428063472356178}, {"z": 1.1616161616161618, "function": "sigmoid(z)", "value": 0.7616262557896033}, {"z": 1.262626262626262, "function": "sigmoid(z)", "value": 0.7794778729544305}, {"z": 1.3636363636363633, "function": "sigmoid(z)", "value": 0.7963500664977807}, {"z": 1.4646464646464645, "function": "sigmoid(z)", "value": 0.8122423109451795}, {"z": 1.5656565656565657, "function": "sigmoid(z)", "value": 0.8271635355338108}, {"z": 1.666666666666667, "function": "sigmoid(z)", "value": 0.8411308951190849}, {"z": 1.7676767676767673, "function": "sigmoid(z)", "value": 0.854168516465085}, {"z": 1.8686868686868685, "function": "sigmoid(z)", "value": 0.8663062641061464}, {"z": 1.9696969696969697, "function": "sigmoid(z)", "value": 0.877578561013787}, {"z": 2.070707070707071, "function": "sigmoid(z)", "value": 0.888023290380253}, {"z": 2.1717171717171713, "function": "sigmoid(z)", "value": 0.8976807964919297}, {"z": 2.2727272727272725, "function": "sigmoid(z)", "value": 0.9065929952831678}, {"z": 2.3737373737373737, "function": "sigmoid(z)", "value": 0.9148025989384116}, {"z": 2.474747474747475, "function": "sigmoid(z)", "value": 0.9223524539165752}, {"z": 2.5757575757575752, "function": "sigmoid(z)", "value": 0.9292849879728562}, {"z": 2.6767676767676765, "function": "sigmoid(z)", "value": 0.9356417590466013}, {"z": 2.7777777777777777, "function": "sigmoid(z)", "value": 0.941463097125632}, {"z": 2.878787878787879, "function": "sigmoid(z)", "value": 0.946787829226089}, {"z": 2.9797979797979792, "function": "sigmoid(z)", "value": 0.9516530772801021}, {"z": 3.0808080808080813, "function": "sigmoid(z)", "value": 0.9560941188500611}, {"z": 3.1818181818181817, "function": "sigmoid(z)", "value": 0.9601443010541102}, {"z": 3.282828282828282, "function": "sigmoid(z)", "value": 0.9638349987798124}, {"z": 3.383838383838384, "function": "sigmoid(z)", "value": 0.9671956090900572}, {"z": 3.4848484848484844, "function": "sigmoid(z)", "value": 0.9702535746159258}, {"z": 3.5858585858585865, "function": "sigmoid(z)", "value": 0.9730344296319098}, {"z": 3.686868686868687, "function": "sigmoid(z)", "value": 0.9755618633816672}, {"z": 3.787878787878787, "function": "sigmoid(z)", "value": 0.977857796041868}, {"z": 3.8888888888888893, "function": "sigmoid(z)", "value": 0.9799424634621495}, {"z": 3.9898989898989896, "function": "sigmoid(z)", "value": 0.9818345074928443}, {"z": 4.09090909090909, "function": "sigmoid(z)", "value": 0.9835510693065821}, {"z": 4.191919191919192, "function": "sigmoid(z)", "value": 0.9851078836367397}, {"z": 4.292929292929292, "function": "sigmoid(z)", "value": 0.9865193722991542}, {"z": 4.3939393939393945, "function": "sigmoid(z)", "value": 0.9877987357393639}, {"z": 4.494949494949495, "function": "sigmoid(z)", "value": 0.9889580416625052}, {"z": 4.595959595959595, "function": "sigmoid(z)", "value": 0.990008310063792}, {"z": 4.696969696969697, "function": "sigmoid(z)", "value": 0.9909595941910669}, {"z": 4.797979797979798, "function": "sigmoid(z)", "value": 0.9918210571437178}, {"z": 4.8989898989899, "function": "sigmoid(z)", "value": 0.9926010439502804}, {"z": 5.0, "function": "sigmoid(z)", "value": 0.9933071490757153}, {"z": -5.0, "function": "d_sigmoid(z)/dz", "value": 0.006648056670790155}, {"z": -4.898989898989899, "function": "d_sigmoid(z)/dz", "value": 0.007344211499093991}, {"z": -4.797979797979798, "function": "d_sigmoid(z)/dz", "value": 0.008112047750035833}, {"z": -4.696969696969697, "function": "d_sigmoid(z)/dz", "value": 0.008958676871742937}, {"z": -4.595959595959596, "function": "d_sigmoid(z)/dz", "value": 0.009891856068426727}, {"z": -4.494949494949495, "function": "d_sigmoid(z)/dz", "value": 0.010920033493567785}, {"z": -4.393939393939394, "function": "d_sigmoid(z)/dz", "value": 0.012052393411078211}, {"z": -4.292929292929293, "function": "d_sigmoid(z)/dz", "value": 0.01329890037763702}, {"z": -4.191919191919192, "function": "d_sigmoid(z)/dz", "value": 0.014670341233483453}, {"z": -4.090909090909091, "function": "d_sigmoid(z)/dz", "value": 0.016178363372461094}, {"z": -3.9898989898989896, "function": "d_sigmoid(z)/dz", "value": 0.01783550738912816}, {"z": -3.888888888888889, "function": "d_sigmoid(z)/dz", "value": 0.019655231765883206}, {"z": -3.787878787878788, "function": "d_sigmoid(z)/dz", "value": 0.021651926762008604}, {"z": -3.686868686868687, "function": "d_sigmoid(z)/dz", "value": 0.023840914096956448}, {"z": -3.5858585858585856, "function": "d_sigmoid(z)/dz", "value": 0.02623842838281381}, {"z": -3.484848484848485, "function": "d_sigmoid(z)/dz", "value": 0.02886157556094391}, {"z": -3.383838383838384, "function": "d_sigmoid(z)/dz", "value": 0.03172826284697048}, {"z": -3.282828282828283, "function": "d_sigmoid(z)/dz", "value": 0.034857093906931556}, {"z": -3.1818181818181817, "function": "d_sigmoid(z)/dz", "value": 0.038267222207424303}, {"z": -3.080808080808081, "function": "d_sigmoid(z)/dz", "value": 0.04197815475038644}, {"z": -2.9797979797979797, "function": "d_sigmoid(z)/dz", "value": 0.04600949778341402}, {"z": -2.878787878787879, "function": "d_sigmoid(z)/dz", "value": 0.05038063565543919}, {"z": -2.7777777777777777, "function": "d_sigmoid(z)/dz", "value": 0.05511033387624472}, {"z": -2.676767676767677, "function": "d_sigmoid(z)/dz", "value": 0.06021625777478293}, {"z": -2.5757575757575757, "function": "d_sigmoid(z)/dz", "value": 0.0657143991011446}, {"z": -2.474747474747475, "function": "d_sigmoid(z)/dz", "value": 0.07161840467064721}, {"z": -2.3737373737373737, "function": "d_sigmoid(z)/dz", "value": 0.07793880391393924}, {"z": -2.272727272727273, "function": "d_sigmoid(z)/dz", "value": 0.08468213618666184}, {"z": -2.1717171717171717, "function": "d_sigmoid(z)/dz", "value": 0.0918499841015443}, {"z": -2.070707070707071, "function": "d_sigmoid(z)/dz", "value": 0.09943792612248181}, {"z": -1.9696969696969697, "function": "d_sigmoid(z)/dz", "value": 0.10743443026275797}, {"z": -1.868686868686869, "function": "d_sigmoid(z)/dz", "value": 0.11581972087659809}, {"z": -1.7676767676767677, "function": "d_sigmoid(z)/dz", "value": 0.12456466194492087}, {"z": -1.6666666666666665, "function": "d_sigmoid(z)/dz", "value": 0.13362971239525193}, {"z": -1.5656565656565657, "function": "d_sigmoid(z)/dz", "value": 0.14296402101701683}, {"z": -1.4646464646464645, "function": "d_sigmoid(z)/dz", "value": 0.15250473925561386}, {"z": -1.3636363636363638, "function": "d_sigmoid(z)/dz", "value": 0.16217663808676092}, {"z": -1.2626262626262625, "function": "d_sigmoid(z)/dz", "value": 0.17189211852886715}, {"z": -1.1616161616161618, "function": "d_sigmoid(z)/dz", "value": 0.18155170228151307}, {"z": -1.0606060606060606, "function": "d_sigmoid(z)/dz", "value": 0.19104507774209661}, {"z": -0.9595959595959593, "function": "d_sigmoid(z)/dz", "value": 0.2002527559405279}, {"z": -0.858585858585859, "function": "d_sigmoid(z)/dz", "value": 0.20904836022068468}, {"z": -0.7575757575757578, "function": "d_sigmoid(z)/dz", "value": 0.21730153340409658}, {"z": -0.6565656565656566, "function": "d_sigmoid(z)/dz", "value": 0.22488139872690713}, {"z": -0.5555555555555554, "function": "d_sigmoid(z)/dz", "value": 0.23166045959779727}, {"z": -0.45454545454545503, "function": "d_sigmoid(z)/dz", "value": 0.2375187731148374}, {"z": -0.3535353535353538, "function": "d_sigmoid(z)/dz", "value": 0.24234818917666093}, {"z": -0.2525252525252526, "function": "d_sigmoid(z)/dz", "value": 0.2460564170117982}, {"z": -0.15151515151515138, "function": "d_sigmoid(z)/dz", "value": 0.24857066938396172}, {"z": -0.050505050505050164, "function": "d_sigmoid(z)/dz", "value": 0.24984064524237257}, {"z": 0.050505050505050164, "function": "d_sigmoid(z)/dz", "value": 0.2498406452423726}, {"z": 0.15151515151515138, "function": "d_sigmoid(z)/dz", "value": 0.24857066938396172}, {"z": 0.2525252525252526, "function": "d_sigmoid(z)/dz", "value": 0.2460564170117982}, {"z": 0.3535353535353538, "function": "d_sigmoid(z)/dz", "value": 0.2423481891766609}, {"z": 0.45454545454545414, "function": "d_sigmoid(z)/dz", "value": 0.23751877311483746}, {"z": 0.5555555555555554, "function": "d_sigmoid(z)/dz", "value": 0.23166045959779727}, {"z": 0.6565656565656566, "function": "d_sigmoid(z)/dz", "value": 0.22488139872690707}, {"z": 0.7575757575757578, "function": "d_sigmoid(z)/dz", "value": 0.21730153340409658}, {"z": 0.8585858585858581, "function": "d_sigmoid(z)/dz", "value": 0.20904836022068476}, {"z": 0.9595959595959593, "function": "d_sigmoid(z)/dz", "value": 0.2002527559405279}, {"z": 1.0606060606060606, "function": "d_sigmoid(z)/dz", "value": 0.19104507774209661}, {"z": 1.1616161616161618, "function": "d_sigmoid(z)/dz", "value": 0.18155170228151307}, {"z": 1.262626262626262, "function": "d_sigmoid(z)/dz", "value": 0.1718921185288672}, {"z": 1.3636363636363633, "function": "d_sigmoid(z)/dz", "value": 0.16217663808676094}, {"z": 1.4646464646464645, "function": "d_sigmoid(z)/dz", "value": 0.15250473925561384}, {"z": 1.5656565656565657, "function": "d_sigmoid(z)/dz", "value": 0.14296402101701688}, {"z": 1.666666666666667, "function": "d_sigmoid(z)/dz", "value": 0.1336297123952519}, {"z": 1.7676767676767673, "function": "d_sigmoid(z)/dz", "value": 0.12456466194492084}, {"z": 1.8686868686868685, "function": "d_sigmoid(z)/dz", "value": 0.11581972087659811}, {"z": 1.9696969696969697, "function": "d_sigmoid(z)/dz", "value": 0.10743443026275797}, {"z": 2.070707070707071, "function": "d_sigmoid(z)/dz", "value": 0.0994379261224819}, {"z": 2.1717171717171713, "function": "d_sigmoid(z)/dz", "value": 0.09184998410154442}, {"z": 2.2727272727272725, "function": "d_sigmoid(z)/dz", "value": 0.08468213618666186}, {"z": 2.3737373737373737, "function": "d_sigmoid(z)/dz", "value": 0.07793880391393922}, {"z": 2.474747474747475, "function": "d_sigmoid(z)/dz", "value": 0.07161840467064726}, {"z": 2.5757575757575752, "function": "d_sigmoid(z)/dz", "value": 0.06571439910114471}, {"z": 2.6767676767676765, "function": "d_sigmoid(z)/dz", "value": 0.060216257774782976}, {"z": 2.7777777777777777, "function": "d_sigmoid(z)/dz", "value": 0.05511033387624478}, {"z": 2.878787878787879, "function": "d_sigmoid(z)/dz", "value": 0.050380635655439175}, {"z": 2.9797979797979792, "function": "d_sigmoid(z)/dz", "value": 0.04600949778341415}, {"z": 3.0808080808080813, "function": "d_sigmoid(z)/dz", "value": 0.04197815475038632}, {"z": 3.1818181818181817, "function": "d_sigmoid(z)/dz", "value": 0.03826722220742441}, {"z": 3.282828282828282, "function": "d_sigmoid(z)/dz", "value": 0.034857093906931445}, {"z": 3.383838383838384, "function": "d_sigmoid(z)/dz", "value": 0.031728262846970466}, {"z": 3.4848484848484844, "function": "d_sigmoid(z)/dz", "value": 0.02886157556094394}, {"z": 3.5858585858585865, "function": "d_sigmoid(z)/dz", "value": 0.026238428382813792}, {"z": 3.686868686868687, "function": "d_sigmoid(z)/dz", "value": 0.023840914096956527}, {"z": 3.787878787878787, "function": "d_sigmoid(z)/dz", "value": 0.021651926762008528}, {"z": 3.8888888888888893, "function": "d_sigmoid(z)/dz", "value": 0.019655231765883265}, {"z": 3.9898989898989896, "function": "d_sigmoid(z)/dz", "value": 0.01783550738912818}, {"z": 4.09090909090909, "function": "d_sigmoid(z)/dz", "value": 0.016178363372461042}, {"z": 4.191919191919192, "function": "d_sigmoid(z)/dz", "value": 0.014670341233483382}, {"z": 4.292929292929292, "function": "d_sigmoid(z)/dz", "value": 0.013298900377636981}, {"z": 4.3939393939393945, "function": "d_sigmoid(z)/dz", "value": 0.012052393411078183}, {"z": 4.494949494949495, "function": "d_sigmoid(z)/dz", "value": 0.010920033493567802}, {"z": 4.595959595959595, "function": "d_sigmoid(z)/dz", "value": 0.009891856068426704}, {"z": 4.696969696969697, "function": "d_sigmoid(z)/dz", "value": 0.00895867687174287}, {"z": 4.797979797979798, "function": "d_sigmoid(z)/dz", "value": 0.00811204775003585}, {"z": 4.8989898989899, "function": "d_sigmoid(z)/dz", "value": 0.0073442114990939465}, {"z": 5.0, "function": "d_sigmoid(z)/dz", "value": 0.006648056670790033}]}}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p>¡Es perfecta para encontrar un punto de corte y clasificar de manera binaria!</p>
+<p><a id='implementation'></a></p>
+</div>
+</div>
+<div class="section" id="implementacion">
+<h2>Implementación<a class="headerlink" href="#implementacion" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="aproximacion-ingenieril">
+<h3>Aproximación Ingenieril<a class="headerlink" href="#aproximacion-ingenieril" title="Permalink to this headline">¶</a></h3>
+<p>¿Cómo podemos reutilizar lo que conocemos de regresión lineal?</p>
+<p>Si buscamos minimizar
+$<span class="math notranslate nohighlight">\(J(\theta) = \frac{1}{2} \sum_{i=1}^{m} \left( h_{\theta}(x^{(i)}) - y^{(i)}\right)^2\)</span><span class="math notranslate nohighlight">\(
+Podemos calcular el gradiente y luego utilizar el método del máximo
+descenso para obtener \)</span>\theta$.</p>
+<p>El cálculo del gradiente es directo:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\frac{\partial J(\theta)}{\partial \theta_k}
+&amp;= \sum_{i=1}^{m} \left( h_{\theta}(x^{(i)}) - y^{(i)}\right) \frac{\partial}{\partial \theta_k} h_{\theta}(x^{(i)}) \\
+&amp;= \sum_{i=1}^{m} \left( h_{\theta}(x^{(i)}) - y^{(i)}\right) \frac{\partial}{\partial \theta_k} g(\theta^T x^{(i)}) \\
+&amp;= \sum_{i=1}^{m} \left( h_{\theta}(x^{(i)}) - y^{(i)}\right) h_{\theta}(x^{(i)}) \left(1-h_{\theta}(x^{(i)})\right) \frac{\partial}{\partial \theta_k} (\theta^T x^{(i)}) \\
+&amp;= \sum_{i=1}^{m} \left( h_{\theta}(x^{(i)}) - y^{(i)}\right) h_{\theta}(x^{(i)}) \left(1-h_{\theta}(x^{(i)})\right) x^{(i)}_k\end{aligned}\end{split}\]</div>
+<p>¿Hay alguna forma de escribir todo esto de manera matricial? Recordemos
+que si las componentes eran</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+\sum_{i=1}^{m} \left( h_{\theta}(x^{(i)}) - y^{(i)}\right) x^{(i)}_k = \sum_{i=1}^{m}  x^{(i)}_k \left( h_{\theta}(x^{(i)}) - y^{(i)}\right)\end{aligned}\]</div>
+<p>podíamos escribirlo vectorialmente como $<span class="math notranslate nohighlight">\(X^T (X\theta - Y)\)</span>$</p>
+<p>Luego, para</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\frac{\partial J(\theta)}{\partial \theta_k}
+&amp;= \sum_{i=1}^{m} \left( h_{\theta}(x^{(i)}) - y^{(i)}\right) h_{\theta}(x^{(i)}) \left(1-h_{\theta}(x^{(i)})\right) x^{(i)}_k \\
+&amp;= \sum_{i=1}^{m}  x^{(i)}_k \left( h_{\theta}(x^{(i)}) - y^{(i)}\right) h_{\theta}(x^{(i)}) \left(1-h_{\theta}(x^{(i)})\right)\end{aligned}\end{split}\]</div>
+<p>podemos escribirlo vectorialmente como
+$<span class="math notranslate nohighlight">\(\nabla_{\theta} J(\theta) = X^T  \Big[ (g(X\theta) - Y) \odot g(X\theta) \odot (1-g(X\theta)) \Big]\)</span><span class="math notranslate nohighlight">\(
+donde \)</span>\odot$ es la multiplicación elemento a elemento (element-wise) o producto Hadamard.</p>
+<p><strong>Observación crucial:</strong>
+$<span class="math notranslate nohighlight">\(\nabla_{\theta} J(\theta) = X^T  \Big[ (g(X\theta) - Y) \odot g(X\theta) \odot (1-g(X\theta)) \Big]\)</span><span class="math notranslate nohighlight">\(
+no permite construir un sistema lineal para \)</span>\theta$, por lo cual sólo
+podemos resolver iterativamente.</p>
+<p>Por
+lo tanto tenemos el algoritmo</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\theta^{(n+1)} &amp; = \theta^{(n)} - \alpha \nabla_{\theta} J(\theta^{(n)}) \\
+\nabla_{\theta} J(\theta) &amp;= X^T  \Big[ (g(X\theta) - Y) \odot g(X\theta) \odot (1-g(X\theta)) \Big]\end{aligned}\end{split}\]</div>
+<p>El código sería el siguiente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">norm2_error_logistic_regression</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">theta0</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1E-6</span><span class="p">):</span>
+    <span class="n">converged</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.01</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
+    <span class="n">theta</span> <span class="o">=</span> <span class="n">theta0</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">converged</span><span class="p">:</span>
+        <span class="n">H</span> <span class="o">=</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">theta</span><span class="p">))</span>
+        <span class="n">gradient</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="p">(</span><span class="n">H</span> <span class="o">-</span> <span class="n">Y</span><span class="p">)</span> <span class="o">*</span> <span class="n">H</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">H</span><span class="p">))</span>
+        <span class="n">new_theta</span> <span class="o">=</span> <span class="n">theta</span> <span class="o">-</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">gradient</span>
+        <span class="n">converged</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">theta</span> <span class="o">-</span> <span class="n">new_theta</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">tol</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> 
+        <span class="n">theta</span> <span class="o">=</span> <span class="n">new_theta</span>
+    <span class="k">return</span> <span class="n">theta</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="interpretacion-probabilistica">
+<h3>Interpretación Probabilística<a class="headerlink" href="#interpretacion-probabilistica" title="Permalink to this headline">¶</a></h3>
+<p>¿Es la derivación anterior
+probabilísticamente correcta?</p>
+<p>Asumamos que la pertenencia a los grupos está dado por</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\mathbb{P}[y = 1| \ x ; \theta ] &amp; = h_\theta(x) \\
+\mathbb{P}[y = 0| \ x ; \theta ] &amp; = 1 - h_\theta(x)\end{aligned}\end{split}\]</div>
+<p>Esto es, una distribución de Bernoulli con <span class="math notranslate nohighlight">\(p=h_\theta(x)\)</span>.<br />
+Las expresiones anteriores pueden escribirse de manera más compacta como</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\mathbb{P}[y | \ x ; \theta ] &amp; = (h_\theta(x))^y (1 - h_\theta(x))^{(1-y)} \\\end{aligned}\end{split}\]</div>
+<p>La función de verosimilitud <span class="math notranslate nohighlight">\(L(\theta)\)</span> nos
+permite entender que tan probable es encontrar los datos observados,
+para una elección del parámetro <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+L(\theta) 
+&amp;= \prod_{i=1}^{m} \mathbb{P}[y^{(i)}| x^{(i)}; \theta ] \\
+&amp;= \prod_{i=1}^{m} \Big(h_{\theta}(x^{(i)})\Big)^{y^{(i)}} \Big(1 - h_\theta(x^{(i)})\Big)^{(1-y^{(i)})}\end{aligned}\end{split}\]</div>
+<p>Nos gustaría encontrar el parámetro <span class="math notranslate nohighlight">\(\theta\)</span> que más probablemente haya
+generado los datos observados, es decir, el parámetro <span class="math notranslate nohighlight">\(\theta\)</span> que
+maximiza la función de verosimilitud.</p>
+<p>Calculamos la log-verosimilitud:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+l(\theta) 
+&amp;= \log L(\theta) \\
+&amp;= \log \prod_{i=1}^{m} (h_\theta(x^{(i)}))^{y^{(i)}} (1 - h_\theta(x^{(i)}))^{(1-y^{(i)})} \\
+&amp;= \sum_{i=1}^{m} y^{(i)}\log (h_\theta(x^{(i)})) + (1-y^{(i)}) \log (1 - h_\theta(x^{(i)}))\end{aligned}\end{split}\]</div>
+<p>No existe una fórmula cerrada que nos permita obtener el máximo de la
+log-verosimitud. Pero podemos utilizar nuevamente el método del
+gradiente máximo.</p>
+<p>Recordemos que si</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+g(z) = \frac{1}{1+e^{-z}}\end{aligned}\]</div>
+<p>Entonces</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+g'(z) &amp;= g(z)(1-g(z))\end{aligned}\]</div>
+<p>y luego tenemos que</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+\frac{\partial}{\partial \theta_k} h_\theta(x) &amp;= h_\theta(x) (1-h_\theta(x)) x_k\end{aligned}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\frac{\partial}{\partial \theta_k} l(\theta) &amp;=
+\frac{\partial}{\partial \theta_k}  \sum_{i=1}^{m} y^{(i)}\log (h_\theta(x^{(i)})) + (1-y^{(i)}) \log (1 - h_\theta(x^{(i)})) \\
+&amp;= \sum_{i=1}^{m} y^{(i)}\frac{\partial}{\partial \theta_k}   \log (h_\theta(x^{(i)})) + (1-y^{(i)}) \frac{\partial}{\partial \theta_k}  \log (1 - h_\theta(x^{(i)})) \\
+&amp;= \sum_{i=1}^{m} y^{(i)}\frac{1}{h_\theta(x^{(i)})}\frac{\partial h_\theta(x^{(i)})}{\partial \theta_k} 
++ (1-y^{(i)}) \frac{1}{1 - h_\theta(x^{(i)})} \frac{\partial (1-h_\theta(x^{(i)}))}{\partial \theta_k} \\
+&amp;= \sum_{i=1}^{m} y^{(i)}(1-h_\theta(x^{(i)})) x^{(i)}- (1-y^{(i)}) h_\theta(x^{(i)}) x^{(i)}\\
+&amp;= \sum_{i=1}^{m} y^{(i)}x^{(i)}- y^{(i)}h_\theta(x^{(i)}) x^{(i)}- h_\theta(x^{(i)}) x^{(i)}+ y^{(i)}h_\theta(x^{(i)}) x^{(i)}\\
+&amp;= \sum_{i=1}^{m} (y^{(i)}-h_\theta(x^{(i)})) x^{(i)}\end{aligned}\end{split}\]</div>
+<p>Es decir, para maximizar la log-verosimilitud
+obtenemos igual que para la regresión lineal:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\theta^{(n+1)} &amp; = \theta^{(n)} - \alpha \nabla_{\theta} l(\theta^{(n)}) \\
+\frac{\partial l(\theta)}{\partial \theta_k}
+&amp;= \sum_{i=1}^{m} \left( h_{\theta}(x^{(i)}) - y^{(i)}\right) x^{(i)}_k\end{aligned}\end{split}\]</div>
+<p>Aunque, en el caso de regresión logística, se tiene
+<span class="math notranslate nohighlight">\(h_\theta(x)=1/(1+e^{-x^T\theta})\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">likelihood_logistic_regression</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">theta0</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1E-6</span><span class="p">):</span>
+    <span class="n">converged</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.01</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
+    <span class="n">theta</span> <span class="o">=</span> <span class="n">theta0</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">converged</span><span class="p">:</span>
+        <span class="n">H</span> <span class="o">=</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">theta</span><span class="p">))</span>
+        <span class="n">gradient</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">H</span> <span class="o">-</span> <span class="n">Y</span><span class="p">)</span>
+        <span class="n">new_theta</span> <span class="o">=</span> <span class="n">theta</span> <span class="o">-</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">gradient</span>
+        <span class="n">converged</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">theta</span> <span class="o">-</span> <span class="n">new_theta</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">tol</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> 
+        <span class="n">theta</span> <span class="o">=</span> <span class="n">new_theta</span>
+    <span class="k">return</span> <span class="n">theta</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="aplicacion">
+<h2>Aplicación<a class="headerlink" href="#aplicacion" title="Permalink to this headline">¶</a></h2>
+<p>Recordemos que los datos son:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">challenger</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>temp_f</th>
+      <th>nm_bad_rings</th>
+      <th>temp_c</th>
+      <th>is_failure</th>
+      <th>ds_failure</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>53</td>
+      <td>3</td>
+      <td>11.67</td>
+      <td>1</td>
+      <td>Falla</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>56</td>
+      <td>1</td>
+      <td>13.33</td>
+      <td>1</td>
+      <td>Falla</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>57</td>
+      <td>1</td>
+      <td>13.89</td>
+      <td>1</td>
+      <td>Falla</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>63</td>
+      <td>0</td>
+      <td>17.22</td>
+      <td>0</td>
+      <td>Éxito</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>66</td>
+      <td>0</td>
+      <td>18.89</td>
+      <td>0</td>
+      <td>Éxito</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Generamos la matriz de diseño <span class="math notranslate nohighlight">\(X\)</span> y el vector de respuestas <span class="math notranslate nohighlight">\(Y\)</span> a partir del dataframe anterior.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">challenger</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">intercept</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="p">[</span><span class="s2">&quot;intercept&quot;</span><span class="p">,</span> <span class="s2">&quot;temp_c&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">challenger</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="p">[</span><span class="s2">&quot;is_failure&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">theta_0</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">/</span> <span class="n">X</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;theta_0 =</span><span class="se">\n</span><span class="s2"> </span><span class="si">{</span><span class="n">theta_0</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">theta_J</span> <span class="o">=</span> <span class="n">norm2_error_logistic_regression</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">theta_0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;theta_J =</span><span class="se">\n</span><span class="s2"> </span><span class="si">{</span><span class="n">theta_J</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">theta_l</span> <span class="o">=</span> <span class="n">likelihood_logistic_regression</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">theta_0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;theta_l = </span><span class="se">\n</span><span class="si">{</span><span class="n">theta_l</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>theta_0 =
+ [[0.29166667]
+ [0.01384658]]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>theta_J =
+ [[ 4.47224507]
+ [-0.26847216]]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>theta_l = 
+[[ 5.27415368]
+ [-0.30262323]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predict_df</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;temp_c&quot;</span><span class="p">:</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span>
+            <span class="s2">&quot;norm_2_error_prediction&quot;</span><span class="p">:</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">theta_J</span><span class="p">))</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span>
+            <span class="s2">&quot;likelihood_prediction&quot;</span><span class="p">:</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">theta_l</span><span class="p">))</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+        <span class="p">}</span>
+    <span class="p">)</span>
+    <span class="o">.</span><span class="n">melt</span><span class="p">(</span>
+        <span class="n">id_vars</span><span class="o">=</span><span class="s2">&quot;temp_c&quot;</span><span class="p">,</span>
+        <span class="n">value_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;norm_2_error_prediction&quot;</span><span class="p">,</span> <span class="s2">&quot;likelihood_prediction&quot;</span><span class="p">],</span>
+        <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;prediction&quot;</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+<span class="n">predict_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>temp_c</th>
+      <th>prediction</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>11.67</td>
+      <td>norm_2_error_prediction</td>
+      <td>0.792354</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>13.33</td>
+      <td>norm_2_error_prediction</td>
+      <td>0.709614</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>13.89</td>
+      <td>norm_2_error_prediction</td>
+      <td>0.677688</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>17.22</td>
+      <td>norm_2_error_prediction</td>
+      <td>0.462360</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>18.89</td>
+      <td>norm_2_error_prediction</td>
+      <td>0.354528</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prediction_chart</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">predict_df</span><span class="p">)</span><span class="o">.</span><span class="n">mark_line</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;temp_c:Q&quot;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">zero</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Temperature [C]&quot;</span><span class="p">),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">&quot;value:Q&quot;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">padding</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)),</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;prediction:N&quot;</span>
+<span class="p">)</span>
+
+<span class="n">rule</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;decision_boundary&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">]}))</span><span class="o">.</span><span class="n">mark_rule</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;decision_boundary&#39;</span><span class="p">)</span>
+
+<span class="p">(</span><span class="n">prediction_chart</span> <span class="o">+</span> <span class="n">failure_chart</span> <span class="o">+</span> <span class="n">rule</span><span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Data and Prediction Failure&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-3b14138e8cfa4efda88596b1e0b7a1a9"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-3b14138e8cfa4efda88596b1e0b7a1a9") {
+      outputDiv = document.getElementById("altair-viz-3b14138e8cfa4efda88596b1e0b7a1a9");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"background": "white", "view": {"continuousWidth": 400, "continuousHeight": 300}}, "layer": [{"data": {"name": "data-5ce80f53007801999a37b611b1a43830"}, "mark": "line", "encoding": {"color": {"type": "nominal", "field": "prediction"}, "x": {"type": "quantitative", "field": "temp_c", "scale": {"zero": false}, "title": "Temperature [C]"}, "y": {"type": "quantitative", "field": "value", "scale": {"padding": 0.5}}}}, {"data": {"name": "data-2fb7a229c8f7d9b13ce371da893c47d0"}, "mark": {"type": "circle", "size": 100}, "encoding": {"color": {"type": "nominal", "field": "ds_failure"}, "x": {"type": "quantitative", "field": "temp_c", "scale": {"zero": false}, "title": "Temperature [C]"}, "y": {"type": "quantitative", "field": "is_failure", "scale": {"padding": 0.5}, "title": "Success/Failure"}}, "height": 400, "title": "Exito o Falla en lanzamiento de Challenger", "width": 600}, {"data": {"name": "data-13d9e1290c4369dbfdef9c3df0e2f780"}, "mark": "rule", "encoding": {"y": {"type": "quantitative", "field": "decision_boundary"}}}], "title": "Data and Prediction Failure", "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-5ce80f53007801999a37b611b1a43830": [{"temp_c": 11.67, "prediction": "norm_2_error_prediction", "value": 0.7923542360384577}, {"temp_c": 13.33, "prediction": "norm_2_error_prediction", "value": 0.7096142307176428}, {"temp_c": 13.89, "prediction": "norm_2_error_prediction", "value": 0.6776879594852155}, {"temp_c": 17.22, "prediction": "norm_2_error_prediction", "value": 0.46235997414579544}, {"temp_c": 18.89, "prediction": "norm_2_error_prediction", "value": 0.35452811769161985}, {"temp_c": 19.44, "prediction": "norm_2_error_prediction", "value": 0.32150725492763105}, {"temp_c": 19.44, "prediction": "norm_2_error_prediction", "value": 0.32150725492763105}, {"temp_c": 19.44, "prediction": "norm_2_error_prediction", "value": 0.32150725492763105}, {"temp_c": 20.0, "prediction": "norm_2_error_prediction", "value": 0.2896266317688506}, {"temp_c": 20.56, "prediction": "norm_2_error_prediction", "value": 0.25969728854807134}, {"temp_c": 21.11, "prediction": "norm_2_error_prediction", "value": 0.2323298212007703}, {"temp_c": 21.11, "prediction": "norm_2_error_prediction", "value": 0.2323298212007703}, {"temp_c": 21.11, "prediction": "norm_2_error_prediction", "value": 0.2323298212007703}, {"temp_c": 21.11, "prediction": "norm_2_error_prediction", "value": 0.2323298212007703}, {"temp_c": 22.22, "prediction": "norm_2_error_prediction", "value": 0.18344097052771421}, {"temp_c": 22.78, "prediction": "norm_2_error_prediction", "value": 0.1619824991712567}, {"temp_c": 23.89, "prediction": "norm_2_error_prediction", "value": 0.12547714704413018}, {"temp_c": 23.89, "prediction": "norm_2_error_prediction", "value": 0.12547714704413018}, {"temp_c": 24.44, "prediction": "norm_2_error_prediction", "value": 0.11014954609519079}, {"temp_c": 24.44, "prediction": "norm_2_error_prediction", "value": 0.11014954609519079}, {"temp_c": 25.56, "prediction": "norm_2_error_prediction", "value": 0.08394586898228021}, {"temp_c": 26.11, "prediction": "norm_2_error_prediction", "value": 0.07326647207216815}, {"temp_c": 26.67, "prediction": "norm_2_error_prediction", "value": 0.06369069621878767}, {"temp_c": 27.22, "prediction": "norm_2_error_prediction", "value": 0.055432186922286006}, {"temp_c": 11.67, "prediction": "likelihood_prediction", "value": 0.8510094786632211}, {"temp_c": 13.33, "prediction": "likelihood_prediction", "value": 0.7755963912539553}, {"temp_c": 13.89, "prediction": "likelihood_prediction", "value": 0.7447332466462059}, {"temp_c": 17.22, "prediction": "likelihood_prediction", "value": 0.5157402093478763}, {"temp_c": 18.89, "prediction": "likelihood_prediction", "value": 0.39116944928039915}, {"temp_c": 19.44, "prediction": "likelihood_prediction", "value": 0.3523234160034029}, {"temp_c": 19.44, "prediction": "likelihood_prediction", "value": 0.3523234160034029}, {"temp_c": 19.44, "prediction": "likelihood_prediction", "value": 0.3523234160034029}, {"temp_c": 20.0, "prediction": "likelihood_prediction", "value": 0.31468403281255597}, {"temp_c": 20.56, "prediction": "likelihood_prediction", "value": 0.27933151265838174}, {"temp_c": 21.11, "prediction": "likelihood_prediction", "value": 0.24708448166589816}, {"temp_c": 21.11, "prediction": "likelihood_prediction", "value": 0.24708448166589816}, {"temp_c": 21.11, "prediction": "likelihood_prediction", "value": 0.24708448166589816}, {"temp_c": 21.11, "prediction": "likelihood_prediction", "value": 0.24708448166589816}, {"temp_c": 22.22, "prediction": "likelihood_prediction", "value": 0.18998086645206838}, {"temp_c": 22.78, "prediction": "likelihood_prediction", "value": 0.16525955771615336}, {"temp_c": 23.89, "prediction": "likelihood_prediction", "value": 0.1239532151155677}, {"temp_c": 23.89, "prediction": "likelihood_prediction", "value": 0.1239532151155677}, {"temp_c": 24.44, "prediction": "likelihood_prediction", "value": 0.10698085973924108}, {"temp_c": 24.44, "prediction": "likelihood_prediction", "value": 0.10698085973924108}, {"temp_c": 25.56, "prediction": "likelihood_prediction", "value": 0.078645381344901}, {"temp_c": 26.11, "prediction": "likelihood_prediction", "value": 0.0673995282299259}, {"temp_c": 26.67, "prediction": "likelihood_prediction", "value": 0.057496915937256476}, {"temp_c": 27.22, "prediction": "likelihood_prediction", "value": 0.04911397184479541}], "data-2fb7a229c8f7d9b13ce371da893c47d0": [{"temp_f": 53, "nm_bad_rings": 3, "temp_c": 11.67, "is_failure": 1, "ds_failure": "Falla"}, {"temp_f": 56, "nm_bad_rings": 1, "temp_c": 13.33, "is_failure": 1, "ds_failure": "Falla"}, {"temp_f": 57, "nm_bad_rings": 1, "temp_c": 13.89, "is_failure": 1, "ds_failure": "Falla"}, {"temp_f": 63, "nm_bad_rings": 0, "temp_c": 17.22, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 66, "nm_bad_rings": 0, "temp_c": 18.89, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 67, "nm_bad_rings": 0, "temp_c": 19.44, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 67, "nm_bad_rings": 0, "temp_c": 19.44, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 67, "nm_bad_rings": 0, "temp_c": 19.44, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 68, "nm_bad_rings": 0, "temp_c": 20.0, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 69, "nm_bad_rings": 0, "temp_c": 20.56, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 70, "nm_bad_rings": 0, "temp_c": 21.11, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 70, "nm_bad_rings": 1, "temp_c": 21.11, "is_failure": 1, "ds_failure": "Falla"}, {"temp_f": 70, "nm_bad_rings": 1, "temp_c": 21.11, "is_failure": 1, "ds_failure": "Falla"}, {"temp_f": 70, "nm_bad_rings": 1, "temp_c": 21.11, "is_failure": 1, "ds_failure": "Falla"}, {"temp_f": 72, "nm_bad_rings": 0, "temp_c": 22.22, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 73, "nm_bad_rings": 0, "temp_c": 22.78, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 75, "nm_bad_rings": 0, "temp_c": 23.89, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 75, "nm_bad_rings": 2, "temp_c": 23.89, "is_failure": 1, "ds_failure": "Falla"}, {"temp_f": 76, "nm_bad_rings": 0, "temp_c": 24.44, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 76, "nm_bad_rings": 0, "temp_c": 24.44, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 78, "nm_bad_rings": 0, "temp_c": 25.56, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 79, "nm_bad_rings": 0, "temp_c": 26.11, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 80, "nm_bad_rings": 0, "temp_c": 26.67, "is_failure": 0, "ds_failure": "\u00c9xito"}, {"temp_f": 81, "nm_bad_rings": 0, "temp_c": 27.22, "is_failure": 0, "ds_failure": "\u00c9xito"}], "data-13d9e1290c4369dbfdef9c3df0e2f780": [{"decision_boundary": 0.5}]}}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<div class="section" id="scikit-learn">
+<h3>scikit-learn<a class="headerlink" href="#scikit-learn" title="Permalink to this headline">¶</a></h3>
+<p>Scikit-learn tiene su propia implementación de Regresión Logística al igual que la Regresión Lineal. A medida que vayas leyendo e interiorizándote en la librería verás que tratan de mantener una sintaxis y API consistente en los distintos objetos y métodos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">challenger</span><span class="p">[[</span><span class="s2">&quot;temp_c&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">challenger</span><span class="p">[</span><span class="s2">&quot;is_failure&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1"># Fitting the model</span>
+<span class="n">Logit</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">solver</span><span class="o">=</span><span class="s2">&quot;lbfgs&quot;</span><span class="p">)</span>
+<span class="n">Logit</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LogisticRegression()
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Obtain the coefficients</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Logit</span><span class="o">.</span><span class="n">intercept_</span><span class="p">,</span> <span class="n">Logit</span><span class="o">.</span><span class="n">coef_</span> <span class="p">)</span>
+
+<span class="c1"># Predicting values</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">Logit</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[5.25668668] [[-0.30158355]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Procedamos a calcular la matriz de confusión.</p>
+<p>Por definición, la matriz de confusión <span class="math notranslate nohighlight">\(C\)</span> es tal que  <span class="math notranslate nohighlight">\(C_{i, j}\)</span> es igual al número de observaciones conocidas en el grupo <span class="math notranslate nohighlight">\(i\)</span> y predecidas en el grupo <span class="math notranslate nohighlight">\(j\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
+
+<span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cm</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[16  1]
+ [ 4  3]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">cm</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>16</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">plot_confusion_matrix</span>  <span class="c1"># New in scikit-learn 0.22</span>
+
+<span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">Logit</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/M4L03_classification_56_0.png" src="../_images/M4L03_classification_56_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="otro-ejemplo-iris-dataset">
+<h3>Otro ejemplo: Iris Dataset<a class="headerlink" href="#otro-ejemplo-iris-dataset" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span> 
+
+<span class="n">iris</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">load_iris</span><span class="p">()</span>
+<span class="c1"># print(iris.DESCR)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iris_df</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">feature_names</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">assign</span><span class="p">(</span>
+        <span class="n">target</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">target</span><span class="p">,</span>
+        <span class="n">target_names</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">target</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">iris</span><span class="o">.</span><span class="n">target_names</span><span class="p">)))</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">iris_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepal length (cm)</th>
+      <th>sepal width (cm)</th>
+      <th>petal length (cm)</th>
+      <th>petal width (cm)</th>
+      <th>target</th>
+      <th>target_names</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5.1</td>
+      <td>3.5</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>0</td>
+      <td>setosa</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4.9</td>
+      <td>3.0</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>0</td>
+      <td>setosa</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4.7</td>
+      <td>3.2</td>
+      <td>1.3</td>
+      <td>0.2</td>
+      <td>0</td>
+      <td>setosa</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4.6</td>
+      <td>3.1</td>
+      <td>1.5</td>
+      <td>0.2</td>
+      <td>0</td>
+      <td>setosa</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5.0</td>
+      <td>3.6</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>0</td>
+      <td>setosa</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span>  <span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="c1"># we only take the first two features.</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">target</span>
+
+<span class="c1"># split dataset</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span><span class="p">)</span> 
+
+<span class="c1"># model</span>
+<span class="n">iris_lclf</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
+<span class="n">iris_lclf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LogisticRegression()
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Inspirado en https://scikit-learn.org/stable/auto_examples/linear_model/plot_iris_logistic.html#sphx-glr-auto-examples-linear-model-plot-iris-logistic-py</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+<span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">-</span> <span class="o">.</span><span class="mi">5</span><span class="p">,</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="o">.</span><span class="mi">5</span>
+<span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">-</span> <span class="o">.</span><span class="mi">5</span><span class="p">,</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="o">.</span><span class="mi">5</span>
+
+<span class="n">h</span> <span class="o">=</span> <span class="o">.</span><span class="mi">01</span>  <span class="c1"># step size in the mesh</span>
+<span class="n">xx</span><span class="p">,</span> <span class="n">yy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">h</span><span class="p">),</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">Z</span> <span class="o">=</span> <span class="n">iris_lclf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">xx</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">yy</span><span class="o">.</span><span class="n">ravel</span><span class="p">()])</span>
+
+<span class="c1"># Put the result into a color plot</span>
+<span class="n">Z</span> <span class="o">=</span> <span class="n">Z</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">xx</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="n">yy</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Paired</span><span class="p">,</span> <span class="n">shading</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">)</span>
+
+<span class="c1"># Plot also the real points</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Paired</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Sepal length&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Sepal width&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/M4L03_classification_62_0.png" src="../_images/M4L03_classification_62_0.png" />
+</div>
+</div>
+<p>Por otro lado, la predicción debe hacerse con el set de test</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">iris_lclf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">iris_lclf</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/M4L03_classification_64_0.png" src="../_images/M4L03_classification_64_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">iris_lclf</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/M4L03_classification_65_0.png" src="../_images/M4L03_classification_65_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">iris_lclf</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/M4L03_classification_66_0.png" src="../_images/M4L03_classification_66_0.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="M4L02_regression.html" title="previous page">Regresión</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Alonso Ogueda Oliva<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-177357392-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>
