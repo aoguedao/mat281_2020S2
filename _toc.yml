@@ -29,3 +29,4 @@
   - file: lessons/M4L01_modeling
   - file: lessons/M4L02_regression
   - file: lessons/M4L03_classification
+  - file: lessons/M4L04_classification_nonparametric
