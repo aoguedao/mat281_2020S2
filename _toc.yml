@@ -32,3 +32,4 @@
   - file: lessons/M4L04_classification_nonparametric
   - file: lessons/M4L05_clustering
   - file: lessons/M4L06_cross_validation
+  - file: lessons/M4L07_model_selection
