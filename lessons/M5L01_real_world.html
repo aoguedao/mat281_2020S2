@@ -1,0 +1,1065 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Es hora de decir adiós &#8212; MAT281 - Aplicaciones de la Matemática en la Ingeniería  - 2020</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.14.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Métricas" href="M4L08_metrics.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/utfsm.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">MAT281 - Aplicaciones de la Matemática en la Ingeniería  - 2020</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Bienvenido(a) a MAT281!
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Introducción
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="M1L01_about_mat281.html">
+   Acerca de MAT281
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="M1L02_toolkit_and_setup.html">
+   Toolkit &amp; Setup
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="M1L02_installation.html">
+     Instalación
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M1L03_python_basics.html">
+   Recordando Python
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="M1L04_python_ecosystem.html">
+   Ecosistema Python
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="M1L04_git_update.html">
+     Utilizando git
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Análisis de Datos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L01_scientific_computing.html">
+   Introducción al Cálculo Científico
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L02_linear_algebra.html">
+   Álgebra Lineal
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L03_data_manipulation.html">
+   Manipulación de Datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L04_data_combining.html">
+   Combinando Datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L05_data_aggregation.html">
+   Agrupando Datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M2L06_eda.html">
+   Análisis Exploratorio de Datos
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Visualización
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="M3L01_theory_and_landscape.html">
+   Teoría y Landscape de Visualización
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M3L02_imperative_visualization.html">
+   Visualización Imperativa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M3L03_declarative_visualization.html">
+   Visualización Declarativa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M3L04_interactive_visualization.html">
+   Visualización Interactiva
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Machine Learning
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="M4L01_modeling.html">
+   Modelamiento
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M4L02_regression.html">
+   Regresión
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M4L03_classification.html">
+   Clasificación
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M4L04_classification_nonparametric.html">
+   Clasificación II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M4L05_clustering.html">
+   Clustering
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M4L06_cross_validation.html">
+   Cross-Validation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M4L07_model_selection.html">
+   Selección de Modelos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M4L08_metrics.html">
+   Métricas
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  The End
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Es hora de decir adiós
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/lessons/M5L01_real_world.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/aoguedao/mat281_2020S2"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/aoguedao/mat281_2020S2/master?urlpath=lab/tree/lessons/M5L01_real_world.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/aoguedao/mat281_2020S2/blob/master/lessons/M5L01_real_world.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mundo-laboral">
+   Mundo Laboral
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#entrevista-de-trabajo">
+     Entrevista de Trabajo
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#antes">
+       Antes
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#durante">
+       Durante
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#despues">
+       Después
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-oficina">
+     La oficina
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#relaciones-interpersonales">
+     Relaciones Interpersonales
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#thinker">
+       <em>
+        Thinker
+       </em>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#director">
+       <em>
+        Director
+       </em>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#relaters">
+       <em>
+        Relaters
+       </em>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#socializers">
+       <em>
+        Socializers
+       </em>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metodologias-de-trabajo">
+     Metodologías de Trabajo
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#waterfall">
+       Waterfall
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#agile">
+       Agile
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#agile-vs-waterfall">
+       Agile vs Waterfall
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etica">
+   Ética
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#datos-limpios-buen-modelo">
+     ¿Datos
+     <em>
+      limpios
+     </em>
+     =
+     <em>
+      Buen
+     </em>
+     modelo?
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sesgo-racial-en-pacientes-enfermos">
+       Sesgo racial en pacientes enfermos
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#weapons-of-math-destruction">
+       <em>
+        Weapons of Math Destruction
+       </em>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#proximos-pasos">
+   Próximos pasos
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="es-hora-de-decir-adios">
+<h1>Es hora de decir adiós<a class="headerlink" href="#es-hora-de-decir-adios" title="Permalink to this headline">¶</a></h1>
+<p>Esta será la última clase del semestre en cuanto a contenidos, trataremos de cerrar con broche de oro con lo que debería depararte el destino después del curso de Aplicaciones de la Matemática en la Ingeniería.</p>
+<div class="section" id="mundo-laboral">
+<h2>Mundo Laboral<a class="headerlink" href="#mundo-laboral" title="Permalink to this headline">¶</a></h2>
+<p>Esta sección está basada casi en su totalidad en la versión del curso dictada el año 2018, en esa ocasión el que dictó la clase de Mundo Laboral fue <a class="reference external" href="https://www.linkedin.com/in/sebastiandres/">Sebastián Flores Benner</a> (mi actual jefe), quien tiene mucha más experiencia en esto.</p>
+<div class="section" id="entrevista-de-trabajo">
+<h3>Entrevista de Trabajo<a class="headerlink" href="#entrevista-de-trabajo" title="Permalink to this headline">¶</a></h3>
+<p>Algunos tips y recomendaciones que podrían ser útiles a la hora de enfrentar una entrevista de trabajo. Digámos las cosas como son, los sansanos no nos caracterizamos por ser las personas más elocuentes del país. Si a lo anterior le sumas la carrera de Ingeniería Civil Matemática obtenemos un mal cliché.</p>
+<div class="section" id="antes">
+<h4>Antes<a class="headerlink" href="#antes" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p><strong>Transversales</strong></p>
+<ol class="simple">
+<li><p>Participar en actividades extraprogramáticas, representación de la carrera u otros intereses.</p>
+<ul class="simple">
+<li><p><strong>Objetivo</strong>: aprender a distribuir tiempos.</p></li>
+</ul>
+</li>
+<li><p>Obtener aprendizajes fuera de la universidad: cursos en línea, kaggle, etc.</p>
+<ul class="simple">
+<li><p><strong>Objetivo</strong>: romper la burbuja y tener “calle”.</p></li>
+</ul>
+</li>
+<li><p>Maximizar el aprendizaje, aún a costo de bajar las notas.</p>
+<ul class="simple">
+<li><p><strong>Objetivo</strong>: obtener recomendaciones, capacidades y habilidades.</p></li>
+</ul>
+</li>
+<li><p>Generar perfil profesional: LinkedIn, correo profesional, etc.</p>
+<ul class="simple">
+<li><p><strong>Objetivo</strong>: mostrarse profesional y poder hacer networking.</p></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p><strong>Preparación</strong></p>
+<ol class="simple">
+<li><p>Sobre la <strong>empresa</strong>: ¿Qué hacen? ¿Porqué lo hacen? ¿Quiénes pagan por el producto/servicio? ¿Quiénes trabajan en la empresa?</p></li>
+<li><p>Sobre la <strong>posición</strong>: ¿Qué se espera del cargo? ¿Que responsabilidades tendrá? ¿Qué herramientas y conocimientos previos se requieren?</p></li>
+<li><p><strong>Referencias</strong>: ¿Conozco alguien que ha trabajado/entrevistado ahí? ¿Qué tipo de entrevistas hacen?</p></li>
+<li><p><strong>Lecturas</strong>: Si tienes poca/nula experiencia en entrevistas, googlea e infórmate de las preguntas más comunes y prepara algunas respuestas honestas.</p></li>
+<li><p>Todos las condiciones de un trabajo son referenciales. Si estás interesado, demuéstralo y negocia.</p></li>
+</ol>
+</li>
+<li><p><strong>Curriculum Vitae</strong></p>
+<ol class="simple">
+<li><p><strong>Formato</strong>: Evitar templates clásicos, buscar algo que sea memorable.</p></li>
+<li><p><strong>Extensión</strong>: 1 página. Máximo 2 páginas.</p></li>
+<li><p><strong>Ortografía</strong>: Que una tercera persona, ojalá un maniático del detalle, revise el CV.</p></li>
+<li><p><strong>Proactividad</strong>: Orientación a resultados generados y experiencias adquiridas.</p></li>
+<li><p><strong>Contenido</strong>: Datos de identificación, estudios relevantes al cargo, trabajos anteriores, referencias. No: estado civil, hijos, fotos, información no relevante.</p></li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="section" id="durante">
+<h4>Durante<a class="headerlink" href="#durante" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p><strong>Actitud</strong></p>
+<ol class="simple">
+<li><p><strong>Relajado pero interesado</strong>:</p>
+<ul class="simple">
+<li><p>No pierdes nada. Estadísticamente, lo más probable es que no consigas el trabajo/práctica pero si ganarás experiencia para la próxima entrevista.</p></li>
+<li><p>El mayor riesgo está en el lado del empleador, quien está gastando tiempo y recursos por una apuesta de un trabajador sobre la media.</p></li>
+</ul>
+</li>
+<li><p><strong>Interesado y Proactivo</strong>:</p>
+<ul class="simple">
+<li><p>Se busca gente que solucione problemas, no que se quede pasiva, menos aún que los genere.</p></li>
+<li><p>Muestra interés genuino por el trabajo/práctica.</p></li>
+</ul>
+</li>
+<li><p><strong>Respaldo con ejemplos</strong>:</p>
+<ul class="simple">
+<li><p>Ten preparados ejemplos de proyectos y trabajos que hayan destacado y que demuestren pasión y calidad.</p></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p><strong><em>Beer Test</em></strong></p>
+<ul class="simple">
+<li><p>Si la persona que hace la entrevista es otro ingeniero, relájate…</p>
+<ul>
+<li><p>Situación es fácil de leer y anticipar con suficiente preparación.</p></li>
+<li><p>Lo más probable es que el otro ingeniero estaba en medio de su trabajo y lo están obligando a realizar entrevistas.</p></li>
+<li><p>No tiene más preparación para hacer entrevistas que tú como entrevistado. Probablemente sólo googleó “Interview questions” en google y anotó las que le parecían más razonables.</p></li>
+<li><p>Sólo hay que pasar el <em>beer test</em>: el otro ingeniero sólo busca alguien que sea <em>suficientemente</em> capacitado para resolver problemas y que sea alguien con quien no sea desagradable trabajar.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Algunas preguntas</p>
+<ul class="simple">
+<li><p>Sobre tipo de <strong>mentalidad</strong>: ¿Cómo has superado un obstáculo o fracaso?</p></li>
+<li><p>Soble trabajo con <strong>stress</strong>: ¿Cómo enfrentas situaciones difíciles, como deadlines o personas complejas?</p></li>
+<li><p>Sobre <strong>trabajo en equipo</strong>: ¿Cómo trabajas en equipo?</p></li>
+<li><p>Sobre <strong>frustración</strong>: ¿Cómo has tratado o tratarías el caso de un compañero de equipo que no hace su parte?</p></li>
+<li><p>Sobre <strong>rigor y detallismo</strong>: Cuéntame de algún proyecto personal que te represente profesionalmente.</p></li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="despues">
+<h4>Después<a class="headerlink" href="#despues" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>Follow Up</p>
+<ul class="simple">
+<li><p>Reflexiona sobre lo que podrías haber hecho mejor. ¿Mejor preparación? ¿Revisión de conceptos e ideas? ¿Mayor confianza? <strong>Corrige</strong> para hacerlo mejor la próxima vez.</p></li>
+<li><p>Envía un <strong>correo</strong> agradeciendo la entrevista sin ser falso: “<em>consideré interesante la pregunta X, …</em>”. A cada puesto postulan 10 a 100 personas, y esos pequeños gestos destacan.</p></li>
+<li><p>En caso de no ser aceptado, puedes pedir retroalimentación. Poca gente lo hace. A veces las razones son diametralmente opuestas a las que uno imaginaba.</p></li>
+<li><p>La práctica hace al maestro: postula a prácticas o trabajos aunque no estes 100% interesado. Permitirá generar confianza para la entrevista del <em>trabajo soñado</em>.</p></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="la-oficina">
+<h3>La oficina<a class="headerlink" href="#la-oficina" title="Permalink to this headline">¶</a></h3>
+<p>La vida en la oficina puede parecer una locura en ocasiones, aquí algunas cosas a tener en consideración</p>
+<ol class="simple">
+<li><p>Principio de Incompetencia de Peter</p>
+<ul class="simple">
+<li><p>En una jerarquía, todo empleado tiende a ascender hasta su nivel de incompetencia: la nota sube hasta cortarse.</p></li>
+</ul>
+</li>
+<li><p>Principio de Hanlon</p>
+<ul class="simple">
+<li><p>Nunca atribuyas a la maldad lo que puede ser explicado por la estupidez.</p></li>
+</ul>
+</li>
+<li><p>Ley de Parkinson</p>
+<ul class="simple">
+<li><p>El trabajo se expande hasta llenar el tiempo disponible para su realización.</p></li>
+</ul>
+</li>
+<li><p>Ley de Murphy</p>
+<ul class="simple">
+<li><p>Todo lo que puede salir mal, saldrá mal.</p></li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="relaciones-interpersonales">
+<h3>Relaciones Interpersonales<a class="headerlink" href="#relaciones-interpersonales" title="Permalink to this headline">¶</a></h3>
+<p>(Source: Dr. Tony Alessandra, creador de <em>The Platinium Rule</em>.)</p>
+<ul class="simple">
+<li><p><strong>Silver Rule</strong></p>
+<ul>
+<li><p><em>One should not treat others in ways that one would not like to be treated</em>: No trates a otros en una forma que no quieras ser tratado.</p></li>
+</ul>
+</li>
+<li><p><strong>Golden Rule</strong></p>
+<ul>
+<li><p><em>One should treat others as one would like others to treat oneself</em>: Trata a otros en la misma forma que quieras ser tratado.</p></li>
+</ul>
+</li>
+<li><p><strong>Platinium Rule</strong></p>
+<ul>
+<li><p><em>Treat others the way they want to be treated</em>: Trata a otros en la forma que ellos quieren ser tratados.</p></li>
+<li><p>Enfoque reduccionista y simplista, pero sencillo de recordar y aplicar.</p></li>
+</ul>
+</li>
+</ul>
+<p>Hay cuatro tipos básicos de personalidad:</p>
+<ol class="simple">
+<li><p>Pensador (Thinker)</p></li>
+<li><p>Director (Director)</p></li>
+<li><p>Relacionador (Relater)</p></li>
+<li><p>Sociabilizador (Socializer)</p></li>
+</ol>
+<p><img alt="pr" src="../_images/PR1.png" /></p>
+<p>El <em>cliché</em>:</p>
+<ol class="simple">
+<li><p><em><strong>Pensador (Thinker)</strong></em>: científico/contador.</p></li>
+<li><p><em><strong>Director (Director)</strong></em>: gerente/sargento.</p></li>
+<li><p><em><strong>Relacionador (Relater)</strong></em>: enfermero/sicólogo.</p></li>
+<li><p><em><strong>Sociabilizador (Socializer)</strong></em>: vendedor de autos/publicista.</p></li>
+</ol>
+<p><img alt="pr2" src="../_images/PR4.png" /></p>
+<div class="section" id="thinker">
+<h4><em>Thinker</em><a class="headerlink" href="#thinker" title="Permalink to this headline">¶</a></h4>
+<p><img alt="thinker" src="../_images/PR4c.png" /></p>
+<ul class="simple">
+<li><p>¿Qué hacen bien?</p>
+<ul>
+<li><p>Organizar y planificar.</p></li>
+<li><p>Rápido para pensar, pero lento para hablar y actuar.</p></li>
+<li><p>Trabajar individualmente.</p></li>
+</ul>
+</li>
+<li><p>¿Qué les cuesta?</p>
+<ul>
+<li><p>Trabajar con gente desorganizada o en ambientes caóticos.</p></li>
+<li><p>Hablar de temas personales.</p></li>
+<li><p>Trabajar en grupo.</p></li>
+<li><p>Instrucciones incompletas o confusas.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="director">
+<h4><em>Director</em><a class="headerlink" href="#director" title="Permalink to this headline">¶</a></h4>
+<p><img alt="director" src="../_images/PR4d.png" /></p>
+<ul class="simple">
+<li><p>¿Qué hacen bien?</p>
+<ul>
+<li><p>Tomar el control.</p></li>
+<li><p>Realizar decisiones bajo riesgo.</p></li>
+<li><p>Sobreponerse a obstáculos.</p></li>
+</ul>
+</li>
+<li><p>¿Qué les cuesta?</p>
+<ul>
+<li><p>Tareas repetitivas.</p></li>
+<li><p>Ser diplomáticos.</p></li>
+<li><p>Reglas y regulaciones.</p></li>
+<li><p>No son tímidos, pero sí reservados de temas personales.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="relaters">
+<h4><em>Relaters</em><a class="headerlink" href="#relaters" title="Permalink to this headline">¶</a></h4>
+<p><img alt="relatres" src="../_images/PR4a.png" /></p>
+<ul class="simple">
+<li><p>¿Qué hacen bien?</p>
+<ul>
+<li><p>Amigables y sensibles: buenos oyentes.</p></li>
+<li><p>Construir redes de amigos.</p></li>
+<li><p>Coordinar y cooperar con otros.</p></li>
+</ul>
+</li>
+<li><p>¿Qué les cuesta?</p>
+<ul>
+<li><p>Competir.</p></li>
+<li><p>Trabajar con gente dictatorial o poco amigable.</p></li>
+<li><p>Tomar decisiones grandes, propensos a rechazar los cambios.</p></li>
+<li><p>Emitir opiniones contrarias.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="socializers">
+<h4><em>Socializers</em><a class="headerlink" href="#socializers" title="Permalink to this headline">¶</a></h4>
+<p><img alt="socializer" src="../_images/PR4b.png" /></p>
+<ul class="simple">
+<li><p>¿Qué hacen bien?</p>
+<ul>
+<li><p>Inspirar a otros a tomar acción.</p></li>
+<li><p>Pensar rápido: intuitivos, optimistas, creativos.</p></li>
+<li><p>Llenos de ideas, pero impulsivos.</p></li>
+</ul>
+</li>
+<li><p>¿Qué les cuesta?</p>
+<ul>
+<li><p>Restricciones.</p></li>
+<li><p>Reportes formales o contabilidad.</p></li>
+<li><p>Rutina.</p></li>
+<li><p>Repetir acciones.</p></li>
+</ul>
+</li>
+</ul>
+<p>Para relacionarse con cada tipo de personalidad hay que <strong>entregar lo que a la otra personalidad le parece importante</strong>.</p>
+<p>Como enfrentar cada tipo de personalidad:</p>
+<ol class="simple">
+<li><p>Con Pensadores, sé detallado, bien preparado y paciente.</p></li>
+<li><p>Con Directores, sé eficiente y competente.</p></li>
+<li><p>Con Relacionadores, sé sincero y no amenazante.</p></li>
+<li><p>Con Sociabilizadores, interésate por ellos y sus historias.</p></li>
+</ol>
+<p><strong>¡Cuidado!</strong></p>
+<ul class="simple">
+<li><p>La personalidad que uno cree/quiere tener es distinta de la que los demás perciben de uno mismo.</p></li>
+<li><p>Una misma persona puede presentar diversas personalidades para distintos ámbitos: familia, trabajo, amigos.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="metodologias-de-trabajo">
+<h3>Metodologías de Trabajo<a class="headerlink" href="#metodologias-de-trabajo" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><em><strong>Cascada (Waterfall)</strong></em>:</p>
+<ul>
+<li><p>Cliente define requerimientos al inicio y empresa cumple, etapa a etapa, con desarrollo especificado.</p></li>
+<li><p>Orientado a proyectos de alta complejidad, con horizontes de tiempo de años.</p></li>
+</ul>
+</li>
+<li><p><em><strong>Desarrollo Ágil (Agile)</strong></em>:</p>
+<ul>
+<li><p>Trabajo codo a codo con cliente mediante iteraciones constantes.</p></li>
+<li><p>Orientado a proyectos de alta variabilidad, con horizontes de tiempo de semanas/meses.</p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="waterfall">
+<h4>Waterfall<a class="headerlink" href="#waterfall" title="Permalink to this headline">¶</a></h4>
+<p>Enfoque metodológico que ordena rigurosa4ente las etapas del proceso para el desarrollo de software, de tal forma que el inicio de cada etapa debe esperar a la finalización de la etapa anterior.</p>
+<p><img alt="waterfall" src="../_images/MT1.png" /></p>
+<ul class="simple">
+<li><p>Ventajas</p>
+<ul>
+<li><p>Promueve análisis sobre improvisación: <em>Definir antes que diseñar, diseñar antes de codificar</em>.</p></li>
+<li><p>Modelo tradicional: ampliamente conocido y utilizado con frecuencia.</p></li>
+<li><p>Fácil de implementar, entender y dirigir.</p></li>
+<li><p>Requiere de menos capital y herramientas para hacerlo funcionar de manera óptima.</p></li>
+</ul>
+</li>
+<li><p>Desventajas</p>
+<ul>
+<li><p>Proyectos en el mundo real no son lineales; el cliente siempre tiene ideas adicionales. Involucrar tardíamente al cliente conlleva disconformidad y fracaso del proyecto.</p></li>
+<li><p>Secuencialismo: etapa <span class="math notranslate nohighlight">\(i+1\)</span> no se puede llevar a cabo a menos que se haya culminado la etapa <span class="math notranslate nohighlight">\(i\)</span>.</p></li>
+<li><p>Demoras: No es posible paralelizar etapas y el software sólo puede validarse una vez que todas las etapas anteriores han finalizado.</p></li>
+<li><p>Propenso a costos adicionales: errores no detectados en etapa <span class="math notranslate nohighlight">\(i\)</span> conducen a cambios en todas las etapas posteriores ya realizadas.</p></li>
+<li><p>Promueve respeto y obediencia sobre innovación y creatividad.</p></li>
+</ul>
+</li>
+</ul>
+<p><img alt="treeswing" src="../_images/treeswing.jpg" /></p>
+</div>
+<div class="section" id="agile">
+<h4>Agile<a class="headerlink" href="#agile" title="Permalink to this headline">¶</a></h4>
+<p>Enfoque metodológico que promueve el desarrollo iterativo e incremental, donde los requisitos y soluciones evolucionan mediante la colaboración de grupos auto-organizados y multidisciplinarios.</p>
+<p><img alt="agile" src="../_images/MT2.png" /></p>
+<p><em><strong>Manifesto for Agile Software Development, 2001</strong></em></p>
+<p>We are uncovering better ways of developing software by doing it and helping others do it. Through this work we have come to value:</p>
+<ul class="simple">
+<li><p>Individuals and interactions over processes and tools</p></li>
+<li><p>Working software over comprehensive documentation</p></li>
+<li><p>Customer collaboration over contract negotiation</p></li>
+<li><p>Responding to change over following a plan</p></li>
+</ul>
+<p>That is, while there is value in the items on the right, we value the
+items on the left more.</p>
+<p><strong>Principios Básicos</strong></p>
+<ul class="simple">
+<li><p>La prioridad es satisfacer al cliente mediante tempranas y continuas entregas de software que le aporte un valor.</p></li>
+<li><p>Dar la bienvenida a los cambios. Se capturan los cambios para que el cliente tenga una ventaja competitiva.</p></li>
+<li><p>Entregar frecuentemente software que funcione desde un par de semanas a un par de meses, con el menor intervalo de tiempo posible entre entregas.</p></li>
+<li><p>La gente del negocio y los desarrolladores deben trabajar juntos a lo largo del proyecto. El cliente es un aliado, no un enemigo.</p></li>
+<li><p>Construir el proyecto en torno a individuos motivados. Darles el entorno y el apoyo que necesitan y confiar en ellos para conseguir finalizar el trabajo.</p></li>
+<li><p>El diálogo cara a cara es el mejor método para comunicar información dentro de un equipo de desarrollo.</p></li>
+<li><p>El software que funciona es la medida principal de progreso. La simplicidad es esencial.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Ventajas</p>
+<ul>
+<li><p>Respuesta rápida a cambios de requisitos, minimizando costos, tiempo y frustración.</p></li>
+<li><p>Efecto IKEA: el cliente se involucra y tiene una mejor satisfacción sobre el resultado final.</p></li>
+<li><p>Al privilegiar la simplicidad se eliminan trabajos innecesarios/superfluos.</p></li>
+<li><p>Permite paralelizar requerimientos y validar implementaciones por separado.</p></li>
+<li><p>Puesto que el software es siempre “casi funcional” permite mantener proyecto en costo acordado. Siempre es posible parar el proyecto en la iteración actual.</p></li>
+<li><p>Promueve innovación y creatividad sobre respeto y obediencia.</p></li>
+</ul>
+</li>
+<li><p>Desventajas</p>
+<ul>
+<li><p>Falta de documentación del diseño.</p></li>
+<li><p>Problemas derivados de la comunicación oral: ambiguedad y futilidad.</p></li>
+<li><p>Alta dependencia a las personas del equipo.</p></li>
+<li><p>Restricciones en cuanto al tamaño y la complejidad de los proyectos.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="agile-vs-waterfall">
+<h4>Agile vs Waterfall<a class="headerlink" href="#agile-vs-waterfall" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Adaptividad vs Predictibilidad</p></li>
+<li><p>Iterativo vs Secuencial</p></li>
+<li><p>Código vs Documentación</p></li>
+</ul>
+<p>La Metodología Agil puede interpretarse como una aplicación del principio de Pareto (ley del 80-20), que dice que, para muchos eventos, aproximadamente 80% de los efectos proviene del 20% de las causas.</p>
+<p>Reuniones tempranas con el cliente permite determinar cuáles son las causas de mayor impacto y establecer una ruta óptima de construcción en función de los requerimientos cambiantes del cliente.</p>
+<p>Algunos ejemplos:</p>
+<ul class="simple">
+<li><p>Aplicacion en Ingeniería</p>
+<ul>
+<li><p>Tener reuniones pequeñas reuniones semanales es mejor que una gran reunión mensual.</p></li>
+<li><p>Mejorar incrementalmente informe e implementación numérica.</p></li>
+<li><p>El cliente tiene derecho cambiar de opinión: ¡Está pagando por ello!</p></li>
+</ul>
+</li>
+<li><p>Aplicacion en Vida Universitaria</p>
+<ul>
+<li><p>Tener lo antes posible un entregable que garantice el 50-70 % de la nota.</p></li>
+<li><p>Mejorar incrementalmente el entregable, en función del tiempo disponible y del esfuerzo requerido.</p></li>
+<li><p>Si se requiere código numérico, preocuparse del código hasta que funcione, luego documentar.</p></li>
+<li><p>El profesor es el cliente: preguntar con tiempo y clarificar expectativas. Lo esencial es cumplir los requerimientos.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="etica">
+<h2>Ética<a class="headerlink" href="#etica" title="Permalink to this headline">¶</a></h2>
+<p>¿Has tomado algún curso de ética durante tu vida universitaria? ¿En cuántos cursos te han hablado de ética? Muchas veces el foco de aprendizaje son las habilidades técnicas, ya sea en menosprecio de las habilidades blandas o asumiendo que todos las poseen.</p>
+<p>Como cualquier otra habilidad, la ética hay que cultivarla. En conjunto a un pensamiento lógico y crítico es posible llevar los problemas con sus respectivas soluciones a un siguiente nivel.</p>
+<p>En el contexto del curso, hay una rama de la ética llamada <em>Data Ethics</em>, la cual cubre una gama increíblemente amplia de temas, muchos de los cuales son urgentes, aparecen en los titulares a diario y causan daño a las personas en este mismo momento.</p>
+<div class="section" id="datos-limpios-buen-modelo">
+<h3>¿Datos <em>limpios</em> = <em>Buen</em> modelo?<a class="headerlink" href="#datos-limpios-buen-modelo" title="Permalink to this headline">¶</a></h3>
+<p>En <em>machine learning</em> se suele hablar mucho de datos sucios y el gasto de HH que implica procesarlos en función de obtener los datos estructurados con tal de ser el insumo de un algoritmo de aprendizaje. Entonces, el santo grial de estos ingenieros o los famosos <em>data scientits</em> serían datos limpios, no procesar nada, <em>llegar y llevar</em>.</p>
+<p>Nuestro análisis no se puede quedar solo en el formato de las columnas o en la cantidad de datos faltantes, tiene que ir mucho más allá. Algunas preguntas que deberías hacer son:</p>
+<ul class="simple">
+<li><p>¿Cuál es la fuente de estos datos?</p></li>
+<li><p>¿Cómo se recolectaron?</p></li>
+<li><p>¿Son lo suficientemente robusto para generalizar y que el algoritmo <em>aprenda</em>?</p></li>
+<li><p>¿Representan la realidad?</p></li>
+<li><p>¿Tienen algún tipo de sesgo?</p></li>
+<li><p>etc. <span class="math notranslate nohighlight">\(\times\)</span> 1000</p></li>
+</ul>
+<p>En ocasiones, ni siquiera esto es suficiente…</p>
+<div class="section" id="sesgo-racial-en-pacientes-enfermos">
+<h4>Sesgo racial en pacientes enfermos<a class="headerlink" href="#sesgo-racial-en-pacientes-enfermos" title="Permalink to this headline">¶</a></h4>
+<p>En 2019, un estudio demostró que un algoritmo ampliamente utilizado por hospitales y aseguradoras de EE. UU. con la finalidad de asignar asistencia adicional para la gestión de la salud discriminaba sistemáticamente a las personas negras. La herramienta de decisión tenía menos probabilidades de derivar a las personas negras que a las blancas a programas de gestión de la atención para necesidades médicas complejas cuando ambos grupos raciales estaban igualmente enfermos.</p>
+<p>La razón subyacente del sesgo estaba relacionada con el algoritmo de asignación de puntajes de riesgo a los pacientes en función de los costos médicos del año anterior. La suposición era que la identificación de pacientes con costos más altos identificaría a aquellos con las necesidades médicas más altas. Sin embargo, muchos pacientes negros tienen menos acceso, menos capacidad de pago y menos confianza en la atención médica que las personas blancas que están igualmente enfermas. En este caso, sus costos médicos más bajos no predijeron con precisión su estado de salud.</p>
+<p>Fuente y más ejemplos: https://www.investopedia.com/bias-in-medical-decision-making-tools-5083308</p>
+</div>
+<div class="section" id="weapons-of-math-destruction">
+<h4><em>Weapons of Math Destruction</em><a class="headerlink" href="#weapons-of-math-destruction" title="Permalink to this headline">¶</a></h4>
+<p><img alt="wmd" src="https://images-na.ssl-images-amazon.com/images/I/51eUw-v0X+L._SX329_BO1,204,203,200_.jpg" /></p>
+<p><em>We live in the age of the algorithm. Increasingly, the decisions that affect our lives—where we go to school, whether we get a car loan, how much we pay for health insurance—are being made not by humans, but by mathematical models. In theory, this should lead to greater fairness: Everyone is judged according to the same rules, and bias is eliminated.</em></p>
+<p><em>But as Cathy O’Neil reveals in this urgent and necessary book, the opposite is true. The models being used today are opaque, unregulated, and uncontestable, even when they’re wrong. Most troubling, they reinforce discrimination: If a poor student can’t get a loan because a lending model deems him too risky (by virtue of his zip code), he’s then cut off from the kind of education that could pull him out of poverty, and a vicious spiral ensues. Models are propping up the lucky and punishing the downtrodden, creating a “toxic cocktail for democracy.” Welcome to the dark side of Big Data.</em></p>
+<p><strong>Video Super-mega-recomendado:</strong> <a class="reference external" href="https://youtu.be/_2u_eHHzRto">The era of blind faith in big data must end | Cathy O’Neil</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="proximos-pasos">
+<h2>Próximos pasos<a class="headerlink" href="#proximos-pasos" title="Permalink to this headline">¶</a></h2>
+<p>De este punto en adelante, cada uno es libre de tomar el camino que más le guste. A continuación algunos temas que puedes seguir estudiando para complementar los contenidos del curso y tu desarrollo profesional.</p>
+<ol class="simple">
+<li><p><em>Data Ethics</em></p>
+<ul class="simple">
+<li><p>Sin duda de lo más importante, al trabajar con modelos estamos plasmando opiniones en forma de código.</p></li>
+<li><p>Este mini-curso se ve muy muy bueno: <a class="reference external" href="https://ethics.fast.ai/">Practical Data Ethics</a></p></li>
+</ul>
+</li>
+<li><p>Relaciones interpersonales</p>
+<ul class="simple">
+<li><p>Identificar qué tipo de personalidad posees (hay tests disponibles en internet).</p></li>
+<li><p>Entender y aplicar metodologías de trabajo sacando provecho a tu personalidad.</p></li>
+</ul>
+</li>
+<li><p>Modelamiento</p>
+<ul class="simple">
+<li><p>Preprocesamiento</p>
+<ul>
+<li><p>Tratar <em>features</em> categóricas, por ejemplo <em>One-Hot-Encoding</em>.</p></li>
+<li><p>Tratar con datos desbalanceados, por ejemplo <em>Over-Sampling</em>.</p></li>
+<li><p><em>Dimensionality Reduction</em>, <em>Feature Selection</em>, etc., por ejemplo, <em>Principal Component Analysis</em>.</p></li>
+</ul>
+</li>
+<li><p>Modelos de Machine Learning</p>
+<ul>
+<li><p><em>Suppor Vector Machine</em></p></li>
+<li><p><em>Decision Trees</em></p></li>
+<li><p><em>Ensemble Methods</em></p></li>
+</ul>
+</li>
+<li><p>Redes Neuronales y Deep Learning</p>
+<ul>
+<li><p>Toda la teoría, incluído redes convolusionales y modelos secuenciales.</p></li>
+<li><p>Frameworkds como Tensorflow, Keras, PyTorch entre otros.</p></li>
+</ul>
+</li>
+<li><p><em>Hyperparameter tunning</em></p></li>
+<li><p><em>Feature Importance</em></p>
+<ul>
+<li><p>Explicar modelos.</p></li>
+<li><p>SHAP (este en particular es el que más me gusta a mi).</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Operacionales</p>
+<ul class="simple">
+<li><p>SQL</p></li>
+<li><p>Git</p></li>
+<li><p>Power BI, Tableau, Google Data Studio, Dash u otra herramienta para realizar dashboards.</p></li>
+<li><p>Docker</p></li>
+<li><p>Linux</p></li>
+<li><p>Cloud Computing (AWS, GCP, Azure)</p></li>
+<li><p>Otro lenguaje de programación</p></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="M4L08_metrics.html" title="previous page">Métricas</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Alonso Ogueda Oliva<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-177357392-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>
